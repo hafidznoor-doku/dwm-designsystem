@@ -1,0 +1,546 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/radio.svg" as iconRadio
+import "resources/assets/icons/radio-2.svg" as iconRadio2
+import "resources/assets/icons/radio-3.svg" as iconRadio3
+import "resources/assets/icons/radio-4.svg" as iconRadio4
+import "resources/assets/icons/master-checkbox-false-true-small.svg" as iconMasterCheckboxFalseTrueSmall
+import "resources/assets/icons/master-checkbox-true-true-small.svg" as iconMasterCheckboxTrueTrueSmall
+import "resources/assets/icons/master-checkbox-true-false-small.svg" as iconMasterCheckboxTrueFalseSmall
+import "resources/assets/icons/master-checkbox-false-false-small.svg" as iconMasterCheckboxFalseFalseSmall
+import "resources/assets/icons/oval.svg" as iconOval
+import "resources/assets/icons/oval-2.svg" as iconOval2
+import "resources/assets/icons/oval-3.svg" as iconOval3
+import "resources/assets/icons/oval-4.svg" as iconOval4
+import "resources/assets/icons/oval-5.svg" as iconOval5
+import "resources/assets/icons/oval-stroke.svg" as iconOvalStroke
+
+export radioButtonDefaultLarge = frame {
+  title: "Radio Button / :state=default, Size=large",
+  left: 0px,
+  top: 0px,
+  layout: {item-gap: 12px},
+  overflow: .visible,
+  children: [radio, textLayer],
+
+  radio = asset {
+    width: 25px,
+    height: 25px,
+    contents: iconRadio
+  }
+
+  textLayer = frame {
+    layout: {direction: .column},
+    overflow: .visible,
+    padding: [4px, 0px],
+    children: [textLayer, subText],
+
+    textLayer = text {
+      fill: colorTokens.colors.neutral-80,
+      contents: "Laki-laki",
+      font-size: 16,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium"
+    }
+
+    subText = text {
+      fill: colorTokens.colors.neutral-80,
+      contents: "Pilih jika laki laki",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+}
+
+export radioButtonCheckedLarge = frame {
+  title: "Radio Button / :state=checked, Size=large",
+  left: 191px,
+  top: 0px,
+  layout: {item-gap: 12px},
+  overflow: .visible,
+  children: [radio, textLayer],
+
+  radio = asset {
+    width: 25px,
+    height: 25px,
+    contents: iconRadio2
+  }
+
+  textLayer = frame {
+    layout: {direction: .column},
+    overflow: .visible,
+    padding: [4px, 0px],
+    children: [textLayer, subText],
+
+    textLayer = text {
+      fill: colorTokens.colors.neutral-80,
+      contents: "Laki-laki",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+
+    subText = text {
+      fill: colorTokens.colors.neutral-80,
+      contents: "Pilih jika laki laki",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+}
+
+export radioButtonDisabledCheckedLarge = frame {
+  title: "Radio Button / :state=disabled checked, Size=large",
+  left: 382px,
+  top: 0px,
+  layout: {item-gap: 12px},
+  overflow: .visible,
+  children: [radio, textLayer],
+
+  radio = asset {
+    width: 25px,
+    height: 25px,
+    contents: iconRadio3
+  }
+
+  textLayer = frame {
+    layout: {direction: .column},
+    overflow: .visible,
+    padding: [4px, 0px],
+    children: [textLayer, subText],
+
+    textLayer = text {
+      fill: colorTokens.colors.neutral-80,
+      contents: "Laki-laki",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+
+    subText = text {
+      fill: colorTokens.colors.neutral-80,
+      contents: "Pilih jika laki laki",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+}
+
+export radioButtonDisabledUncheckedLarge = frame {
+  title: "Radio Button / :state=disabled unchecked, Size=large",
+  left: 573px,
+  top: 0px,
+  layout: {item-gap: 12px},
+  overflow: .visible,
+  children: [radio, textLayer],
+
+  radio = asset {
+    width: 25px,
+    height: 25px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconRadio4
+  }
+
+  textLayer = frame {
+    layout: {direction: .column},
+    overflow: .visible,
+    padding: [4px, 0px],
+    children: [textLayer, subText],
+
+    textLayer = text {
+      fill: colorTokens.colors.neutral-80,
+      contents: "Laki-laki",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+
+    subText = text {
+      fill: colorTokens.colors.neutral-80,
+      contents: "Pilih jika laki laki",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+}
+
+export radioButtonDefaultSmall = frame {
+  title: "Radio Button / :state=default, Size=small",
+  left: 0px,
+  top: 92px,
+  width: 156.5px,
+  layout: {item-gap: 8px},
+  overflow: .visible,
+  children: [masterCheckbox, textLayer],
+
+  masterCheckbox = asset {
+    width: 16px,
+    height: 16px,
+    contents: iconMasterCheckboxFalseTrueSmall
+  }
+
+  textLayer = frame {
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [textLayer, subText],
+
+    textLayer = text {
+      fill: colorTokens.colors.neutral-80,
+      contents: "Laki-laki",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+
+    subText = text {
+      fill: colorTokens.colors.neutral-80,
+      contents: "Pilih jika laki laki",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+}
+
+export radioButtonCheckedSmall = frame {
+  title: "Radio Button / :state=checked, Size=small",
+  left: 204.5px,
+  top: 92px,
+  width: 156.5px,
+  layout: {item-gap: 8px},
+  overflow: .visible,
+  children: [masterCheckbox, textLayer],
+
+  masterCheckbox = asset {
+    width: 16px,
+    height: 16px,
+    contents: iconMasterCheckboxTrueTrueSmall
+  }
+
+  textLayer = frame {
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [textLayer, subText],
+
+    textLayer = text {
+      fill: colorTokens.colors.neutral-80,
+      contents: "Laki-laki",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+
+    subText = text {
+      fill: colorTokens.colors.neutral-80,
+      contents: "Pilih jika laki laki",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+}
+
+export radioButtonDisabledCheckedSmall = frame {
+  title: "Radio Button / :state=disabled checked, Size=small",
+  left: 409px,
+  top: 92px,
+  layout: {item-gap: 8px},
+  overflow: .visible,
+  children: [masterCheckbox, textLayer],
+
+  masterCheckbox = asset {
+    width: 16px,
+    height: 16px,
+    contents: iconMasterCheckboxTrueFalseSmall
+  }
+
+  textLayer = frame {
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [textLayer, subText],
+
+    textLayer = text {
+      fill: colorTokens.colors.neutral-80,
+      contents: "Laki-laki",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+
+    subText = text {
+      fill: colorTokens.colors.neutral-80,
+      contents: "Pilih jika laki laki",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+}
+
+export radioButtonDisabledUncheckedSmall = frame {
+  title: "Radio Button / :state=disabled unchecked, Size=small",
+  left: 587px,
+  top: 92px,
+  layout: {item-gap: 8px},
+  overflow: .visible,
+  children: [masterCheckbox, textLayer],
+
+  masterCheckbox = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconMasterCheckboxFalseFalseSmall
+  }
+
+  textLayer = frame {
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [textLayer, subText],
+
+    textLayer = text {
+      fill: colorTokens.colors.neutral-80,
+      contents: "Laki-laki",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+
+    subText = text {
+      fill: colorTokens.colors.neutral-80,
+      contents: "Pilih jika laki laki",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+}
+
+export masterCheckboxFalseTrueLarge = frame {
+  title: "_master_checkbox / selected=false, active=true, Size=large",
+  left: 0px,
+  top: 260px,
+  width: 24px,
+  height: 24px,
+  overflow: .visible,
+  children: oval,
+
+  oval = asset {
+    left: 0px,
+    top: 0px,
+    width: 24px,
+    height: 24px,
+    contents: iconOval
+  }
+}
+
+export masterCheckboxTrueTrueLarge = frame {
+  title: "_master_checkbox / selected=true, active=true, Size=large",
+  left: 72px,
+  top: 260px,
+  width: 24px,
+  height: 24px,
+  overflow: .visible,
+  children: [oval, oval2],
+
+  oval = asset {
+    left: 0px,
+    top: 0px,
+    width: 24px,
+    height: 24px,
+    contents: iconOval2
+  }
+
+  oval2 = asset {
+    left: 7.68px,
+    top: 7.68px,
+    width: 8.64px,
+    height: 8.64px,
+    fill: colorTokens.colors.red-50,
+    contents: iconOval3
+  }
+}
+
+export masterCheckboxTrueFalseLarge = frame {
+  title: "_master_checkbox / selected=true, active=false, Size=large",
+  left: 0px,
+  top: 332px,
+  width: 24px,
+  height: 24px,
+  overflow: .visible,
+  children: [oval, oval2],
+
+  oval = asset {
+    left: 0px,
+    top: 0px,
+    width: 24px,
+    height: 24px,
+    contents: iconOval4
+  }
+
+  oval2 = asset {
+    left: 7.68px,
+    top: 7.68px,
+    width: 8.64px,
+    height: 8.64px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconOval3
+  }
+}
+
+export masterCheckboxFalseFalseLarge = frame {
+  title: "_master_checkbox / selected=false, active=false, Size=large",
+  left: 72px,
+  top: 332px,
+  width: 24px,
+  height: 24px,
+  overflow: .visible,
+  children: oval,
+
+  oval = asset {
+    left: 0px,
+    top: 0px,
+    width: 24px,
+    height: 24px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconOval5
+  }
+}
+
+export masterCheckboxFalseTrueSmall = frame {
+  title: "_master_checkbox / selected=false, active=true, Size=small",
+  left: 0px,
+  top: 404px,
+  width: 16px,
+  height: 16px,
+  overflow: .visible,
+  children: [oval, ovalStroke],
+
+  oval = asset {
+    left: 0px,
+    top: 0px,
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconMasterCheckboxFalseFalseSmall
+  }
+
+  ovalStroke = asset {
+    left: 0px,
+    top: 0px,
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconOvalStroke
+  }
+}
+
+export masterCheckboxTrueTrueSmall = frame {
+  title: "_master_checkbox / selected=true, active=true, Size=small",
+  left: 64px,
+  top: 404px,
+  width: 16px,
+  height: 16px,
+  overflow: .visible,
+  children: [oval, ovalStroke, ellipse1],
+
+  oval = asset {
+    left: 0px,
+    top: 0px,
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconMasterCheckboxFalseFalseSmall
+  }
+
+  ovalStroke = asset {
+    left: 0px,
+    top: 0px,
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.red-50,
+    contents: iconOvalStroke
+  }
+
+  ellipse1 = shape {
+    left: 5px,
+    top: 5px,
+    width: 6px,
+    height: 6px,
+    fill: colorTokens.colors.red-50,
+    type: .ellipse
+  }
+}
+
+export masterCheckboxTrueFalseSmall = frame {
+  title: "_master_checkbox / selected=true, active=false, Size=small",
+  left: 0px,
+  top: 468px,
+  width: 16px,
+  height: 16px,
+  overflow: .visible,
+  children: [oval, ovalStroke, ellipse1],
+
+  oval = asset {
+    left: 0px,
+    top: 0px,
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-10,
+    contents: iconMasterCheckboxFalseFalseSmall
+  }
+
+  ovalStroke = asset {
+    left: 0px,
+    top: 0px,
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconOvalStroke
+  }
+
+  ellipse1 = shape {
+    left: 5px,
+    top: 5px,
+    width: 6px,
+    height: 6px,
+    fill: colorTokens.colors.neutral-30,
+    type: .ellipse
+  }
+}
+
+export masterCheckboxFalseFalseSmall = frame {
+  title: "_master_checkbox / selected=false, active=false, Size=small",
+  left: 64px,
+  top: 468px,
+  width: 16px,
+  height: 16px,
+  overflow: .visible,
+  children: oval,
+
+  oval = asset {
+    left: 0px,
+    top: 0px,
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconMasterCheckboxFalseFalseSmall
+  }
+}

@@ -1,0 +1,1735 @@
+import "tokens/colors.elyx" as colorTokens
+import "blocks/bottom-sheet.elyx" as bottomSheetLib
+import "resources/assets/icons/dw-icon-akun-tentang-outline.svg" as iconDwIconAkunTentangOutline
+import "resources/assets/icons/path-copy-2-2.svg" as iconPathCopy22
+import "resources/assets/icons/dw-icon-akun-kebijakan-privasi-outline.svg" as iconDwIconAkunKebijakanPrivasiOutline
+import "resources/assets/icons/dw-icon-akun-bantuan-outline.svg" as iconDwIconAkunBantuanOutline
+import "resources/assets/icons/dw-icon-akun-hapus-akun-outline.svg" as iconDwIconAkunHapusAkunOutline
+import "resources/assets/icons/dw-icon-akun-keluar-outline.svg" as iconDwIconAkunKeluarOutline
+import "resources/assets/icons/dw-icon-akun-ubah-profile-outline.svg" as iconDwIconAkunUbahProfileOutline
+import "resources/assets/icons/dw-icon-akun-ubah-pin-outline.svg" as iconDwIconAkunUbahPinOutline
+import "resources/assets/icons/dw-icon-akun-lupa-pin-outline.svg" as iconDwIconAkunLupaPinOutline
+import "resources/assets/icons/dw-icon-akun-smart-login-outline-2.svg" as iconDwIconAkunSmartLoginOutline2
+import "resources/assets/icons/group-9.svg" as iconGroup9
+import "resources/assets/icons/avatar.svg" as iconAvatar
+import "resources/assets/images/f5128e97f84e245c.png" as imageF5128e97f84e245c
+import "resources/assets/icons/dwm-ilustrasi-home-pakai-doku-e-wallet-aja.svg" as iconDwmIlustrasiHomePakaiDokuEWalletAja
+import "resources/assets/icons/dwm-ilustrasi-home-yuk-daftar-qris.svg" as iconDwmIlustrasiHomeYukDaftarQris
+import "resources/assets/icons/bi-info-circle-fill-3.svg" as iconBiInfoCircleFill3
+import "resources/assets/icons/icon-content-clear-24px.svg" as iconIconContentClear24px
+import "resources/assets/icons/line-13.svg" as iconLine13
+import "resources/assets/icons/group-92.svg" as iconGroup92
+import "resources/assets/icons/group-92-2.svg" as iconGroup922
+import "resources/assets/icons/line-13-2.svg" as iconLine132
+import "resources/assets/icons/mail-filled.svg" as iconMailFilled
+import "resources/assets/icons/group-92-3.svg" as iconGroup923
+import "resources/assets/icons/check-circle-fill.svg" as iconCheckCircleFill
+import "resources/assets/icons/fingerprint-outlined.svg" as iconFingerprintOutlined
+import "resources/assets/icons/group-92-4.svg" as iconGroup924
+import "resources/assets/icons/check-circle-fill-2.svg" as iconCheckCircleFill2
+
+export sectionContentFullWidth = frame {
+  title: "_section-content / Property 1=full width",
+  left: 0px,
+  top: 0px,
+  width: 390px,
+  height: 56px,
+  layout: {direction: .column, item-gap: 24px},
+  fill: colorTokens.colors.neutral-00,
+  overflow: .visible,
+  padding: [16px, 0px],
+  children: [slotComponent, frame495],
+
+  slotComponent = frame : bottomSheetLib.slotComponentContent {}
+
+  frame495 = frame {
+    width: 100%,
+    height: 40px,
+    display: .none,
+    layout: {item-gap: 16px},
+    overflow: .visible,
+    padding: [0px, 16px]
+  }
+}
+
+export sectionContentWithContainer = frame {
+  title: "_section-content / Property 1=with container",
+  left: 0px,
+  top: 104px,
+  width: 390px,
+  height: 56px,
+  layout: {direction: .column, item-gap: 24px},
+  fill: colorTokens.colors.neutral-00,
+  overflow: .visible,
+  padding: 16px,
+  children: [slotComponent, frame495],
+
+  slotComponent = frame : bottomSheetLib.slotComponentContent {}
+
+  frame495 = frame {
+    width: 100%,
+    height: 40px,
+    display: .none,
+    layout: {item-gap: 16px},
+    overflow: .visible,
+    padding: [0px, 16px]
+  }
+}
+
+export sectionContentWithoutContainer = frame {
+  title: "_section-content / Property 1=without container",
+  left: 0px,
+  top: 208px,
+  width: 390px,
+  layout: {direction: .column, item-gap: 16px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: slotComponent,
+
+  slotComponent = frame : bottomSheetLib.slotComponentContent {}
+}
+
+export bodyContentFullSection = frame {
+  title: "Body Content / Variants=Full Section",
+  left: 0px,
+  top: 360px,
+  width: 390px,
+  height: 671px,
+  layout: {direction: .column},
+  overflow: .visible,
+  children: sectionContent,
+
+  sectionContent = frame : sectionContentWithContainer {
+    height: 671px
+  }
+}
+
+export bodyContentTwoSection = frame {
+  title: "Body Content / Variants=Two Section",
+  left: 468px,
+  top: 360px,
+  width: 390px,
+  layout: {direction: .column, item-gap: 16px},
+  overflow: .visible,
+  children: [sectionContent, sectionContent2],
+
+  sectionContent = frame : sectionContentWithContainer {
+    height: .auto
+  }
+
+  sectionContent2 = frame : sectionContentWithContainer {
+    height: .auto
+  }
+}
+
+export bodyContentThreeSection = frame {
+  title: "Body Content / Variants=Three Section",
+  left: 936px,
+  top: 360px,
+  width: 390px,
+  layout: {direction: .column, item-gap: 16px},
+  overflow: .visible,
+  children: [sectionContent, sectionContent2, sectionContent3],
+
+  sectionContent = frame : sectionContentWithContainer {
+    height: .auto
+  }
+
+  sectionContent2 = frame : sectionContentWithContainer {
+    height: .auto
+  }
+
+  sectionContent3 = frame : sectionContentWithContainer {
+    height: .auto
+  }
+}
+
+export bodyContentFourSection = frame {
+  title: "Body Content / Variants=Four Section",
+  left: 1404px,
+  top: 360px,
+  width: 390px,
+  layout: {direction: .column, item-gap: 16px},
+  overflow: .visible,
+  children: [sectionContent, sectionContent2, sectionContent3, sectionContent4],
+
+  sectionContent = frame : sectionContentWithContainer {
+    height: .auto
+  }
+
+  sectionContent2 = frame : sectionContentWithContainer {
+    height: .auto
+  }
+
+  sectionContent3 = frame : sectionContentWithContainer {
+    height: .auto
+  }
+
+  sectionContent4 = frame : sectionContentWithContainer {
+    height: .auto
+  }
+}
+
+export testAnotherSettingsSection = frame {
+  title: "_test-another-settings-section",
+  left: 0px,
+  top: 1245px,
+  layout: {direction: .column},
+  fill: colorTokens.colors.neutral-00,
+  overflow: .visible,
+  children: frame760,
+
+  frame760 = frame {
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [frame755, frame756, frame760, frame758, frame759],
+
+    frame755 = frame {
+      layout: {direction: .column, item-gap: 16px},
+      overflow: .visible,
+      padding: [16px, 0px],
+      children: [frame754, pathCopy2],
+
+      frame754 = frame {
+        layout: {align-items: .center, item-gap: 24px},
+        overflow: .visible,
+        padding: [0px, 16px],
+        children: [dwIcon, ubahProfil],
+
+        dwIcon = asset {
+          width: 24px,
+          height: 24px,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: iconDwIconAkunTentangOutline
+        }
+
+        ubahProfil = text {
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Tentang DOKU E-Wallet",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.429
+        }
+      }
+
+      pathCopy2 = asset {
+        width: 360px,
+        height: 1px,
+        contents: iconPathCopy22
+      }
+    }
+
+    frame756 = frame {
+      layout: {direction: .column, item-gap: 16px},
+      overflow: .visible,
+      padding: [16px, 0px],
+      children: [frame754, pathCopy2],
+
+      frame754 = frame {
+        layout: {align-items: .center, item-gap: 24px},
+        overflow: .visible,
+        padding: [0px, 16px],
+        children: [dwIcon, ubahProfil],
+
+        dwIcon = asset {
+          width: 24px,
+          height: 24px,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: iconDwIconAkunKebijakanPrivasiOutline
+        }
+
+        ubahProfil = text {
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Kebijakan Privasi",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.429
+        }
+      }
+
+      pathCopy2 = asset {
+        width: 360px,
+        height: 1px,
+        contents: iconPathCopy22
+      }
+    }
+
+    frame760 = frame {
+      width: 360px,
+      height: 55px,
+      layout: {direction: .column, item-gap: 16px},
+      overflow: .visible,
+      padding: [16px, 0px],
+      children: [frame754, pathCopy2],
+
+      frame754 = frame {
+        layout: {align-items: .center, item-gap: 24px},
+        overflow: .visible,
+        padding: [0px, 16px],
+        children: [dwIcon, ubahProfil],
+
+        dwIcon = asset {
+          width: 24px,
+          height: 24px,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: iconDwIconAkunBantuanOutline
+        }
+
+        ubahProfil = text {
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Pusat Bantuan",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.429
+        }
+      }
+
+      pathCopy2 = asset {
+        width: 360px,
+        height: 1px,
+        contents: iconPathCopy22
+      }
+    }
+
+    frame758 = frame {
+      width: 360px,
+      height: 55px,
+      layout: {direction: .column, item-gap: 16px},
+      overflow: .visible,
+      padding: [16px, 0px],
+      children: [frame754, pathCopy2],
+
+      frame754 = frame {
+        layout: {align-items: .center, item-gap: 24px},
+        overflow: .visible,
+        padding: [0px, 16px],
+        children: [dwIcon, ubahProfil],
+
+        dwIcon = asset {
+          width: 24px,
+          height: 24px,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: iconDwIconAkunHapusAkunOutline
+        }
+
+        ubahProfil = text {
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Hapus Akun",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.429
+        }
+      }
+
+      pathCopy2 = asset {
+        width: 360px,
+        height: 1px,
+        contents: iconPathCopy22
+      }
+    }
+
+    frame759 = frame {
+      width: 360px,
+      height: 55px,
+      layout: {direction: .column, item-gap: 16px},
+      overflow: .visible,
+      padding: [16px, 0px],
+      children: [frame754, pathCopy2],
+
+      frame754 = frame {
+        layout: {align-items: .center, item-gap: 24px},
+        overflow: .visible,
+        padding: [0px, 16px],
+        children: [dwIcon, ubahProfil],
+
+        dwIcon = asset {
+          width: 24px,
+          height: 24px,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: iconDwIconAkunKeluarOutline
+        }
+
+        ubahProfil = text {
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Keluar",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.429
+        }
+      }
+
+      pathCopy2 = asset {
+        width: 360px,
+        height: 1px,
+        display: .none,
+        contents: iconPathCopy22
+      }
+    }
+  }
+}
+
+export testListProfileSettings = frame {
+  title: "_test-list-profile-settings",
+  left: 0px,
+  top: 1660px,
+  layout: {direction: .column},
+  fill: colorTokens.colors.neutral-00,
+  overflow: .visible,
+  children: [frame755, frame756, frame757, frame758],
+
+  frame755 = frame {
+    layout: {direction: .column, item-gap: 16px},
+    overflow: .visible,
+    padding: [16px, 0px],
+    children: [frame754, pathCopy2],
+
+    frame754 = frame {
+      layout: {align-items: .center, item-gap: 24px},
+      overflow: .visible,
+      padding: [0px, 16px],
+      children: [dwIcon, ubahProfil],
+
+      dwIcon = asset {
+        width: 24px,
+        height: 24px,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: iconDwIconAkunUbahProfileOutline
+      }
+
+      ubahProfil = text {
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: "Ubah Profil",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.429
+      }
+    }
+
+    pathCopy2 = asset {
+      width: 360px,
+      height: 1px,
+      contents: iconPathCopy22
+    }
+  }
+
+  frame756 = frame {
+    layout: {direction: .column, item-gap: 16px},
+    overflow: .visible,
+    padding: [16px, 0px],
+    children: [frame754, pathCopy2],
+
+    frame754 = frame {
+      layout: {align-items: .center, item-gap: 24px},
+      overflow: .visible,
+      padding: [0px, 16px],
+      children: [dwIcon, ubahProfil],
+
+      dwIcon = asset {
+        width: 24px,
+        height: 24px,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: iconDwIconAkunUbahPinOutline
+      }
+
+      ubahProfil = text {
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: "Ubah PIN",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.429
+      }
+    }
+
+    pathCopy2 = asset {
+      width: 360px,
+      height: 1px,
+      contents: iconPathCopy22
+    }
+  }
+
+  frame757 = frame {
+    width: 360px,
+    height: 55px,
+    layout: {direction: .column, item-gap: 16px},
+    overflow: .visible,
+    padding: [16px, 0px],
+    children: [frame754, pathCopy2],
+
+    frame754 = frame {
+      layout: {align-items: .center, item-gap: 24px},
+      overflow: .visible,
+      padding: [0px, 16px],
+      children: [dwIcon, ubahProfil],
+
+      dwIcon = asset {
+        width: 24px,
+        height: 24px,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: iconDwIconAkunLupaPinOutline
+      }
+
+      ubahProfil = text {
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: "Lupa PIN",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.429
+      }
+    }
+
+    pathCopy2 = asset {
+      width: 360px,
+      height: 1px,
+      contents: iconPathCopy22
+    }
+  }
+
+  frame758 = frame {
+    width: 360px,
+    height: 55px,
+    layout: {direction: .column, item-gap: 16px},
+    overflow: .visible,
+    padding: [16px, 0px],
+    children: [frame849, pathCopy2],
+
+    frame849 = frame {
+      width: 344px,
+      layout: {justify-content: .space-between, item-gap: 16px},
+      overflow: .visible,
+      children: [frame754, toggle],
+
+      frame754 = frame {
+        layout: {align-items: .center, item-gap: 24px},
+        overflow: .visible,
+        padding: [0px, 16px],
+        children: [dwIcon, ubahProfil],
+
+        dwIcon = asset {
+          width: 24px,
+          height: 24px,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: iconDwIconAkunSmartLoginOutline2
+        }
+
+        ubahProfil = text {
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Smart Login",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.429
+        }
+      }
+
+      toggle = frame {
+        layout: {align-items: .center, item-gap: 8px},
+        overflow: .visible,
+        children: [switchDefault, labelHere],
+
+        switchDefault = frame {
+          width: 33px,
+          height: 16px,
+          overflow: .visible,
+          children: [rectangle5, right, left],
+
+          rectangle5 = shape {
+            left: 0px,
+            top: 0px,
+            width: 33px,
+            height: 16px,
+            fill: rgb(80%, 80%, 80%),
+            border: rgb(80%, 80%, 80%),
+            type: .rect,
+            corner-radius: 16px
+          }
+
+          right = shape {
+            left: 19px,
+            top: 2px,
+            width: 12px,
+            height: 12px,
+            display: .none,
+            fill: rgb(98.0392%, 98.0392%, 98.0392%),
+            type: .ellipse
+          }
+
+          left = shape {
+            left: 2px,
+            top: 2px,
+            width: 12px,
+            height: 12px,
+            fill: rgb(98.0392%, 98.0392%, 98.0392%),
+            type: .ellipse
+          }
+        }
+
+        labelHere = text {
+          display: .none,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Label here",
+          font-size: 16,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1
+        }
+      }
+    }
+
+    pathCopy2 = asset {
+      width: 360px,
+      height: 1px,
+      display: .none,
+      contents: iconPathCopy22
+    }
+  }
+}
+
+export testLabelAccount = frame {
+  title: "_test-label-account",
+  left: 0px,
+  top: 2012px,
+  layout: {direction: .column},
+  overflow: .visible,
+  children: userStatus,
+
+  userStatus = frame {
+    width: 329px,
+    height: 48px,
+    layout: {direction: .column, justify-content: .center, item-gap: 10px},
+    fill: colorTokens.colors.green-60,
+    corner-radius: 8px,
+    overflow: .visible,
+    padding: 16px,
+    children: group12,
+
+    group12 = frame {
+      layout: {align-items: .center, item-gap: 8px},
+      overflow: .visible,
+      children: [group9, akunKamuBelumTerv],
+
+      group9 = asset {
+        width: 14px,
+        height: 14px,
+        contents: iconGroup9
+      }
+
+      akunKamuBelumTerv = text {
+        width: 137px,
+        height: 12px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "DOKU Premium Account",
+        font-size: 13,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+    }
+  }
+}
+
+export testProfileInfo = frame {
+  title: "_test-profile-info",
+  left: 0px,
+  top: 2188px,
+  width: 328px,
+  height: 39px,
+  overflow: .visible,
+  children: frame751,
+
+  frame751 = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    layout: {align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [avatar, frame750],
+
+    avatar = asset {
+      width: 21.43px,
+      height: 21.43px,
+      contents: iconAvatar
+    }
+
+    frame750 = frame {
+      layout: {direction: .column, item-gap: 3px},
+      overflow: .visible,
+      children: [carlaWildner, label081234567123],
+
+      carlaWildner = text {
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: "Carla Wildner",
+        font-size: 16,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      label081234567123 = text {
+        width: 171px,
+        fill: colorTokens.colors.neutral-60,
+        contents: "DOKU ID: 1827928374",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+  }
+}
+
+export infoSectionBayarPakaiDoku = frame {
+  title: "_info-section/bayar-pakai-DOKU",
+  left: 0px,
+  top: 2355px,
+  width: 358px,
+  layout: {align-items: .center, item-gap: 8px},
+  fill: rgb(0%, 50.98%, 49.0196%),
+  shadow: {
+    drop-shadow: {
+      color: rgb(93.33%, 93.33%, 93.33%, 87.0588%),
+      offset: point(0px, 0px),
+      blur-radius: 22px,
+      spread: 7px
+    }
+  },
+  corner-radius: 8px,
+  padding: [8px, 16px],
+  children: [label, frame14326, caraMudah2, dwmIlustrasi],
+
+  label = text {
+    width: 45px,
+    height: 45px,
+    display: .none,
+    fill: .black,
+    contents: "😘",
+    font-size: 50,
+    font-family: "Open Sans",
+    font-style: "Bold"
+  }
+
+  frame14326 = frame {
+    width: 218px,
+    height: 80px,
+    layout: {direction: .column, item-gap: 16px},
+    overflow: .visible,
+    children: [frame33517, buttonLargeFilledDefault],
+
+    frame33517 = frame {
+      width: 100%,
+      layout: {direction: .column, item-gap: 2px},
+      overflow: .visible,
+      children: [mauBayarTransaksi, pakaiDokuEWalletAja],
+
+      mauBayarTransaksi = text {
+        fill: colorTokens.colors.neutral-00,
+        contents: "Mau bayar transaksi?",
+        font-size: 12,
+        font-family: "Inter",
+        font-style: "Regular"
+      }
+
+      pakaiDokuEWalletAja = text {
+        width: 100%,
+        fill: colorTokens.colors.neutral-00,
+        contents: "Pakai DOKU e-Wallet aja",
+        font-size: 14,
+        font-family: "Inter",
+        font-style: "Bold"
+      }
+    }
+
+    buttonLargeFilledDefault = frame {
+      width: 166px,
+      height: 32px,
+      layout: {direction: .row},
+      overflow: .visible
+    }
+  }
+
+  caraMudah2 = frame {
+    width: 115px,
+    height: 99px,
+    display: .none,
+    overflow: .visible,
+    children: caraMudah2,
+
+    caraMudah2 = shape {
+      left: 0px,
+      top: 0px,
+      width: 115px,
+      height: 99px,
+      fill: {image: {ref: imageF5128e97f84e245c, sizing: .fit}},
+      type: .rect
+    }
+  }
+
+  dwmIlustrasi = asset {
+    width: 100px,
+    height: 100px,
+    contents: iconDwmIlustrasiHomePakaiDokuEWalletAja
+  }
+}
+
+export infoSectionQris = frame {
+  title: "_info-section/QRIS",
+  left: 0px,
+  top: 2599px,
+  width: 358px,
+  layout: {align-items: .center, item-gap: 8px},
+  fill: colorTokens.colors.yellow-70,
+  shadow: {
+    drop-shadow: {
+      color: rgb(93.33%, 93.33%, 93.33%, 87.0588%),
+      offset: point(0px, 0px),
+      blur-radius: 22px,
+      spread: 7px
+    }
+  },
+  corner-radius: 8px,
+  padding: [8px, 16px],
+  children: [label, frame14326, caraMudah2, dwmIlustrasi],
+
+  label = text {
+    width: 45px,
+    height: 45px,
+    display: .none,
+    fill: .black,
+    contents: "😘",
+    font-size: 50,
+    font-family: "Open Sans",
+    font-style: "Bold"
+  }
+
+  frame14326 = frame {
+    width: 218px,
+    height: 80px,
+    layout: {direction: .column, item-gap: 16px},
+    overflow: .visible,
+    children: [frame33517, buttonLargeFilledDefault],
+
+    frame33517 = frame {
+      width: 100%,
+      layout: {direction: .column, item-gap: 2px},
+      overflow: .visible,
+      children: [terimaPembayaranDenganMudah, daftarQrisPenjual],
+
+      terimaPembayaranDenganMudah = text {
+        fill: colorTokens.colors.neutral-00,
+        contents: "Terima pembayaran dengan mudah",
+        font-size: 12,
+        font-family: "Inter",
+        font-style: "Regular"
+      }
+
+      daftarQrisPenjual = text {
+        width: 100%,
+        fill: colorTokens.colors.neutral-00,
+        contents: "Daftar QRIS Penjual",
+        font-size: 14,
+        font-family: "Inter",
+        font-style: "Bold"
+      }
+    }
+
+    buttonLargeFilledDefault = frame {
+      width: 174px,
+      height: 32px,
+      layout: {direction: .row},
+      overflow: .visible
+    }
+  }
+
+  caraMudah2 = frame {
+    width: 115px,
+    height: 99px,
+    display: .none,
+    overflow: .visible,
+    children: caraMudah2,
+
+    caraMudah2 = shape {
+      left: 0px,
+      top: 0px,
+      width: 115px,
+      height: 99px,
+      fill: {image: {ref: imageF5128e97f84e245c, sizing: .fit}},
+      type: .rect
+    }
+  }
+
+  dwmIlustrasi = asset {
+    width: 100px,
+    height: 100px,
+    contents: iconDwmIlustrasiHomeYukDaftarQris
+  }
+}
+
+export collateralMessageAppUpdate = frame {
+  title: "Collateral Message / Property 1=app-update",
+  left: 0px,
+  top: 2843px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 12px},
+  fill: colorTokens.colors.neutral-00,
+  border: colorTokens.colors.cyan-60,
+  corner-radius: 4px,
+  overflow: .visible,
+  padding: 16px,
+  children: [container, line13, frame846],
+
+  container = frame {
+    width: 100%,
+    layout: {justify-content: .space-between, item-gap: 16px},
+    children: [help24px, frame846, iconContentClear24px],
+
+    help24px = frame {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      overflow: .visible
+    }
+
+    frame846 = frame {
+      layout: {align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [biInfoCircleFill, frame847],
+
+      biInfoCircleFill = asset {
+        width: 24px,
+        height: 24px,
+        fill: colorTokens.colors.cyan-80,
+        contents: iconBiInfoCircleFill3
+      }
+
+      frame847 = frame {
+        layout: {direction: .column, justify-content: .center, item-gap: 8px},
+        overflow: .visible,
+        children: [
+          perbaruiDokuEWalletYuk,
+          untukPengalamanYangLebihBaikSegeraPerbaruiAplikasiDokuEWallet
+        ],
+
+        perbaruiDokuEWalletYuk = text {
+          width: 226.82px,
+          fill: rgb(20%, 20%, 20%),
+          contents: "Perbarui DOKU e-Wallet, yuk!",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.14
+        }
+
+        untukPengalamanYangLebihBaikSegeraPerbaruiAplikasiDokuEWallet = text {
+          width: 226.82px,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Untuk pengalaman yang lebih baik, segera perbarui aplikasi DOKU e-Wallet",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.33
+        }
+      }
+    }
+
+    iconContentClear24px = asset {
+      width: 12px,
+      height: 12px,
+      fill: rgb(70.1961%, 70.1961%, 70.1961%),
+      contents: iconIconContentClear24px
+    }
+  }
+
+  line13 = asset {
+    width: 328px,
+    height: 0px,
+    fill: rgb(80%, 80%, 80%),
+    contents: iconLine13
+  }
+
+  frame846 = frame {
+    width: 100%,
+    layout: {
+      justify-content: .space-between,
+      align-items: .center,
+      item-gap: 16px
+    },
+    overflow: .visible,
+    children: [perbarui, group92],
+
+    perbarui = text {
+      fill: colorTokens.colors.cyan-70,
+      contents: "Perbarui",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.429
+    }
+
+    group92 = asset {
+      width: 24px,
+      height: 24px,
+      contents: iconGroup92
+    }
+  }
+}
+
+export collateralMessageNonKyc = frame {
+  title: "Collateral Message / Property 1=non-kyc",
+  left: 0px,
+  top: 3031px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 12px},
+  fill: colorTokens.colors.neutral-00,
+  border: colorTokens.colors.red-70,
+  corner-radius: 4px,
+  overflow: .visible,
+  padding: 16px,
+  children: [container, line13, frame846],
+
+  container = frame {
+    width: 100%,
+    layout: {
+      justify-content: .space-between,
+      align-items: .center,
+      item-gap: 16px
+    },
+    children: [help24px, frame846, iconContentClear24px, group92],
+
+    help24px = frame {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      overflow: .visible
+    }
+
+    frame846 = frame {
+      layout: {align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [biInfoCircleFill, frame847],
+
+      biInfoCircleFill = asset {
+        width: 24px,
+        height: 24px,
+        fill: colorTokens.colors.red-70,
+        contents: iconBiInfoCircleFill3
+      }
+
+      frame847 = frame {
+        layout: {direction: .column, justify-content: .center, item-gap: 8px},
+        overflow: .visible,
+        children: [
+          verifikasiDataKamu,
+          untukMeningkatkanKeamananAkunHarapVerifikasiDataYangDiperlukan
+        ],
+
+        verifikasiDataKamu = text {
+          width: 226.82px,
+          fill: rgb(20%, 20%, 20%),
+          contents: "Verifikasi Data Kamu ",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.14
+        }
+
+        untukMeningkatkanKeamananAkunHarapVerifikasiDataYangDiperlukan = text {
+          width: 226.82px,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Untuk meningkatkan keamanan akun, harap verifikasi data yang diperlukan",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+    }
+
+    iconContentClear24px = asset {
+      width: 12px,
+      height: 12px,
+      display: .none,
+      fill: rgb(70.1961%, 70.1961%, 70.1961%),
+      contents: iconIconContentClear24px
+    }
+
+    group92 = asset {
+      width: 24px,
+      height: 24px,
+      contents: iconGroup922
+    }
+  }
+
+  line13 = asset {
+    width: 326px,
+    height: 0px,
+    display: .none,
+    fill: rgb(80%, 80%, 80%),
+    contents: iconLine132
+  }
+
+  frame846 = frame {
+    width: 100%,
+    display: .none,
+    layout: {
+      justify-content: .space-between,
+      align-items: .center,
+      item-gap: 16px
+    },
+    overflow: .visible,
+    children: [verfikasiSekarang, group92],
+
+    verfikasiSekarang = text {
+      fill: colorTokens.colors.red-70,
+      contents: "Verfikasi Sekarang",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.167
+    }
+
+    group92 = asset {
+      width: 24px,
+      height: 24px,
+      contents: iconGroup922
+    }
+  }
+}
+
+export collateralMessageVerifyEmail = frame {
+  title: "Collateral Message / Property 1=verify-email",
+  left: 0px,
+  top: 3175px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 12px},
+  fill: colorTokens.colors.neutral-00,
+  border: colorTokens.colors.red-70,
+  corner-radius: 4px,
+  overflow: .visible,
+  padding: 16px,
+  children: [container, line13, frame846],
+
+  container = frame {
+    width: 100%,
+    layout: {
+      justify-content: .space-between,
+      align-items: .center,
+      item-gap: 16px
+    },
+    children: [help24px, frame846, iconContentClear24px, group92],
+
+    help24px = frame {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      overflow: .visible
+    }
+
+    frame846 = frame {
+      layout: {align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [mail, frame847],
+
+      mail = asset {
+        width: 24px,
+        height: 24px,
+        fill: colorTokens.colors.red-70,
+        contents: iconMailFilled
+      }
+
+      frame847 = frame {
+        layout: {direction: .column, justify-content: .center, item-gap: 8px},
+        overflow: .visible,
+        children: [
+          verifikasiEmailKamu,
+          untukMeningkatkanKeamananAkunHarapVerifikasiEmail
+        ],
+
+        verifikasiEmailKamu = text {
+          width: 226.82px,
+          fill: rgb(20%, 20%, 20%),
+          contents: "Verifikasi Email Kamu ",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.14
+        }
+
+        untukMeningkatkanKeamananAkunHarapVerifikasiEmail = text {
+          width: 226.82px,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Untuk meningkatkan keamanan akun, harap verifikasi email",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+    }
+
+    iconContentClear24px = asset {
+      width: 12px,
+      height: 12px,
+      display: .none,
+      fill: rgb(70.1961%, 70.1961%, 70.1961%),
+      contents: iconIconContentClear24px
+    }
+
+    group92 = asset {
+      width: 24px,
+      height: 24px,
+      contents: iconGroup922
+    }
+  }
+
+  line13 = asset {
+    width: 326px,
+    height: 0px,
+    display: .none,
+    fill: rgb(80%, 80%, 80%),
+    contents: iconLine132
+  }
+
+  frame846 = frame {
+    width: 100%,
+    display: .none,
+    layout: {
+      justify-content: .space-between,
+      align-items: .center,
+      item-gap: 16px
+    },
+    overflow: .visible,
+    children: [verfikasiSekarang, group92],
+
+    verfikasiSekarang = text {
+      fill: colorTokens.colors.red-70,
+      contents: "Verfikasi Sekarang",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.167
+    }
+
+    group92 = asset {
+      width: 24px,
+      height: 24px,
+      contents: iconGroup922
+    }
+  }
+}
+
+export collateralMessageKycProcess = frame {
+  title: "Collateral Message / Property 1=kyc-process",
+  left: 0px,
+  top: 3319px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 12px},
+  fill: colorTokens.colors.neutral-00,
+  border: colorTokens.colors.yellow-50,
+  corner-radius: 4px,
+  overflow: .visible,
+  padding: 16px,
+  children: [container, line13, frame846],
+
+  container = frame {
+    width: 100%,
+    layout: {justify-content: .space-between, item-gap: 16px},
+    children: [help24px, frame846, iconContentClear24px],
+
+    help24px = frame {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      overflow: .visible
+    }
+
+    frame846 = frame {
+      width: 305px,
+      layout: {align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [biInfoCircleFill, frame847],
+
+      biInfoCircleFill = asset {
+        width: 24px,
+        height: 24px,
+        fill: colorTokens.colors.yellow-60,
+        contents: iconBiInfoCircleFill3
+      }
+
+      frame847 = frame {
+        width: 265px,
+        layout: {direction: .column, justify-content: .center, item-gap: 8px},
+        overflow: .visible,
+        children: [verifikasiDataSedangDiproses, silakanTungguDalam2X24JamYa],
+
+        verifikasiDataSedangDiproses = text {
+          width: 226.82px,
+          fill: rgb(20%, 20%, 20%),
+          contents: "Verifikasi Data sedang Diproses",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.14
+        }
+
+        silakanTungguDalam2X24JamYa = text {
+          width: 100%,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Silakan tunggu dalam 2 x 24 jam, ya",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+    }
+
+    iconContentClear24px = asset {
+      width: 12px,
+      height: 12px,
+      fill: rgb(70.1961%, 70.1961%, 70.1961%),
+      contents: iconIconContentClear24px
+    }
+  }
+
+  line13 = asset {
+    width: 326px,
+    height: 0px,
+    display: .none,
+    fill: rgb(80%, 80%, 80%),
+    contents: iconLine132
+  }
+
+  frame846 = frame {
+    width: 100%,
+    display: .none,
+    layout: {
+      justify-content: .space-between,
+      align-items: .center,
+      item-gap: 16px
+    },
+    overflow: .visible,
+    children: [verfikasiSekarang, group92],
+
+    verfikasiSekarang = text {
+      fill: colorTokens.colors.yellow-70,
+      contents: "Verfikasi Sekarang",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.167
+    }
+
+    group92 = asset {
+      width: 24px,
+      height: 24px,
+      contents: iconGroup923
+    }
+  }
+}
+
+export collateralMessageKycSuccess = frame {
+  title: "Collateral Message / Property 1=kyc-success",
+  left: 0px,
+  top: 3445px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 12px},
+  fill: colorTokens.colors.neutral-00,
+  border: colorTokens.colors.green-50,
+  corner-radius: 4px,
+  overflow: .visible,
+  padding: 16px,
+  children: [container, line13, frame846],
+
+  container = frame {
+    width: 100%,
+    layout: {justify-content: .space-between, item-gap: 16px},
+    children: [help24px, frame846, iconContentClear24px],
+
+    help24px = frame {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      overflow: .visible
+    }
+
+    frame846 = frame {
+      width: 305px,
+      layout: {align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [checkCircleFill, frame847],
+
+      checkCircleFill = asset {
+        width: 24px,
+        height: 24px,
+        fill: colorTokens.colors.green-50,
+        contents: iconCheckCircleFill
+      }
+
+      frame847 = frame {
+        width: 265px,
+        layout: {direction: .column, justify-content: .center, item-gap: 8px},
+        overflow: .visible,
+        children: [verifikasiAkunBerhasil, selamatMenikmatiSemuaMenuDokuEWallet],
+
+        verifikasiAkunBerhasil = text {
+          width: 226.82px,
+          fill: rgb(20%, 20%, 20%),
+          contents: "Verifikasi Akun Berhasil!",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.14
+        }
+
+        selamatMenikmatiSemuaMenuDokuEWallet = text {
+          width: 100%,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Selamat menikmati semua menu DOKU e-Wallet",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+    }
+
+    iconContentClear24px = asset {
+      width: 12px,
+      height: 12px,
+      fill: rgb(70.1961%, 70.1961%, 70.1961%),
+      contents: iconIconContentClear24px
+    }
+  }
+
+  line13 = asset {
+    width: 326px,
+    height: 0px,
+    display: .none,
+    fill: rgb(80%, 80%, 80%),
+    contents: iconLine132
+  }
+
+  frame846 = frame {
+    width: 100%,
+    display: .none,
+    layout: {
+      justify-content: .space-between,
+      align-items: .center,
+      item-gap: 16px
+    },
+    overflow: .visible,
+    children: [verfikasiSekarang, group92],
+
+    verfikasiSekarang = text {
+      fill: colorTokens.colors.yellow-70,
+      contents: "Verfikasi Sekarang",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.167
+    }
+
+    group92 = asset {
+      width: 24px,
+      height: 24px,
+      contents: iconGroup923
+    }
+  }
+}
+
+export collateralMessageBiometricActivate = frame {
+  title: "Collateral Message / Property 1=biometric-activate",
+  left: 0px,
+  top: 3589px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 12px},
+  fill: colorTokens.colors.neutral-00,
+  border: colorTokens.colors.neutral-20,
+  corner-radius: 4px,
+  overflow: .visible,
+  padding: 16px,
+  children: [container, line13, frame846],
+
+  container = frame {
+    width: 100%,
+    layout: {justify-content: .space-between, item-gap: 16px},
+    children: [help24px, frame846, iconContentClear24px],
+
+    help24px = frame {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      overflow: .visible
+    }
+
+    frame846 = frame {
+      layout: {align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [fingerprint, frame847],
+
+      fingerprint = asset {
+        width: 32px,
+        height: 32px,
+        fill: colorTokens.colors.neutral-80,
+        contents: iconFingerprintOutlined
+      }
+
+      frame847 = frame {
+        layout: {direction: .column, justify-content: .center, item-gap: 8px},
+        overflow: .visible,
+        children: [
+          aktifkanBiometrikYuk,
+          pakaiSmartLoginUntukTransaksiYangLebihCepatDanAman
+        ],
+
+        aktifkanBiometrikYuk = text {
+          width: 226.82px,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Aktifkan Biometrik, yuk",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.14
+        }
+
+        pakaiSmartLoginUntukTransaksiYangLebihCepatDanAman = text {
+          width: 226.82px,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Pakai Smart Login untuk transaksi yang lebih cepat dan aman",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+    }
+
+    iconContentClear24px = asset {
+      width: 12px,
+      height: 12px,
+      fill: rgb(70.1961%, 70.1961%, 70.1961%),
+      contents: iconIconContentClear24px
+    }
+  }
+
+  line13 = asset {
+    width: 328px,
+    height: 0px,
+    fill: rgb(80%, 80%, 80%),
+    contents: iconLine13
+  }
+
+  frame846 = frame {
+    width: 100%,
+    layout: {
+      justify-content: .space-between,
+      align-items: .center,
+      item-gap: 16px
+    },
+    overflow: .visible,
+    children: [aktifkan, group92],
+
+    aktifkan = text {
+      fill: colorTokens.colors.red-50,
+      contents: "Aktifkan",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.14
+    }
+
+    group92 = asset {
+      width: 24px,
+      height: 24px,
+      contents: iconGroup924
+    }
+  }
+}
+
+export collateralMessageGamification = frame {
+  title: "Collateral Message / Property 1=gamification",
+  left: 0px,
+  top: 3781px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 12px},
+  fill: colorTokens.colors.neutral-00,
+  border: colorTokens.colors.neutral-20,
+  corner-radius: 4px,
+  overflow: .visible,
+  padding: 16px,
+  children: [container, frame14351, line13, frame846],
+
+  container = frame {
+    width: 100%,
+    layout: {justify-content: .space-between, item-gap: 16px},
+    children: [help24px, frame847, iconContentClear24px],
+
+    help24px = frame {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      overflow: .visible
+    }
+
+    frame847 = frame {
+      width: 316px,
+      layout: {direction: .column, justify-content: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [
+        label10xGratisBiayaTransfer,
+        selesaikanMisiUntukMendapatkanKeuntungan
+      ],
+
+      label10xGratisBiayaTransfer = text {
+        width: 226.82px,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: "10x Gratis Biaya Transfer",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      selesaikanMisiUntukMendapatkanKeuntungan = text {
+        width: 100%,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: "Selesaikan misi untuk mendapatkan keuntungan",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.167
+      }
+    }
+
+    iconContentClear24px = asset {
+      width: 12px,
+      height: 12px,
+      fill: rgb(70.1961%, 70.1961%, 70.1961%),
+      contents: iconIconContentClear24px
+    }
+  }
+
+  frame14351 = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 12px},
+    overflow: .visible,
+    children: [frame14348, frame14349],
+
+    frame14348 = frame {
+      width: 100%,
+      layout: {align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [checkCircleFill, frame14347],
+
+      checkCircleFill = asset {
+        width: 20px,
+        height: 20px,
+        fill: colorTokens.colors.green-50,
+        contents: iconCheckCircleFill2
+      }
+
+      frame14347 = frame {
+        width: 292px,
+        layout: {direction: .column, item-gap: 4px},
+        overflow: .visible,
+        children: [bayarPakaiQris, cobaPembayaranQrisSebelum30Oktober],
+
+        bayarPakaiQris = text {
+          fill: colorTokens.colors.neutral-80,
+          contents: "Bayar Pakai QRIS",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.167
+        }
+
+        cobaPembayaranQrisSebelum30Oktober = text {
+          fill: colorTokens.colors.neutral-70,
+          contents: "Coba pembayaran QRIS sebelum 30 Oktober",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+    }
+
+    frame14349 = frame {
+      width: 100%,
+      layout: {align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [checkCircleFill, frame14347],
+
+      checkCircleFill = asset {
+        width: 20px,
+        height: 20px,
+        fill: colorTokens.colors.neutral-20,
+        contents: iconCheckCircleFill2
+      }
+
+      frame14347 = frame {
+        width: 292px,
+        layout: {direction: .column, item-gap: 4px},
+        overflow: .visible,
+        children: [undangTeman, ajak1TemanUntukMemakaiDokuEWallet],
+
+        undangTeman = text {
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Undang Teman",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.167
+        }
+
+        ajak1TemanUntukMemakaiDokuEWallet = text {
+          fill: colorTokens.colors.neutral-70,
+          contents: "Ajak 1 teman untuk memakai DOKU e-Wallet",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+    }
+  }
+
+  line13 = asset {
+    width: 326px,
+    height: 0px,
+    display: .none,
+    fill: rgb(80%, 80%, 80%),
+    contents: iconLine132
+  }
+
+  frame846 = frame {
+    width: 100%,
+    display: .none,
+    layout: {
+      justify-content: .space-between,
+      align-items: .center,
+      item-gap: 16px
+    },
+    overflow: .visible,
+    children: [aktifkanSekarang, group92],
+
+    aktifkanSekarang = text {
+      fill: colorTokens.colors.red-50,
+      contents: "Aktifkan Sekarang",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.167
+    }
+
+    group92 = asset {
+      width: 24px,
+      height: 24px,
+      contents: iconGroup924
+    }
+  }
+}

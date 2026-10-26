@@ -1,0 +1,288 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/check-circle-24px.svg" as iconCheckCircle24px
+import "resources/assets/icons/icon-font-awesome-free-solid-c-check-circle.svg" as iconIconFontAwesomeFreeSolidCCheckCircle
+import "resources/assets/icons/auto-added-frame.svg" as iconAutoAddedFrame
+import "resources/assets/icons/icon-font-awesome-free-solid-e-exclamation-circle.svg" as iconIconFontAwesomeFreeSolidEExclamationCircle
+import "resources/assets/icons/cancel-16px-2.svg" as iconCancel16px2
+import "resources/assets/icons/icon-font-awesome-free-solid-t-times-circle.svg" as iconIconFontAwesomeFreeSolidTTimesCircle
+import "resources/assets/icons/help-24px-2.svg" as iconHelp24px2
+import "resources/assets/icons/icon-font-awesome-free-solid-q-question-circle.svg" as iconIconFontAwesomeFreeSolidQQuestionCircle
+
+export toastSuccess = frame {
+  title: "Toast / State=Success",
+  left: 0px,
+  top: 0px,
+  width: 384px,
+  layout: {direction: .column, item-gap: 16px},
+  fill: colorTokens.colors.green-10,
+  shadow: [
+    {
+      drop-shadow: {
+        color: rgb(6.27%, 9.41%, 15.6863%, 3.1373%),
+        offset: point(0px, 8px),
+        blur-radius: 8px,
+        spread: -4px
+      }
+    },
+    {
+      drop-shadow: {
+        color: rgb(6.27%, 9.41%, 15.6863%, 7.84%),
+        offset: point(0px, 20px),
+        blur-radius: 24px,
+        spread: -4px
+      }
+    }
+  ],
+  corner-radius: 4px,
+  padding: 16px,
+  children: container,
+
+  container = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 8px},
+    children: [
+      checkCircle24px,
+      iconFontAwesomeFreeSolidCCheckCircle,
+      successAlertHereSYouCanSeeASuccessAlert
+    ],
+
+    checkCircle24px = asset {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      fill: colorTokens.colors.green-80,
+      contents: iconCheckCircle24px
+    }
+
+    iconFontAwesomeFreeSolidCCheckCircle = asset {
+      width: 16px,
+      height: 16px,
+      fill: rgb(0%, 50.98%, 49.0196%),
+      contents: iconIconFontAwesomeFreeSolidCCheckCircle
+    }
+
+    successAlertHereSYouCanSeeASuccessAlert = text {
+      width: 328px,
+      fill: colorTokens.colors.green-80,
+      subrange: {
+        range: [13, 50],
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      },
+      contents: "Success Alert - Here's you can see a success alert",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.14
+    }
+  }
+}
+
+export toastWarning = frame {
+  title: "Toast / State=Warning",
+  left: 0px,
+  top: 96px,
+  width: 384px,
+  layout: {direction: .column, item-gap: 16px},
+  fill: colorTokens.colors.yellow-10,
+  shadow: [
+    {
+      drop-shadow: {
+        color: rgb(6.27%, 9.41%, 15.6863%, 3.1373%),
+        offset: point(0px, 8px),
+        blur-radius: 8px,
+        spread: -4px
+      }
+    },
+    {
+      drop-shadow: {
+        color: rgb(6.27%, 9.41%, 15.6863%, 7.84%),
+        offset: point(0px, 20px),
+        blur-radius: 24px,
+        spread: -4px
+      }
+    }
+  ],
+  corner-radius: 4px,
+  padding: 16px,
+  children: container,
+
+  container = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 8px},
+    children: [
+      autoAddedFrame,
+      iconFontAwesomeFreeSolidEExclamationCircle,
+      warningAlertHereSYouCanSeeAWarningAlert
+    ],
+
+    autoAddedFrame = asset {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      fill: colorTokens.colors.yellow-80,
+      contents: iconAutoAddedFrame
+    }
+
+    iconFontAwesomeFreeSolidEExclamationCircle = asset {
+      width: 16px,
+      height: 16px,
+      fill: colorTokens.colors.yellow-70,
+      contents: iconIconFontAwesomeFreeSolidEExclamationCircle
+    }
+
+    warningAlertHereSYouCanSeeAWarningAlert = text {
+      width: 328px,
+      fill: colorTokens.colors.yellow-80,
+      subrange: {
+        range: [13, 50],
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      },
+      contents: "Warning Alert - Here's you can see a warning alert",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.14
+    }
+  }
+}
+
+export toastError = frame {
+  title: "Toast / State=Error",
+  left: 0px,
+  top: 192px,
+  width: 353px,
+  layout: {direction: .column, item-gap: 16px},
+  fill: colorTokens.colors.red-10,
+  shadow: [
+    {
+      drop-shadow: {
+        color: rgb(6.27%, 9.41%, 15.6863%, 3.1373%),
+        offset: point(0px, 8px),
+        blur-radius: 8px,
+        spread: -4px
+      }
+    },
+    {
+      drop-shadow: {
+        color: rgb(6.27%, 9.41%, 15.6863%, 7.84%),
+        offset: point(0px, 20px),
+        blur-radius: 24px,
+        spread: -4px
+      }
+    }
+  ],
+  corner-radius: 4px,
+  padding: 16px,
+  children: container,
+
+  container = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 8px},
+    children: [
+      cancel16px,
+      iconFontAwesomeFreeSolidTTimesCircle,
+      errorAlertHereSYouCanSeeAnErrorAlert
+    ],
+
+    cancel16px = asset {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      fill: colorTokens.colors.red-80,
+      contents: iconCancel16px2
+    }
+
+    iconFontAwesomeFreeSolidTTimesCircle = asset {
+      width: 16px,
+      height: 16px,
+      fill: colorTokens.colors.red-70,
+      contents: iconIconFontAwesomeFreeSolidTTimesCircle
+    }
+
+    errorAlertHereSYouCanSeeAnErrorAlert = text {
+      width: 297px,
+      fill: colorTokens.colors.red-80,
+      subrange: {
+        range: [11, 47],
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      },
+      contents: "Error Alert - Here's you can see an error alert",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.14
+    }
+  }
+}
+
+export toastNeutral = frame {
+  title: "Toast / State=Neutral",
+  left: 0px,
+  top: 288px,
+  width: 384px,
+  layout: {direction: .column, item-gap: 16px},
+  fill: rgb(98.0392%, 98.0392%, 98.0392%),
+  shadow: [
+    {
+      drop-shadow: {
+        color: rgb(6.27%, 9.41%, 15.6863%, 3.1373%),
+        offset: point(0px, 8px),
+        blur-radius: 8px,
+        spread: -4px
+      }
+    },
+    {
+      drop-shadow: {
+        color: rgb(6.27%, 9.41%, 15.6863%, 7.84%),
+        offset: point(0px, 20px),
+        blur-radius: 24px,
+        spread: -4px
+      }
+    }
+  ],
+  corner-radius: 4px,
+  padding: 16px,
+  children: container,
+
+  container = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 8px},
+    children: [
+      help24px,
+      iconFontAwesomeFreeSolidQQuestionCircle,
+      questionAlertHereSYouCanSeeAWarningAlert
+    ],
+
+    help24px = asset {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      contents: iconHelp24px2
+    }
+
+    iconFontAwesomeFreeSolidQQuestionCircle = asset {
+      width: 16px,
+      height: 16px,
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: iconIconFontAwesomeFreeSolidQQuestionCircle
+    }
+
+    questionAlertHereSYouCanSeeAWarningAlert = text {
+      width: 328px,
+      fill: rgb(40%, 40%, 40%),
+      subrange: {
+        range: [14, 51],
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      },
+      contents: "Question Alert - Here's you can see a warning alert",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.14
+    }
+  }
+}

@@ -1,0 +1,1510 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/keyboard-icon-operation-divide.svg" as iconKeyboardIconOperationDivide
+import "resources/assets/icons/path.svg" as iconPath
+import "resources/assets/icons/path-2.svg" as iconPath2
+import "resources/assets/icons/rectangle-3.svg" as iconRectangle3
+import "resources/assets/icons/rectangle.svg" as iconRectangle
+import "resources/assets/icons/vector-17.svg" as iconVector17
+import "resources/assets/icons/group-5.svg" as iconGroup5
+import "resources/assets/icons/group-4.svg" as iconGroup4
+import "resources/assets/icons/group-3.svg" as iconGroup3
+import "resources/assets/icons/action-button-done-light-big.svg" as iconActionButtonDoneLightBig
+import "resources/assets/icons/nav-bar-light.svg" as iconNavBarLight
+import "resources/assets/icons/delete.svg" as iconDelete
+import "resources/assets/icons/group-13.svg" as iconGroup13
+import "resources/assets/icons/icon-face-id.svg" as iconIconFaceId
+
+export keyboardItemFalseNumber = frame {
+  title: "_keyboard-item / pressed=false, variant=number",
+  left: 0px,
+  top: 0px,
+  width: 52px,
+  height: 52px,
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px
+  },
+  corner-radius: 8px,
+  overflow: .visible,
+  padding: 20px,
+  children: label1,
+
+  label1 = text {
+    fill: colorTokens.colors.neutral-80,
+    contents: "1",
+    font-size: 20,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.4,
+    align: .center
+  }
+}
+
+export keyboardItemTrueNumber = frame {
+  title: "_keyboard-item / pressed=true, variant=number",
+  left: 100px,
+  top: 0px,
+  width: 52px,
+  height: 52px,
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px
+  },
+  fill: colorTokens.colors.neutral-20,
+  corner-radius: 8px,
+  overflow: .visible,
+  padding: 20px,
+  children: label1,
+
+  label1 = text {
+    fill: colorTokens.colors.neutral-80,
+    contents: "1",
+    font-size: 20,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.4,
+    align: .center
+  }
+}
+
+export keyboardItemTrueNumber2 = frame {
+  title: "_keyboard-item / pressed=true, variant=number",
+  left: 0px,
+  top: 100px,
+  width: 52px,
+  height: 52px,
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px
+  },
+  fill: colorTokens.colors.neutral-20,
+  corner-radius: 8px,
+  overflow: .visible,
+  padding: 20px,
+  children: label1,
+
+  label1 = text {
+    fill: colorTokens.colors.neutral-80,
+    contents: "1",
+    font-size: 22,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    align: .center
+  }
+}
+
+export keyboardItemFalseOperator = frame {
+  title: "_keyboard-item / pressed=false, variant=operator",
+  left: 0px,
+  top: 200px,
+  width: 52px,
+  height: 52px,
+  fill: colorTokens.colors.neutral-20,
+  corner-radius: 8px,
+  children: keyboardIconOperation,
+
+  keyboardIconOperation = asset {
+    left: 16px,
+    top: 16px,
+    width: 20px,
+    height: 20px,
+    fill: colorTokens.colors.neutral-80,
+    contents: iconKeyboardIconOperationDivide
+  }
+}
+
+export keyboardItemTrueOperator = frame {
+  title: "_keyboard-item / pressed=true, variant=operator",
+  left: 100px,
+  top: 200px,
+  width: 52px,
+  height: 52px,
+  fill: colorTokens.colors.neutral-30,
+  corner-radius: 8px,
+  children: keyboardIconOperation,
+
+  keyboardIconOperation = asset {
+    left: 16px,
+    top: 16px,
+    width: 20px,
+    height: 20px,
+    fill: colorTokens.colors.neutral-80,
+    contents: iconKeyboardIconOperationDivide
+  }
+}
+
+export keyboardIconOperationBackspace = frame {
+  title: "_keyboard-icon-operation / operation=backspace",
+  left: 0px,
+  top: 380px,
+  width: 28px,
+  height: 28px,
+  overflow: .visible,
+  children: [path, path2, path2Copy],
+
+  path = asset {
+    left: 3px,
+    top: 7px,
+    width: 22.39px,
+    height: 14.46px,
+    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+    contents: iconPath
+  }
+
+  path2 = asset {
+    left: 13.75px,
+    top: 11px,
+    width: 6.34px,
+    height: 6.34px,
+    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+    contents: iconPath2
+  }
+
+  path2Copy = asset {
+    left: 0px,
+    top: 0px,
+    width: 6.34px,
+    height: 6.34px,
+    transform: [-1, 0, 20.09, 0, 1, 11],
+    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+    contents: iconPath2
+  }
+}
+
+export keyboardNumberAndroid = frame {
+  title: "Keyboard Number / Property 1=android",
+  left: 0px,
+  top: 536px,
+  layout: {direction: .column},
+  overflow: .visible,
+  children: [androidKeyboard, navBarLight],
+
+  androidKeyboard = frame {
+    width: 360px,
+    height: 206px,
+    children: [page1, actionButton],
+
+    page1 = frame {
+      left: 0px,
+      top: 0px,
+      width: 360px,
+      height: 206px,
+      children: numberKeyboard,
+
+      numberKeyboard = frame {
+        left: 0px,
+        top: 0px,
+        width: 360px,
+        height: 206px,
+        children: [
+          rectangle3,
+          dot,
+          layer0,
+          layer,
+          layer9,
+          layer8,
+          layer7,
+          layer6,
+          layer5,
+          layer4,
+          layer3,
+          layer2,
+          layer1,
+          group5,
+          group4,
+          group3
+        ],
+
+        rectangle3 = asset {
+          left: 0px,
+          top: 0px,
+          width: 360px,
+          height: 206px,
+          fill: rgb(91.37%, 91.76%, 93.33%),
+          contents: iconRectangle3
+        }
+
+        dot = frame {
+          left: 182px,
+          top: 154px,
+          width: 84px,
+          height: 44px,
+          children: [rectangle, label],
+
+          rectangle = asset {
+            left: 0px,
+            top: 0px,
+            width: 84px,
+            height: 44px,
+            contents: iconRectangle
+          }
+
+          label = text {
+            left: 38.29px,
+            top: 1px,
+            fill: .black,
+            contents: ".",
+            font-size: 32,
+            font-family: "Roboto",
+            font-style: "Regular"
+          }
+        }
+
+        layer0 = frame {
+          left: 93px,
+          top: 154px,
+          width: 84px,
+          height: 44px,
+          children: [rectangle, label0],
+
+          rectangle = asset {
+            left: 0px,
+            top: 0px,
+            width: 84px,
+            height: 44px,
+            contents: iconRectangle
+          }
+
+          label0 = text {
+            left: 33.5px,
+            top: 3px,
+            fill: .black,
+            contents: "0",
+            font-size: 30,
+            font-family: "Roboto",
+            font-style: "Regular"
+          }
+        }
+
+        layer = frame {
+          left: 4px,
+          top: 154px,
+          width: 84px,
+          height: 44px,
+          children: rectangle,
+
+          rectangle = frame {
+            left: 0px,
+            top: 0px,
+            width: 84px,
+            height: 44px,
+            children: [vector, vector2, label],
+
+            vector = asset {
+              left: 0px,
+              top: 0px,
+              width: 84px,
+              height: 44px,
+              fill: .black,
+              contents: iconVector17
+            }
+
+            vector2 = asset {
+              left: 0px,
+              top: 0px,
+              width: 84px,
+              height: 44px,
+              fill: colorTokens.colors.neutral-00,
+              contents: iconVector17
+            }
+
+            label = text {
+              left: 37.29px,
+              top: 3px,
+              fill: .black,
+              contents: ",",
+              font-size: 32,
+              font-family: "Roboto",
+              font-style: "Regular"
+            }
+          }
+        }
+
+        layer9 = frame {
+          left: 182px,
+          top: 105px,
+          width: 84px,
+          height: 44px,
+          children: [rectangle, label9],
+
+          rectangle = asset {
+            left: 0px,
+            top: 0px,
+            width: 84px,
+            height: 44px,
+            contents: iconRectangle
+          }
+
+          label9 = text {
+            left: 33.5px,
+            top: 3px,
+            fill: .black,
+            contents: "9",
+            font-size: 30,
+            font-family: "Roboto",
+            font-style: "Regular"
+          }
+        }
+
+        layer8 = frame {
+          left: 93px,
+          top: 105px,
+          width: 84px,
+          height: 44px,
+          children: [rectangle, label8],
+
+          rectangle = asset {
+            left: 0px,
+            top: 0px,
+            width: 84px,
+            height: 44px,
+            contents: iconRectangle
+          }
+
+          label8 = text {
+            left: 33.5px,
+            top: 3px,
+            fill: .black,
+            contents: "8",
+            font-size: 30,
+            font-family: "Roboto",
+            font-style: "Regular"
+          }
+        }
+
+        layer7 = frame {
+          left: 4px,
+          top: 105px,
+          width: 84px,
+          height: 44px,
+          children: [rectangle, label7],
+
+          rectangle = asset {
+            left: 0px,
+            top: 0px,
+            width: 84px,
+            height: 44px,
+            contents: iconRectangle
+          }
+
+          label7 = text {
+            left: 33.5px,
+            top: 3px,
+            fill: .black,
+            contents: "7",
+            font-size: 30,
+            font-family: "Roboto",
+            font-style: "Regular"
+          }
+        }
+
+        layer6 = frame {
+          left: 182px,
+          top: 56px,
+          width: 84px,
+          height: 44px,
+          children: [rectangle, label6],
+
+          rectangle = asset {
+            left: 0px,
+            top: 0px,
+            width: 84px,
+            height: 44px,
+            contents: iconRectangle
+          }
+
+          label6 = text {
+            left: 33.5px,
+            top: 3px,
+            fill: .black,
+            contents: "6",
+            font-size: 30,
+            font-family: "Roboto",
+            font-style: "Regular"
+          }
+        }
+
+        layer5 = frame {
+          left: 93px,
+          top: 56px,
+          width: 84px,
+          height: 44px,
+          children: [rectangle, label5],
+
+          rectangle = asset {
+            left: 0px,
+            top: 0px,
+            width: 84px,
+            height: 44px,
+            contents: iconRectangle
+          }
+
+          label5 = text {
+            left: 33.5px,
+            top: 3px,
+            fill: .black,
+            contents: "5",
+            font-size: 30,
+            font-family: "Roboto",
+            font-style: "Regular"
+          }
+        }
+
+        layer4 = frame {
+          left: 4px,
+          top: 56px,
+          width: 84px,
+          height: 44px,
+          children: [rectangle, label4],
+
+          rectangle = asset {
+            left: 0px,
+            top: 0px,
+            width: 84px,
+            height: 44px,
+            contents: iconRectangle
+          }
+
+          label4 = text {
+            left: 33.5px,
+            top: 3px,
+            fill: .black,
+            contents: "4",
+            font-size: 30,
+            font-family: "Roboto",
+            font-style: "Regular"
+          }
+        }
+
+        layer3 = frame {
+          left: 182px,
+          top: 7px,
+          width: 84px,
+          height: 44px,
+          children: [rectangle, label3],
+
+          rectangle = asset {
+            left: 0px,
+            top: 0px,
+            width: 84px,
+            height: 44px,
+            contents: iconRectangle
+          }
+
+          label3 = text {
+            left: 33.5px,
+            top: 3px,
+            fill: .black,
+            contents: "3",
+            font-size: 30,
+            font-family: "Roboto",
+            font-style: "Regular"
+          }
+        }
+
+        layer2 = frame {
+          left: 93px,
+          top: 7px,
+          width: 84px,
+          height: 44px,
+          children: [rectangle, label2],
+
+          rectangle = asset {
+            left: 0px,
+            top: 0px,
+            width: 84px,
+            height: 44px,
+            contents: iconRectangle
+          }
+
+          label2 = text {
+            left: 33.5px,
+            top: 3px,
+            fill: .black,
+            contents: "2",
+            font-size: 30,
+            font-family: "Roboto",
+            font-style: "Regular"
+          }
+        }
+
+        layer1 = frame {
+          left: 4px,
+          top: 7px,
+          width: 84px,
+          height: 44px,
+          children: [rectangle, label1],
+
+          rectangle = asset {
+            left: 0px,
+            top: 0px,
+            width: 84px,
+            height: 44px,
+            contents: iconRectangle
+          }
+
+          label1 = text {
+            left: 33.5px,
+            top: 3px,
+            fill: .black,
+            contents: "1",
+            font-size: 30,
+            font-family: "Roboto",
+            font-style: "Regular"
+          }
+        }
+
+        group5 = asset {
+          left: 272px,
+          top: 7px,
+          width: 84px,
+          height: 44px,
+          contents: iconGroup5
+        }
+
+        group4 = asset {
+          left: 272px,
+          top: 56px,
+          width: 84px,
+          height: 44px,
+          contents: iconGroup4
+        }
+
+        group3 = asset {
+          left: 272px,
+          top: 105px,
+          width: 84px,
+          height: 44px,
+          contents: iconGroup3
+        }
+      }
+    }
+
+    actionButton = asset {
+      left: 272px,
+      top: 154px,
+      width: 84px,
+      height: 44px,
+      contents: iconActionButtonDoneLightBig
+    }
+  }
+
+  navBarLight = asset {
+    width: 360px,
+    height: 48px,
+    contents: iconNavBarLight
+  }
+}
+
+export keyboardNumberIos = frame {
+  title: "Keyboard Number / Property 1=ios",
+  left: 432px,
+  top: 536px,
+  width: 390px,
+  height: 291px,
+  overflow: .visible,
+  children: nativeIos,
+
+  nativeIos = frame {
+    left: 0px,
+    top: 0px,
+    width: 390px,
+    height: 302.64px,
+    children: keyboardLightHelper,
+
+    keyboardLightHelper = frame {
+      left: 0px,
+      top: 0px,
+      width: 390px,
+      height: 291px,
+      children: [
+        backgroundKeyboardBg,
+        layer0,
+        layer1,
+        layer2,
+        layer3,
+        layer4,
+        layer5,
+        layer6,
+        layer7,
+        layer8,
+        layer9,
+        delete,
+        dragger
+      ],
+
+      backgroundKeyboardBg = frame {
+        left: 0px,
+        top: 0px,
+        width: 390px,
+        height: 291px,
+        fill: rgb(80.78%, 82.35%, 85.098%, 69.8%),
+        filter: {type: .background-blur, radius: 70px},
+        overflow: .visible
+      }
+
+      layer0 = frame {
+        left: 134px,
+        top: 167px,
+        width: 122px,
+        height: 46px,
+        fill: colorTokens.colors.neutral-00,
+        shadow: {
+          drop-shadow: {
+            color: rgb(0%, 0%, 0%, 34.9%),
+            offset: point(0px, 1px),
+            blur-radius: 0px
+          }
+        },
+        corner-radius: 5px,
+        overflow: .visible,
+        children: [letters, number],
+
+        letters = text {
+          left: 2px,
+          top: 29px,
+          width: 117px,
+          display: .none,
+          fill: .black,
+          contents: "TUV",
+          font-size: 10,
+          font-family: "SF Pro Text",
+          font-style: "Bold",
+          letter-spacing: 17%,
+          align: .center
+        }
+
+        number = text {
+          left: 52.5px,
+          top: 7px,
+          fill: .black,
+          contents: "0",
+          font-size: 25,
+          font-family: "SF Pro Text",
+          font-style: "Regular",
+          letter-spacing: -2%,
+          align: .center
+        }
+      }
+
+      layer1 = frame {
+        left: 6px,
+        top: 6px,
+        width: 122px,
+        height: 46px,
+        corner-radius: 5px,
+        overflow: .visible,
+        children: [backgroundPrimaryBg, letters, number],
+
+        backgroundPrimaryBg = frame {
+          left: 0px,
+          top: 0px,
+          width: 122px,
+          height: 46px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: {
+            drop-shadow: {
+              color: rgb(0%, 0%, 0%, 30.1961%),
+              offset: point(0px, 1px),
+              blur-radius: 0px
+            }
+          },
+          corner-radius: 5px
+        }
+
+        letters = text {
+          left: 2px,
+          top: 29px,
+          width: 117px,
+          display: .none,
+          fill: .black,
+          subrange: [
+            {range: [0, 2], font-family: "SF Pro Text", font-style: "Heavy"},
+            {range: [2, 3], font-family: "SF Pro Text", font-style: "Heavy"}
+          ],
+          contents: "ABC",
+          font-size: 10,
+          font-family: "SF Pro Text",
+          font-style: "Bold",
+          letter-spacing: 17%,
+          align: .center
+        }
+
+        number = text {
+          left: 54.5px,
+          top: 0px,
+          fill: .black,
+          contents: "1",
+          font-size: 25,
+          font-family: "SF Pro Text",
+          font-style: "Regular",
+          letter-spacing: -2%,
+          align: .center
+        }
+      }
+
+      layer2 = frame {
+        left: 134px,
+        top: 6px,
+        width: 122px,
+        height: 46px,
+        corner-radius: 5px,
+        overflow: .visible,
+        children: [backgroundPrimaryBg, letters, number],
+
+        backgroundPrimaryBg = frame {
+          left: 0px,
+          top: 0px,
+          width: 122px,
+          height: 46px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: {
+            drop-shadow: {
+              color: rgb(0%, 0%, 0%, 30.1961%),
+              offset: point(0px, 1px),
+              blur-radius: 0px
+            }
+          },
+          corner-radius: 5px
+        }
+
+        letters = text {
+          left: 2px,
+          top: 29px,
+          width: 117px,
+          fill: .black,
+          contents: "ABC",
+          font-size: 10,
+          font-family: "SF Pro Text",
+          font-style: "Bold",
+          letter-spacing: 17%,
+          align: .center
+        }
+
+        number = text {
+          left: 53.5px,
+          top: 0px,
+          fill: .black,
+          contents: "2",
+          font-size: 25,
+          font-family: "SF Pro Text",
+          font-style: "Regular",
+          letter-spacing: -2%,
+          align: .center
+        }
+      }
+
+      layer3 = frame {
+        left: 262px,
+        top: 6px,
+        width: 122px,
+        height: 46px,
+        corner-radius: 5px,
+        overflow: .visible,
+        children: [backgroundPrimaryBg, letters, number],
+
+        backgroundPrimaryBg = frame {
+          left: 0px,
+          top: 0px,
+          width: 122px,
+          height: 46px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: {
+            drop-shadow: {
+              color: rgb(0%, 0%, 0%, 30.1961%),
+              offset: point(0px, 1px),
+              blur-radius: 0px
+            }
+          },
+          corner-radius: 5px
+        }
+
+        letters = text {
+          left: 2px,
+          top: 29px,
+          width: 117px,
+          fill: .black,
+          contents: "DEF",
+          font-size: 10,
+          font-family: "SF Pro Text",
+          font-style: "Bold",
+          letter-spacing: 17%,
+          align: .center
+        }
+
+        number = text {
+          left: 52.5px,
+          top: 0px,
+          fill: .black,
+          contents: "3",
+          font-size: 25,
+          font-family: "SF Pro Text",
+          font-style: "Regular",
+          letter-spacing: -2%,
+          align: .center
+        }
+      }
+
+      layer4 = frame {
+        left: 6px,
+        top: 59px,
+        width: 122px,
+        height: 47px,
+        corner-radius: 5px,
+        overflow: .visible,
+        children: [backgroundPrimaryBg, letters, number],
+
+        backgroundPrimaryBg = frame {
+          left: 0px,
+          top: 0px,
+          width: 122px,
+          height: 47px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: {
+            drop-shadow: {
+              color: rgb(0%, 0%, 0%, 30.1961%),
+              offset: point(0px, 1px),
+              blur-radius: 0px
+            }
+          },
+          corner-radius: 5px
+        }
+
+        letters = text {
+          left: 2px,
+          top: 30px,
+          width: 117px,
+          fill: .black,
+          contents: "GHI",
+          font-size: 10,
+          font-family: "SF Pro Text",
+          font-style: "Bold",
+          letter-spacing: 17%,
+          align: .center
+        }
+
+        number = text {
+          left: 52.5px,
+          top: 1px,
+          fill: .black,
+          contents: "4",
+          font-size: 25,
+          font-family: "SF Pro Text",
+          font-style: "Regular",
+          letter-spacing: -2%,
+          align: .center
+        }
+      }
+
+      layer5 = frame {
+        left: 134px,
+        top: 59px,
+        width: 122px,
+        height: 47px,
+        corner-radius: 5px,
+        overflow: .visible,
+        children: [backgroundPrimaryBg, letters, number],
+
+        backgroundPrimaryBg = frame {
+          left: 0px,
+          top: 0px,
+          width: 122px,
+          height: 47px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: {
+            drop-shadow: {
+              color: rgb(0%, 0%, 0%, 30.1961%),
+              offset: point(0px, 1px),
+              blur-radius: 0px
+            }
+          },
+          corner-radius: 5px
+        }
+
+        letters = text {
+          left: 2px,
+          top: 30px,
+          width: 117px,
+          fill: .black,
+          contents: "JKL",
+          font-size: 10,
+          font-family: "SF Pro Text",
+          font-style: "Bold",
+          letter-spacing: 17%,
+          align: .center
+        }
+
+        number = text {
+          left: 53.5px,
+          top: 1px,
+          fill: .black,
+          contents: "5",
+          font-size: 25,
+          font-family: "SF Pro Text",
+          font-style: "Regular",
+          letter-spacing: -2%,
+          align: .center
+        }
+      }
+
+      layer6 = frame {
+        left: 262px,
+        top: 59px,
+        width: 122px,
+        height: 47px,
+        corner-radius: 5px,
+        overflow: .visible,
+        children: [backgroundPrimaryBg, letters, number],
+
+        backgroundPrimaryBg = frame {
+          left: 0px,
+          top: 0px,
+          width: 122px,
+          height: 47px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: {
+            drop-shadow: {
+              color: rgb(0%, 0%, 0%, 30.1961%),
+              offset: point(0px, 1px),
+              blur-radius: 0px
+            }
+          },
+          corner-radius: 5px
+        }
+
+        letters = text {
+          left: 2px,
+          top: 30px,
+          width: 117px,
+          fill: .black,
+          contents: "MNO",
+          font-size: 10,
+          font-family: "SF Pro Text",
+          font-style: "Bold",
+          letter-spacing: 17%,
+          align: .center
+        }
+
+        number = text {
+          left: 52.5px,
+          top: 1px,
+          fill: .black,
+          contents: "6",
+          font-size: 25,
+          font-family: "SF Pro Text",
+          font-style: "Regular",
+          letter-spacing: -2%,
+          align: .center
+        }
+      }
+
+      layer7 = frame {
+        left: 6px,
+        top: 113px,
+        width: 122px,
+        height: 47px,
+        corner-radius: 5px,
+        overflow: .visible,
+        children: [backgroundPrimaryBg, letters, number],
+
+        backgroundPrimaryBg = frame {
+          left: 0px,
+          top: 0px,
+          width: 122px,
+          height: 47px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: {
+            drop-shadow: {
+              color: rgb(0%, 0%, 0%, 30.1961%),
+              offset: point(0px, 1px),
+              blur-radius: 0px
+            }
+          },
+          corner-radius: 5px
+        }
+
+        letters = text {
+          left: 2px,
+          top: 30px,
+          width: 117px,
+          fill: .black,
+          contents: "PQRS",
+          font-size: 10,
+          font-family: "SF Pro Text",
+          font-style: "Bold",
+          letter-spacing: 17%,
+          align: .center
+        }
+
+        number = text {
+          left: 53.5px,
+          top: 1px,
+          fill: .black,
+          contents: "7",
+          font-size: 25,
+          font-family: "SF Pro Text",
+          font-style: "Regular",
+          letter-spacing: -2%,
+          align: .center
+        }
+      }
+
+      layer8 = frame {
+        left: 134px,
+        top: 113px,
+        width: 122px,
+        height: 47px,
+        corner-radius: 5px,
+        overflow: .visible,
+        children: [backgroundPrimaryBg, letters, number],
+
+        backgroundPrimaryBg = frame {
+          left: 0px,
+          top: 0px,
+          width: 122px,
+          height: 47px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: {
+            drop-shadow: {
+              color: rgb(0%, 0%, 0%, 30.1961%),
+              offset: point(0px, 1px),
+              blur-radius: 0px
+            }
+          },
+          corner-radius: 5px
+        }
+
+        letters = text {
+          left: 2px,
+          top: 30px,
+          width: 117px,
+          fill: .black,
+          contents: "TUV",
+          font-size: 10,
+          font-family: "SF Pro Text",
+          font-style: "Bold",
+          letter-spacing: 17%,
+          align: .center
+        }
+
+        number = text {
+          left: 52.5px,
+          top: 1px,
+          fill: .black,
+          contents: "8",
+          font-size: 25,
+          font-family: "SF Pro Text",
+          font-style: "Regular",
+          letter-spacing: -2%,
+          align: .center
+        }
+      }
+
+      layer9 = frame {
+        left: 262px,
+        top: 113px,
+        width: 122px,
+        height: 47px,
+        corner-radius: 5px,
+        overflow: .visible,
+        children: [backgroundPrimaryBg, letters, number],
+
+        backgroundPrimaryBg = frame {
+          left: 0px,
+          top: 0px,
+          width: 122px,
+          height: 47px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: {
+            drop-shadow: {
+              color: rgb(0%, 0%, 0%, 30.1961%),
+              offset: point(0px, 1px),
+              blur-radius: 0px
+            }
+          },
+          corner-radius: 5px
+        }
+
+        letters = text {
+          left: 2px,
+          top: 30px,
+          width: 117px,
+          fill: .black,
+          contents: "WXYZ",
+          font-size: 10,
+          font-family: "SF Pro Text",
+          font-style: "Bold",
+          letter-spacing: 17%,
+          align: .center
+        }
+
+        number = text {
+          left: 52.5px,
+          top: 1px,
+          fill: .black,
+          contents: "9",
+          font-size: 25,
+          font-family: "SF Pro Text",
+          font-style: "Regular",
+          letter-spacing: -2%,
+          align: .center
+        }
+      }
+
+      delete = asset {
+        left: 309px,
+        top: 173px,
+        width: 32px,
+        height: 32px,
+        fill: .black,
+        contents: iconDelete
+      }
+
+      dragger = shape {
+        left: 127px,
+        top: 278px,
+        width: 135px,
+        height: 5px,
+        fill: .black,
+        type: .rect,
+        corner-radius: 5px
+      }
+    }
+  }
+}
+
+export keyboardNumberInputPin = frame {
+  title: "Keyboard Number / Property 1=input PIN",
+  left: 900px,
+  top: 536px,
+  width: 343px,
+  height: 347px,
+  overflow: .visible,
+  children: [
+    group13,
+    group11,
+    group8,
+    group5,
+    group12,
+    group10,
+    group7,
+    group4,
+    rectangle,
+    group9,
+    group6,
+    group3,
+    iconLayer
+  ],
+
+  group13 = asset {
+    left: 228.67px,
+    top: 260.25px,
+    width: 114.33px,
+    height: 86.75px,
+    contents: iconGroup13
+  }
+
+  group11 = frame {
+    left: 228.67px,
+    top: 173.5px,
+    width: 115px,
+    height: 87px,
+    children: [rectangle, label9],
+
+    rectangle = shape {
+      left: 0px,
+      top: 0px,
+      width: 114.33px,
+      height: 86.75px,
+      fill: colorTokens.colors.neutral-00,
+      type: .rect
+    }
+
+    label9 = text {
+      left: 50.33px,
+      top: 34.5px,
+      fill: rgb(20%, 20%, 20%),
+      contents: "9",
+      font-size: 22,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      align: .center
+    }
+  }
+
+  group8 = frame {
+    left: 228.67px,
+    top: 86.75px,
+    width: 115px,
+    height: 87px,
+    children: [rectangle, label6],
+
+    rectangle = shape {
+      left: 0px,
+      top: 0px,
+      width: 114.33px,
+      height: 86.75px,
+      fill: colorTokens.colors.neutral-00,
+      type: .rect
+    }
+
+    label6 = text {
+      left: 50.33px,
+      top: 34.25px,
+      fill: rgb(20%, 20%, 20%),
+      contents: "6",
+      font-size: 22,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      align: .center
+    }
+  }
+
+  group5 = frame {
+    left: 228.67px,
+    top: 0px,
+    width: 115px,
+    height: 87px,
+    children: [rectangle, label3],
+
+    rectangle = shape {
+      left: 0px,
+      top: 0px,
+      width: 114.33px,
+      height: 86.75px,
+      fill: colorTokens.colors.neutral-00,
+      type: .rect
+    }
+
+    label3 = text {
+      left: 50.33px,
+      top: 34px,
+      fill: rgb(20%, 20%, 20%),
+      contents: "3",
+      font-size: 22,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      align: .center
+    }
+  }
+
+  group12 = frame {
+    left: 114.33px,
+    top: 260.25px,
+    width: 115px,
+    height: 87px,
+    children: [rectangle, label0],
+
+    rectangle = shape {
+      left: 0px,
+      top: 0px,
+      width: 114.33px,
+      height: 86.75px,
+      fill: colorTokens.colors.neutral-00,
+      type: .rect
+    }
+
+    label0 = text {
+      left: 50.67px,
+      top: 34.75px,
+      fill: rgb(20%, 20%, 20%),
+      contents: "0",
+      font-size: 22,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      align: .center
+    }
+  }
+
+  group10 = frame {
+    left: 114.33px,
+    top: 173.5px,
+    width: 115px,
+    height: 87px,
+    children: [rectangle, label8],
+
+    rectangle = shape {
+      left: 0px,
+      top: 0px,
+      width: 114.33px,
+      height: 86.75px,
+      fill: colorTokens.colors.neutral-00,
+      type: .rect
+    }
+
+    label8 = text {
+      left: 50.67px,
+      top: 34.5px,
+      fill: rgb(20%, 20%, 20%),
+      contents: "8",
+      font-size: 22,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      align: .center
+    }
+  }
+
+  group7 = frame {
+    left: 114.33px,
+    top: 86.75px,
+    width: 115px,
+    height: 87px,
+    children: [rectangle, label5],
+
+    rectangle = shape {
+      left: 0px,
+      top: 0px,
+      width: 114.33px,
+      height: 86.75px,
+      fill: colorTokens.colors.neutral-00,
+      type: .rect
+    }
+
+    label5 = text {
+      left: 50.67px,
+      top: 34.25px,
+      fill: rgb(20%, 20%, 20%),
+      contents: "5",
+      font-size: 22,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      align: .center
+    }
+  }
+
+  group4 = frame {
+    left: 114.33px,
+    top: 0px,
+    width: 115px,
+    height: 87px,
+    children: [rectangle, label2],
+
+    rectangle = shape {
+      left: 0px,
+      top: 0px,
+      width: 114.33px,
+      height: 86.75px,
+      fill: colorTokens.colors.neutral-00,
+      type: .rect
+    }
+
+    label2 = text {
+      left: 50.67px,
+      top: 34px,
+      fill: rgb(20%, 20%, 20%),
+      contents: "2",
+      font-size: 22,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      align: .center
+    }
+  }
+
+  rectangle = shape {
+    left: 0px,
+    top: 260.25px,
+    width: 114.33px,
+    height: 86.75px,
+    fill: colorTokens.colors.neutral-00,
+    type: .rect
+  }
+
+  group9 = frame {
+    left: 0px,
+    top: 173.5px,
+    width: 115px,
+    height: 87px,
+    children: [rectangle, label7],
+
+    rectangle = shape {
+      left: 0px,
+      top: 0px,
+      width: 114.33px,
+      height: 86.75px,
+      fill: colorTokens.colors.neutral-00,
+      type: .rect
+    }
+
+    label7 = text {
+      left: 51px,
+      top: 34.5px,
+      fill: rgb(20%, 20%, 20%),
+      contents: "7",
+      font-size: 22,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      align: .center
+    }
+  }
+
+  group6 = frame {
+    left: 0px,
+    top: 86.75px,
+    width: 115px,
+    height: 87px,
+    children: [rectangle, label4],
+
+    rectangle = shape {
+      left: 0px,
+      top: 0px,
+      width: 114.33px,
+      height: 86.75px,
+      fill: colorTokens.colors.neutral-00,
+      type: .rect
+    }
+
+    label4 = text {
+      left: 51px,
+      top: 34.25px,
+      fill: rgb(20%, 20%, 20%),
+      contents: "4",
+      font-size: 22,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      align: .center
+    }
+  }
+
+  group3 = frame {
+    left: 0px,
+    top: 0px,
+    width: 115px,
+    height: 87px,
+    children: [rectangle, label1],
+
+    rectangle = shape {
+      left: 0px,
+      top: 0px,
+      width: 114.33px,
+      height: 86.75px,
+      fill: colorTokens.colors.neutral-00,
+      type: .rect
+    }
+
+    label1 = text {
+      left: 51px,
+      top: 34px,
+      fill: rgb(20%, 20%, 20%),
+      contents: "1",
+      font-size: 22,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      align: .center
+    }
+  }
+
+  iconLayer = asset {
+    left: 42px,
+    top: 288px,
+    width: 32px,
+    height: 32px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconIconFaceId
+  }
+}

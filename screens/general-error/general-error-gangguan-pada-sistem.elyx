@@ -1,0 +1,136 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/general-error-gangguan-pada-sistem.svg" as iconGeneralErrorGangguanPadaSistem
+import "resources/assets/icons/regular-nav-w-line-cross-empty-non-false.svg" as iconRegularNavWLineCrossEmptyNonFalse
+import "resources/assets/icons/bi-arrow-left.svg" as iconBiArrowLeft
+import "resources/assets/icons/bi-plus-2.svg" as iconBiPlus2
+
+export generalErrorGangguanPadaSistem = frame {
+  title: "general error/gangguan pada sistem",
+  left: 0px,
+  top: 0px,
+  width: 375px,
+  height: 812px,
+  fill: colorTokens.colors.neutral-00,
+  children: [frame442, regularNavWLine, frame731],
+
+  frame442 = frame {
+    left: 36px,
+    top: 135px,
+    layout: {direction: .column, align-items: .center, item-gap: 24px},
+    overflow: .visible,
+    children: [generalError, frame441],
+
+    generalError = asset {
+      width: 300px,
+      height: 300px,
+      contents: iconGeneralErrorGangguanPadaSistem
+    }
+
+    frame441 = frame {
+      layout: {direction: .column, align-items: .center, item-gap: 6px},
+      overflow: .visible,
+      children: [transferGagal, mohonMaafSaatIni, mohonMaafSaatIni2],
+
+      transferGagal = text {
+        width: 300px,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: "Terjadi gangguan pada sistem",
+        font-size: 20,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.5,
+        align: .center
+      }
+
+      mohonMaafSaatIni = text {
+        width: 304px,
+        height: 48px,
+        fill: rgb(0%, 0%, 0%, 60%),
+        contents: "Jangan khawatir! Silahkan coba kembali atau hubungi customer care kami",
+        font-size: 16,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.5,
+        align: .center
+      }
+
+      mohonMaafSaatIni2 = text {
+        width: 120px,
+        fill: rgb(60%, 60%, 60%),
+        contents: "Error Code : QR68",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.71
+      }
+    }
+  }
+
+  regularNavWLine = asset {
+    left: 0px,
+    top: 0px,
+    width: 375px,
+    height: 57.29px,
+    contents: iconRegularNavWLineCrossEmptyNonFalse
+  }
+
+  frame731 = frame {
+    left: 82px,
+    top: 705px,
+    layout: {direction: .column, align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [butuhBantuanKami, button],
+
+    butuhBantuanKami = text {
+      width: 128px,
+      height: 10.88px,
+      fill: rgb(27.0588%, 33.33%, 36.0784%),
+      contents: "Butuh bantuan kami?",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      align: .center
+    }
+
+    button = frame {
+      width: 100%,
+      layout: {direction: .column, align-items: .center, item-gap: 10px},
+      fill: colorTokens.colors.neutral-00,
+      border: colorTokens.colors.red-50,
+      corner-radius: 4px,
+      overflow: .visible,
+      padding: [12px, 24px],
+      children: content,
+
+      content = frame {
+        layout: {align-items: .center, item-gap: 8px},
+        children: [biArrowLeft, button, biPlus],
+
+        biArrowLeft = asset {
+          width: 14px,
+          height: 14px,
+          display: .none,
+          contents: iconBiArrowLeft
+        }
+
+        button = text {
+          fill: colorTokens.colors.red-60,
+          contents: "KE HALAMAN BANTUAN",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.14,
+          letter-spacing: 7.1%,
+          align: .center
+        }
+
+        biPlus = asset {
+          width: 14px,
+          height: 14px,
+          display: .none,
+          contents: iconBiPlus2
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2131 @@
+import "tokens/colors.elyx" as colorTokens
+import "controls/input-form.elyx" as inputFormLib
+import "blocks/topbar.elyx" as topbarLib
+import "controls/keyboard.elyx" as keyboardLib
+import "resources/assets/icons/status-bar-ios.svg" as iconStatusBarIos
+import "resources/assets/icons/rectangle-3-2.svg" as iconRectangle32
+import "resources/assets/icons/rectangle-2.svg" as iconRectangle2
+import "resources/assets/icons/vector-18.svg" as iconVector18
+import "resources/assets/icons/group-5-2.svg" as iconGroup52
+import "resources/assets/icons/group-4-2.svg" as iconGroup42
+import "resources/assets/icons/group-3-2.svg" as iconGroup32
+import "resources/assets/icons/action-button-done-light-big-2.svg" as iconActionButtonDoneLightBig2
+import "resources/assets/icons/nav-bar-light-2.svg" as iconNavBarLight2
+
+export verificationCodeSmsDefault = frame {
+  title: "Verification Code / phase=sms, type=default",
+  left: 0px,
+  top: 0px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 24px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: [row, pinInput, frame33551],
+
+  row = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 8px},
+    children: [masukanKodeVerifik, kodeVerifikasiYang],
+
+    masukanKodeVerifik = text {
+      width: 287.98px,
+      fill: colorTokens.colors.neutral-80,
+      contents: "Masukkan Kode Verifikasi",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    kodeVerifikasiYang = text {
+      width: 341px,
+      fill: colorTokens.colors.neutral-40,
+      contents: "Kode Verifikasi telah dikirim via SMS ke: 08123****898",
+      font-size: 16,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  pinInput = frame : inputFormLib.pinInput {
+    width: 100%,
+    layout.align-items: .center,
+    layout.direction: .row,
+    layout.item-gap: 16px,
+    layout.justify-content: .center
+  }
+
+  frame33551 = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 8px},
+    overflow: .visible,
+    children: [verificationChanceInfo, mohonTungguDalam1],
+
+    verificationChanceInfo = frame : verificationChanceInfoDefault {}
+
+    mohonTungguDalam1 = text {
+      width: 100%,
+      fill: colorTokens.colors.green-50,
+      contents: "Atau kirim via WhatsApp",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14,
+      align: .center
+    }
+  }
+}
+
+export verificationCodeSmsFilled = frame {
+  title: "Verification Code / phase=sms, type=filled",
+  left: 432px,
+  top: 0px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 24px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: [row, pinInput, frame33552],
+
+  row = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 8px},
+    children: [masukanKodeVerifik, kodeVerifikasiYang],
+
+    masukanKodeVerifik = text {
+      width: 287.98px,
+      fill: colorTokens.colors.neutral-80,
+      contents: "Masukkan Kode Verifikasi",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    kodeVerifikasiYang = text {
+      width: 341px,
+      fill: colorTokens.colors.neutral-40,
+      contents: "Kode Verifikasi telah dikirim via SMS ke: 08123****898",
+      font-size: 16,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  pinInput = frame {
+    width: 100%,
+    layout: {justify-content: .center, align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [
+      masterPinPasswordInput,
+      masterPinPasswordInput2,
+      masterPinPasswordInput3,
+      masterPinPasswordInput4,
+      masterPinPasswordInput5,
+      masterPinPasswordInput6
+    ],
+
+    masterPinPasswordInput = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+      border[0].color: rgb(92.549%, 92.549%, 92.549%),
+      fill[0].color: rgb(94.1176%, 94.1176%, 94.1176%)
+    }
+
+    masterPinPasswordInput2 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+      border[0].color: rgb(92.549%, 92.549%, 92.549%),
+      fill[0].color: rgb(94.1176%, 94.1176%, 94.1176%)
+    }
+
+    masterPinPasswordInput3 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+      border[0].color: rgb(92.549%, 92.549%, 92.549%),
+      fill[0].color: rgb(94.1176%, 94.1176%, 94.1176%)
+    }
+
+    masterPinPasswordInput4 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+      border[0].color: rgb(92.549%, 92.549%, 92.549%),
+      fill[0].color: rgb(94.1176%, 94.1176%, 94.1176%)
+    }
+
+    masterPinPasswordInput5 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+      border[0].color: rgb(92.549%, 92.549%, 92.549%),
+      fill[0].color: rgb(94.1176%, 94.1176%, 94.1176%)
+    }
+
+    masterPinPasswordInput6 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+      border[0].color: rgb(92.549%, 92.549%, 92.549%),
+      fill[0].color: rgb(94.1176%, 94.1176%, 94.1176%)
+    }
+  }
+
+  frame33552 = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 8px},
+    overflow: .visible,
+    children: [verificationChanceInfo, mohonTungguDalam1],
+
+    verificationChanceInfo = frame : verificationChanceInfoDefault {}
+
+    mohonTungguDalam1 = text {
+      width: 100%,
+      fill: colorTokens.colors.green-50,
+      contents: "Atau kirim via WhatsApp",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14,
+      align: .center
+    }
+  }
+}
+
+export verificationCodeSmsWrongSisa2 = frame {
+  title: "Verification Code / phase=sms, type=wrong-sisa-2",
+  left: 864px,
+  top: 0px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 24px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: [row, frame33553, frame33552],
+
+  row = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 8px},
+    children: [masukanKodeVerifik, kodeVerifikasiYang],
+
+    masukanKodeVerifik = text {
+      width: 287.98px,
+      fill: colorTokens.colors.neutral-80,
+      contents: "Masukkan Kode Verifikasi",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    kodeVerifikasiYang = text {
+      width: 341px,
+      fill: colorTokens.colors.neutral-40,
+      contents: "Kode Verifikasi telah dikirim via SMS ke: 08123****898",
+      font-size: 16,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  frame33553 = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [pinInput, kodeVerifikasiSala],
+
+    pinInput = frame {
+      width: 100%,
+      layout: {justify-content: .center, align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [
+        masterPinPasswordInput,
+        masterPinPasswordInput2,
+        masterPinPasswordInput3,
+        masterPinPasswordInput4,
+        masterPinPasswordInput5,
+        masterPinPasswordInput6
+      ],
+
+      masterPinPasswordInput = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput2 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput3 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput4 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput5 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput6 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+    }
+
+    kodeVerifikasiSala = text {
+      fill: colorTokens.colors.red-70,
+      contents: "Kode Verifikasi salah. 2 kesempatan tersisa",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+
+  frame33552 = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 8px},
+    overflow: .visible,
+    children: [verificationChanceInfo, mohonTungguDalam1],
+
+    verificationChanceInfo = frame : verificationChanceInfoDefault {}
+
+    mohonTungguDalam1 = text {
+      width: 100%,
+      fill: colorTokens.colors.green-50,
+      contents: "Atau kirim via WhatsApp",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14,
+      align: .center
+    }
+  }
+}
+
+export verificationCodeSmsWrongSisa1 = frame {
+  title: "Verification Code / phase=sms, type=wrong-sisa-1",
+  left: 1296px,
+  top: 0px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 24px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: [row, frame33554, frame33552],
+
+  row = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 8px},
+    children: [masukanKodeVerifik, kodeVerifikasiYang],
+
+    masukanKodeVerifik = text {
+      width: 287.98px,
+      fill: colorTokens.colors.neutral-80,
+      contents: "Masukkan Kode Verifikasi",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    kodeVerifikasiYang = text {
+      width: 341px,
+      fill: colorTokens.colors.neutral-40,
+      contents: "Kode Verifikasi telah dikirim via SMS ke: 08123****898",
+      font-size: 16,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  frame33554 = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [pinInput, kodeVerifikasiSala],
+
+    pinInput = frame {
+      width: 100%,
+      layout: {justify-content: .center, align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [
+        masterPinPasswordInput,
+        masterPinPasswordInput2,
+        masterPinPasswordInput3,
+        masterPinPasswordInput4,
+        masterPinPasswordInput5,
+        masterPinPasswordInput6
+      ],
+
+      masterPinPasswordInput = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput2 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput3 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput4 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput5 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput6 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+    }
+
+    kodeVerifikasiSala = text {
+      fill: colorTokens.colors.red-70,
+      contents: "Kode Verifikasi salah. 1 kesempatan tersisa",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+
+  frame33552 = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 8px},
+    overflow: .visible,
+    children: [verificationChanceInfo, mohonTungguDalam1],
+
+    verificationChanceInfo = frame : verificationChanceInfoDefault {
+      kodeVerifikasiCountDown {
+        contents: "Kirim ulang dalam 02:00\n(Sisa 1 kesempatan)"
+      }
+    }
+
+    mohonTungguDalam1 = text {
+      width: 100%,
+      fill: colorTokens.colors.green-50,
+      contents: "Atau kirim via WhatsApp",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14,
+      align: .center
+    }
+  }
+}
+
+export verificationCodeSmsExpired = frame {
+  title: "Verification Code / phase=sms, type=expired",
+  left: 1728px,
+  top: 0px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 24px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: [row, frame33555, frame33552],
+
+  row = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 8px},
+    children: [masukanKodeVerifik, kodeVerifikasiYang],
+
+    masukanKodeVerifik = text {
+      width: 287.98px,
+      fill: colorTokens.colors.neutral-80,
+      contents: "Masukkan Kode Verifikasi",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    kodeVerifikasiYang = text {
+      width: 341px,
+      fill: colorTokens.colors.neutral-40,
+      contents: "Kode Verifikasi telah dikirim via SMS ke: 08123****898",
+      font-size: 16,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  frame33555 = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [pinInput, kodeVerifikasiSala],
+
+    pinInput = frame {
+      width: 100%,
+      layout: {justify-content: .center, align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [
+        masterPinPasswordInput,
+        masterPinPasswordInput2,
+        masterPinPasswordInput3,
+        masterPinPasswordInput4,
+        masterPinPasswordInput5,
+        masterPinPasswordInput6
+      ],
+
+      masterPinPasswordInput = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput2 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput3 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput4 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput5 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput6 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+    }
+
+    kodeVerifikasiSala = text {
+      fill: colorTokens.colors.red-70,
+      contents: "Kode Verifikasi Kedaluwarsa",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+
+  frame33552 = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 8px},
+    overflow: .visible,
+    children: [verificationChanceInfo, mohonTungguDalam1],
+
+    verificationChanceInfo = frame : verificationChanceInfoDidnTGetCode {}
+
+    mohonTungguDalam1 = text {
+      width: 100%,
+      fill: colorTokens.colors.green-50,
+      contents: "Atau kirim via WhatsApp",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14,
+      align: .center
+    }
+  }
+}
+
+export verificationCodeWhatsappDefault = frame {
+  title: "Verification Code / phase=whatsapp, type=default",
+  left: 0px,
+  top: 295px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 24px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: [row, pinInput, frame33551],
+
+  row = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 8px},
+    children: [masukanKodeVerifik, kodeVerifikasiYang],
+
+    masukanKodeVerifik = text {
+      width: 287.98px,
+      fill: colorTokens.colors.neutral-80,
+      contents: "Masukkan Kode Verifikasi",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    kodeVerifikasiYang = text {
+      width: 341px,
+      fill: colorTokens.colors.neutral-40,
+      contents: "Kode Verifikasi telah dikirim via WhatsApp ke: 08123****898",
+      font-size: 16,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  pinInput = frame : inputFormLib.pinInput {
+    width: 100%,
+    layout.align-items: .center,
+    layout.direction: .row,
+    layout.item-gap: 16px,
+    layout.justify-content: .center
+  }
+
+  frame33551 = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 8px},
+    overflow: .visible,
+    children: [verificationChanceInfo, mohonTungguDalam1],
+
+    verificationChanceInfo = frame : verificationChanceInfoDefault {}
+
+    mohonTungguDalam1 = text {
+      width: 100%,
+      fill: colorTokens.colors.green-50,
+      contents: "Atau kirim via SMS",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14,
+      align: .center
+    }
+  }
+}
+
+export verificationCodeWhatsappFilled = frame {
+  title: "Verification Code / phase=whatsapp, type=filled",
+  left: 432px,
+  top: 295px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 24px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: [row, pinInput, frame33551],
+
+  row = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 8px},
+    children: [masukanKodeVerifik, kodeVerifikasiYang],
+
+    masukanKodeVerifik = text {
+      width: 287.98px,
+      fill: colorTokens.colors.neutral-80,
+      contents: "Masukkan Kode Verifikasi",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    kodeVerifikasiYang = text {
+      width: 341px,
+      fill: colorTokens.colors.neutral-40,
+      contents: "Kode Verifikasi telah dikirim via WhatsApp ke: 08123****898",
+      font-size: 16,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  pinInput = frame {
+    width: 100%,
+    layout: {justify-content: .center, align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [
+      masterPinPasswordInput,
+      masterPinPasswordInput2,
+      masterPinPasswordInput3,
+      masterPinPasswordInput4,
+      masterPinPasswordInput5,
+      masterPinPasswordInput6
+    ],
+
+    masterPinPasswordInput = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+      border[0].color: rgb(92.549%, 92.549%, 92.549%),
+      fill[0].color: rgb(94.1176%, 94.1176%, 94.1176%)
+    }
+
+    masterPinPasswordInput2 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+      border[0].color: rgb(92.549%, 92.549%, 92.549%),
+      fill[0].color: rgb(94.1176%, 94.1176%, 94.1176%)
+    }
+
+    masterPinPasswordInput3 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+      border[0].color: rgb(92.549%, 92.549%, 92.549%),
+      fill[0].color: rgb(94.1176%, 94.1176%, 94.1176%)
+    }
+
+    masterPinPasswordInput4 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+      border[0].color: rgb(92.549%, 92.549%, 92.549%),
+      fill[0].color: rgb(94.1176%, 94.1176%, 94.1176%)
+    }
+
+    masterPinPasswordInput5 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+      border[0].color: rgb(92.549%, 92.549%, 92.549%),
+      fill[0].color: rgb(94.1176%, 94.1176%, 94.1176%)
+    }
+
+    masterPinPasswordInput6 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+      border[0].color: rgb(92.549%, 92.549%, 92.549%),
+      fill[0].color: rgb(94.1176%, 94.1176%, 94.1176%)
+    }
+  }
+
+  frame33551 = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 8px},
+    overflow: .visible,
+    children: [verificationChanceInfo, mohonTungguDalam1],
+
+    verificationChanceInfo = frame : verificationChanceInfoDefault {}
+
+    mohonTungguDalam1 = text {
+      width: 100%,
+      fill: colorTokens.colors.green-50,
+      contents: "Atau kirim via SMS",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14,
+      align: .center
+    }
+  }
+}
+
+export verificationCodeWhatsappWrongSisa2 = frame {
+  title: "Verification Code / phase=whatsapp, type=wrong-sisa-2",
+  left: 864px,
+  top: 295px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 24px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: [row, frame33556, frame33551],
+
+  row = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 8px},
+    children: [masukanKodeVerifik, kodeVerifikasiYang],
+
+    masukanKodeVerifik = text {
+      width: 287.98px,
+      fill: colorTokens.colors.neutral-80,
+      contents: "Masukkan Kode Verifikasi",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    kodeVerifikasiYang = text {
+      width: 341px,
+      fill: colorTokens.colors.neutral-40,
+      contents: "Kode Verifikasi telah dikirim via WhatsApp ke: 08123****898",
+      font-size: 16,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  frame33556 = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [pinInput, kodeVerifikasiSala],
+
+    pinInput = frame {
+      width: 100%,
+      layout: {justify-content: .center, align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [
+        masterPinPasswordInput,
+        masterPinPasswordInput2,
+        masterPinPasswordInput3,
+        masterPinPasswordInput4,
+        masterPinPasswordInput5,
+        masterPinPasswordInput6
+      ],
+
+      masterPinPasswordInput = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput2 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput3 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput4 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput5 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput6 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+    }
+
+    kodeVerifikasiSala = text {
+      fill: colorTokens.colors.red-70,
+      contents: "Kode Verifikasi salah. 2 kesempatan tersisa",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+
+  frame33551 = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 8px},
+    overflow: .visible,
+    children: [verificationChanceInfo, mohonTungguDalam1],
+
+    verificationChanceInfo = frame : verificationChanceInfoDefault {}
+
+    mohonTungguDalam1 = text {
+      width: 100%,
+      fill: colorTokens.colors.green-50,
+      contents: "Atau kirim via SMS",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14,
+      align: .center
+    }
+  }
+}
+
+export verificationCodeWhatsappWrongSisa1 = frame {
+  title: "Verification Code / phase=whatsapp, type=wrong-sisa-1",
+  left: 1296px,
+  top: 295px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 24px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: [row, frame33556, frame33551],
+
+  row = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 8px},
+    children: [masukanKodeVerifik, kodeVerifikasiYang],
+
+    masukanKodeVerifik = text {
+      width: 287.98px,
+      fill: colorTokens.colors.neutral-80,
+      contents: "Masukkan Kode Verifikasi",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    kodeVerifikasiYang = text {
+      width: 341px,
+      fill: colorTokens.colors.neutral-40,
+      contents: "Kode Verifikasi telah dikirim via WhatsApp ke: 08123****898",
+      font-size: 16,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  frame33556 = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [pinInput, kodeVerifikasiSala],
+
+    pinInput = frame {
+      width: 100%,
+      layout: {justify-content: .center, align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [
+        masterPinPasswordInput,
+        masterPinPasswordInput2,
+        masterPinPasswordInput3,
+        masterPinPasswordInput4,
+        masterPinPasswordInput5,
+        masterPinPasswordInput6
+      ],
+
+      masterPinPasswordInput = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput2 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput3 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput4 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput5 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput6 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+    }
+
+    kodeVerifikasiSala = text {
+      fill: colorTokens.colors.red-70,
+      contents: "Kode Verifikasi salah. 1 kesempatan tersisa",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+
+  frame33551 = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 8px},
+    overflow: .visible,
+    children: [verificationChanceInfo, mohonTungguDalam1],
+
+    verificationChanceInfo = frame : verificationChanceInfoDefault {
+      kodeVerifikasiCountDown {
+        contents: "Kirim ulang dalam 02:00\n(Sisa 1 kesempatan)"
+      }
+    }
+
+    mohonTungguDalam1 = text {
+      width: 100%,
+      fill: colorTokens.colors.green-50,
+      contents: "Atau kirim via SMS",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14,
+      align: .center
+    }
+  }
+}
+
+export verificationCodeWhatsappExpired = frame {
+  title: "Verification Code / phase=whatsapp, type=expired",
+  left: 1728px,
+  top: 295px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 24px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: [row, frame33556, frame33551],
+
+  row = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 8px},
+    children: [masukanKodeVerifik, kodeVerifikasiYang],
+
+    masukanKodeVerifik = text {
+      width: 287.98px,
+      fill: colorTokens.colors.neutral-80,
+      contents: "Masukkan Kode Verifikasi",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    kodeVerifikasiYang = text {
+      width: 341px,
+      fill: colorTokens.colors.neutral-40,
+      contents: "Kode Verifikasi telah dikirim via WhatsApp ke: 08123****898",
+      font-size: 16,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  frame33556 = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [pinInput, kodeVerifikasiSala],
+
+    pinInput = frame {
+      width: 100%,
+      layout: {justify-content: .center, align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [
+        masterPinPasswordInput,
+        masterPinPasswordInput2,
+        masterPinPasswordInput3,
+        masterPinPasswordInput4,
+        masterPinPasswordInput5,
+        masterPinPasswordInput6
+      ],
+
+      masterPinPasswordInput = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput2 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput3 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput4 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput5 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput6 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+    }
+
+    kodeVerifikasiSala = text {
+      fill: colorTokens.colors.red-70,
+      contents: "Kode Verifikasi Kedaluwarsa",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+
+  frame33551 = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 8px},
+    overflow: .visible,
+    children: [verificationChanceInfo, mohonTungguDalam1],
+
+    verificationChanceInfo = frame : verificationChanceInfoDidnTGetCode {}
+
+    mohonTungguDalam1 = text {
+      width: 100%,
+      fill: colorTokens.colors.green-50,
+      contents: "Atau kirim via SMS",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14,
+      align: .center
+    }
+  }
+}
+
+export verificationCodeEmailDefault = frame {
+  title: "Verification Code / phase=email, type=default",
+  left: 0px,
+  top: 590px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 24px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: [row, pinInput, verificationChanceInfo, masukanNomorPonsel],
+
+  row = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 8px},
+    children: [masukanKodeVerifik, kodeVerifikasiYang],
+
+    masukanKodeVerifik = text {
+      width: 287.98px,
+      fill: colorTokens.colors.neutral-80,
+      contents: "Masukkan Kode Verifikasi",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    kodeVerifikasiYang = text {
+      width: 341px,
+      fill: colorTokens.colors.neutral-40,
+      contents: "Kode Verifikasi telah dikirim via Email ke: user@mail.com",
+      font-size: 16,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  pinInput = frame : inputFormLib.pinInput {
+    width: 100%,
+    layout.align-items: .center,
+    layout.direction: .row,
+    layout.item-gap: 16px,
+    layout.justify-content: .center
+  }
+
+  verificationChanceInfo = frame : verificationChanceInfoDefault {}
+
+  masukanNomorPonsel = text {
+    fill: colorTokens.colors.red-60,
+    contents: "Hubungi Customer Care",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.5,
+    underline: .single
+  }
+}
+
+export verificationCodeEmailFilled = frame {
+  title: "Verification Code / phase=email, type=filled",
+  left: 432px,
+  top: 590px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 24px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: [row, pinInput, verificationChanceInfo, masukanNomorPonsel],
+
+  row = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 8px},
+    children: [masukanKodeVerifik, kodeVerifikasiYang],
+
+    masukanKodeVerifik = text {
+      width: 287.98px,
+      fill: colorTokens.colors.neutral-80,
+      contents: "Masukkan Kode Verifikasi",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    kodeVerifikasiYang = text {
+      width: 341px,
+      fill: colorTokens.colors.neutral-40,
+      contents: "Kode Verifikasi telah dikirim via Email ke: user@mail.com",
+      font-size: 16,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  pinInput = frame {
+    width: 100%,
+    layout: {justify-content: .center, align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [
+      masterPinPasswordInput,
+      masterPinPasswordInput2,
+      masterPinPasswordInput3,
+      masterPinPasswordInput4,
+      masterPinPasswordInput5,
+      masterPinPasswordInput6
+    ],
+
+    masterPinPasswordInput = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+      border[0].color: rgb(92.549%, 92.549%, 92.549%),
+      fill[0].color: rgb(94.1176%, 94.1176%, 94.1176%)
+    }
+
+    masterPinPasswordInput2 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+      border[0].color: rgb(92.549%, 92.549%, 92.549%),
+      fill[0].color: rgb(94.1176%, 94.1176%, 94.1176%)
+    }
+
+    masterPinPasswordInput3 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+      border[0].color: rgb(92.549%, 92.549%, 92.549%),
+      fill[0].color: rgb(94.1176%, 94.1176%, 94.1176%)
+    }
+
+    masterPinPasswordInput4 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+      border[0].color: rgb(92.549%, 92.549%, 92.549%),
+      fill[0].color: rgb(94.1176%, 94.1176%, 94.1176%)
+    }
+
+    masterPinPasswordInput5 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+      border[0].color: rgb(92.549%, 92.549%, 92.549%),
+      fill[0].color: rgb(94.1176%, 94.1176%, 94.1176%)
+    }
+
+    masterPinPasswordInput6 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+      border[0].color: rgb(92.549%, 92.549%, 92.549%),
+      fill[0].color: rgb(94.1176%, 94.1176%, 94.1176%)
+    }
+  }
+
+  verificationChanceInfo = frame : verificationChanceInfoDefault {}
+
+  masukanNomorPonsel = text {
+    fill: colorTokens.colors.red-60,
+    contents: "Hubungi Customer Care",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.5,
+    underline: .single
+  }
+}
+
+export verificationCodeEmailWrongSisa2 = frame {
+  title: "Verification Code / phase=email, type=wrong-sisa-2",
+  left: 864px,
+  top: 590px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 24px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: [row, frame33556, verificationChanceInfo, masukanNomorPonsel],
+
+  row = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 8px},
+    children: [masukanKodeVerifik, kodeVerifikasiYang],
+
+    masukanKodeVerifik = text {
+      width: 287.98px,
+      fill: colorTokens.colors.neutral-80,
+      contents: "Masukkan Kode Verifikasi",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    kodeVerifikasiYang = text {
+      width: 341px,
+      fill: colorTokens.colors.neutral-40,
+      contents: "Kode Verifikasi telah dikirim via Email ke: user@mail.com",
+      font-size: 16,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  frame33556 = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [pinInput, kodeVerifikasiSala],
+
+    pinInput = frame {
+      width: 100%,
+      layout: {justify-content: .center, align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [
+        masterPinPasswordInput,
+        masterPinPasswordInput2,
+        masterPinPasswordInput3,
+        masterPinPasswordInput4,
+        masterPinPasswordInput5,
+        masterPinPasswordInput6
+      ],
+
+      masterPinPasswordInput = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput2 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput3 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput4 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput5 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput6 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+    }
+
+    kodeVerifikasiSala = text {
+      fill: colorTokens.colors.red-70,
+      contents: "Kode Verifikasi salah. 2 kesempatan tersisa",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+
+  verificationChanceInfo = frame : verificationChanceInfoDefault {}
+
+  masukanNomorPonsel = text {
+    fill: colorTokens.colors.red-60,
+    contents: "Hubungi Customer Care",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.5,
+    underline: .single
+  }
+}
+
+export verificationCodeEmailWrongSisa1 = frame {
+  title: "Verification Code / phase=email, type=wrong-sisa-1",
+  left: 1296px,
+  top: 590px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 24px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: [row, frame33556, verificationChanceInfo, masukanNomorPonsel],
+
+  row = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 8px},
+    children: [masukanKodeVerifik, kodeVerifikasiYang],
+
+    masukanKodeVerifik = text {
+      width: 287.98px,
+      fill: colorTokens.colors.neutral-80,
+      contents: "Masukkan Kode Verifikasi",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    kodeVerifikasiYang = text {
+      width: 341px,
+      fill: colorTokens.colors.neutral-40,
+      contents: "Kode Verifikasi telah dikirim via Email ke: user@mail.com",
+      font-size: 16,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  frame33556 = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [pinInput, kodeVerifikasiSala],
+
+    pinInput = frame {
+      width: 100%,
+      layout: {justify-content: .center, align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [
+        masterPinPasswordInput,
+        masterPinPasswordInput2,
+        masterPinPasswordInput3,
+        masterPinPasswordInput4,
+        masterPinPasswordInput5,
+        masterPinPasswordInput6
+      ],
+
+      masterPinPasswordInput = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput2 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput3 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput4 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput5 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput6 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+    }
+
+    kodeVerifikasiSala = text {
+      fill: colorTokens.colors.red-70,
+      contents: "Kode Verifikasi salah. 1 kesempatan tersisa",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+
+  verificationChanceInfo = frame : verificationChanceInfoDefault {
+    kodeVerifikasiCountDown {
+      contents: "Kirim ulang dalam 02:00\n(Sisa 1 kesempatan)"
+    }
+  }
+
+  masukanNomorPonsel = text {
+    fill: colorTokens.colors.red-60,
+    contents: "Hubungi Customer Care",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.5,
+    underline: .single
+  }
+}
+
+export verificationCodeEmailExpired = frame {
+  title: "Verification Code / phase=email, type=expired",
+  left: 1728px,
+  top: 590px,
+  width: 360px,
+  layout: {direction: .column, align-items: .center, item-gap: 24px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: [row, frame33556, verificationChanceInfo, masukanNomorPonsel],
+
+  row = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 8px},
+    children: [masukanKodeVerifik, kodeVerifikasiYang],
+
+    masukanKodeVerifik = text {
+      width: 287.98px,
+      fill: colorTokens.colors.neutral-80,
+      contents: "Masukkan Kode Verifikasi",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    kodeVerifikasiYang = text {
+      width: 341px,
+      fill: colorTokens.colors.neutral-40,
+      contents: "Kode Verifikasi telah dikirim via Email ke: user@mail.com",
+      font-size: 16,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  frame33556 = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [pinInput, kodeVerifikasiSala],
+
+    pinInput = frame {
+      width: 100%,
+      layout: {justify-content: .center, align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [
+        masterPinPasswordInput,
+        masterPinPasswordInput2,
+        masterPinPasswordInput3,
+        masterPinPasswordInput4,
+        masterPinPasswordInput5,
+        masterPinPasswordInput6
+      ],
+
+      masterPinPasswordInput = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput2 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput3 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput4 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput5 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+
+      masterPinPasswordInput6 = frame : inputFormLib.masterPinPasswordInputNumberFilled {
+        border[0].color: colorTokens.colors.red-60,
+        fill[0].color: colorTokens.colors.red-05,
+
+        label1 {
+          fill[0].color: colorTokens.colors.red-60
+        }
+      }
+    }
+
+    kodeVerifikasiSala = text {
+      fill: colorTokens.colors.red-70,
+      contents: "Kode Verifikasi Kedaluwarsa",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+
+  verificationChanceInfo = frame : verificationChanceInfoDidnTGetCode {}
+
+  masukanNomorPonsel = text {
+    fill: colorTokens.colors.red-60,
+    contents: "Hubungi Customer Care",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.5,
+    underline: .single
+  }
+}
+
+export verificationChanceInfoDefault = frame {
+  title: "_verification-chance-info / Property 1=default",
+  left: 0px,
+  top: 986px,
+  width: 328px,
+  height: 32px,
+  overflow: .visible,
+  children: kodeVerifikasiCountDown,
+
+  kodeVerifikasiCountDown = text {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    fill: colorTokens.colors.neutral-80,
+    contents: "Kirim ulang dalam 02:00\n(Sisa 2 kesempatan)",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.14,
+    align: .center
+  }
+}
+
+export verificationChanceInfoDidnTGetCode = frame {
+  title: "_verification-chance-info / Property 1=didn't-get-code",
+  left: 0px,
+  top: 1066px,
+  width: 328px,
+  height: 32px,
+  overflow: .visible,
+  children: kodeVerifikasiDidnTGetCode,
+
+  kodeVerifikasiDidnTGetCode = text {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    fill: colorTokens.colors.neutral-80,
+    contents: "Tidak dapat Kode Verifikasi? Kirim Ulang (Sisa 2 kesempatan)",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.14,
+    align: .center
+  }
+}
+
+export templateVerifCode = frame {
+  title: "_template-verif-code",
+  left: 0px,
+  top: 1226px,
+  width: 375px,
+  height: 800px,
+  layout: {direction: .column},
+  overflow: .visible,
+  children: [statusBar, topbar, bodyContent, keyboardNumber],
+
+  statusBar = asset {
+    width: 375px,
+    height: 44px,
+    contents: iconStatusBarIos
+  }
+
+  topbar = frame : topbarLib.topbarDefault {
+    width: 100%,
+
+    row {
+      width: 343px,
+
+      header {
+        contents: "Kode Verifikasi"
+      }
+    }
+
+    moreIcon {
+      display: .none
+    }
+  }
+
+  bodyContent = frame {
+    width: 100%,
+    height: 447px,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: sectionContent,
+
+    sectionContent = frame {
+      width: 100%,
+      height: 447px,
+      layout: {direction: .column, item-gap: 24px},
+      fill: colorTokens.colors.neutral-00,
+      overflow: .visible,
+      padding: [56px, 0px, 16px],
+      children: [slotComponent, frame495],
+
+      slotComponent = frame : verificationCodeSmsDefault {
+        width: 100%
+      }
+
+      frame495 = frame {
+        width: 100%,
+        height: 40px,
+        display: .none,
+        layout: {item-gap: 16px},
+        overflow: .visible,
+        padding: [0px, 16px]
+      }
+    }
+  }
+
+  keyboardNumber = frame : keyboardLib.keyboardNumberAndroid {
+    width: 100%,
+
+    androidKeyboard {
+      page1 {
+        numberKeyboard {
+          dot {
+            left: 189.58px,
+
+            label {
+              left: 39.88px
+            }
+
+            width: 87.5px,
+
+            rectangle {
+              width: 87.5px,
+              contents: iconRectangle2
+            }
+          }
+
+          layer0 {
+            left: 96.88px,
+
+            label0 {
+              left: 34.9px
+            }
+
+            width: 87.5px,
+
+            rectangle {
+              width: 87.5px,
+              contents: iconRectangle2
+            }
+          }
+
+          layer {
+            left: 4.17px,
+
+            rectangle {
+              label {
+                left: 38.84px
+              }
+
+              width: 87.5px,
+
+              vector {
+                width: 87.5px,
+                contents: iconVector18
+              }
+
+              vector2 {
+                width: 87.5px,
+                contents: iconVector18
+              }
+            }
+
+            width: 87.5px
+          }
+
+          layer9 {
+            left: 189.58px,
+
+            label9 {
+              left: 34.9px
+            }
+
+            width: 87.5px,
+
+            rectangle {
+              width: 87.5px,
+              contents: iconRectangle2
+            }
+          }
+
+          layer8 {
+            left: 96.88px,
+
+            label8 {
+              left: 34.9px
+            }
+
+            width: 87.5px,
+
+            rectangle {
+              width: 87.5px,
+              contents: iconRectangle2
+            }
+          }
+
+          layer7 {
+            left: 4.17px,
+
+            label7 {
+              left: 34.9px
+            }
+
+            width: 87.5px,
+
+            rectangle {
+              width: 87.5px,
+              contents: iconRectangle2
+            }
+          }
+
+          layer6 {
+            left: 189.58px,
+
+            label6 {
+              left: 34.9px
+            }
+
+            width: 87.5px,
+
+            rectangle {
+              width: 87.5px,
+              contents: iconRectangle2
+            }
+          }
+
+          layer5 {
+            left: 96.88px,
+
+            label5 {
+              left: 34.9px
+            }
+
+            width: 87.5px,
+
+            rectangle {
+              width: 87.5px,
+              contents: iconRectangle2
+            }
+          }
+
+          layer4 {
+            left: 4.17px,
+
+            label4 {
+              left: 34.9px
+            }
+
+            width: 87.5px,
+
+            rectangle {
+              width: 87.5px,
+              contents: iconRectangle2
+            }
+          }
+
+          layer3 {
+            left: 189.58px,
+
+            label3 {
+              left: 34.9px
+            }
+
+            width: 87.5px,
+
+            rectangle {
+              width: 87.5px,
+              contents: iconRectangle2
+            }
+          }
+
+          layer2 {
+            left: 96.88px,
+
+            label2 {
+              left: 34.9px
+            }
+
+            width: 87.5px,
+
+            rectangle {
+              width: 87.5px,
+              contents: iconRectangle2
+            }
+          }
+
+          layer1 {
+            left: 4.17px,
+
+            label1 {
+              left: 34.9px
+            }
+
+            width: 87.5px,
+
+            rectangle {
+              width: 87.5px,
+              contents: iconRectangle2
+            }
+          }
+
+          group5 {
+            left: 283.33px,
+            width: 87.5px,
+            contents: iconGroup52
+          }
+
+          group4 {
+            left: 283.33px,
+            width: 87.5px,
+            contents: iconGroup42
+          }
+
+          group3 {
+            left: 283.33px,
+            width: 87.5px,
+            contents: iconGroup32
+          }
+
+          width: 375px,
+
+          rectangle3 {
+            width: 375px,
+            contents: iconRectangle32
+          }
+        }
+
+        width: 375px
+      }
+
+      actionButton {
+        left: 283.33px,
+        width: 87.5px,
+        contents: iconActionButtonDoneLightBig2
+      }
+
+      width: 100%
+    }
+
+    navBarLight {
+      width: 375px,
+      contents: iconNavBarLight2
+    }
+  }
+}

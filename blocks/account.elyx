@@ -1,0 +1,3932 @@
+import "tokens/colors.elyx" as colorTokens
+import "controls/badge.elyx" as badgeLib
+import "resources/assets/icons/add-round.svg" as iconAddRound
+import "resources/assets/icons/mode-edit-round.svg" as iconModeEditRound
+import "controls/toggle.elyx" as toggleLib
+import "blocks/topbar.elyx" as topbarLib
+import "blocks/toast.elyx" as toastLib
+import "resources/assets/icons/avatar-2.svg" as iconAvatar2
+import "resources/assets/icons/mode-edit-round-2.svg" as iconModeEditRound2
+import "resources/assets/icons/chevron-right-2.svg" as iconChevronRight2
+import "resources/assets/icons/bi-info-circle-fill-3.svg" as iconBiInfoCircleFill3
+import "resources/assets/icons/icon-content-clear-24px.svg" as iconIconContentClear24px
+import "resources/assets/icons/group-92-5.svg" as iconGroup925
+import "resources/assets/icons/line-13-2.svg" as iconLine132
+import "resources/assets/icons/dw-icon-akun-ubah-pin-outline.svg" as iconDwIconAkunUbahPinOutline
+import "resources/assets/icons/path-copy-2-2.svg" as iconPathCopy22
+import "resources/assets/icons/dw-icon-akun-lupa-pin-outline.svg" as iconDwIconAkunLupaPinOutline
+import "resources/assets/icons/dw-icon-akun-smart-login-outline-2.svg" as iconDwIconAkunSmartLoginOutline2
+import "resources/assets/icons/link-outlined.svg" as iconLinkOutlined
+import "resources/assets/icons/accessibility.svg" as iconAccessibility
+import "resources/assets/icons/path-copy-2-3.svg" as iconPathCopy23
+import "resources/assets/icons/color-lens-outlined.svg" as iconColorLensOutlined
+import "resources/assets/icons/dw-icon-akun-tentang-outline.svg" as iconDwIconAkunTentangOutline
+import "resources/assets/icons/wallet-icon-akun-snk-outline.svg" as iconWalletIconAkunSnkOutline
+import "resources/assets/icons/dw-icon-akun-kebijakan-privasi-outline.svg" as iconDwIconAkunKebijakanPrivasiOutline
+import "resources/assets/icons/dw-icon-akun-bantuan-outline.svg" as iconDwIconAkunBantuanOutline
+import "resources/assets/icons/dw-icon-akun-hapus-akun-outline.svg" as iconDwIconAkunHapusAkunOutline
+import "resources/assets/icons/dw-icon-akun-keluar-outline.svg" as iconDwIconAkunKeluarOutline
+import "resources/assets/icons/vector-3-2.svg" as iconVector32
+import "resources/assets/icons/rectangle-copy.svg" as iconRectangleCopy
+import "resources/assets/icons/group-75.svg" as iconGroup75
+import "resources/assets/icons/combined-shape.svg" as iconCombinedShape
+import "resources/assets/icons/group.svg" as iconGroup
+import "resources/assets/icons/group-2.svg" as iconGroup2
+import "resources/assets/icons/group-346.svg" as iconGroup346
+import "resources/assets/icons/status-bar-android.svg" as iconStatusBarAndroid
+import "resources/assets/icons/mode-edit-round-3.svg" as iconModeEditRound3
+import "resources/assets/icons/mail-filled.svg" as iconMailFilled
+import "resources/assets/icons/dw-icon-akun-ubah-pin-outline-2.svg" as iconDwIconAkunUbahPinOutline2
+import "resources/assets/icons/dw-icon-akun-lupa-pin-outline-2.svg" as iconDwIconAkunLupaPinOutline2
+import "resources/assets/icons/dw-icon-akun-smart-login-outline-3.svg" as iconDwIconAkunSmartLoginOutline3
+import "resources/assets/icons/dw-icon-akun-tentang-outline-2.svg" as iconDwIconAkunTentangOutline2
+import "resources/assets/icons/dw-icon-akun-kebijakan-privasi-outline-2.svg" as iconDwIconAkunKebijakanPrivasiOutline2
+import "resources/assets/icons/dw-icon-akun-bantuan-outline-2.svg" as iconDwIconAkunBantuanOutline2
+import "resources/assets/icons/dw-icon-akun-hapus-akun-outline-2.svg" as iconDwIconAkunHapusAkunOutline2
+import "resources/assets/icons/dw-icon-akun-keluar-outline-2.svg" as iconDwIconAkunKeluarOutline2
+import "resources/assets/icons/vector-3-3.svg" as iconVector33
+import "resources/assets/icons/group-346-2.svg" as iconGroup3462
+import "resources/assets/icons/copy-2.svg" as iconCopy2
+
+export accountComponentBelumKyc = frame {
+  title: "account-component / Property 1=belum-kyc",
+  left: 0px,
+  top: 0px,
+  width: 360px,
+  height: 1256px,
+  fill: colorTokens.colors.neutral-background,
+  children: [account, header],
+
+  account = frame {
+    left: 0px,
+    top: 97px,
+    layout: {direction: .column, item-gap: 16px},
+    overflow: .visible,
+    children: [
+      header,
+      frame753,
+      frame757,
+      frame33555,
+      frame746,
+      frame33556,
+      bottomNav
+    ],
+
+    header = frame {
+      width: 100%,
+      layout: {
+        justify-content: .space-between,
+        align-items: .center,
+        item-gap: 16px
+      },
+      fill: colorTokens.colors.neutral-00,
+      overflow: .visible,
+      padding: 16px,
+      children: [left, button, chevronRight],
+
+      left = frame {
+        layout: {item-gap: 16px},
+        overflow: .visible,
+        children: [avatar, namePn],
+
+        avatar = asset {
+          width: 45.54px,
+          height: 45.54px,
+          contents: iconAvatar2
+        }
+
+        namePn = frame {
+          layout: {direction: .column, item-gap: 4px},
+          overflow: .visible,
+          children: [ulfaIntania, badge, dokuId1290859012],
+
+          ulfaIntania = text {
+            fill: colorTokens.colors.neutral-80,
+            contents: "Ulfa Intania",
+            font-size: 16,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 0.75
+          }
+
+          badge = frame : badgeLib.badgeBelumVerifikasi {}
+
+          dokuId1290859012 = text {
+            fill: colorTokens.colors.neutral-70,
+            contents: "DOKU ID: 1290859012",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.14
+          }
+        }
+      }
+
+      button = frame {
+        display: .none,
+        layout: {direction: .row},
+        overflow: .visible,
+        children: buttonBase,
+
+        buttonBase = frame {
+          height: 100%,
+          layout: {
+            justify-content: .center,
+            align-items: .center,
+            item-gap: 4px
+          },
+          fill: colorTokens.colors.neutral-00,
+          border: rgb(20.39%, 25.098%, 32.94%),
+          shadow: [
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 7.84%),
+                offset: point(0px, 1px),
+                blur-radius: 8px
+              }
+            },
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 12.1569%),
+                offset: point(0px, 0px),
+                blur-radius: 1px
+              }
+            }
+          ],
+          corner-radius: 42px,
+          padding: [4px, 12px],
+          children: [add, textLayer, add2],
+
+          add = asset {
+            width: 12px,
+            height: 12px,
+            display: .none,
+            fill: rgb(49.8%, 33.7255%, 85.098%),
+            contents: iconAddRound
+          }
+
+          textLayer = text {
+            fill: colorTokens.colors.neutral-70,
+            contents: "Ubah",
+            font-size: 12,
+            font-family: "Inter",
+            font-style: "Semi Bold",
+            line-height: 1.33
+          }
+
+          add2 = asset {
+            width: 12px,
+            height: 12px,
+            fill: rgb(20.39%, 25.098%, 32.94%),
+            contents: iconModeEditRound2
+          }
+        }
+      }
+
+      chevronRight = asset {
+        width: 15.36px,
+        height: 15.36px,
+        fill: colorTokens.colors.neutral-40,
+        contents: iconChevronRight2
+      }
+    }
+
+    frame753 = frame {
+      width: 359px,
+      layout: {direction: .column, item-gap: 10px},
+      overflow: .visible,
+      padding: [0px, 16px],
+      children: collateralMsg,
+
+      collateralMsg = frame {
+        width: 100%,
+        layout: {direction: .column, align-items: .center, item-gap: 12px},
+        fill: colorTokens.colors.neutral-00,
+        border: colorTokens.colors.red-70,
+        corner-radius: 4px,
+        overflow: .visible,
+        padding: 16px,
+        children: [container, line13, frame846],
+
+        container = frame {
+          width: 100%,
+          layout: {
+            justify-content: .space-between,
+            align-items: .center,
+            item-gap: 16px
+          },
+          children: [help24px, frame846, iconContentClear24px, group92],
+
+          help24px = frame {
+            width: 16px,
+            height: 16px,
+            display: .none,
+            overflow: .visible
+          }
+
+          frame846 = frame {
+            layout: {align-items: .center, item-gap: 16px},
+            overflow: .visible,
+            children: [biInfoCircleFill, frame847],
+
+            biInfoCircleFill = asset {
+              width: 24px,
+              height: 24px,
+              fill: colorTokens.colors.red-70,
+              contents: iconBiInfoCircleFill3
+            }
+
+            frame847 = frame {
+              layout: {
+                direction: .column,
+                justify-content: .center,
+                item-gap: 8px
+              },
+              overflow: .visible,
+              children: [
+                verifikasiDataKamu,
+                untukMeningkatkanKeamananAkunHarapVerifikasiDataYangDiperlukan
+              ],
+
+              verifikasiDataKamu = text {
+                width: 226.82px,
+                fill: rgb(20%, 20%, 20%),
+                contents: "Verifikasi Data Kamu ",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.14
+              }
+
+              untukMeningkatkanKeamananAkunHarapVerifikasiDataYangDiperlukan = text {
+                width: 226.82px,
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "Untuk meningkatkan keamanan akun, harap verifikasi email",
+                font-size: 12,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.167
+              }
+            }
+          }
+
+          iconContentClear24px = asset {
+            width: 12px,
+            height: 12px,
+            display: .none,
+            fill: rgb(70.1961%, 70.1961%, 70.1961%),
+            contents: iconIconContentClear24px
+          }
+
+          group92 = asset {
+            width: 24px,
+            height: 24px,
+            contents: iconGroup925
+          }
+        }
+
+        line13 = asset {
+          width: 326px,
+          height: 0px,
+          display: .none,
+          fill: rgb(80%, 80%, 80%),
+          contents: iconLine132
+        }
+
+        frame846 = frame {
+          width: 100%,
+          display: .none,
+          layout: {
+            justify-content: .space-between,
+            align-items: .center,
+            item-gap: 16px
+          },
+          overflow: .visible,
+          children: [verfikasiSekarang, group92],
+
+          verfikasiSekarang = text {
+            fill: colorTokens.colors.red-70,
+            contents: "Verfikasi Sekarang",
+            font-size: 12,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.167
+          }
+
+          group92 = asset {
+            width: 24px,
+            height: 24px,
+            contents: iconGroup925
+          }
+        }
+      }
+    }
+
+    frame757 = frame {
+      layout: {direction: .column},
+      fill: colorTokens.colors.neutral-00,
+      overflow: .visible,
+      children: [frame864, frame756, frame757, frame758],
+
+      frame864 = frame {
+        width: 100%,
+        layout: {item-gap: 10px},
+        overflow: .visible,
+        padding: [12px, 16px],
+        children: keamanan,
+
+        keamanan = text {
+          width: 328px,
+          fill: rgb(40%, 43.92%, 52.1569%),
+          contents: "Keamanan",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+
+      frame756 = frame {
+        layout: {direction: .column, item-gap: 16px},
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame754, pathCopy2],
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [dwIcon, ubahProfil],
+
+          dwIcon = asset {
+            width: 24px,
+            height: 24px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: iconDwIconAkunUbahPinOutline
+          }
+
+          ubahProfil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Ubah PIN",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          contents: iconPathCopy22
+        }
+      }
+
+      frame757 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame754, pathCopy2],
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [dwIcon, ubahProfil],
+
+          dwIcon = asset {
+            width: 24px,
+            height: 24px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: iconDwIconAkunLupaPinOutline
+          }
+
+          ubahProfil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Lupa PIN",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          contents: iconPathCopy22
+        }
+      }
+
+      frame758 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame849, pathCopy2],
+
+        frame849 = frame {
+          width: 344px,
+          layout: {justify-content: .space-between, item-gap: 16px},
+          overflow: .visible,
+          children: [frame754, toggle],
+
+          frame754 = frame {
+            layout: {align-items: .center, item-gap: 24px},
+            overflow: .visible,
+            padding: [0px, 16px],
+            children: [dwIcon, ubahProfil],
+
+            dwIcon = asset {
+              width: 24px,
+              height: 24px,
+              fill: rgb(30.1961%, 30.1961%, 30.1961%),
+              contents: iconDwIconAkunSmartLoginOutline2
+            }
+
+            ubahProfil = text {
+              fill: rgb(30.1961%, 30.1961%, 30.1961%),
+              contents: "Smart Login",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Medium",
+              line-height: 1.14
+            }
+          }
+
+          toggle = frame : toggleLib.toggleFalseFalse {
+            width: 38px
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          display: .none,
+          contents: iconPathCopy22
+        }
+      }
+    }
+
+    frame33555 = frame {
+      layout: {direction: .column},
+      fill: colorTokens.colors.neutral-00,
+      overflow: .visible,
+      children: [frame864, frame865, pathCopy2, frame868, pathCopy3, frame867],
+
+      frame864 = frame {
+        width: 100%,
+        layout: {item-gap: 10px},
+        overflow: .visible,
+        padding: [12px, 16px],
+        children: pengaturan,
+
+        pengaturan = text {
+          width: 328px,
+          fill: rgb(40%, 43.92%, 52.1569%),
+          contents: "Pengaturan",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+
+      frame865 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame754, pathCopy2],
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [link, ubahProfil],
+
+          link = asset {
+            width: 24px,
+            height: 24px,
+            fill: .black,
+            contents: iconLinkOutlined
+          }
+
+          ubahProfil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Akun Terhubung",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          display: .none,
+          contents: iconPathCopy22
+        }
+      }
+
+      pathCopy2 = asset {
+        width: 360px,
+        height: 1px,
+        contents: iconPathCopy22
+      }
+
+      frame868 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame754, pathCopy2],
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [accessibility, ubahProfil],
+
+          accessibility = asset {
+            width: 24px,
+            height: 24px,
+            fill: .black,
+            contents: iconAccessibility
+          }
+
+          ubahProfil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Aksesibilitas",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          display: .none,
+          contents: iconPathCopy23
+        }
+      }
+
+      pathCopy3 = asset {
+        width: 360px,
+        height: 1px,
+        contents: iconPathCopy23
+      }
+
+      frame867 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: frame754,
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [colorLens, ubahProfil],
+
+          colorLens = asset {
+            width: 24px,
+            height: 24px,
+            fill: .black,
+            contents: iconColorLensOutlined
+          }
+
+          ubahProfil = text {
+            width: 57px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Tema",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+      }
+    }
+
+    frame746 = frame {
+      layout: {direction: .column},
+      overflow: .visible,
+      children: frame757,
+
+      frame757 = frame {
+        layout: {direction: .column},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        children: [frame864, frame760],
+
+        frame864 = frame {
+          width: 100%,
+          layout: {item-gap: 10px},
+          overflow: .visible,
+          padding: [12px, 16px],
+          children: tentang,
+
+          tentang = text {
+            width: 328px,
+            fill: rgb(40%, 43.92%, 52.1569%),
+            contents: "Tentang",
+            font-size: 12,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.167
+          }
+        }
+
+        frame760 = frame {
+          layout: {direction: .column},
+          overflow: .visible,
+          children: [frame755, frame761, frame756, frame760],
+
+          frame755 = frame {
+            layout: {direction: .column, item-gap: 16px},
+            overflow: .visible,
+            padding: [16px, 0px],
+            children: [frame754, pathCopy2],
+
+            frame754 = frame {
+              layout: {align-items: .center, item-gap: 24px},
+              overflow: .visible,
+              padding: [0px, 16px],
+              children: [dwIcon, ubahProfil],
+
+              dwIcon = asset {
+                width: 24px,
+                height: 24px,
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: iconDwIconAkunTentangOutline
+              }
+
+              ubahProfil = text {
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "Tentang DOKU e-Wallet",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.14
+              }
+            }
+
+            pathCopy2 = asset {
+              width: 360px,
+              height: 1px,
+              contents: iconPathCopy22
+            }
+          }
+
+          frame761 = frame {
+            layout: {direction: .column, item-gap: 16px},
+            overflow: .visible,
+            padding: [16px, 0px],
+            children: [frame754, pathCopy2],
+
+            frame754 = frame {
+              layout: {align-items: .center, item-gap: 24px},
+              overflow: .visible,
+              padding: [0px, 16px],
+              children: [walletIcon, ubahProfil],
+
+              walletIcon = asset {
+                width: 24px,
+                height: 24px,
+                fill: colorTokens.colors.neutral-80,
+                contents: iconWalletIconAkunSnkOutline
+              }
+
+              ubahProfil = text {
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "Syarat dan Ketentuan",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.14
+              }
+            }
+
+            pathCopy2 = asset {
+              width: 360px,
+              height: 1px,
+              contents: iconPathCopy22
+            }
+          }
+
+          frame756 = frame {
+            layout: {direction: .column, item-gap: 16px},
+            overflow: .visible,
+            padding: [16px, 0px],
+            children: [frame754, pathCopy2],
+
+            frame754 = frame {
+              layout: {align-items: .center, item-gap: 24px},
+              overflow: .visible,
+              padding: [0px, 16px],
+              children: [dwIcon, ubahProfil],
+
+              dwIcon = asset {
+                width: 24px,
+                height: 24px,
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: iconDwIconAkunKebijakanPrivasiOutline
+              }
+
+              ubahProfil = text {
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "Kebijakan Privasi",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.14
+              }
+            }
+
+            pathCopy2 = asset {
+              width: 360px,
+              height: 1px,
+              contents: iconPathCopy22
+            }
+          }
+
+          frame760 = frame {
+            width: 360px,
+            height: 55px,
+            layout: {direction: .column, item-gap: 16px},
+            overflow: .visible,
+            padding: [16px, 0px],
+            children: [frame754, pathCopy2],
+
+            frame754 = frame {
+              layout: {align-items: .center, item-gap: 24px},
+              overflow: .visible,
+              padding: [0px, 16px],
+              children: [dwIcon, ubahProfil],
+
+              dwIcon = asset {
+                width: 24px,
+                height: 24px,
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: iconDwIconAkunBantuanOutline
+              }
+
+              ubahProfil = text {
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "Pusat Bantuan",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.14
+              }
+            }
+
+            pathCopy2 = asset {
+              width: 360px,
+              height: 1px,
+              display: .none,
+              contents: iconPathCopy22
+            }
+          }
+        }
+      }
+    }
+
+    frame33556 = frame {
+      layout: {direction: .column},
+      overflow: .visible,
+      children: [frame864, frame866, pathCopy3, frame759, frame748],
+
+      frame864 = frame {
+        width: 100%,
+        layout: {item-gap: 10px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [12px, 16px],
+        children: lainnya,
+
+        lainnya = text {
+          width: 328px,
+          fill: rgb(40%, 43.92%, 52.1569%),
+          contents: "Lainnya",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+
+      frame866 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame754, pathCopy2],
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [dwIcon, ubahProfil],
+
+          dwIcon = asset {
+            width: 24px,
+            height: 24px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: iconDwIconAkunHapusAkunOutline
+          }
+
+          ubahProfil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Hapus Akun",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          contents: iconPathCopy22
+        }
+      }
+
+      pathCopy3 = asset {
+        width: 360px,
+        height: 1px,
+        contents: iconPathCopy22
+      }
+
+      frame759 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame754, pathCopy2],
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [dwIcon, ubahProfil],
+
+          dwIcon = asset {
+            width: 24px,
+            height: 24px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: iconDwIconAkunKeluarOutline
+          }
+
+          ubahProfil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Keluar",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          display: .none,
+          contents: iconPathCopy22
+        }
+      }
+
+      frame748 = frame {
+        width: 359px,
+        layout: {justify-content: .center, item-gap: 10px},
+        overflow: .visible,
+        padding: 16px,
+        children: keluar,
+
+        keluar = text {
+          fill: rgb(60%, 60%, 60%),
+          contents: "App Version 3.1.0 (7715)",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+    }
+
+    bottomNav = frame {
+      width: 360px,
+      height: 82px,
+      overflow: .visible,
+      children: [group302, group346],
+
+      group302 = frame {
+        left: 0px,
+        top: 0px,
+        width: 360px,
+        height: 82px,
+        children: [
+          vector3,
+          ellipse2,
+          rectangleCopy,
+          group76,
+          home,
+          group343,
+          groupLayer
+        ],
+
+        vector3 = asset {
+          left: 0px,
+          top: 25px,
+          width: 360px,
+          height: 0px,
+          fill: rgb(89.8%, 89.8%, 89.8%),
+          contents: iconVector32
+        }
+
+        ellipse2 = shape {
+          left: 148.5px,
+          top: 0px,
+          width: 64px,
+          height: 64px,
+          fill: colorTokens.colors.neutral-00,
+          border: {color: rgb(89.8%, 89.8%, 89.8%), width: 0.54px},
+          type: .ellipse
+        }
+
+        rectangleCopy = asset {
+          left: 0px,
+          top: 25px,
+          width: 360px,
+          height: 57px,
+          fill: colorTokens.colors.neutral-00,
+          contents: iconRectangleCopy
+        }
+
+        group76 = frame {
+          left: 0px,
+          top: 29px,
+          width: 360px,
+          height: 52.66px,
+          children: [group75, akun, wallet, promo],
+
+          group75 = asset {
+            left: 0px,
+            top: 0px,
+            width: 90px,
+            height: 52.66px,
+            contents: iconGroup75
+          }
+
+          akun = frame {
+            left: 270px,
+            top: 0px,
+            width: 90px,
+            height: 52.66px,
+            children: [rectangleCopy2, group24],
+
+            rectangleCopy2 = shape {
+              left: 0px,
+              top: 0px,
+              width: 90px,
+              height: 52.66px,
+              fill: colorTokens.colors.neutral-00,
+              type: .rect
+            }
+
+            group24 = frame {
+              left: 33.15px,
+              top: 33.62px,
+              width: 25px,
+              height: 11px,
+              children: akun,
+
+              akun = text {
+                left: -2px,
+                top: 0px,
+                fill: colorTokens.colors.red-60,
+                contents: "Akun",
+                font-size: 12,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.167,
+                align: .center
+              }
+            }
+          }
+
+          wallet = frame {
+            left: 180px,
+            top: 0px,
+            width: 90px,
+            height: 52.66px,
+            children: [rectangleCopy2, group342],
+
+            rectangleCopy2 = shape {
+              left: 0px,
+              top: 0px,
+              width: 90px,
+              height: 52.66px,
+              fill: colorTokens.colors.neutral-00,
+              type: .rect
+            }
+
+            group342 = frame {
+              left: 54px,
+              top: 8px,
+              width: 30px,
+              height: 36.55px,
+              children: [combinedShape, wallet],
+
+              combinedShape = asset {
+                left: 6.28px,
+                top: 0px,
+                width: 19px,
+                height: 19px,
+                fill: rgb(91.76%, 92.549%, 94.1176%),
+                contents: iconCombinedShape
+              }
+
+              wallet = frame {
+                left: 0px,
+                top: 25.55px,
+                width: 30px,
+                height: 11px,
+                children: group8Copy2,
+
+                group8Copy2 = frame {
+                  left: 0px,
+                  top: 0px,
+                  width: 30px,
+                  height: 11px,
+                  children: wallet,
+
+                  wallet = text {
+                    left: -2px,
+                    top: 0px,
+                    fill: rgb(91.76%, 92.549%, 94.1176%),
+                    contents: "Wallet",
+                    font-size: 12,
+                    font-family: "DIN Next LT Pro",
+                    font-style: "Regular",
+                    line-height: 1.167,
+                    align: .center
+                  }
+                }
+              }
+            }
+          }
+
+          promo = frame {
+            left: 119.72px,
+            top: 33.55px,
+            width: 32px,
+            height: 11px,
+            children: promo,
+
+            promo = frame {
+              left: 0px,
+              top: 0px,
+              width: 32px,
+              height: 11px,
+              children: group8Copy,
+
+              group8Copy = frame {
+                left: 0px,
+                top: 0px,
+                width: 32px,
+                height: 11px,
+                children: group12,
+
+                group12 = frame {
+                  left: 0px,
+                  top: 0px,
+                  width: 32px,
+                  height: 11px
+                }
+              }
+            }
+          }
+        }
+
+        home = frame {
+          left: 24.94px,
+          top: 62.55px,
+          width: 41px,
+          height: 11px,
+          children: beranda,
+
+          beranda = frame {
+            left: 0px,
+            top: 0px,
+            width: 41px,
+            height: 11px,
+            children: group2,
+
+            group2 = frame {
+              left: 0px,
+              top: 0px,
+              width: 41px,
+              height: 11px,
+              children: group28,
+
+              group28 = frame {
+                left: 0px,
+                top: 0px,
+                width: 41px,
+                height: 11px,
+                children: beranda,
+
+                beranda = text {
+                  left: -4px,
+                  top: 0px,
+                  fill: rgb(91.76%, 92.549%, 94.1176%),
+                  contents: "Beranda",
+                  font-size: 12,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Regular",
+                  line-height: 1.167,
+                  align: .center
+                }
+              }
+            }
+          }
+        }
+
+        group343 = frame {
+          left: 90px,
+          top: 29px,
+          width: 108px,
+          height: 52.66px,
+          children: [rectangleCopy2, group341],
+
+          rectangleCopy2 = shape {
+            left: 0px,
+            top: 0px,
+            width: 90px,
+            height: 52.66px,
+            fill: colorTokens.colors.neutral-00,
+            type: .rect
+          }
+
+          group341 = frame {
+            left: 3px,
+            top: 6px,
+            width: 105px,
+            height: 45.55px,
+            children: [promo, promo2, groupLayer],
+
+            promo = text {
+              left: 0px,
+              top: 27.55px,
+              fill: rgb(91.76%, 92.549%, 94.1176%),
+              contents: "Promo",
+              font-size: 12,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.167,
+              align: .center
+            }
+
+            promo2 = text {
+              left: 72px,
+              top: 27.55px,
+              fill: rgb(91.76%, 92.549%, 94.1176%),
+              contents: "Bayar",
+              font-size: 12,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.167,
+              align: .center
+            }
+
+            groupLayer = asset {
+              left: 8.35px,
+              top: 0px,
+              width: 19.2px,
+              height: 20.69px,
+              fill: rgb(91.76%, 92.549%, 94.1176%),
+              contents: iconGroup
+            }
+          }
+        }
+
+        groupLayer = asset {
+          left: 309.36px,
+          top: 35px,
+          width: 14.05px,
+          height: 21.16px,
+          fill: colorTokens.colors.red-60,
+          contents: iconGroup2
+        }
+      }
+
+      group346 = asset {
+        left: 156.5px,
+        top: 8px,
+        width: 48px,
+        height: 48px,
+        contents: iconGroup346
+      }
+    }
+  }
+
+  header = frame {
+    left: 0px,
+    top: 0px,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: frame33527,
+
+    frame33527 = frame {
+      layout: {direction: .column},
+      overflow: .visible,
+      children: [statusBar, topbar],
+
+      statusBar = asset {
+        width: 360px,
+        height: 42px,
+        contents: iconStatusBarAndroid
+      }
+
+      topbar = frame : topbarLib.topbarDefault {
+        width: 360px,
+
+        row {
+          width: 328px,
+
+          arrowBack {
+            display: .none
+          }
+
+          header {
+            contents: "Akun"
+          }
+        }
+
+        moreIcon {
+          display: .none
+        }
+      }
+    }
+  }
+}
+
+export accountComponentKyc = frame {
+  title: "account-component / Property 1=kyc",
+  left: 432px,
+  top: 0px,
+  width: 360px,
+  height: 1158px,
+  fill: colorTokens.colors.neutral-background,
+  children: [frame761, frame762],
+
+  frame761 = frame {
+    left: 0px,
+    top: 97px,
+    layout: {direction: .column, item-gap: 16px},
+    overflow: .visible,
+    children: [
+      header,
+      frame753,
+      frame757,
+      frame33555,
+      frame746,
+      frame758,
+      bottomNav
+    ],
+
+    header = frame {
+      width: 100%,
+      layout: {
+        justify-content: .space-between,
+        align-items: .center,
+        item-gap: 16px
+      },
+      fill: colorTokens.colors.neutral-00,
+      overflow: .visible,
+      padding: 16px,
+      children: [left, button, chevronRight],
+
+      left = frame {
+        layout: {item-gap: 16px},
+        overflow: .visible,
+        children: [avatar, namePn],
+
+        avatar = asset {
+          width: 45.54px,
+          height: 45.54px,
+          contents: iconAvatar2
+        }
+
+        namePn = frame {
+          layout: {direction: .column, item-gap: 4px},
+          overflow: .visible,
+          children: [ulfaIntania, badge, dokuId1290859012],
+
+          ulfaIntania = text {
+            fill: colorTokens.colors.neutral-80,
+            contents: "Ulfa Intania",
+            font-size: 16,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 0.75
+          }
+
+          badge = frame : badgeLib.badgeSudahVerifikasi {}
+
+          dokuId1290859012 = text {
+            fill: colorTokens.colors.neutral-70,
+            contents: "DOKU ID: 1290859012",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.14
+          }
+        }
+      }
+
+      button = frame {
+        display: .none,
+        layout: {direction: .row},
+        overflow: .visible,
+        children: buttonBase,
+
+        buttonBase = frame {
+          height: 100%,
+          layout: {
+            justify-content: .center,
+            align-items: .center,
+            item-gap: 4px
+          },
+          fill: colorTokens.colors.neutral-00,
+          border: rgb(20.39%, 25.098%, 32.94%),
+          shadow: [
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 7.84%),
+                offset: point(0px, 1px),
+                blur-radius: 8px
+              }
+            },
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 12.1569%),
+                offset: point(0px, 0px),
+                blur-radius: 1px
+              }
+            }
+          ],
+          corner-radius: 42px,
+          padding: [4px, 12px],
+          children: [add, textLayer, add2],
+
+          add = asset {
+            width: 12px,
+            height: 12px,
+            display: .none,
+            fill: rgb(49.8%, 33.7255%, 85.098%),
+            contents: iconAddRound
+          }
+
+          textLayer = text {
+            fill: colorTokens.colors.neutral-70,
+            contents: "Ubah",
+            font-size: 12,
+            font-family: "Inter",
+            font-style: "Semi Bold",
+            line-height: 1.33
+          }
+
+          add2 = asset {
+            width: 12px,
+            height: 12px,
+            fill: rgb(20.39%, 25.098%, 32.94%),
+            contents: iconModeEditRound2
+          }
+        }
+      }
+
+      chevronRight = asset {
+        width: 15.36px,
+        height: 15.36px,
+        fill: colorTokens.colors.neutral-40,
+        contents: iconChevronRight2
+      }
+    }
+
+    frame753 = frame {
+      width: 359px,
+      display: .none,
+      layout: {direction: .column, item-gap: 10px},
+      overflow: .visible,
+      padding: [0px, 16px],
+      children: collateralMsg,
+
+      collateralMsg = frame {
+        width: 100%,
+        layout: {direction: .column, align-items: .center, item-gap: 12px},
+        fill: colorTokens.colors.neutral-00,
+        border: colorTokens.colors.red-70,
+        corner-radius: 4px,
+        overflow: .visible,
+        padding: 16px,
+        children: [container, line13, frame846],
+
+        container = frame {
+          width: 100%,
+          layout: {
+            justify-content: .space-between,
+            align-items: .center,
+            item-gap: 16px
+          },
+          children: [help24px, frame846, iconContentClear24px, group92],
+
+          help24px = frame {
+            width: 16px,
+            height: 16px,
+            display: .none,
+            overflow: .visible
+          }
+
+          frame846 = frame {
+            layout: {align-items: .center, item-gap: 16px},
+            overflow: .visible,
+            children: [biInfoCircleFill, frame847],
+
+            biInfoCircleFill = asset {
+              width: 24px,
+              height: 24px,
+              fill: colorTokens.colors.red-70,
+              contents: iconBiInfoCircleFill3
+            }
+
+            frame847 = frame {
+              layout: {
+                direction: .column,
+                justify-content: .center,
+                item-gap: 8px
+              },
+              overflow: .visible,
+              children: [
+                verifikasiDataKamu,
+                untukMeningkatkanKeamananAkunHarapVerifikasiDataYangDiperlukan
+              ],
+
+              verifikasiDataKamu = text {
+                width: 226.82px,
+                fill: rgb(20%, 20%, 20%),
+                contents: "Verifikasi Data Kamu ",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.14
+              }
+
+              untukMeningkatkanKeamananAkunHarapVerifikasiDataYangDiperlukan = text {
+                width: 226.82px,
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "Untuk meningkatkan keamanan akun, harap verifikasi email",
+                font-size: 12,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.167
+              }
+            }
+          }
+
+          iconContentClear24px = asset {
+            width: 12px,
+            height: 12px,
+            display: .none,
+            fill: rgb(70.1961%, 70.1961%, 70.1961%),
+            contents: iconIconContentClear24px
+          }
+
+          group92 = asset {
+            width: 24px,
+            height: 24px,
+            contents: iconGroup925
+          }
+        }
+
+        line13 = asset {
+          width: 326px,
+          height: 0px,
+          display: .none,
+          fill: rgb(80%, 80%, 80%),
+          contents: iconLine132
+        }
+
+        frame846 = frame {
+          width: 100%,
+          display: .none,
+          layout: {
+            justify-content: .space-between,
+            align-items: .center,
+            item-gap: 16px
+          },
+          overflow: .visible,
+          children: [verfikasiSekarang, group92],
+
+          verfikasiSekarang = text {
+            fill: colorTokens.colors.red-70,
+            contents: "Verfikasi Sekarang",
+            font-size: 12,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.167
+          }
+
+          group92 = asset {
+            width: 24px,
+            height: 24px,
+            contents: iconGroup925
+          }
+        }
+      }
+    }
+
+    frame757 = frame {
+      layout: {direction: .column},
+      fill: colorTokens.colors.neutral-00,
+      overflow: .visible,
+      children: [frame864, frame756, frame757, frame758],
+
+      frame864 = frame {
+        width: 100%,
+        layout: {item-gap: 10px},
+        overflow: .visible,
+        padding: [12px, 16px],
+        children: keamanan,
+
+        keamanan = text {
+          width: 328px,
+          fill: rgb(40%, 43.92%, 52.1569%),
+          contents: "Keamanan",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+
+      frame756 = frame {
+        layout: {direction: .column, item-gap: 16px},
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame754, pathCopy2],
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [dwIcon, ubahProfil],
+
+          dwIcon = asset {
+            width: 24px,
+            height: 24px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: iconDwIconAkunUbahPinOutline
+          }
+
+          ubahProfil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Ubah PIN",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          contents: iconPathCopy22
+        }
+      }
+
+      frame757 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame754, pathCopy2],
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [dwIcon, ubahProfil],
+
+          dwIcon = asset {
+            width: 24px,
+            height: 24px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: iconDwIconAkunLupaPinOutline
+          }
+
+          ubahProfil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Lupa PIN",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          contents: iconPathCopy22
+        }
+      }
+
+      frame758 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame849, pathCopy2],
+
+        frame849 = frame {
+          width: 344px,
+          layout: {justify-content: .space-between, item-gap: 16px},
+          overflow: .visible,
+          children: [frame754, toggle],
+
+          frame754 = frame {
+            layout: {align-items: .center, item-gap: 24px},
+            overflow: .visible,
+            padding: [0px, 16px],
+            children: [dwIcon, ubahProfil],
+
+            dwIcon = asset {
+              width: 24px,
+              height: 24px,
+              fill: rgb(30.1961%, 30.1961%, 30.1961%),
+              contents: iconDwIconAkunSmartLoginOutline2
+            }
+
+            ubahProfil = text {
+              fill: rgb(30.1961%, 30.1961%, 30.1961%),
+              contents: "Smart Login",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Medium",
+              line-height: 1.14
+            }
+          }
+
+          toggle = frame : toggleLib.toggleFalseFalse {
+            width: 38px
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          display: .none,
+          contents: iconPathCopy22
+        }
+      }
+    }
+
+    frame33555 = frame {
+      layout: {direction: .column},
+      fill: colorTokens.colors.neutral-00,
+      overflow: .visible,
+      children: [frame864, frame865, pathCopy2, frame867, pathCopy3, frame868],
+
+      frame864 = frame {
+        width: 100%,
+        layout: {item-gap: 10px},
+        overflow: .visible,
+        padding: [12px, 16px],
+        children: pengaturan,
+
+        pengaturan = text {
+          width: 328px,
+          fill: rgb(40%, 43.92%, 52.1569%),
+          contents: "Pengaturan",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+
+      frame865 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame754, pathCopy2],
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [link, ubahProfil],
+
+          link = asset {
+            width: 24px,
+            height: 24px,
+            fill: .black,
+            contents: iconLinkOutlined
+          }
+
+          ubahProfil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Akun Terhubung",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          display: .none,
+          contents: iconPathCopy22
+        }
+      }
+
+      pathCopy2 = asset {
+        width: 360px,
+        height: 1px,
+        contents: iconPathCopy22
+      }
+
+      frame867 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: frame754,
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [colorLens, ubahProfil],
+
+          colorLens = asset {
+            width: 24px,
+            height: 24px,
+            fill: .black,
+            contents: iconColorLensOutlined
+          }
+
+          ubahProfil = text {
+            width: 57px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Tema",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+      }
+
+      pathCopy3 = asset {
+        width: 360px,
+        height: 1px,
+        contents: iconPathCopy23
+      }
+
+      frame868 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame754, pathCopy2],
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [accessibility, ubahProfil],
+
+          accessibility = asset {
+            width: 24px,
+            height: 24px,
+            fill: .black,
+            contents: iconAccessibility
+          }
+
+          ubahProfil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Aksesibilitas",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          display: .none,
+          contents: iconPathCopy23
+        }
+      }
+    }
+
+    frame746 = frame {
+      layout: {direction: .column},
+      overflow: .visible,
+      children: frame757,
+
+      frame757 = frame {
+        layout: {direction: .column},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        children: [frame864, frame760],
+
+        frame864 = frame {
+          width: 100%,
+          layout: {item-gap: 10px},
+          overflow: .visible,
+          padding: [12px, 16px],
+          children: tentang,
+
+          tentang = text {
+            width: 328px,
+            fill: rgb(40%, 43.92%, 52.1569%),
+            contents: "Tentang",
+            font-size: 12,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.167
+          }
+        }
+
+        frame760 = frame {
+          layout: {direction: .column},
+          overflow: .visible,
+          children: [frame755, frame761, frame756, frame760],
+
+          frame755 = frame {
+            layout: {direction: .column, item-gap: 16px},
+            overflow: .visible,
+            padding: [16px, 0px],
+            children: [frame754, pathCopy2],
+
+            frame754 = frame {
+              layout: {align-items: .center, item-gap: 24px},
+              overflow: .visible,
+              padding: [0px, 16px],
+              children: [dwIcon, ubahProfil],
+
+              dwIcon = asset {
+                width: 24px,
+                height: 24px,
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: iconDwIconAkunTentangOutline
+              }
+
+              ubahProfil = text {
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "Tentang DOKU e-Wallet",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.14
+              }
+            }
+
+            pathCopy2 = asset {
+              width: 360px,
+              height: 1px,
+              contents: iconPathCopy22
+            }
+          }
+
+          frame761 = frame {
+            layout: {direction: .column, item-gap: 16px},
+            overflow: .visible,
+            padding: [16px, 0px],
+            children: [frame754, pathCopy2],
+
+            frame754 = frame {
+              layout: {align-items: .center, item-gap: 24px},
+              overflow: .visible,
+              padding: [0px, 16px],
+              children: [walletIcon, ubahProfil],
+
+              walletIcon = asset {
+                width: 24px,
+                height: 24px,
+                fill: colorTokens.colors.neutral-80,
+                contents: iconWalletIconAkunSnkOutline
+              }
+
+              ubahProfil = text {
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "Syarat dan Ketentuan",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.14
+              }
+            }
+
+            pathCopy2 = asset {
+              width: 360px,
+              height: 1px,
+              contents: iconPathCopy22
+            }
+          }
+
+          frame756 = frame {
+            layout: {direction: .column, item-gap: 16px},
+            overflow: .visible,
+            padding: [16px, 0px],
+            children: [frame754, pathCopy2],
+
+            frame754 = frame {
+              layout: {align-items: .center, item-gap: 24px},
+              overflow: .visible,
+              padding: [0px, 16px],
+              children: [dwIcon, ubahProfil],
+
+              dwIcon = asset {
+                width: 24px,
+                height: 24px,
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: iconDwIconAkunKebijakanPrivasiOutline
+              }
+
+              ubahProfil = text {
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "Kebijakan Privasi",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.14
+              }
+            }
+
+            pathCopy2 = asset {
+              width: 360px,
+              height: 1px,
+              contents: iconPathCopy22
+            }
+          }
+
+          frame760 = frame {
+            width: 360px,
+            height: 55px,
+            layout: {direction: .column, item-gap: 16px},
+            overflow: .visible,
+            padding: [16px, 0px],
+            children: [frame754, pathCopy2],
+
+            frame754 = frame {
+              layout: {align-items: .center, item-gap: 24px},
+              overflow: .visible,
+              padding: [0px, 16px],
+              children: [dwIcon, ubahProfil],
+
+              dwIcon = asset {
+                width: 24px,
+                height: 24px,
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: iconDwIconAkunBantuanOutline
+              }
+
+              ubahProfil = text {
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "Pusat Bantuan",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.14
+              }
+            }
+
+            pathCopy2 = asset {
+              width: 360px,
+              height: 1px,
+              display: .none,
+              contents: iconPathCopy22
+            }
+          }
+        }
+      }
+    }
+
+    frame758 = frame {
+      layout: {direction: .column},
+      overflow: .visible,
+      children: [frame864, frame865, pathCopy3, frame759, frame748],
+
+      frame864 = frame {
+        width: 100%,
+        layout: {item-gap: 10px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [12px, 16px],
+        children: lainnya,
+
+        lainnya = text {
+          width: 328px,
+          fill: rgb(40%, 43.92%, 52.1569%),
+          contents: "Lainnya",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+
+      frame865 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame754, pathCopy2],
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [dwIcon, ubahProfil],
+
+          dwIcon = asset {
+            width: 24px,
+            height: 24px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: iconDwIconAkunHapusAkunOutline
+          }
+
+          ubahProfil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Hapus Akun",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          contents: iconPathCopy22
+        }
+      }
+
+      pathCopy3 = asset {
+        width: 360px,
+        height: 1px,
+        contents: iconPathCopy22
+      }
+
+      frame759 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame754, pathCopy2],
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [dwIcon, ubahProfil],
+
+          dwIcon = asset {
+            width: 24px,
+            height: 24px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: iconDwIconAkunKeluarOutline
+          }
+
+          ubahProfil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Keluar",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          display: .none,
+          contents: iconPathCopy22
+        }
+      }
+
+      frame748 = frame {
+        width: 359px,
+        layout: {justify-content: .center, item-gap: 10px},
+        overflow: .visible,
+        padding: 16px,
+        children: keluar,
+
+        keluar = text {
+          fill: rgb(60%, 60%, 60%),
+          contents: "App Version 3.1.0 (7715)",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+    }
+
+    bottomNav = frame {
+      width: 360px,
+      height: 82px,
+      overflow: .visible,
+      children: [group302, group346],
+
+      group302 = frame {
+        left: 0px,
+        top: 0px,
+        width: 360px,
+        height: 82px,
+        children: [
+          vector3,
+          ellipse2,
+          rectangleCopy,
+          group76,
+          home,
+          group343,
+          groupLayer
+        ],
+
+        vector3 = asset {
+          left: 0px,
+          top: 25px,
+          width: 360px,
+          height: 0px,
+          fill: rgb(89.8%, 89.8%, 89.8%),
+          contents: iconVector32
+        }
+
+        ellipse2 = shape {
+          left: 148.5px,
+          top: 0px,
+          width: 64px,
+          height: 64px,
+          fill: colorTokens.colors.neutral-00,
+          border: {color: rgb(89.8%, 89.8%, 89.8%), width: 0.54px},
+          type: .ellipse
+        }
+
+        rectangleCopy = asset {
+          left: 0px,
+          top: 25px,
+          width: 360px,
+          height: 57px,
+          fill: colorTokens.colors.neutral-00,
+          contents: iconRectangleCopy
+        }
+
+        group76 = frame {
+          left: 0px,
+          top: 29px,
+          width: 360px,
+          height: 52.66px,
+          children: [group75, akun, wallet, promo],
+
+          group75 = asset {
+            left: 0px,
+            top: 0px,
+            width: 90px,
+            height: 52.66px,
+            contents: iconGroup75
+          }
+
+          akun = frame {
+            left: 270px,
+            top: 0px,
+            width: 90px,
+            height: 52.66px,
+            children: [rectangleCopy2, group24],
+
+            rectangleCopy2 = shape {
+              left: 0px,
+              top: 0px,
+              width: 90px,
+              height: 52.66px,
+              fill: colorTokens.colors.neutral-00,
+              type: .rect
+            }
+
+            group24 = frame {
+              left: 33.15px,
+              top: 33.62px,
+              width: 25px,
+              height: 11px,
+              children: akun,
+
+              akun = text {
+                left: -2px,
+                top: 0px,
+                fill: colorTokens.colors.red-60,
+                contents: "Akun",
+                font-size: 12,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.167,
+                align: .center
+              }
+            }
+          }
+
+          wallet = frame {
+            left: 180px,
+            top: 0px,
+            width: 90px,
+            height: 52.66px,
+            children: [rectangleCopy2, group342],
+
+            rectangleCopy2 = shape {
+              left: 0px,
+              top: 0px,
+              width: 90px,
+              height: 52.66px,
+              fill: colorTokens.colors.neutral-00,
+              type: .rect
+            }
+
+            group342 = frame {
+              left: 54px,
+              top: 8px,
+              width: 30px,
+              height: 36.55px,
+              children: [combinedShape, wallet],
+
+              combinedShape = asset {
+                left: 6.28px,
+                top: 0px,
+                width: 19px,
+                height: 19px,
+                fill: rgb(91.76%, 92.549%, 94.1176%),
+                contents: iconCombinedShape
+              }
+
+              wallet = frame {
+                left: 0px,
+                top: 25.55px,
+                width: 30px,
+                height: 11px,
+                children: group8Copy2,
+
+                group8Copy2 = frame {
+                  left: 0px,
+                  top: 0px,
+                  width: 30px,
+                  height: 11px,
+                  children: wallet,
+
+                  wallet = text {
+                    left: -2px,
+                    top: 0px,
+                    fill: rgb(91.76%, 92.549%, 94.1176%),
+                    contents: "Wallet",
+                    font-size: 12,
+                    font-family: "DIN Next LT Pro",
+                    font-style: "Regular",
+                    line-height: 1.167,
+                    align: .center
+                  }
+                }
+              }
+            }
+          }
+
+          promo = frame {
+            left: 119.72px,
+            top: 33.55px,
+            width: 32px,
+            height: 11px,
+            children: promo,
+
+            promo = frame {
+              left: 0px,
+              top: 0px,
+              width: 32px,
+              height: 11px,
+              children: group8Copy,
+
+              group8Copy = frame {
+                left: 0px,
+                top: 0px,
+                width: 32px,
+                height: 11px,
+                children: group12,
+
+                group12 = frame {
+                  left: 0px,
+                  top: 0px,
+                  width: 32px,
+                  height: 11px
+                }
+              }
+            }
+          }
+        }
+
+        home = frame {
+          left: 24.94px,
+          top: 62.55px,
+          width: 41px,
+          height: 11px,
+          children: beranda,
+
+          beranda = frame {
+            left: 0px,
+            top: 0px,
+            width: 41px,
+            height: 11px,
+            children: group2,
+
+            group2 = frame {
+              left: 0px,
+              top: 0px,
+              width: 41px,
+              height: 11px,
+              children: group28,
+
+              group28 = frame {
+                left: 0px,
+                top: 0px,
+                width: 41px,
+                height: 11px,
+                children: beranda,
+
+                beranda = text {
+                  left: -4px,
+                  top: 0px,
+                  fill: rgb(91.76%, 92.549%, 94.1176%),
+                  contents: "Beranda",
+                  font-size: 12,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Regular",
+                  line-height: 1.167,
+                  align: .center
+                }
+              }
+            }
+          }
+        }
+
+        group343 = frame {
+          left: 90px,
+          top: 29px,
+          width: 108px,
+          height: 52.66px,
+          children: [rectangleCopy2, group341],
+
+          rectangleCopy2 = shape {
+            left: 0px,
+            top: 0px,
+            width: 90px,
+            height: 52.66px,
+            fill: colorTokens.colors.neutral-00,
+            type: .rect
+          }
+
+          group341 = frame {
+            left: 3px,
+            top: 6px,
+            width: 105px,
+            height: 45.55px,
+            children: [promo, promo2, groupLayer],
+
+            promo = text {
+              left: 0px,
+              top: 27.55px,
+              fill: rgb(91.76%, 92.549%, 94.1176%),
+              contents: "Promo",
+              font-size: 12,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.167,
+              align: .center
+            }
+
+            promo2 = text {
+              left: 72px,
+              top: 27.55px,
+              fill: rgb(91.76%, 92.549%, 94.1176%),
+              contents: "Bayar",
+              font-size: 12,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.167,
+              align: .center
+            }
+
+            groupLayer = asset {
+              left: 8.35px,
+              top: 0px,
+              width: 19.2px,
+              height: 20.69px,
+              fill: rgb(91.76%, 92.549%, 94.1176%),
+              contents: iconGroup
+            }
+          }
+        }
+
+        groupLayer = asset {
+          left: 309.36px,
+          top: 35px,
+          width: 14.05px,
+          height: 21.16px,
+          fill: colorTokens.colors.red-60,
+          contents: iconGroup2
+        }
+      }
+
+      group346 = asset {
+        left: 156.5px,
+        top: 8px,
+        width: 48px,
+        height: 48px,
+        contents: iconGroup346
+      }
+    }
+  }
+
+  frame762 = frame {
+    left: 0px,
+    top: 0px,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: frame33527,
+
+    frame33527 = frame {
+      layout: {direction: .column},
+      overflow: .visible,
+      children: [statusBar, topbar],
+
+      statusBar = asset {
+        width: 360px,
+        height: 42px,
+        contents: iconStatusBarAndroid
+      }
+
+      topbar = frame : topbarLib.topbarDefault {
+        width: 360px,
+
+        row {
+          width: 328px,
+
+          arrowBack {
+            display: .none
+          }
+
+          header {
+            contents: "Akun"
+          }
+        }
+
+        moreIcon {
+          display: .none
+        }
+      }
+    }
+  }
+}
+
+export accountComponentOnProcessKyc = frame {
+  title: "account-component / Property 1=on-process-kyc",
+  left: 864px,
+  top: 0px,
+  width: 360px,
+  height: 1156px,
+  fill: colorTokens.colors.neutral-background,
+  children: [frame761, frame762],
+
+  frame761 = frame {
+    left: 0px,
+    top: 97px,
+    layout: {direction: .column, item-gap: 16px},
+    overflow: .visible,
+    children: [
+      header,
+      verify,
+      frame757,
+      frame33555,
+      frame746,
+      frame33556,
+      bottomNav
+    ],
+
+    header = frame {
+      width: 100%,
+      layout: {
+        justify-content: .space-between,
+        align-items: .center,
+        item-gap: 16px
+      },
+      fill: colorTokens.colors.neutral-00,
+      overflow: .visible,
+      padding: 16px,
+      children: [left, button, chevronRight],
+
+      left = frame {
+        layout: {item-gap: 16px},
+        overflow: .visible,
+        children: [avatar, namePn],
+
+        avatar = asset {
+          width: 45.54px,
+          height: 45.54px,
+          contents: iconAvatar2
+        }
+
+        namePn = frame {
+          layout: {direction: .column, item-gap: 4px},
+          overflow: .visible,
+          children: [ulfaIntania, badge, dokuId1290859012],
+
+          ulfaIntania = text {
+            fill: colorTokens.colors.neutral-80,
+            contents: "Ulfa Intania",
+            font-size: 16,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 0.75
+          }
+
+          badge = frame : badgeLib.badgeSedangVerifikasi {}
+
+          dokuId1290859012 = text {
+            fill: colorTokens.colors.neutral-70,
+            contents: "DOKU ID: 1290859012",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.14
+          }
+        }
+      }
+
+      button = frame {
+        display: .none,
+        layout: {direction: .row},
+        overflow: .visible,
+        children: buttonBase,
+
+        buttonBase = frame {
+          height: 100%,
+          layout: {
+            justify-content: .center,
+            align-items: .center,
+            item-gap: 4px
+          },
+          fill: colorTokens.colors.neutral-00,
+          border: rgb(20.39%, 25.098%, 32.94%),
+          shadow: [
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 7.84%),
+                offset: point(0px, 1px),
+                blur-radius: 8px
+              }
+            },
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 12.1569%),
+                offset: point(0px, 0px),
+                blur-radius: 1px
+              }
+            }
+          ],
+          corner-radius: 42px,
+          padding: [4px, 12px],
+          children: [add, textLayer, add2],
+
+          add = asset {
+            width: 12px,
+            height: 12px,
+            display: .none,
+            fill: rgb(49.8%, 33.7255%, 85.098%),
+            contents: iconAddRound
+          }
+
+          textLayer = text {
+            fill: colorTokens.colors.neutral-70,
+            contents: "Ubah",
+            font-size: 12,
+            font-family: "Inter",
+            font-style: "Semi Bold",
+            line-height: 1.33
+          }
+
+          add2 = asset {
+            width: 12px,
+            height: 12px,
+            fill: rgb(20.39%, 25.098%, 32.94%),
+            contents: iconModeEditRound3
+          }
+        }
+      }
+
+      chevronRight = asset {
+        width: 15.36px,
+        height: 15.36px,
+        fill: colorTokens.colors.neutral-40,
+        contents: iconChevronRight2
+      }
+    }
+
+    verify = frame {
+      width: 359px,
+      display: .none,
+      layout: {direction: .column, item-gap: 10px},
+      overflow: .visible,
+      padding: [0px, 16px],
+      children: collateralMsg,
+
+      collateralMsg = frame {
+        width: 100%,
+        layout: {direction: .column, align-items: .center, item-gap: 12px},
+        fill: colorTokens.colors.neutral-00,
+        border: colorTokens.colors.red-70,
+        corner-radius: 4px,
+        overflow: .visible,
+        padding: 16px,
+        children: [container, line13, frame846],
+
+        container = frame {
+          width: 100%,
+          layout: {
+            justify-content: .space-between,
+            align-items: .center,
+            item-gap: 16px
+          },
+          children: [help24px, frame846, iconContentClear24px, group92],
+
+          help24px = frame {
+            width: 16px,
+            height: 16px,
+            display: .none,
+            overflow: .visible
+          }
+
+          frame846 = frame {
+            layout: {align-items: .center, item-gap: 16px},
+            overflow: .visible,
+            children: [mail, frame847],
+
+            mail = asset {
+              width: 24px,
+              height: 24px,
+              fill: colorTokens.colors.red-70,
+              contents: iconMailFilled
+            }
+
+            frame847 = frame {
+              layout: {
+                direction: .column,
+                justify-content: .center,
+                item-gap: 8px
+              },
+              overflow: .visible,
+              children: [
+                verifikasiDataKamu,
+                untukMeningkatkanKeamananAkunHarapVerifikasiDataYangDiperlukan
+              ],
+
+              verifikasiDataKamu = text {
+                width: 226.82px,
+                fill: rgb(20%, 20%, 20%),
+                contents: "Verifikasi Email Kamu ",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.14
+              }
+
+              untukMeningkatkanKeamananAkunHarapVerifikasiDataYangDiperlukan = text {
+                width: 226.82px,
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "Untuk meningkatkan keamanan akun, harap verifikasi email",
+                font-size: 12,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.167
+              }
+            }
+          }
+
+          iconContentClear24px = asset {
+            width: 12px,
+            height: 12px,
+            display: .none,
+            fill: rgb(70.1961%, 70.1961%, 70.1961%),
+            contents: iconIconContentClear24px
+          }
+
+          group92 = asset {
+            width: 24px,
+            height: 24px,
+            contents: iconGroup925
+          }
+        }
+
+        line13 = asset {
+          width: 326px,
+          height: 0px,
+          display: .none,
+          fill: rgb(80%, 80%, 80%),
+          contents: iconLine132
+        }
+
+        frame846 = frame {
+          width: 100%,
+          display: .none,
+          layout: {
+            justify-content: .space-between,
+            align-items: .center,
+            item-gap: 16px
+          },
+          overflow: .visible,
+          children: [verfikasiSekarang, group92],
+
+          verfikasiSekarang = text {
+            fill: colorTokens.colors.red-70,
+            contents: "Verfikasi Sekarang",
+            font-size: 12,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.167
+          }
+
+          group92 = asset {
+            width: 24px,
+            height: 24px,
+            contents: iconGroup925
+          }
+        }
+      }
+    }
+
+    frame757 = frame {
+      layout: {direction: .column},
+      fill: colorTokens.colors.neutral-00,
+      overflow: .visible,
+      children: [frame864, frame756, frame757, frame758],
+
+      frame864 = frame {
+        width: 100%,
+        layout: {item-gap: 10px},
+        overflow: .visible,
+        padding: [12px, 16px],
+        children: keamanan,
+
+        keamanan = text {
+          width: 328px,
+          fill: rgb(40%, 43.92%, 52.1569%),
+          contents: "Keamanan",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+
+      frame756 = frame {
+        layout: {direction: .column, item-gap: 16px},
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame754, pathCopy2],
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [dwIcon, ubahProfil],
+
+          dwIcon = asset {
+            width: 24px,
+            height: 24px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: iconDwIconAkunUbahPinOutline2
+          }
+
+          ubahProfil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Ubah PIN",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          contents: iconPathCopy23
+        }
+      }
+
+      frame757 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame754, pathCopy2],
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [dwIcon, ubahProfil],
+
+          dwIcon = asset {
+            width: 24px,
+            height: 24px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: iconDwIconAkunLupaPinOutline2
+          }
+
+          ubahProfil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Lupa PIN",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          contents: iconPathCopy23
+        }
+      }
+
+      frame758 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame849, pathCopy2],
+
+        frame849 = frame {
+          width: 344px,
+          layout: {justify-content: .space-between, item-gap: 16px},
+          overflow: .visible,
+          children: [frame754, toggle],
+
+          frame754 = frame {
+            layout: {align-items: .center, item-gap: 24px},
+            overflow: .visible,
+            padding: [0px, 16px],
+            children: [dwIcon, ubahProfil],
+
+            dwIcon = asset {
+              width: 24px,
+              height: 24px,
+              fill: rgb(30.1961%, 30.1961%, 30.1961%),
+              contents: iconDwIconAkunSmartLoginOutline3
+            }
+
+            ubahProfil = text {
+              fill: rgb(30.1961%, 30.1961%, 30.1961%),
+              contents: "Smart Login",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Medium",
+              line-height: 1.14
+            }
+          }
+
+          toggle = frame : toggleLib.toggleFalseFalse {
+            width: 38px
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          display: .none,
+          contents: iconPathCopy23
+        }
+      }
+    }
+
+    frame33555 = frame {
+      layout: {direction: .column},
+      fill: colorTokens.colors.neutral-00,
+      overflow: .visible,
+      children: [frame864, frame865, pathCopy2, frame867, pathCopy3, frame868],
+
+      frame864 = frame {
+        width: 100%,
+        layout: {item-gap: 10px},
+        overflow: .visible,
+        padding: [12px, 16px],
+        children: pengaturan,
+
+        pengaturan = text {
+          width: 328px,
+          fill: rgb(40%, 43.92%, 52.1569%),
+          contents: "Pengaturan",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+
+      frame865 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame754, pathCopy2],
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [link, ubahProfil],
+
+          link = asset {
+            width: 24px,
+            height: 24px,
+            fill: .black,
+            contents: iconLinkOutlined
+          }
+
+          ubahProfil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Akun Terhubung",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          display: .none,
+          contents: iconPathCopy23
+        }
+      }
+
+      pathCopy2 = asset {
+        width: 360px,
+        height: 1px,
+        contents: iconPathCopy23
+      }
+
+      frame867 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: frame754,
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [colorLens, ubahProfil],
+
+          colorLens = asset {
+            width: 24px,
+            height: 24px,
+            fill: .black,
+            contents: iconColorLensOutlined
+          }
+
+          ubahProfil = text {
+            width: 57px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Tema",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+      }
+
+      pathCopy3 = asset {
+        width: 360px,
+        height: 1px,
+        contents: iconPathCopy23
+      }
+
+      frame868 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame754, pathCopy2],
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [accessibility, ubahProfil],
+
+          accessibility = asset {
+            width: 24px,
+            height: 24px,
+            fill: .black,
+            contents: iconAccessibility
+          }
+
+          ubahProfil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Aksesibilitas",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          display: .none,
+          contents: iconPathCopy23
+        }
+      }
+    }
+
+    frame746 = frame {
+      layout: {direction: .column},
+      overflow: .visible,
+      children: frame757,
+
+      frame757 = frame {
+        layout: {direction: .column},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        children: [frame864, frame760],
+
+        frame864 = frame {
+          width: 100%,
+          layout: {item-gap: 10px},
+          overflow: .visible,
+          padding: [12px, 16px],
+          children: tentang,
+
+          tentang = text {
+            width: 328px,
+            fill: rgb(40%, 43.92%, 52.1569%),
+            contents: "Tentang",
+            font-size: 12,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.167
+          }
+        }
+
+        frame760 = frame {
+          layout: {direction: .column},
+          overflow: .visible,
+          children: [frame755, frame761, frame756, frame760],
+
+          frame755 = frame {
+            layout: {direction: .column, item-gap: 16px},
+            overflow: .visible,
+            padding: [16px, 0px],
+            children: [frame754, pathCopy2],
+
+            frame754 = frame {
+              layout: {align-items: .center, item-gap: 24px},
+              overflow: .visible,
+              padding: [0px, 16px],
+              children: [dwIcon, ubahProfil],
+
+              dwIcon = asset {
+                width: 24px,
+                height: 24px,
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: iconDwIconAkunTentangOutline2
+              }
+
+              ubahProfil = text {
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "Tentang DOKU e-Wallet",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.14
+              }
+            }
+
+            pathCopy2 = asset {
+              width: 360px,
+              height: 1px,
+              contents: iconPathCopy23
+            }
+          }
+
+          frame761 = frame {
+            layout: {direction: .column, item-gap: 16px},
+            overflow: .visible,
+            padding: [16px, 0px],
+            children: [frame754, pathCopy2],
+
+            frame754 = frame {
+              layout: {align-items: .center, item-gap: 24px},
+              overflow: .visible,
+              padding: [0px, 16px],
+              children: [walletIcon, ubahProfil],
+
+              walletIcon = asset {
+                width: 24px,
+                height: 24px,
+                fill: colorTokens.colors.neutral-80,
+                contents: iconWalletIconAkunSnkOutline
+              }
+
+              ubahProfil = text {
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "Syarat dan Ketentuan",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.14
+              }
+            }
+
+            pathCopy2 = asset {
+              width: 360px,
+              height: 1px,
+              contents: iconPathCopy23
+            }
+          }
+
+          frame756 = frame {
+            layout: {direction: .column, item-gap: 16px},
+            overflow: .visible,
+            padding: [16px, 0px],
+            children: [frame754, pathCopy2],
+
+            frame754 = frame {
+              layout: {align-items: .center, item-gap: 24px},
+              overflow: .visible,
+              padding: [0px, 16px],
+              children: [dwIcon, ubahProfil],
+
+              dwIcon = asset {
+                width: 24px,
+                height: 24px,
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: iconDwIconAkunKebijakanPrivasiOutline2
+              }
+
+              ubahProfil = text {
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "Kebijakan Privasi",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.14
+              }
+            }
+
+            pathCopy2 = asset {
+              width: 360px,
+              height: 1px,
+              contents: iconPathCopy23
+            }
+          }
+
+          frame760 = frame {
+            width: 360px,
+            height: 55px,
+            layout: {direction: .column, item-gap: 16px},
+            overflow: .visible,
+            padding: [16px, 0px],
+            children: [frame754, pathCopy2],
+
+            frame754 = frame {
+              layout: {align-items: .center, item-gap: 24px},
+              overflow: .visible,
+              padding: [0px, 16px],
+              children: [dwIcon, ubahProfil],
+
+              dwIcon = asset {
+                width: 24px,
+                height: 24px,
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: iconDwIconAkunBantuanOutline2
+              }
+
+              ubahProfil = text {
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "Pusat Bantuan",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.14
+              }
+            }
+
+            pathCopy2 = asset {
+              width: 360px,
+              height: 1px,
+              display: .none,
+              contents: iconPathCopy23
+            }
+          }
+        }
+      }
+    }
+
+    frame33556 = frame {
+      layout: {direction: .column},
+      overflow: .visible,
+      children: [frame864, frame866, pathCopy3, frame759, frame748],
+
+      frame864 = frame {
+        width: 100%,
+        layout: {item-gap: 10px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [12px, 16px],
+        children: lainnya,
+
+        lainnya = text {
+          width: 328px,
+          fill: rgb(40%, 43.92%, 52.1569%),
+          contents: "Lainnya",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+
+      frame866 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame754, pathCopy2],
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [dwIcon, ubahProfil],
+
+          dwIcon = asset {
+            width: 24px,
+            height: 24px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: iconDwIconAkunHapusAkunOutline2
+          }
+
+          ubahProfil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Hapus Akun",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          contents: iconPathCopy23
+        }
+      }
+
+      pathCopy3 = asset {
+        width: 360px,
+        height: 1px,
+        contents: iconPathCopy23
+      }
+
+      frame759 = frame {
+        width: 360px,
+        height: 55px,
+        layout: {direction: .column, item-gap: 16px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [16px, 0px],
+        children: [frame754, pathCopy2],
+
+        frame754 = frame {
+          layout: {align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          padding: [0px, 16px],
+          children: [dwIcon, ubahProfil],
+
+          dwIcon = asset {
+            width: 24px,
+            height: 24px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: iconDwIconAkunKeluarOutline2
+          }
+
+          ubahProfil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Keluar",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+        }
+
+        pathCopy2 = asset {
+          width: 360px,
+          height: 1px,
+          display: .none,
+          contents: iconPathCopy23
+        }
+      }
+
+      frame748 = frame {
+        width: 359px,
+        layout: {justify-content: .center, item-gap: 10px},
+        overflow: .visible,
+        padding: 16px,
+        children: keluar,
+
+        keluar = text {
+          fill: rgb(60%, 60%, 60%),
+          contents: "App Version 3.1.0 (7715)",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.167
+        }
+      }
+    }
+
+    bottomNav = frame {
+      width: 360px,
+      height: 82px,
+      overflow: .visible,
+      children: [group302, group346],
+
+      group302 = frame {
+        left: 0px,
+        top: 0px,
+        width: 360px,
+        height: 82px,
+        children: [
+          vector3,
+          ellipse2,
+          rectangleCopy,
+          group76,
+          home,
+          group343,
+          groupLayer
+        ],
+
+        vector3 = asset {
+          left: 0px,
+          top: 25px,
+          width: 360px,
+          height: 0px,
+          fill: rgb(89.8%, 89.8%, 89.8%),
+          contents: iconVector33
+        }
+
+        ellipse2 = shape {
+          left: 148.5px,
+          top: 0px,
+          width: 64px,
+          height: 64px,
+          fill: colorTokens.colors.neutral-00,
+          border: {color: rgb(89.8%, 89.8%, 89.8%), width: 0.54px},
+          type: .ellipse
+        }
+
+        rectangleCopy = asset {
+          left: 0px,
+          top: 25px,
+          width: 360px,
+          height: 57px,
+          fill: colorTokens.colors.neutral-00,
+          contents: iconRectangleCopy
+        }
+
+        group76 = frame {
+          left: 0px,
+          top: 29px,
+          width: 360px,
+          height: 52.66px,
+          children: [group75, akun, wallet, promo],
+
+          group75 = asset {
+            left: 0px,
+            top: 0px,
+            width: 90px,
+            height: 52.66px,
+            contents: iconGroup75
+          }
+
+          akun = frame {
+            left: 270px,
+            top: 0px,
+            width: 90px,
+            height: 52.66px,
+            children: [rectangleCopy2, group24],
+
+            rectangleCopy2 = shape {
+              left: 0px,
+              top: 0px,
+              width: 90px,
+              height: 52.66px,
+              fill: colorTokens.colors.neutral-00,
+              type: .rect
+            }
+
+            group24 = frame {
+              left: 33.15px,
+              top: 33.62px,
+              width: 25px,
+              height: 11px,
+              children: akun,
+
+              akun = text {
+                left: -2px,
+                top: 0px,
+                fill: colorTokens.colors.red-60,
+                contents: "Akun",
+                font-size: 12,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.167,
+                align: .center
+              }
+            }
+          }
+
+          wallet = frame {
+            left: 180px,
+            top: 0px,
+            width: 90px,
+            height: 52.66px,
+            children: [rectangleCopy2, group342],
+
+            rectangleCopy2 = shape {
+              left: 0px,
+              top: 0px,
+              width: 90px,
+              height: 52.66px,
+              fill: colorTokens.colors.neutral-00,
+              type: .rect
+            }
+
+            group342 = frame {
+              left: 54px,
+              top: 8px,
+              width: 30px,
+              height: 36.55px,
+              children: [combinedShape, wallet],
+
+              combinedShape = asset {
+                left: 6.28px,
+                top: 0px,
+                width: 19px,
+                height: 19px,
+                fill: rgb(91.76%, 92.549%, 94.1176%),
+                contents: iconCombinedShape
+              }
+
+              wallet = frame {
+                left: 0px,
+                top: 25.55px,
+                width: 30px,
+                height: 11px,
+                children: group8Copy2,
+
+                group8Copy2 = frame {
+                  left: 0px,
+                  top: 0px,
+                  width: 30px,
+                  height: 11px,
+                  children: wallet,
+
+                  wallet = text {
+                    left: -2px,
+                    top: 0px,
+                    fill: rgb(91.76%, 92.549%, 94.1176%),
+                    contents: "Wallet",
+                    font-size: 12,
+                    font-family: "DIN Next LT Pro",
+                    font-style: "Regular",
+                    line-height: 1.167,
+                    align: .center
+                  }
+                }
+              }
+            }
+          }
+
+          promo = frame {
+            left: 119.72px,
+            top: 33.55px,
+            width: 32px,
+            height: 11px,
+            children: promo,
+
+            promo = frame {
+              left: 0px,
+              top: 0px,
+              width: 32px,
+              height: 11px,
+              children: group8Copy,
+
+              group8Copy = frame {
+                left: 0px,
+                top: 0px,
+                width: 32px,
+                height: 11px,
+                children: group12,
+
+                group12 = frame {
+                  left: 0px,
+                  top: 0px,
+                  width: 32px,
+                  height: 11px
+                }
+              }
+            }
+          }
+        }
+
+        home = frame {
+          left: 24.94px,
+          top: 62.55px,
+          width: 41px,
+          height: 11px,
+          children: beranda,
+
+          beranda = frame {
+            left: 0px,
+            top: 0px,
+            width: 41px,
+            height: 11px,
+            children: group2,
+
+            group2 = frame {
+              left: 0px,
+              top: 0px,
+              width: 41px,
+              height: 11px,
+              children: group28,
+
+              group28 = frame {
+                left: 0px,
+                top: 0px,
+                width: 41px,
+                height: 11px,
+                children: beranda,
+
+                beranda = text {
+                  left: -4px,
+                  top: 0px,
+                  fill: rgb(91.76%, 92.549%, 94.1176%),
+                  contents: "Beranda",
+                  font-size: 12,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Regular",
+                  line-height: 1.167,
+                  align: .center
+                }
+              }
+            }
+          }
+        }
+
+        group343 = frame {
+          left: 90px,
+          top: 29px,
+          width: 108px,
+          height: 52.66px,
+          children: [rectangleCopy2, group341],
+
+          rectangleCopy2 = shape {
+            left: 0px,
+            top: 0px,
+            width: 90px,
+            height: 52.66px,
+            fill: colorTokens.colors.neutral-00,
+            type: .rect
+          }
+
+          group341 = frame {
+            left: 3px,
+            top: 6px,
+            width: 105px,
+            height: 45.55px,
+            children: [promo, promo2, groupLayer],
+
+            promo = text {
+              left: 0px,
+              top: 27.55px,
+              fill: rgb(91.76%, 92.549%, 94.1176%),
+              contents: "Promo",
+              font-size: 12,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.167,
+              align: .center
+            }
+
+            promo2 = text {
+              left: 72px,
+              top: 27.55px,
+              fill: rgb(91.76%, 92.549%, 94.1176%),
+              contents: "Bayar",
+              font-size: 12,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.167,
+              align: .center
+            }
+
+            groupLayer = asset {
+              left: 8.35px,
+              top: 0px,
+              width: 19.2px,
+              height: 20.69px,
+              fill: rgb(91.76%, 92.549%, 94.1176%),
+              contents: iconGroup
+            }
+          }
+        }
+
+        groupLayer = asset {
+          left: 309.36px,
+          top: 35px,
+          width: 14.05px,
+          height: 21.16px,
+          fill: colorTokens.colors.red-60,
+          contents: iconGroup2
+        }
+      }
+
+      group346 = asset {
+        left: 156.5px,
+        top: 8px,
+        width: 48px,
+        height: 48px,
+        contents: iconGroup3462
+      }
+    }
+  }
+
+  frame762 = frame {
+    left: 0px,
+    top: 0px,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: frame33527,
+
+    frame33527 = frame {
+      layout: {direction: .column},
+      overflow: .visible,
+      children: [statusBar, topbar],
+
+      statusBar = asset {
+        width: 360px,
+        height: 42px,
+        contents: iconStatusBarAndroid
+      }
+
+      topbar = frame : topbarLib.topbarDefault {
+        width: 360px,
+
+        row {
+          width: 328px,
+
+          arrowBack {
+            display: .none
+          }
+
+          header {
+            contents: "Akun"
+          }
+        }
+
+        moreIcon {
+          display: .none
+        }
+      }
+    }
+  }
+}
+
+export header = frame {
+  title: "Header",
+  left: 0px,
+  top: 1587px,
+  width: 360px,
+  height: 92px,
+  layout: {
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: 16px
+  },
+  fill: colorTokens.colors.neutral-00,
+  overflow: .visible,
+  padding: 16px,
+  children: [left, button, chevronRight],
+
+  left = frame {
+    layout: {item-gap: 16px},
+    overflow: .visible,
+    children: [avatar, namePn],
+
+    avatar = asset {
+      width: 45.54px,
+      height: 45.54px,
+      contents: iconAvatar2
+    }
+
+    namePn = frame {
+      layout: {direction: .column, item-gap: 4px},
+      overflow: .visible,
+      children: [ulfaIntania, badge, frame33557],
+
+      ulfaIntania = text {
+        fill: colorTokens.colors.neutral-80,
+        contents: "Ulfa Intania",
+        font-size: 16,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 0.75
+      }
+
+      badge = frame : badgeLib.badgeBelumVerifikasi {}
+
+      frame33557 = frame {
+        layout: {item-gap: 8px},
+        overflow: .visible,
+        children: [dokuId1290859012, transactionNumberCopyIcon],
+
+        dokuId1290859012 = text {
+          fill: colorTokens.colors.neutral-70,
+          contents: "DOKU ID: 1290859012",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.14
+        }
+
+        transactionNumberCopyIcon = asset {
+          width: 14px,
+          height: 14px,
+          fill: colorTokens.colors.red-60,
+          contents: iconCopy2
+        }
+      }
+    }
+  }
+
+  button = frame {
+    display: .none,
+    layout: {direction: .row},
+    overflow: .visible,
+    children: buttonBase,
+
+    buttonBase = frame {
+      height: 100%,
+      layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+      fill: colorTokens.colors.neutral-00,
+      border: rgb(20.39%, 25.098%, 32.94%),
+      shadow: [
+        {
+          drop-shadow: {
+            color: rgb(7.84%, 7.84%, 7.84%, 7.84%),
+            offset: point(0px, 1px),
+            blur-radius: 8px
+          }
+        },
+        {
+          drop-shadow: {
+            color: rgb(7.84%, 7.84%, 7.84%, 12.1569%),
+            offset: point(0px, 0px),
+            blur-radius: 1px
+          }
+        }
+      ],
+      corner-radius: 42px,
+      padding: [4px, 12px],
+      children: [add, textLayer, add2],
+
+      add = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: rgb(49.8%, 33.7255%, 85.098%),
+        contents: iconAddRound
+      }
+
+      textLayer = text {
+        fill: colorTokens.colors.neutral-70,
+        contents: "Ubah",
+        font-size: 12,
+        font-family: "Inter",
+        font-style: "Semi Bold",
+        line-height: 1.33
+      }
+
+      add2 = asset {
+        width: 12px,
+        height: 12px,
+        fill: rgb(20.39%, 25.098%, 32.94%),
+        contents: iconModeEditRound
+      }
+    }
+  }
+
+  chevronRight = asset {
+    width: 15.36px,
+    height: 15.36px,
+    fill: colorTokens.colors.neutral-40,
+    contents: iconChevronRight2
+  }
+}
+
+export successToast = frame {
+  title: "_success_toast",
+  left: 0px,
+  top: 1807px,
+  layout: {direction: .column},
+  overflow: .visible,
+  children: toast,
+
+  toast = frame : toastLib.toastSuccess {
+    container {
+      successAlertHereSYouCanSeeASuccessAlert {
+        fill[0].color: rgb(0%, 50.98%, 49.0196%),
+        width: 272px,
+        contents: "Tersalin",
+        font-style: "Regular"
+      }
+    }
+  }
+}

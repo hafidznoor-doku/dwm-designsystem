@@ -1,0 +1,105 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/cards.svg" as iconCards
+import "resources/assets/icons/data-driven-analytics.svg" as iconDataDrivenAnalytics
+import "resources/assets/icons/general-data-kosong.svg" as iconGeneralDataKosong
+
+export emptyStateNoCards = frame {
+  title: "Empty-state/no-cards",
+  left: 0px,
+  top: 0px,
+  width: 155px,
+  height: 77px,
+  overflow: .visible,
+  children: [rp10430233, cards],
+
+  rp10430233 = text {
+    left: -7px,
+    top: 60px,
+    fill: colorTokens.colors.neutral-30,
+    contents: "Belum ada kartu tersedia",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    align: .center
+  }
+
+  cards = asset {
+    left: 44.5px,
+    top: 0px,
+    width: 64px,
+    height: 44px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconCards
+  }
+}
+
+export emptyStateNoData = frame {
+  title: "Empty-state/no-data",
+  left: 0px,
+  top: 205px,
+  width: 125px,
+  height: 125px,
+  overflow: .visible,
+  children: [ellipse4, dataDrivenAnalytics],
+
+  ellipse4 = shape {
+    left: 0px,
+    top: 0px,
+    width: 125px,
+    height: 125px,
+    fill: colorTokens.colors.neutral-background,
+    type: .ellipse
+  }
+
+  dataDrivenAnalytics = asset {
+    left: 32px,
+    top: 30px,
+    width: 66px,
+    height: 66px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconDataDrivenAnalytics
+  }
+}
+
+export emptyState = frame {
+  title: "_empty-state",
+  left: 0px,
+  top: 458px,
+  layout: {direction: .column, align-items: .center, item-gap: 24px},
+  overflow: .visible,
+  children: [general, frame441],
+
+  general = asset {
+    width: 240px,
+    height: 240px,
+    contents: iconGeneralDataKosong
+  }
+
+  frame441 = frame {
+    layout: {direction: .column, align-items: .center, item-gap: 6px},
+    overflow: .visible,
+    children: [title, subtitle],
+
+    title = text {
+      width: 300px,
+      fill: colorTokens.colors.neutral-70,
+      contents: "Tile",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    subtitle = text {
+      width: 304px,
+      fill: colorTokens.colors.neutral-40,
+      contents: "Subtitle",
+      font-size: 16,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+}

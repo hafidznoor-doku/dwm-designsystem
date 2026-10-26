@@ -1,0 +1,2760 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/info-outlined.svg" as iconInfoOutlined
+import "resources/assets/icons/line.svg" as iconLine
+import "resources/assets/icons/bi-info-circle-fill.svg" as iconBiInfoCircleFill
+import "resources/assets/icons/bi-info-circle-fill-2.svg" as iconBiInfoCircleFill2
+import "resources/assets/icons/icon-font-awesome-free-solid-i-info-circle.svg" as iconIconFontAwesomeFreeSolidIInfoCircle
+import "resources/assets/icons/icon-font-awesome-free-brands-s-sistrix.svg" as iconIconFontAwesomeFreeBrandsSSistrix
+import "resources/assets/icons/arrow-drop-down-outlined.svg" as iconArrowDropDownOutlined
+import "resources/assets/icons/flag-singapore.svg" as iconFlagSingapore
+import "resources/assets/icons/right-icons.svg" as iconRightIcons
+import "resources/assets/icons/line-2.svg" as iconLine2
+import "resources/assets/icons/flag-indonesia.svg" as iconFlagIndonesia
+import "resources/assets/icons/right-icons-2.svg" as iconRightIcons2
+import "resources/assets/icons/vector.svg" as iconVector
+import "resources/assets/icons/vector-2.svg" as iconVector2
+import "resources/assets/icons/vector-3.svg" as iconVector3
+import "resources/assets/icons/vector-4.svg" as iconVector4
+import "resources/assets/icons/vector-5.svg" as iconVector5
+import "resources/assets/icons/vector-6.svg" as iconVector6
+import "resources/assets/icons/vector-7.svg" as iconVector7
+import "resources/assets/icons/vector-8.svg" as iconVector8
+import "resources/assets/icons/vector-9.svg" as iconVector9
+import "resources/assets/icons/vector-10.svg" as iconVector10
+import "resources/assets/icons/vector-11.svg" as iconVector11
+import "resources/assets/icons/vector-12.svg" as iconVector12
+import "resources/assets/icons/vector-13.svg" as iconVector13
+import "resources/assets/icons/vector-14.svg" as iconVector14
+import "resources/assets/icons/vector-15.svg" as iconVector15
+import "resources/assets/icons/vector-16.svg" as iconVector16
+import "resources/assets/icons/flag-flags-property-25.svg" as iconFlagFlagsProperty25
+import "resources/assets/icons/flags-singapore-flag-on.svg" as iconFlagsSingaporeFlagOn
+import "resources/assets/icons/calendar-today-outlined.svg" as iconCalendarTodayOutlined
+import "resources/assets/icons/line-3.svg" as iconLine3
+
+export masterPinPasswordInputNumberFilled = frame {
+  title: "_master_pin-password-input / variant=number, filled=filled",
+  left: 0px,
+  top: 96px,
+  width: 28px,
+  height: 28px,
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px
+  },
+  fill: colorTokens.colors.neutral-10,
+  border: {color: colorTokens.colors.neutral-20, width: 1.25px},
+  corner-radius: 4px,
+  overflow: .visible,
+  padding: 10px,
+  children: label1,
+
+  label1 = text {
+    width: 11px,
+    height: 19px,
+    fill: colorTokens.colors.neutral-80,
+    contents: "1",
+    font-size: 20,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    align: .center
+  }
+}
+
+export pinInput = frame {
+  title: "PIN input",
+  left: 0px,
+  top: 348px,
+  layout: {item-gap: 16px},
+  overflow: .visible,
+  children: [
+    masterPinPasswordInput,
+    masterPinPasswordInput2,
+    masterPinPasswordInput3,
+    masterPinPasswordInput4,
+    masterPinPasswordInput5,
+    masterPinPasswordInput6
+  ],
+
+  masterPinPasswordInput = frame {
+    width: 28px,
+    height: 100%,
+    layout: {
+      direction: .column,
+      justify-content: .center,
+      align-items: .center,
+      item-gap: 10px
+    },
+    fill: colorTokens.colors.neutral-10,
+    border: {color: colorTokens.colors.neutral-20, width: 1.25px},
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: 10px
+  }
+
+  masterPinPasswordInput2 = frame {
+    width: 28px,
+    height: 100%,
+    layout: {
+      direction: .column,
+      justify-content: .center,
+      align-items: .center,
+      item-gap: 10px
+    },
+    fill: colorTokens.colors.neutral-10,
+    border: {color: colorTokens.colors.neutral-20, width: 1.25px},
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: 10px
+  }
+
+  masterPinPasswordInput3 = frame {
+    width: 28px,
+    height: 100%,
+    layout: {
+      direction: .column,
+      justify-content: .center,
+      align-items: .center,
+      item-gap: 10px
+    },
+    fill: colorTokens.colors.neutral-10,
+    border: {color: colorTokens.colors.neutral-20, width: 1.25px},
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: 10px
+  }
+
+  masterPinPasswordInput4 = frame {
+    width: 28px,
+    height: 100%,
+    layout: {
+      direction: .column,
+      justify-content: .center,
+      align-items: .center,
+      item-gap: 10px
+    },
+    fill: colorTokens.colors.neutral-10,
+    border: {color: colorTokens.colors.neutral-20, width: 1.25px},
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: 10px
+  }
+
+  masterPinPasswordInput5 = frame {
+    width: 28px,
+    height: 100%,
+    layout: {
+      direction: .column,
+      justify-content: .center,
+      align-items: .center,
+      item-gap: 10px
+    },
+    fill: colorTokens.colors.neutral-10,
+    border: {color: colorTokens.colors.neutral-20, width: 1.25px},
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: 10px
+  }
+
+  masterPinPasswordInput6 = frame {
+    width: 28px,
+    height: 100%,
+    layout: {
+      direction: .column,
+      justify-content: .center,
+      align-items: .center,
+      item-gap: 10px
+    },
+    fill: colorTokens.colors.neutral-10,
+    border: {color: colorTokens.colors.neutral-20, width: 1.25px},
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: 10px
+  }
+}
+
+export inputAreaDefault = frame {
+  title: "Input Area / Property 1=default",
+  left: 0px,
+  top: 504px,
+  width: 328px,
+  layout: {direction: .column, justify-content: .end, item-gap: 4px},
+  overflow: .visible,
+  children: [container, line, characterIndicator, textHelper],
+
+  container = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 4px},
+    overflow: .visible,
+    children: [frame1, row],
+
+    frame1 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [noPonsel, info],
+
+      noPonsel = text {
+        fill: colorTokens.colors.neutral-80,
+        contents: "Catatan",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      info = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: colorTokens.colors.neutral-80,
+        contents: iconInfoOutlined
+      }
+    }
+
+    row = frame {
+      width: 100%,
+      height: 62px,
+      layout: {direction: .column},
+      overflow: .visible,
+      padding: [8px, 0px],
+      children: row,
+
+      row = frame {
+        width: 100%,
+        layout: {align-items: .center, item-gap: 4px},
+        overflow: .visible,
+        children: value,
+
+        value = text {
+          width: 328px,
+          fill: colorTokens.colors.neutral-30,
+          contents: "Masukkan Catatan",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.14
+        }
+      }
+    }
+  }
+
+  line = asset {
+    width: 328px,
+    height: 0px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconLine
+  }
+
+  characterIndicator = frame {
+    width: 100%,
+    layout: {justify-content: .end},
+    overflow: .visible,
+    children: numberOfCharacter,
+
+    numberOfCharacter = text {
+      fill: colorTokens.colors.neutral-30,
+      contents: "0/255",
+      font-size: 10,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.2,
+      align: .right
+    }
+  }
+
+  textHelper = text {
+    display: .none,
+    fill: colorTokens.colors.neutral-60,
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.167
+  }
+}
+
+export inputAreaPressed = frame {
+  title: "Input Area / Property 1=pressed",
+  left: 0px,
+  top: 660px,
+  width: 328px,
+  layout: {direction: .column, justify-content: .end, item-gap: 4px},
+  overflow: .visible,
+  children: [container, line, characterIndicator, textHelper],
+
+  container = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 4px},
+    overflow: .visible,
+    children: [frame1, row],
+
+    frame1 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [noPonsel, info],
+
+      noPonsel = text {
+        fill: colorTokens.colors.neutral-80,
+        contents: "Catatan",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      info = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: colorTokens.colors.neutral-80,
+        contents: iconInfoOutlined
+      }
+    }
+
+    row = frame {
+      width: 100%,
+      height: 62px,
+      layout: {direction: .column},
+      overflow: .visible,
+      padding: [8px, 0px],
+      children: row,
+
+      row = frame {
+        width: 100%,
+        layout: {align-items: .center, item-gap: 4px},
+        overflow: .visible,
+        children: value,
+
+        value = text {
+          width: 328px,
+          fill: colorTokens.colors.neutral-30,
+          contents: "Masukkan Catatan",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.14
+        }
+      }
+    }
+  }
+
+  line = asset {
+    width: 328px,
+    height: 0px,
+    fill: colorTokens.colors.red-20,
+    contents: iconLine
+  }
+
+  characterIndicator = frame {
+    width: 100%,
+    layout: {justify-content: .end},
+    overflow: .visible,
+    children: numberOfCharacter,
+
+    numberOfCharacter = text {
+      fill: colorTokens.colors.neutral-30,
+      contents: "0/255",
+      font-size: 10,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.2,
+      align: .right
+    }
+  }
+
+  textHelper = text {
+    display: .none,
+    fill: colorTokens.colors.neutral-60,
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.167
+  }
+}
+
+export inputAreaFilled = frame {
+  title: "Input Area / Property 1=filled",
+  left: 0px,
+  top: 816px,
+  width: 328px,
+  layout: {direction: .column, justify-content: .end, item-gap: 4px},
+  overflow: .visible,
+  children: [container, line, characterIndicator, textHelper],
+
+  container = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 4px},
+    overflow: .visible,
+    children: [frame1, row],
+
+    frame1 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [noPonsel, info],
+
+      noPonsel = text {
+        fill: colorTokens.colors.neutral-80,
+        contents: "Catatan",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      info = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: colorTokens.colors.neutral-80,
+        contents: iconInfoOutlined
+      }
+    }
+
+    row = frame {
+      width: 100%,
+      height: 62px,
+      layout: {direction: .column},
+      overflow: .visible,
+      padding: [8px, 0px],
+      children: row,
+
+      row = frame {
+        width: 100%,
+        layout: {item-gap: 4px},
+        overflow: .visible,
+        children: value,
+
+        value = text {
+          width: 328px,
+          fill: colorTokens.colors.neutral-80,
+          contents: "Lorem ipsum dolor sit amet consectetur. Aliquam urna neque pretium sociis sed. Donec et nunc purus commodo. ",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.14
+        }
+      }
+    }
+  }
+
+  line = asset {
+    width: 328px,
+    height: 0px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconLine
+  }
+
+  characterIndicator = frame {
+    width: 100%,
+    layout: {justify-content: .end},
+    overflow: .visible,
+    children: numberOfCharacter,
+
+    numberOfCharacter = text {
+      fill: colorTokens.colors.neutral-30,
+      contents: "0/255",
+      font-size: 10,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.2,
+      align: .right
+    }
+  }
+
+  textHelper = text {
+    display: .none,
+    fill: colorTokens.colors.neutral-60,
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.167
+  }
+}
+
+export inputAreaDisabled = frame {
+  title: "Input Area / Property 1=disabled",
+  left: 0px,
+  top: 972px,
+  width: 328px,
+  layout: {direction: .column, justify-content: .end, item-gap: 4px},
+  overflow: .visible,
+  children: [container, line, characterIndicator, textHelper],
+
+  container = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 4px},
+    overflow: .visible,
+    children: [frame1, row],
+
+    frame1 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [noPonsel, info],
+
+      noPonsel = text {
+        fill: colorTokens.colors.neutral-40,
+        contents: "Catatan",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      info = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: colorTokens.colors.neutral-80,
+        contents: iconInfoOutlined
+      }
+    }
+
+    row = frame {
+      width: 100%,
+      height: 62px,
+      layout: {direction: .column},
+      overflow: .visible,
+      padding: [8px, 0px],
+      children: row,
+
+      row = frame {
+        width: 100%,
+        layout: {align-items: .center, item-gap: 4px},
+        overflow: .visible,
+        children: value,
+
+        value = text {
+          width: 328px,
+          fill: colorTokens.colors.neutral-30,
+          contents: "Masukkan Catatan",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.14
+        }
+      }
+    }
+  }
+
+  line = asset {
+    width: 328px,
+    height: 0px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconLine
+  }
+
+  characterIndicator = frame {
+    width: 100%,
+    layout: {justify-content: .end},
+    overflow: .visible,
+    children: numberOfCharacter,
+
+    numberOfCharacter = text {
+      fill: colorTokens.colors.neutral-30,
+      contents: "0/255",
+      font-size: 10,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.2,
+      align: .right
+    }
+  }
+
+  textHelper = text {
+    display: .none,
+    fill: colorTokens.colors.neutral-60,
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.167
+  }
+}
+
+export inputFormSearchDefault = frame {
+  title: "Input Form / variants=search, :states=default",
+  left: 0px,
+  top: 1208px,
+  width: 317px,
+  layout: {direction: .column, item-gap: 4px},
+  overflow: .visible,
+  children: [label, inputPlaceholder, textHelper],
+
+  label = frame {
+    layout: {align-items: .center, item-gap: 4px},
+    overflow: .visible,
+    children: [namaKamu, biInfoCircleFill, badge],
+
+    namaKamu = text {
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: "Nama Kamu",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.429
+    }
+
+    biInfoCircleFill = asset {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: iconBiInfoCircleFill
+    }
+
+    badge = frame {
+      display: .none,
+      layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+      fill: colorTokens.colors.green-10,
+      corner-radius: 8px,
+      padding: [4px, 8px],
+      children: [badge, biInfoCircleFill],
+
+      badge = text {
+        opacity: 0.8,
+        fill: colorTokens.colors.green-50,
+        contents: "Badge",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1,
+        align: .center
+      }
+
+      biInfoCircleFill = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: rgb(0%, 50.98%, 49.0196%),
+        contents: iconBiInfoCircleFill2
+      }
+    }
+  }
+
+  inputPlaceholder = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 10px},
+    fill: colorTokens.colors.neutral-00,
+    border: rgb(80%, 80%, 80%),
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: [10px, 16px],
+    children: [
+      iconFontAwesomeFreeSolidIInfoCircle,
+      label81234567901,
+      iconFontAwesomeFreeBrandsSSistrix
+    ],
+
+    iconFontAwesomeFreeSolidIInfoCircle = asset {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      fill: rgb(40%, 40%, 40%),
+      contents: iconIconFontAwesomeFreeSolidIInfoCircle
+    }
+
+    label81234567901 = text {
+      width: 259px,
+      fill: rgb(80%, 80%, 80%),
+      contents: "81234567901",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.429
+    }
+
+    iconFontAwesomeFreeBrandsSSistrix = asset {
+      width: 16px,
+      height: 16px,
+      fill: rgb(40%, 40%, 40%),
+      contents: iconIconFontAwesomeFreeBrandsSSistrix
+    }
+  }
+
+  textHelper = text {
+    width: 100%,
+    fill: rgb(40%, 40%, 40%),
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.33
+  }
+}
+
+export inputFormBaseFormDefault = frame {
+  title: "Input Form / variants=base form, :states=default",
+  left: 380px,
+  top: 1208px,
+  width: 317px,
+  layout: {direction: .column, justify-content: .end, item-gap: 4px},
+  overflow: .visible,
+  children: [container, line, characterIndicator, textHelper],
+
+  container = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 4px},
+    overflow: .visible,
+    children: [frame1, row],
+
+    frame1 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [noPonsel, info],
+
+      noPonsel = text {
+        fill: colorTokens.colors.neutral-80,
+        contents: "Nama Kamu",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      info = asset {
+        width: 12px,
+        height: 12px,
+        fill: colorTokens.colors.neutral-80,
+        contents: iconInfoOutlined
+      }
+    }
+
+    row = frame {
+      width: 100%,
+      height: 24px,
+      layout: {justify-content: .space-between, align-items: .center},
+      overflow: .visible,
+      children: [row, rightIcons],
+
+      row = frame {
+        width: 272px,
+        layout: {align-items: .center, item-gap: 4px},
+        overflow: .visible,
+        children: [withoutFlag, withFlag, value],
+
+        withoutFlag = frame {
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [label62, label, arrowDropDown],
+
+          label62 = text {
+            fill: colorTokens.colors.neutral-80,
+            contents: "+62",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.14
+          }
+
+          label = text {
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          arrowDropDown = asset {
+            width: 16px,
+            height: 16px,
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: iconArrowDropDownOutlined
+          }
+        }
+
+        withFlag = frame {
+          display: .none,
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [flag, label, frame33526],
+
+          flag = asset {
+            width: 16px,
+            height: 16px,
+            contents: iconFlagSingapore
+          }
+
+          label = text {
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          frame33526 = frame {
+            layout: {align-items: .center},
+            overflow: .visible,
+            children: [label62, arrowDropDown],
+
+            label62 = text {
+              fill: colorTokens.colors.neutral-80,
+              contents: "+62",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            arrowDropDown = asset {
+              width: 16px,
+              height: 16px,
+              fill: colorTokens.colors.neutral-30,
+              contents: iconArrowDropDownOutlined
+            }
+          }
+        }
+
+        value = text {
+          width: 235px,
+          fill: colorTokens.colors.neutral-30,
+          contents: "81234567901",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.14
+        }
+      }
+
+      rightIcons = asset {
+        width: 40px,
+        height: 16px,
+        contents: iconRightIcons
+      }
+    }
+  }
+
+  line = asset {
+    width: 317px,
+    height: 0px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconLine2
+  }
+
+  characterIndicator = frame {
+    width: 100%,
+    layout: {justify-content: .end},
+    overflow: .visible,
+    children: numberOfCharacter,
+
+    numberOfCharacter = text {
+      fill: colorTokens.colors.neutral-30,
+      contents: "0/255",
+      font-size: 10,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.2,
+      align: .right
+    }
+  }
+
+  textHelper = text {
+    fill: colorTokens.colors.neutral-60,
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.167
+  }
+}
+
+export inputFormSearchFilled = frame {
+  title: "Input Form / variants=search, :states=filled",
+  left: 0px,
+  top: 1348px,
+  width: 317px,
+  layout: {direction: .column, item-gap: 4px},
+  overflow: .visible,
+  children: [label, inputPlaceholder, textHelper],
+
+  label = frame {
+    layout: {align-items: .center, item-gap: 4px},
+    overflow: .visible,
+    children: [namaKamu, biInfoCircleFill, badge],
+
+    namaKamu = text {
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: "Nama Kamu",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.429
+    }
+
+    biInfoCircleFill = asset {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: iconBiInfoCircleFill
+    }
+
+    badge = frame {
+      display: .none,
+      layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+      fill: colorTokens.colors.green-10,
+      corner-radius: 8px,
+      padding: [4px, 8px],
+      children: [badge, biInfoCircleFill],
+
+      badge = text {
+        opacity: 0.8,
+        fill: colorTokens.colors.green-50,
+        contents: "Badge",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1,
+        align: .center
+      }
+
+      biInfoCircleFill = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: rgb(0%, 50.98%, 49.0196%),
+        contents: iconBiInfoCircleFill2
+      }
+    }
+  }
+
+  inputPlaceholder = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 10px},
+    fill: colorTokens.colors.neutral-00,
+    border: rgb(80%, 80%, 80%),
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: [10px, 16px],
+    children: [
+      iconFontAwesomeFreeSolidIInfoCircle,
+      label81234567901,
+      iconFontAwesomeFreeBrandsSSistrix
+    ],
+
+    iconFontAwesomeFreeSolidIInfoCircle = asset {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      fill: rgb(40%, 40%, 40%),
+      contents: iconIconFontAwesomeFreeSolidIInfoCircle
+    }
+
+    label81234567901 = text {
+      width: 259px,
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: "81234567901",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.429
+    }
+
+    iconFontAwesomeFreeBrandsSSistrix = asset {
+      width: 16px,
+      height: 16px,
+      fill: rgb(40%, 40%, 40%),
+      contents: iconIconFontAwesomeFreeBrandsSSistrix
+    }
+  }
+
+  textHelper = text {
+    width: 100%,
+    fill: rgb(40%, 40%, 40%),
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.33
+  }
+}
+
+export inputFormBaseFormFilled = frame {
+  title: "Input Form / variants=base form, :states=filled",
+  left: 380px,
+  top: 1348px,
+  width: 317px,
+  layout: {direction: .column, justify-content: .end, item-gap: 4px},
+  overflow: .visible,
+  children: [container, line, characterIndicator, textHelper],
+
+  container = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 4px},
+    overflow: .visible,
+    children: [frame1, row],
+
+    frame1 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [noPonsel, info],
+
+      noPonsel = text {
+        fill: colorTokens.colors.neutral-80,
+        contents: "Nama Kamu",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      info = asset {
+        width: 12px,
+        height: 12px,
+        fill: colorTokens.colors.neutral-80,
+        contents: iconInfoOutlined
+      }
+    }
+
+    row = frame {
+      width: 100%,
+      height: 24px,
+      layout: {justify-content: .space-between, align-items: .center},
+      overflow: .visible,
+      children: [row, rightIcons],
+
+      row = frame {
+        width: 272px,
+        layout: {align-items: .center, item-gap: 4px},
+        overflow: .visible,
+        children: [withoutFlag, withFlag, value],
+
+        withoutFlag = frame {
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [label62, label, arrowDropDown],
+
+          label62 = text {
+            fill: colorTokens.colors.neutral-80,
+            contents: "+62",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.14
+          }
+
+          label = text {
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          arrowDropDown = asset {
+            width: 16px,
+            height: 16px,
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: iconArrowDropDownOutlined
+          }
+        }
+
+        withFlag = frame {
+          display: .none,
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [flag, label, frame33526],
+
+          flag = asset {
+            width: 16px,
+            height: 16px,
+            contents: iconFlagIndonesia
+          }
+
+          label = text {
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          frame33526 = frame {
+            layout: {align-items: .center},
+            overflow: .visible,
+            children: [label62, arrowDropDown],
+
+            label62 = text {
+              fill: colorTokens.colors.neutral-80,
+              contents: "+62",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            arrowDropDown = asset {
+              width: 16px,
+              height: 16px,
+              fill: colorTokens.colors.neutral-30,
+              contents: iconArrowDropDownOutlined
+            }
+          }
+        }
+
+        value = text {
+          width: 235px,
+          fill: colorTokens.colors.neutral-80,
+          contents: "81234567901",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.14
+        }
+      }
+
+      rightIcons = asset {
+        width: 40px,
+        height: 16px,
+        contents: iconRightIcons
+      }
+    }
+  }
+
+  line = asset {
+    width: 317px,
+    height: 0px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconLine2
+  }
+
+  characterIndicator = frame {
+    width: 100%,
+    layout: {justify-content: .end},
+    overflow: .visible,
+    children: numberOfCharacter,
+
+    numberOfCharacter = text {
+      fill: colorTokens.colors.neutral-30,
+      contents: "0/255",
+      font-size: 10,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.2,
+      align: .right
+    }
+  }
+
+  textHelper = text {
+    fill: colorTokens.colors.neutral-60,
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.167
+  }
+}
+
+export inputFormSearchPressed = frame {
+  title: "Input Form / variants=search, :states=pressed",
+  left: 0px,
+  top: 1488px,
+  width: 317px,
+  layout: {direction: .column, item-gap: 4px},
+  overflow: .visible,
+  children: [label, inputPlaceholder, textHelper],
+
+  label = frame {
+    layout: {align-items: .center, item-gap: 4px},
+    overflow: .visible,
+    children: [namaKamu, badge, biInfoCircleFill],
+
+    namaKamu = text {
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: "Nama Kamu",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.429
+    }
+
+    badge = frame {
+      display: .none,
+      layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+      fill: colorTokens.colors.green-10,
+      corner-radius: 8px,
+      padding: [4px, 8px],
+      children: [badge, biInfoCircleFill],
+
+      badge = text {
+        opacity: 0.8,
+        fill: colorTokens.colors.green-50,
+        contents: "Badge",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1,
+        align: .center
+      }
+
+      biInfoCircleFill = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: rgb(0%, 50.98%, 49.0196%),
+        contents: iconBiInfoCircleFill2
+      }
+    }
+
+    biInfoCircleFill = asset {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: iconBiInfoCircleFill
+    }
+  }
+
+  inputPlaceholder = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 10px},
+    fill: colorTokens.colors.neutral-00,
+    border: colorTokens.colors.red-20,
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: [10px, 16px],
+    children: [
+      iconFontAwesomeFreeSolidIInfoCircle,
+      label81234567901,
+      iconFontAwesomeFreeBrandsSSistrix
+    ],
+
+    iconFontAwesomeFreeSolidIInfoCircle = asset {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      fill: rgb(40%, 40%, 40%),
+      contents: iconIconFontAwesomeFreeSolidIInfoCircle
+    }
+
+    label81234567901 = text {
+      width: 259px,
+      fill: rgb(80%, 80%, 80%),
+      contents: "81234567901",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.429
+    }
+
+    iconFontAwesomeFreeBrandsSSistrix = asset {
+      width: 16px,
+      height: 16px,
+      fill: rgb(40%, 40%, 40%),
+      contents: iconIconFontAwesomeFreeBrandsSSistrix
+    }
+  }
+
+  textHelper = text {
+    width: 100%,
+    fill: rgb(40%, 40%, 40%),
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.33
+  }
+}
+
+export inputFormBaseFormPressed = frame {
+  title: "Input Form / variants=base form, :states=pressed",
+  left: 380px,
+  top: 1488px,
+  width: 317px,
+  layout: {direction: .column, justify-content: .end, item-gap: 4px},
+  overflow: .visible,
+  children: [container, line, characterIndicator, textHelper],
+
+  container = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 4px},
+    overflow: .visible,
+    children: [frame1, row],
+
+    frame1 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [noPonsel, info],
+
+      noPonsel = text {
+        fill: colorTokens.colors.neutral-80,
+        contents: "Nama Kamu",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      info = asset {
+        width: 12px,
+        height: 12px,
+        fill: colorTokens.colors.neutral-80,
+        contents: iconInfoOutlined
+      }
+    }
+
+    row = frame {
+      width: 100%,
+      height: 24px,
+      layout: {justify-content: .space-between, align-items: .center},
+      overflow: .visible,
+      children: [row, rightIcons],
+
+      row = frame {
+        width: 272px,
+        layout: {align-items: .center, item-gap: 4px},
+        overflow: .visible,
+        children: [withoutFlag, withFlag, value],
+
+        withoutFlag = frame {
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [label62, label, arrowDropDown],
+
+          label62 = text {
+            fill: colorTokens.colors.neutral-80,
+            contents: "+62",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.14
+          }
+
+          label = text {
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          arrowDropDown = asset {
+            width: 16px,
+            height: 16px,
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: iconArrowDropDownOutlined
+          }
+        }
+
+        withFlag = frame {
+          display: .none,
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [flag, label, frame33526],
+
+          flag = asset {
+            width: 16px,
+            height: 16px,
+            contents: iconFlagIndonesia
+          }
+
+          label = text {
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          frame33526 = frame {
+            layout: {align-items: .center},
+            overflow: .visible,
+            children: [label62, arrowDropDown],
+
+            label62 = text {
+              fill: colorTokens.colors.neutral-80,
+              contents: "+62",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            arrowDropDown = asset {
+              width: 16px,
+              height: 16px,
+              fill: colorTokens.colors.neutral-30,
+              contents: iconArrowDropDownOutlined
+            }
+          }
+        }
+
+        value = text {
+          width: 235px,
+          fill: colorTokens.colors.neutral-30,
+          contents: "81234567901",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.14
+        }
+      }
+
+      rightIcons = asset {
+        width: 40px,
+        height: 16px,
+        contents: iconRightIcons
+      }
+    }
+  }
+
+  line = asset {
+    width: 317px,
+    height: 0px,
+    fill: colorTokens.colors.red-20,
+    contents: iconLine2
+  }
+
+  characterIndicator = frame {
+    width: 100%,
+    layout: {justify-content: .end},
+    overflow: .visible,
+    children: numberOfCharacter,
+
+    numberOfCharacter = text {
+      fill: colorTokens.colors.neutral-30,
+      contents: "0/255",
+      font-size: 10,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.2,
+      align: .right
+    }
+  }
+
+  textHelper = text {
+    fill: colorTokens.colors.neutral-60,
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.167
+  }
+}
+
+export inputFormSearchInvalid = frame {
+  title: "Input Form / variants=search, :states=invalid",
+  left: 0px,
+  top: 1628px,
+  width: 317px,
+  layout: {direction: .column, item-gap: 4px},
+  overflow: .visible,
+  children: [label, inputPlaceholder, textHelper],
+
+  label = frame {
+    layout: {align-items: .center, item-gap: 4px},
+    overflow: .visible,
+    children: [namaKamu, biInfoCircleFill, badge],
+
+    namaKamu = text {
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: "Nama Kamu",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.429
+    }
+
+    biInfoCircleFill = asset {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: iconBiInfoCircleFill
+    }
+
+    badge = frame {
+      display: .none,
+      layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+      fill: colorTokens.colors.green-10,
+      corner-radius: 8px,
+      padding: [4px, 8px],
+      children: [badge, biInfoCircleFill],
+
+      badge = text {
+        opacity: 0.8,
+        fill: colorTokens.colors.green-50,
+        contents: "Badge",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1,
+        align: .center
+      }
+
+      biInfoCircleFill = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: rgb(0%, 50.98%, 49.0196%),
+        contents: iconBiInfoCircleFill2
+      }
+    }
+  }
+
+  inputPlaceholder = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 10px},
+    fill: colorTokens.colors.red-05,
+    border: colorTokens.colors.red-70,
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: [10px, 16px],
+    children: [
+      iconFontAwesomeFreeSolidIInfoCircle,
+      label81234567901,
+      iconFontAwesomeFreeBrandsSSistrix
+    ],
+
+    iconFontAwesomeFreeSolidIInfoCircle = asset {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      fill: rgb(40%, 40%, 40%),
+      contents: iconIconFontAwesomeFreeSolidIInfoCircle
+    }
+
+    label81234567901 = text {
+      width: 259px,
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: "81234567901",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.429
+    }
+
+    iconFontAwesomeFreeBrandsSSistrix = asset {
+      width: 16px,
+      height: 16px,
+      fill: colorTokens.colors.red-60,
+      contents: iconIconFontAwesomeFreeBrandsSSistrix
+    }
+  }
+
+  textHelper = text {
+    width: 100%,
+    fill: colorTokens.colors.red-70,
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.33
+  }
+}
+
+export inputFormBaseFormInvalid = frame {
+  title: "Input Form / variants=base form, :states=invalid",
+  left: 380px,
+  top: 1628px,
+  width: 317px,
+  layout: {direction: .column, justify-content: .end, item-gap: 4px},
+  overflow: .visible,
+  children: [container, line, characterIndicator, textHelper],
+
+  container = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 4px},
+    overflow: .visible,
+    children: [frame1, row],
+
+    frame1 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [noPonsel, info],
+
+      noPonsel = text {
+        fill: colorTokens.colors.neutral-80,
+        contents: "Nama Kamu",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      info = asset {
+        width: 12px,
+        height: 12px,
+        fill: colorTokens.colors.neutral-80,
+        contents: iconInfoOutlined
+      }
+    }
+
+    row = frame {
+      width: 100%,
+      height: 24px,
+      layout: {justify-content: .space-between, align-items: .center},
+      overflow: .visible,
+      children: [row, rightIcons],
+
+      row = frame {
+        width: 272px,
+        layout: {align-items: .center, item-gap: 4px},
+        overflow: .visible,
+        children: [withoutFlag, withFlag, value],
+
+        withoutFlag = frame {
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [label62, label, arrowDropDown],
+
+          label62 = text {
+            fill: colorTokens.colors.neutral-80,
+            contents: "+62",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.14
+          }
+
+          label = text {
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          arrowDropDown = asset {
+            width: 16px,
+            height: 16px,
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: iconArrowDropDownOutlined
+          }
+        }
+
+        withFlag = frame {
+          display: .none,
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [flag, label, frame33526],
+
+          flag = asset {
+            width: 16px,
+            height: 16px,
+            contents: iconFlagIndonesia
+          }
+
+          label = text {
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          frame33526 = frame {
+            layout: {align-items: .center},
+            overflow: .visible,
+            children: [label62, arrowDropDown],
+
+            label62 = text {
+              fill: colorTokens.colors.neutral-80,
+              contents: "+62",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            arrowDropDown = asset {
+              width: 16px,
+              height: 16px,
+              fill: colorTokens.colors.neutral-30,
+              contents: iconArrowDropDownOutlined
+            }
+          }
+        }
+
+        value = text {
+          width: 235px,
+          fill: colorTokens.colors.neutral-30,
+          contents: "81234567901",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.14
+        }
+      }
+
+      rightIcons = asset {
+        width: 40px,
+        height: 16px,
+        contents: iconRightIcons
+      }
+    }
+  }
+
+  line = asset {
+    width: 317px,
+    height: 0px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconLine2
+  }
+
+  characterIndicator = frame {
+    width: 100%,
+    layout: {justify-content: .end},
+    overflow: .visible,
+    children: numberOfCharacter,
+
+    numberOfCharacter = text {
+      fill: colorTokens.colors.neutral-30,
+      contents: "0/255",
+      font-size: 10,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.2,
+      align: .right
+    }
+  }
+
+  textHelper = text {
+    fill: colorTokens.colors.red-70,
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.167
+  }
+}
+
+export inputFormSearchDisabled = frame {
+  title: "Input Form / variants=search, :states=disabled",
+  left: 0px,
+  top: 1768px,
+  width: 317px,
+  layout: {direction: .column, item-gap: 4px},
+  overflow: .visible,
+  children: [label, inputPlaceholder, textHelper],
+
+  label = frame {
+    layout: {align-items: .center, item-gap: 4px},
+    overflow: .visible,
+    children: [namaKamu, biInfoCircleFill, badge],
+
+    namaKamu = text {
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: "Nama Kamu",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.429
+    }
+
+    biInfoCircleFill = asset {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: iconBiInfoCircleFill
+    }
+
+    badge = frame {
+      display: .none,
+      layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+      fill: colorTokens.colors.green-10,
+      corner-radius: 8px,
+      padding: [4px, 8px],
+      children: [badge, biInfoCircleFill],
+
+      badge = text {
+        opacity: 0.8,
+        fill: colorTokens.colors.green-50,
+        contents: "Badge",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1,
+        align: .center
+      }
+
+      biInfoCircleFill = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: rgb(0%, 50.98%, 49.0196%),
+        contents: iconBiInfoCircleFill2
+      }
+    }
+  }
+
+  inputPlaceholder = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 10px},
+    fill: rgb(91.76%, 92.549%, 94.1176%),
+    border: rgb(80%, 80%, 80%),
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: [10px, 16px],
+    children: [
+      iconFontAwesomeFreeSolidIInfoCircle,
+      label81234567901,
+      iconFontAwesomeFreeBrandsSSistrix
+    ],
+
+    iconFontAwesomeFreeSolidIInfoCircle = asset {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      fill: rgb(40%, 40%, 40%),
+      contents: iconIconFontAwesomeFreeSolidIInfoCircle
+    }
+
+    label81234567901 = text {
+      width: 259px,
+      fill: rgb(70.1961%, 70.1961%, 70.1961%),
+      contents: "81234567901",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.429
+    }
+
+    iconFontAwesomeFreeBrandsSSistrix = asset {
+      width: 16px,
+      height: 16px,
+      fill: rgb(70.1961%, 70.1961%, 70.1961%),
+      contents: iconIconFontAwesomeFreeBrandsSSistrix
+    }
+  }
+
+  textHelper = text {
+    width: 100%,
+    fill: rgb(70.1961%, 70.1961%, 70.1961%),
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.33
+  }
+}
+
+export inputFormBaseFormDisabled = frame {
+  title: "Input Form / variants=base form, :states=disabled",
+  left: 380px,
+  top: 1768px,
+  width: 317px,
+  layout: {direction: .column, justify-content: .end, item-gap: 4px},
+  overflow: .visible,
+  children: [container, line, characterIndicator, textHelper],
+
+  container = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 4px},
+    overflow: .visible,
+    children: [frame1, row],
+
+    frame1 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [noPonsel, info],
+
+      noPonsel = text {
+        fill: colorTokens.colors.neutral-30,
+        contents: "Nama Kamu",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      info = asset {
+        width: 12px,
+        height: 12px,
+        fill: colorTokens.colors.neutral-30,
+        contents: iconInfoOutlined
+      }
+    }
+
+    row = frame {
+      width: 100%,
+      height: 24px,
+      layout: {justify-content: .space-between, align-items: .center},
+      overflow: .visible,
+      children: [row, rightIcons],
+
+      row = frame {
+        width: 272px,
+        layout: {align-items: .center, item-gap: 4px},
+        overflow: .visible,
+        children: [withoutFlag, withFlag, value],
+
+        withoutFlag = frame {
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [label62, label, arrowDropDown],
+
+          label62 = text {
+            fill: colorTokens.colors.neutral-30,
+            contents: "+62",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.14
+          }
+
+          label = text {
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          arrowDropDown = asset {
+            width: 16px,
+            height: 16px,
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: iconArrowDropDownOutlined
+          }
+        }
+
+        withFlag = frame {
+          display: .none,
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [flag, label, frame33526],
+
+          flag = asset {
+            width: 16px,
+            height: 16px,
+            contents: iconFlagIndonesia
+          }
+
+          label = text {
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          frame33526 = frame {
+            layout: {align-items: .center},
+            overflow: .visible,
+            children: [label62, arrowDropDown],
+
+            label62 = text {
+              fill: colorTokens.colors.neutral-80,
+              contents: "+62",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            arrowDropDown = asset {
+              width: 16px,
+              height: 16px,
+              fill: colorTokens.colors.neutral-30,
+              contents: iconArrowDropDownOutlined
+            }
+          }
+        }
+
+        value = text {
+          width: 235px,
+          fill: colorTokens.colors.neutral-30,
+          contents: "81234567901",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.14
+        }
+      }
+
+      rightIcons = asset {
+        width: 40px,
+        height: 16px,
+        fill: colorTokens.colors.neutral-30,
+        contents: iconRightIcons2
+      }
+    }
+  }
+
+  line = asset {
+    width: 317px,
+    height: 0px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconLine2
+  }
+
+  characterIndicator = frame {
+    width: 100%,
+    layout: {justify-content: .end},
+    overflow: .visible,
+    children: numberOfCharacter,
+
+    numberOfCharacter = text {
+      fill: colorTokens.colors.neutral-30,
+      contents: "0/255",
+      font-size: 10,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.2,
+      align: .right
+    }
+  }
+
+  textHelper = text {
+    fill: colorTokens.colors.neutral-30,
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.167
+  }
+}
+
+export flagMalaysia = frame {
+  title: "flag / Property 1=malaysia",
+  left: 0px,
+  top: 1988px,
+  width: 16px,
+  height: 16px,
+  children: [
+    vector,
+    vector2,
+    vector3,
+    vector4,
+    vector5,
+    vector6,
+    vector7,
+    vector8,
+    vector9,
+    vector10,
+    vector11,
+    vector12,
+    vector13,
+    vector14,
+    vector15,
+    vector16,
+    vector17
+  ],
+
+  vector = asset {
+    left: 0.14px,
+    top: 11.75px,
+    width: 15.72px,
+    height: 0.75px,
+    fill: rgb(92.549%, 10.98%, 14.1176%),
+    contents: iconVector
+  }
+
+  vector2 = asset {
+    left: 6.25px,
+    top: 3.5px,
+    width: 9.61px,
+    height: 0.75px,
+    fill: rgb(90.1961%, 90.5882%, 90.98%),
+    contents: iconVector2
+  }
+
+  vector3 = asset {
+    left: 6.25px,
+    top: 4.25px,
+    width: 9.74px,
+    height: 0.75px,
+    fill: rgb(92.549%, 10.98%, 14.1176%),
+    contents: iconVector3
+  }
+
+  vector4 = asset {
+    left: 6.25px,
+    top: 5px,
+    width: 9.75px,
+    height: 0.75px,
+    fill: rgb(90.1961%, 90.5882%, 90.98%),
+    contents: iconVector4
+  }
+
+  vector5 = asset {
+    left: 6.25px,
+    top: 5.75px,
+    width: 9.75px,
+    height: 0.75px,
+    fill: rgb(92.549%, 10.98%, 14.1176%),
+    contents: iconVector5
+  }
+
+  vector6 = asset {
+    left: 6.25px,
+    top: 6.5px,
+    width: 9.75px,
+    height: 0.75px,
+    fill: rgb(90.1961%, 90.5882%, 90.98%),
+    contents: iconVector5
+  }
+
+  vector7 = asset {
+    left: 6.25px,
+    top: 7.25px,
+    width: 9.75px,
+    height: 0.75px,
+    fill: rgb(92.549%, 10.98%, 14.1176%),
+    contents: iconVector5
+  }
+
+  vector8 = asset {
+    left: 6.25px,
+    top: 8px,
+    width: 9.75px,
+    height: 0.75px,
+    fill: rgb(90.1961%, 90.5882%, 90.98%),
+    contents: iconVector5
+  }
+
+  vector9 = asset {
+    left: 0px,
+    top: 8.75px,
+    width: 16px,
+    height: 0.75px,
+    fill: rgb(92.549%, 10.98%, 14.1176%),
+    contents: iconVector6
+  }
+
+  vector10 = asset {
+    left: 0px,
+    top: 9.5px,
+    width: 16px,
+    height: 0.75px,
+    fill: rgb(90.1961%, 90.5882%, 90.98%),
+    contents: iconVector7
+  }
+
+  vector11 = asset {
+    left: 0px,
+    top: 10.25px,
+    width: 16px,
+    height: 0.75px,
+    fill: rgb(92.549%, 10.98%, 14.1176%),
+    contents: iconVector8
+  }
+
+  vector12 = asset {
+    left: 0.01px,
+    top: 11px,
+    width: 15.98px,
+    height: 0.75px,
+    fill: rgb(90.1961%, 90.5882%, 90.98%),
+    contents: iconVector9
+  }
+
+  vector13 = asset {
+    left: 6.25px,
+    top: 2.5px,
+    width: 9.27px,
+    height: 1px,
+    fill: rgb(92.549%, 10.98%, 14.1176%),
+    contents: iconVector10
+  }
+
+  vector14 = asset {
+    left: 0.48px,
+    top: 12.5px,
+    width: 15.03px,
+    height: 1px,
+    fill: rgb(90.1961%, 90.5882%, 90.98%),
+    contents: iconVector11
+  }
+
+  vector15 = asset {
+    left: 0px,
+    top: 2.5px,
+    width: 6.25px,
+    height: 6.25px,
+    fill: rgb(16.86%, 22.35%, 56.47%),
+    contents: iconVector12
+  }
+
+  vector16 = asset {
+    left: 0.86px,
+    top: 4.25px,
+    width: 2.85px,
+    height: 3.1px,
+    fill: rgb(97.6471%, 79.6078%, 21.96%),
+    contents: iconVector13
+  }
+
+  vector17 = asset {
+    left: 3.43px,
+    top: 4.85px,
+    width: 1.96px,
+    height: 1.95px,
+    fill: rgb(97.6471%, 79.6078%, 21.96%),
+    contents: iconVector14
+  }
+}
+
+export flagIndonesia = frame {
+  title: "flag / Property 1=indonesia",
+  left: 64px,
+  top: 1988px,
+  width: 16px,
+  height: 16px,
+  children: [vector, vector2],
+
+  vector = asset {
+    left: 0px,
+    top: 2.22px,
+    width: 16px,
+    height: 5.78px,
+    fill: rgb(86.27%, 12.1569%, 14.9%),
+    contents: iconVector15
+  }
+
+  vector2 = asset {
+    left: 0px,
+    top: 8px,
+    width: 16px,
+    height: 5.78px,
+    fill: rgb(93.33%, 93.33%, 93.33%),
+    contents: iconVector16
+  }
+}
+
+export flagUnitedStates = frame {
+  title: "flag / Property 1=United States",
+  left: 128px,
+  top: 1988px,
+  width: 16px,
+  height: 16px,
+  children: flagFlagsProperty25,
+
+  flagFlagsProperty25 = asset {
+    left: 0px,
+    top: 2px,
+    width: 16px,
+    height: 11.43px,
+    contents: iconFlagFlagsProperty25
+  }
+}
+
+export flagSingapore = frame {
+  title: "flag / Property 1=Singapore",
+  left: 192px,
+  top: 1988px,
+  width: 16px,
+  height: 16px,
+  children: flags,
+
+  flags = asset {
+    left: 0px,
+    top: 2px,
+    width: 16px,
+    height: 11.43px,
+    contents: iconFlagsSingaporeFlagOn
+  }
+}
+
+export passwordInput = frame {
+  title: "Password input",
+  left: 0px,
+  top: 2132px,
+  width: 248px,
+  layout: {
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: 16px
+  },
+  overflow: .visible,
+  padding: [0px, 6px],
+  children: [
+    masterPinPasswordInput,
+    masterPinPasswordInput2,
+    masterPinPasswordInput3,
+    masterPinPasswordInput4,
+    masterPinPasswordInput5,
+    masterPinPasswordInput6
+  ],
+
+  masterPinPasswordInput = frame {
+    width: 16px,
+    height: 16px,
+    layout: {
+      direction: .column,
+      justify-content: .center,
+      align-items: .center,
+      item-gap: 10px
+    },
+    fill: colorTokens.colors.neutral-20,
+    border: {color: colorTokens.colors.neutral-20, width: 1.25px},
+    corner-radius: 22px,
+    overflow: .visible,
+    padding: 10px
+  }
+
+  masterPinPasswordInput2 = frame {
+    width: 16px,
+    height: 16px,
+    layout: {
+      direction: .column,
+      justify-content: .center,
+      align-items: .center,
+      item-gap: 10px
+    },
+    fill: colorTokens.colors.neutral-20,
+    border: {color: colorTokens.colors.neutral-20, width: 1.25px},
+    corner-radius: 22px,
+    overflow: .visible,
+    padding: 10px
+  }
+
+  masterPinPasswordInput3 = frame {
+    width: 16px,
+    height: 16px,
+    layout: {
+      direction: .column,
+      justify-content: .center,
+      align-items: .center,
+      item-gap: 10px
+    },
+    fill: colorTokens.colors.neutral-20,
+    border: {color: colorTokens.colors.neutral-20, width: 1.25px},
+    corner-radius: 22px,
+    overflow: .visible,
+    padding: 10px
+  }
+
+  masterPinPasswordInput4 = frame {
+    width: 16px,
+    height: 16px,
+    layout: {
+      direction: .column,
+      justify-content: .center,
+      align-items: .center,
+      item-gap: 10px
+    },
+    fill: colorTokens.colors.neutral-20,
+    border: {color: colorTokens.colors.neutral-20, width: 1.25px},
+    corner-radius: 22px,
+    overflow: .visible,
+    padding: 10px
+  }
+
+  masterPinPasswordInput5 = frame {
+    width: 16px,
+    height: 16px,
+    layout: {
+      direction: .column,
+      justify-content: .center,
+      align-items: .center,
+      item-gap: 10px
+    },
+    fill: colorTokens.colors.neutral-20,
+    border: {color: colorTokens.colors.neutral-20, width: 1.25px},
+    corner-radius: 22px,
+    overflow: .visible,
+    padding: 10px
+  }
+
+  masterPinPasswordInput6 = frame {
+    width: 16px,
+    height: 16px,
+    layout: {
+      direction: .column,
+      justify-content: .center,
+      align-items: .center,
+      item-gap: 10px
+    },
+    fill: colorTokens.colors.neutral-20,
+    border: {color: colorTokens.colors.neutral-20, width: 1.25px},
+    corner-radius: 22px,
+    overflow: .visible,
+    padding: 10px
+  }
+}
+
+export inputDateDefault = frame {
+  title: "Input Date / :states=default",
+  left: 0px,
+  top: 2276px,
+  width: 317px,
+  layout: {direction: .column, justify-content: .end, item-gap: 4px},
+  overflow: .visible,
+  children: [container, line],
+
+  container = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 4px},
+    overflow: .visible,
+    children: [frame1, row],
+
+    frame1 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [noPonsel, info],
+
+      noPonsel = text {
+        fill: colorTokens.colors.neutral-80,
+        contents: "Nama Kamu",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      info = asset {
+        width: 12px,
+        height: 12px,
+        fill: colorTokens.colors.neutral-80,
+        contents: iconInfoOutlined
+      }
+    }
+
+    row = frame {
+      width: 100%,
+      height: 24px,
+      layout: {justify-content: .space-between, align-items: .center},
+      overflow: .visible,
+      children: [row, calendarToday],
+
+      row = frame {
+        width: 272px,
+        layout: {align-items: .center, item-gap: 4px},
+        overflow: .visible,
+        children: [withFlag, value],
+
+        withFlag = frame {
+          display: .none,
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [flag, label, frame33526],
+
+          flag = asset {
+            width: 16px,
+            height: 16px,
+            contents: iconFlagIndonesia
+          }
+
+          label = text {
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          frame33526 = frame {
+            layout: {align-items: .center},
+            overflow: .visible,
+            children: [label62, arrowDropDown],
+
+            label62 = text {
+              fill: colorTokens.colors.neutral-80,
+              contents: "+62",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            arrowDropDown = asset {
+              width: 16px,
+              height: 16px,
+              fill: colorTokens.colors.neutral-30,
+              contents: iconArrowDropDownOutlined
+            }
+          }
+        }
+
+        value = text {
+          width: 235px,
+          fill: colorTokens.colors.neutral-30,
+          contents: "81234567901",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.14
+        }
+      }
+
+      calendarToday = asset {
+        width: 16px,
+        height: 16px,
+        fill: colorTokens.colors.neutral-60,
+        contents: iconCalendarTodayOutlined
+      }
+    }
+  }
+
+  line = asset {
+    width: 317px,
+    height: 0px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconLine3
+  }
+}
+
+export inputDatePressed = frame {
+  title: "Input Date / :states=pressed",
+  left: 0px,
+  top: 2376px,
+  width: 317px,
+  layout: {direction: .column, justify-content: .end, item-gap: 4px},
+  overflow: .visible,
+  children: [container, line],
+
+  container = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 4px},
+    overflow: .visible,
+    children: [frame1, row],
+
+    frame1 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [noPonsel, info],
+
+      noPonsel = text {
+        fill: colorTokens.colors.neutral-80,
+        contents: "Nama Kamu",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      info = asset {
+        width: 12px,
+        height: 12px,
+        fill: colorTokens.colors.neutral-80,
+        contents: iconInfoOutlined
+      }
+    }
+
+    row = frame {
+      width: 100%,
+      height: 24px,
+      layout: {justify-content: .space-between, align-items: .center},
+      overflow: .visible,
+      children: [row, calendarToday],
+
+      row = frame {
+        width: 272px,
+        layout: {align-items: .center, item-gap: 4px},
+        overflow: .visible,
+        children: [withFlag, value],
+
+        withFlag = frame {
+          display: .none,
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [flag, label, frame33526],
+
+          flag = asset {
+            width: 16px,
+            height: 16px,
+            contents: iconFlagIndonesia
+          }
+
+          label = text {
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          frame33526 = frame {
+            layout: {align-items: .center},
+            overflow: .visible,
+            children: [label62, arrowDropDown],
+
+            label62 = text {
+              fill: colorTokens.colors.neutral-80,
+              contents: "+62",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            arrowDropDown = asset {
+              width: 16px,
+              height: 16px,
+              fill: colorTokens.colors.neutral-30,
+              contents: iconArrowDropDownOutlined
+            }
+          }
+        }
+
+        value = text {
+          width: 235px,
+          fill: colorTokens.colors.neutral-30,
+          contents: "81234567901",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.14
+        }
+      }
+
+      calendarToday = asset {
+        width: 16px,
+        height: 16px,
+        fill: colorTokens.colors.neutral-60,
+        contents: iconCalendarTodayOutlined
+      }
+    }
+  }
+
+  line = asset {
+    width: 317px,
+    height: 0px,
+    fill: colorTokens.colors.red-20,
+    contents: iconLine3
+  }
+}
+
+export inputDateDisabled = frame {
+  title: "Input Date / :states=disabled",
+  left: 0px,
+  top: 2476px,
+  width: 317px,
+  layout: {direction: .column, justify-content: .end, item-gap: 4px},
+  overflow: .visible,
+  children: [container, line],
+
+  container = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 4px},
+    overflow: .visible,
+    children: [frame1, row],
+
+    frame1 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [noPonsel, info],
+
+      noPonsel = text {
+        fill: colorTokens.colors.neutral-40,
+        contents: "Nama Kamu",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      info = asset {
+        width: 12px,
+        height: 12px,
+        fill: colorTokens.colors.neutral-30,
+        contents: iconInfoOutlined
+      }
+    }
+
+    row = frame {
+      width: 100%,
+      height: 24px,
+      layout: {justify-content: .space-between, align-items: .center},
+      overflow: .visible,
+      children: [row, calendarToday],
+
+      row = frame {
+        width: 272px,
+        layout: {align-items: .center, item-gap: 4px},
+        overflow: .visible,
+        children: [withFlag, value],
+
+        withFlag = frame {
+          display: .none,
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [flag, label, frame33526],
+
+          flag = asset {
+            width: 16px,
+            height: 16px,
+            contents: iconFlagIndonesia
+          }
+
+          label = text {
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          frame33526 = frame {
+            layout: {align-items: .center},
+            overflow: .visible,
+            children: [label62, arrowDropDown],
+
+            label62 = text {
+              fill: colorTokens.colors.neutral-80,
+              contents: "+62",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            arrowDropDown = asset {
+              width: 16px,
+              height: 16px,
+              fill: colorTokens.colors.neutral-30,
+              contents: iconArrowDropDownOutlined
+            }
+          }
+        }
+
+        value = text {
+          width: 235px,
+          fill: colorTokens.colors.neutral-30,
+          contents: "81234567901",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.14
+        }
+      }
+
+      calendarToday = asset {
+        width: 16px,
+        height: 16px,
+        fill: colorTokens.colors.neutral-30,
+        contents: iconCalendarTodayOutlined
+      }
+    }
+  }
+
+  line = asset {
+    width: 317px,
+    height: 0px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconLine3
+  }
+}

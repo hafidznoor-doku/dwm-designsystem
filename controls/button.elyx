@@ -1,0 +1,1564 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/icon-add.svg" as iconIconAdd
+import "resources/assets/icons/ads-click-outlined.svg" as iconAdsClickOutlined
+import "resources/assets/icons/icon-add-2.svg" as iconIconAdd2
+import "resources/assets/icons/ads-click-outlined-2.svg" as iconAdsClickOutlined2
+import "resources/assets/icons/icon-add-3.svg" as iconIconAdd3
+import "resources/assets/icons/ads-click-outlined-3.svg" as iconAdsClickOutlined3
+import "resources/assets/icons/icon-add-4.svg" as iconIconAdd4
+import "resources/assets/icons/ads-click-outlined-4.svg" as iconAdsClickOutlined4
+import "resources/assets/icons/icon-add-5.svg" as iconIconAdd5
+import "resources/assets/icons/ads-click-outlined-5.svg" as iconAdsClickOutlined5
+import "resources/assets/icons/icon-add-6.svg" as iconIconAdd6
+import "resources/assets/icons/ads-click-outlined-6.svg" as iconAdsClickOutlined6
+
+export buttonDefaultPrimaryDefault = frame {
+  title: "button / Size=default, variant=primary, :state=default",
+  left: 0px,
+  top: 0px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  fill: colorTokens.colors.red-50,
+  border: colorTokens.colors.red-50,
+  corner-radius: 4px,
+  padding: [12px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconIconAdd
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-00,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconAdsClickOutlined
+  }
+}
+
+export buttonSmallPrimaryDefault = frame {
+  title: "button / Size=small, variant=primary, :state=default",
+  left: 209px,
+  top: 0px,
+  height: 30px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  fill: colorTokens.colors.red-50,
+  border: colorTokens.colors.red-50,
+  corner-radius: 4px,
+  padding: [8px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconIconAdd2
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-00,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconAdsClickOutlined2
+  }
+}
+
+export buttonDefaultPrimaryPressed = frame {
+  title: "button / Size=default, variant=primary, :state=pressed",
+  left: 0px,
+  top: 94px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  fill: colorTokens.colors.red-60,
+  border: colorTokens.colors.red-60,
+  corner-radius: 4px,
+  padding: [12px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconIconAdd
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-00,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconAdsClickOutlined
+  }
+}
+
+export buttonSmallPrimaryPressed = frame {
+  title: "button / Size=small, variant=primary, :state=pressed",
+  left: 209px,
+  top: 94px,
+  height: 30px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  fill: colorTokens.colors.red-60,
+  border: colorTokens.colors.red-60,
+  corner-radius: 4px,
+  padding: [8px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconIconAdd2
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-00,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconAdsClickOutlined2
+  }
+}
+
+export buttonDefaultPrimaryDisabled = frame {
+  title: "button / Size=default, variant=primary, :state=disabled",
+  left: 0px,
+  top: 188px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  fill: colorTokens.colors.neutral-20,
+  border: colorTokens.colors.neutral-20,
+  corner-radius: 4px,
+  padding: [12px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-40,
+    contents: iconIconAdd
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-40,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-40,
+    contents: iconAdsClickOutlined
+  }
+}
+
+export buttonSmallPrimaryDisabled = frame {
+  title: "button / Size=small, variant=primary, :state=disabled",
+  left: 209px,
+  top: 188px,
+  height: 30px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  fill: colorTokens.colors.neutral-20,
+  border: colorTokens.colors.neutral-20,
+  corner-radius: 4px,
+  padding: [8px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-40,
+    contents: iconIconAdd2
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-40,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-40,
+    contents: iconAdsClickOutlined2
+  }
+}
+
+export buttonDefaultSecondaryDefault = frame {
+  title: "button / Size=default, variant=secondary, :state=default",
+  left: 0px,
+  top: 282px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  fill: colorTokens.colors.neutral-00,
+  border: colorTokens.colors.red-50,
+  corner-radius: 4px,
+  padding: [12px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.red-50,
+    contents: iconIconAdd
+  }
+
+  button = text {
+    fill: colorTokens.colors.red-50,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.red-50,
+    contents: iconAdsClickOutlined
+  }
+}
+
+export buttonSmallSecondaryDefault = frame {
+  title: "button / Size=small, variant=secondary, :state=default",
+  left: 209px,
+  top: 282px,
+  height: 30px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  fill: colorTokens.colors.neutral-00,
+  border: colorTokens.colors.red-50,
+  corner-radius: 4px,
+  padding: [8px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.red-50,
+    contents: iconIconAdd2
+  }
+
+  button = text {
+    fill: colorTokens.colors.red-50,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.red-50,
+    contents: iconAdsClickOutlined2
+  }
+}
+
+export buttonDefaultSecondaryPressed = frame {
+  title: "button / Size=default, variant=secondary, :state=pressed",
+  left: 0px,
+  top: 376px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  fill: colorTokens.colors.neutral-00,
+  border: colorTokens.colors.red-60,
+  corner-radius: 4px,
+  padding: [12px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.red-60,
+    contents: iconIconAdd
+  }
+
+  button = text {
+    fill: colorTokens.colors.red-60,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.red-60,
+    contents: iconAdsClickOutlined
+  }
+}
+
+export buttonSmallSecondaryPressed = frame {
+  title: "button / Size=small, variant=secondary, :state=pressed",
+  left: 209px,
+  top: 376px,
+  height: 30px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  fill: colorTokens.colors.neutral-00,
+  border: colorTokens.colors.red-60,
+  corner-radius: 4px,
+  padding: [8px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.red-60,
+    contents: iconIconAdd2
+  }
+
+  button = text {
+    fill: colorTokens.colors.red-60,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.red-60,
+    contents: iconAdsClickOutlined2
+  }
+}
+
+export buttonDefaultSecondaryDisabled = frame {
+  title: "button / Size=default, variant=secondary, :state=disabled",
+  left: 0px,
+  top: 470px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  fill: colorTokens.colors.neutral-00,
+  border: colorTokens.colors.neutral-30,
+  corner-radius: 4px,
+  padding: [12px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconIconAdd
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-30,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconAdsClickOutlined
+  }
+}
+
+export buttonSmallSecondaryDisabled = frame {
+  title: "button / Size=small, variant=secondary, :state=disabled",
+  left: 209px,
+  top: 470px,
+  height: 30px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  fill: colorTokens.colors.neutral-00,
+  border: colorTokens.colors.neutral-30,
+  corner-radius: 4px,
+  padding: [8px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconIconAdd2
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-30,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconAdsClickOutlined2
+  }
+}
+
+export buttonDefaultTextPrimaryDefault = frame {
+  title: "button / Size=default, variant=text primary, :state=default",
+  left: 0px,
+  top: 564px,
+  height: 42px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  corner-radius: 4px,
+  padding: [12px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.red-50,
+    contents: iconIconAdd
+  }
+
+  button = text {
+    fill: colorTokens.colors.red-50,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.red-50,
+    contents: iconAdsClickOutlined
+  }
+}
+
+export buttonSmallTextPrimaryDefault = frame {
+  title: "button / Size=small, variant=text primary, :state=default",
+  left: 207px,
+  top: 564px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  corner-radius: 4px,
+  padding: [8px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.red-50,
+    contents: iconIconAdd2
+  }
+
+  button = text {
+    fill: colorTokens.colors.red-50,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.red-50,
+    contents: iconAdsClickOutlined2
+  }
+}
+
+export buttonDefaultTextPrimaryPressed = frame {
+  title: "button / Size=default, variant=text primary, :state=pressed",
+  left: 0px,
+  top: 654px,
+  height: 42px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  corner-radius: 4px,
+  padding: [12px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.red-60,
+    contents: iconIconAdd
+  }
+
+  button = text {
+    fill: colorTokens.colors.red-60,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.red-60,
+    contents: iconAdsClickOutlined
+  }
+}
+
+export buttonSmallTextPrimaryPressed = frame {
+  title: "button / Size=small, variant=text primary, :state=pressed",
+  left: 207px,
+  top: 654px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  corner-radius: 4px,
+  padding: [8px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.red-60,
+    contents: iconIconAdd2
+  }
+
+  button = text {
+    fill: colorTokens.colors.red-60,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.red-60,
+    contents: iconAdsClickOutlined2
+  }
+}
+
+export buttonDefaultTextPrimaryDisabled = frame {
+  title: "button / Size=default, variant=text primary, :state=disabled",
+  left: 0px,
+  top: 744px,
+  height: 42px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  corner-radius: 4px,
+  padding: [12px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconIconAdd3
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-30,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconAdsClickOutlined3
+  }
+}
+
+export buttonSmallTextPrimaryDisabled = frame {
+  title: "button / Size=small, variant=text primary, :state=disabled",
+  left: 207px,
+  top: 744px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  corner-radius: 4px,
+  padding: [8px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconIconAdd4
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-30,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconAdsClickOutlined4
+  }
+}
+
+export buttonDefaultNeutralDefault = frame {
+  title: "button / Size=default, variant=neutral, :state=default",
+  left: 0px,
+  top: 834px,
+  height: 42px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  fill: colorTokens.colors.neutral-00,
+  border: {color: colorTokens.colors.neutral-30, position: .outside},
+  corner-radius: 4px,
+  padding: [12px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-80,
+    contents: iconIconAdd
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-80,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-80,
+    contents: iconAdsClickOutlined
+  }
+}
+
+export buttonSmallNeutralDefault = frame {
+  title: "button / Size=small, variant=neutral, :state=default",
+  left: 207px,
+  top: 834px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  fill: colorTokens.colors.neutral-00,
+  border: {color: colorTokens.colors.neutral-30, position: .outside},
+  corner-radius: 4px,
+  padding: [8px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-80,
+    contents: iconIconAdd2
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-80,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-80,
+    contents: iconAdsClickOutlined2
+  }
+}
+
+export buttonDefaultNeutralPressed = frame {
+  title: "button / Size=default, variant=neutral, :state=pressed",
+  left: 0px,
+  top: 924px,
+  height: 42px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  fill: colorTokens.colors.neutral-05,
+  border: {color: colorTokens.colors.neutral-30, position: .outside},
+  corner-radius: 4px,
+  padding: [12px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-80,
+    contents: iconIconAdd
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-80,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-80,
+    contents: iconAdsClickOutlined
+  }
+}
+
+export buttonSmallNeutralPressed = frame {
+  title: "button / Size=small, variant=neutral, :state=pressed",
+  left: 207px,
+  top: 924px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  fill: colorTokens.colors.neutral-05,
+  border: {color: colorTokens.colors.neutral-30, position: .outside},
+  corner-radius: 4px,
+  padding: [8px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-80,
+    contents: iconIconAdd2
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-80,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-80,
+    contents: iconAdsClickOutlined2
+  }
+}
+
+export buttonDefaultNeutralDisabled = frame {
+  title: "button / Size=default, variant=neutral, :state=disabled",
+  left: 0px,
+  top: 1014px,
+  height: 42px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  fill: colorTokens.colors.neutral-00,
+  border: {color: colorTokens.colors.neutral-30, position: .outside},
+  corner-radius: 4px,
+  padding: [12px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconIconAdd
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-30,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconAdsClickOutlined
+  }
+}
+
+export buttonSmallNeutralDisabled = frame {
+  title: "button / Size=small, variant=neutral, :state=disabled",
+  left: 207px,
+  top: 1014px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  fill: colorTokens.colors.neutral-00,
+  border: {color: colorTokens.colors.neutral-30, position: .outside},
+  corner-radius: 4px,
+  padding: [8px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconIconAdd2
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-30,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconAdsClickOutlined2
+  }
+}
+
+export buttonDefaultTextNeutralDefault = frame {
+  title: "button / Size=default, variant=text neutral, :state=default",
+  left: 0px,
+  top: 1104px,
+  height: 42px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  corner-radius: 4px,
+  padding: [12px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-80,
+    contents: iconIconAdd
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-80,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-80,
+    contents: iconAdsClickOutlined
+  }
+}
+
+export buttonSmallTextNeutralDefault = frame {
+  title: "button / Size=small, variant=text neutral, :state=default",
+  left: 207px,
+  top: 1104px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  corner-radius: 4px,
+  padding: [8px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-80,
+    contents: iconIconAdd2
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-80,
+    contents: "BUTTON",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.167,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-80,
+    contents: iconAdsClickOutlined2
+  }
+}
+
+export buttonDefaultTextNeutralPressed = frame {
+  title: "button / Size=default, variant=text neutral, :state=pressed",
+  left: 0px,
+  top: 1194px,
+  height: 42px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  corner-radius: 4px,
+  padding: [12px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-90,
+    contents: iconIconAdd
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-90,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-90,
+    contents: iconAdsClickOutlined
+  }
+}
+
+export buttonSmallTextNeutralPressed = frame {
+  title: "button / Size=small, variant=text neutral, :state=pressed",
+  left: 207px,
+  top: 1194px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  corner-radius: 4px,
+  padding: [8px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-90,
+    contents: iconIconAdd2
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-90,
+    contents: "BUTTON",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.167,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-90,
+    contents: iconAdsClickOutlined2
+  }
+}
+
+export buttonDefaultTextNeutralDisabled = frame {
+  title: "button / Size=default, variant=text neutral, :state=disabled",
+  left: 0px,
+  top: 1284px,
+  height: 42px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  corner-radius: 4px,
+  padding: [12px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconIconAdd5
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-30,
+    contents: "BUTTON",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.14,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconAdsClickOutlined5
+  }
+}
+
+export buttonSmallTextNeutralDisabled = frame {
+  title: "button / Size=small, variant=text neutral, :state=disabled",
+  left: 207px,
+  top: 1284px,
+  layout: {
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px,
+    include-borders: .true
+  },
+  corner-radius: 4px,
+  padding: [8px, 24px],
+  children: [overlay, iconAdd, button, adsClick],
+
+  overlay = frame {
+    left: 0px,
+    top: 0px,
+    width: 328px,
+    height: 42px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(0%, 0%, 0%, 10.1961%),
+    corner-radius: 10px
+  }
+
+  iconAdd = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconIconAdd6
+  }
+
+  button = text {
+    fill: colorTokens.colors.neutral-30,
+    contents: "BUTTON",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.167,
+    align: .center
+  }
+
+  adsClick = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconAdsClickOutlined6
+  }
+}

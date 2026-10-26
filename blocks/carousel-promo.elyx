@@ -1,0 +1,841 @@
+import "tokens/colors.elyx" as colorTokens
+import "controls/pill-tabs.elyx" as pillTabsLib
+import "resources/assets/images/a597f35430b22a5f.png" as imageA597f35430b22a5f
+import "resources/assets/images/dbe0dcb3a705d414.png" as imageDbe0dcb3a705d414
+import "resources/assets/images/cd6cb267cb73af5b.png" as imageCd6cb267cb73af5b
+import "resources/assets/icons/carousel-indicator-slide-1.svg" as iconCarouselIndicatorSlide1
+import "resources/assets/icons/carousel-indicator-slide-3.svg" as iconCarouselIndicatorSlide3
+import "resources/assets/icons/indicator.svg" as iconIndicator
+
+export infoPromoPromo = frame {
+  title: "Info Promo / Tipe=Promo",
+  left: 0px,
+  top: 0px,
+  width: 391px,
+  layout: {direction: .column, item-gap: 16px},
+  padding: [0px, 16px],
+  children: [pillTabs, frame14293],
+
+  pillTabs = frame : pillTabsLib.pillTabs2Tabs {
+    pill {
+      qris {
+        contents: "Penawaran"
+      }
+
+      creditCard {
+        display: .visible
+      }
+    }
+
+    pill2 {
+      qris {
+        contents: "Info"
+      }
+
+      creditCard {
+        display: .visible
+      }
+    }
+  }
+
+  frame14293 = frame {
+    layout: {direction: .column, align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [frame303, carouselIndicator],
+
+    frame303 = frame {
+      width: 358px,
+      height: 132px,
+      overflow: .visible,
+      children: frame304,
+
+      frame304 = frame {
+        left: 0px,
+        top: 0px,
+        layout: {item-gap: 8px},
+        overflow: .visible,
+        children: [frame4, frame3, frame5, frame6, frame7, frame8],
+
+        frame4 = frame {
+          width: 358px,
+          height: 132px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: [
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 7.84%),
+                offset: point(0px, 1px),
+                blur-radius: 8px
+              }
+            },
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 12.1569%),
+                offset: point(0px, 0px),
+                blur-radius: 1px
+              }
+            }
+          ],
+          corner-radius: 8px,
+          children: [banner, screenshot20230830At16141],
+
+          banner = text {
+            left: 85px,
+            top: 51px,
+            fill: .black,
+            contents: "Banner",
+            font-size: 14,
+            font-family: "Inter",
+            font-style: "Semi Bold"
+          }
+
+          screenshot20230830At16141 = shape {
+            left: -1px,
+            top: -36px,
+            width: 359px,
+            height: 205px,
+            fill: {image: {ref: imageA597f35430b22a5f}},
+            type: .rect
+          }
+        }
+
+        frame3 = frame {
+          width: 344px,
+          height: 132px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: [
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 7.84%),
+                offset: point(0px, 1px),
+                blur-radius: 8px
+              }
+            },
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 12.1569%),
+                offset: point(0px, 0px),
+                blur-radius: 1px
+              }
+            }
+          ],
+          corner-radius: 8px,
+          children: [banner, screenshot20230830At16121],
+
+          banner = text {
+            left: 85px,
+            top: 51px,
+            fill: .black,
+            contents: "Banner",
+            font-size: 14,
+            font-family: "Inter",
+            font-style: "Semi Bold"
+          }
+
+          screenshot20230830At16121 = shape {
+            left: -2px,
+            top: -1px,
+            width: 236px,
+            height: 142px,
+            fill: {image: {ref: imageDbe0dcb3a705d414, sizing: .stretch}},
+            type: .rect
+          }
+        }
+
+        frame5 = frame {
+          width: 344px,
+          height: 132px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: [
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 7.84%),
+                offset: point(0px, 1px),
+                blur-radius: 8px
+              }
+            },
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 12.1569%),
+                offset: point(0px, 0px),
+                blur-radius: 1px
+              }
+            }
+          ],
+          corner-radius: 8px,
+          children: [
+            banner,
+            screenshot20230830At16121,
+            screenshot20230830At16122
+          ],
+
+          banner = text {
+            left: 85px,
+            top: 51px,
+            fill: .black,
+            contents: "Banner",
+            font-size: 14,
+            font-family: "Inter",
+            font-style: "Semi Bold"
+          }
+
+          screenshot20230830At16121 = shape {
+            left: -2px,
+            top: -1px,
+            width: 214px,
+            height: 129px,
+            fill: {image: {ref: imageDbe0dcb3a705d414, sizing: .stretch}},
+            type: .rect
+          }
+
+          screenshot20230830At16122 = shape {
+            left: 0px,
+            top: 0px,
+            width: 234px,
+            height: 132px,
+            fill: {image: {ref: imageCd6cb267cb73af5b, sizing: .stretch}},
+            type: .rect
+          }
+        }
+
+        frame6 = frame {
+          width: 344px,
+          height: 132px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: [
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 7.84%),
+                offset: point(0px, 1px),
+                blur-radius: 8px
+              }
+            },
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 12.1569%),
+                offset: point(0px, 0px),
+                blur-radius: 1px
+              }
+            }
+          ],
+          corner-radius: 8px,
+          children: [banner, screenshot20230830At16141],
+
+          banner = text {
+            left: 85px,
+            top: 51px,
+            fill: .black,
+            contents: "Banner",
+            font-size: 14,
+            font-family: "Inter",
+            font-style: "Semi Bold"
+          }
+
+          screenshot20230830At16141 = shape {
+            left: 55px,
+            top: 6px,
+            width: 234px,
+            height: 134px,
+            fill: {image: {ref: imageA597f35430b22a5f}},
+            type: .rect
+          }
+        }
+
+        frame7 = frame {
+          width: 344px,
+          height: 132px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: [
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 7.84%),
+                offset: point(0px, 1px),
+                blur-radius: 8px
+              }
+            },
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 12.1569%),
+                offset: point(0px, 0px),
+                blur-radius: 1px
+              }
+            }
+          ],
+          corner-radius: 8px,
+          children: [banner, screenshot20230830At16121],
+
+          banner = text {
+            left: 85px,
+            top: 51px,
+            fill: .black,
+            contents: "Banner",
+            font-size: 14,
+            font-family: "Inter",
+            font-style: "Semi Bold"
+          }
+
+          screenshot20230830At16121 = shape {
+            left: -2px,
+            top: -1px,
+            width: 236px,
+            height: 142px,
+            fill: {image: {ref: imageDbe0dcb3a705d414, sizing: .stretch}},
+            type: .rect
+          }
+        }
+
+        frame8 = frame {
+          width: 344px,
+          height: 132px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: [
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 7.84%),
+                offset: point(0px, 1px),
+                blur-radius: 8px
+              }
+            },
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 12.1569%),
+                offset: point(0px, 0px),
+                blur-radius: 1px
+              }
+            }
+          ],
+          corner-radius: 8px,
+          children: [
+            banner,
+            screenshot20230830At16121,
+            screenshot20230830At16122
+          ],
+
+          banner = text {
+            left: 85px,
+            top: 51px,
+            fill: .black,
+            contents: "Banner",
+            font-size: 14,
+            font-family: "Inter",
+            font-style: "Semi Bold"
+          }
+
+          screenshot20230830At16121 = shape {
+            left: -2px,
+            top: -1px,
+            width: 214px,
+            height: 129px,
+            fill: {image: {ref: imageDbe0dcb3a705d414, sizing: .stretch}},
+            type: .rect
+          }
+
+          screenshot20230830At16122 = shape {
+            left: 0px,
+            top: 0px,
+            width: 234px,
+            height: 132px,
+            fill: {image: {ref: imageCd6cb267cb73af5b, sizing: .stretch}},
+            type: .rect
+          }
+        }
+      }
+    }
+
+    carouselIndicator = asset {
+      width: 63px,
+      height: 5px,
+      contents: iconCarouselIndicatorSlide1
+    }
+  }
+}
+
+export infoPromoInfo = frame {
+  title: "Info Promo / Tipe=Info",
+  left: 469px,
+  top: 0px,
+  width: 391px,
+  layout: {direction: .column, item-gap: 16px},
+  padding: [0px, 16px],
+  children: [pillTabs, frame14293],
+
+  pillTabs = frame : pillTabsLib.pillTabs2Tabs {
+    pill2 {
+      fill[0].color: colorTokens.colors.red-50,
+      border[0]: .nil,
+
+      qris {
+        fill[0].color: colorTokens.colors.neutral-00,
+        contents: "Info"
+      }
+
+      creditCard {
+        fill[0].color: colorTokens.colors.neutral-00
+      }
+    }
+
+    pill {
+      border[0].color: colorTokens.colors.neutral-10,
+      fill[0]: .nil,
+
+      qris {
+        fill[0].color: colorTokens.colors.neutral-50,
+        contents: "Penawaran"
+      }
+
+      creditCard {
+        fill[0].color: colorTokens.colors.neutral-50
+      }
+    }
+  }
+
+  frame14293 = frame {
+    layout: {direction: .column, align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [frame303, carouselIndicator],
+
+    frame303 = frame {
+      width: 358px,
+      height: 132px,
+      overflow: .visible,
+      children: frame304,
+
+      frame304 = frame {
+        left: 0px,
+        top: 0px,
+        layout: {item-gap: 16px},
+        overflow: .visible,
+        children: [frame3, frame5, frame7, frame8],
+
+        frame3 = frame {
+          width: 344px,
+          height: 132px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: [
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 7.84%),
+                offset: point(0px, 1px),
+                blur-radius: 8px
+              }
+            },
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 12.1569%),
+                offset: point(0px, 0px),
+                blur-radius: 1px
+              }
+            }
+          ],
+          corner-radius: 8px,
+          children: [banner, screenshot20230830At16121],
+
+          banner = text {
+            left: 85px,
+            top: 51px,
+            fill: .black,
+            contents: "Banner",
+            font-size: 14,
+            font-family: "Inter",
+            font-style: "Semi Bold"
+          }
+
+          screenshot20230830At16121 = shape {
+            left: -2px,
+            top: -1px,
+            width: 360px,
+            height: 217px,
+            fill: {image: {ref: imageDbe0dcb3a705d414, sizing: .stretch}},
+            type: .rect
+          }
+        }
+
+        frame5 = frame {
+          width: 344px,
+          height: 132px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: [
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 7.84%),
+                offset: point(0px, 1px),
+                blur-radius: 8px
+              }
+            },
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 12.1569%),
+                offset: point(0px, 0px),
+                blur-radius: 1px
+              }
+            }
+          ],
+          corner-radius: 8px,
+          children: [
+            banner,
+            screenshot20230830At16121,
+            screenshot20230830At16122
+          ],
+
+          banner = text {
+            left: 85px,
+            top: 51px,
+            fill: .black,
+            contents: "Banner",
+            font-size: 14,
+            font-family: "Inter",
+            font-style: "Semi Bold"
+          }
+
+          screenshot20230830At16121 = shape {
+            left: -2px,
+            top: -1px,
+            width: 214px,
+            height: 129px,
+            fill: {image: {ref: imageDbe0dcb3a705d414, sizing: .stretch}},
+            type: .rect
+          }
+
+          screenshot20230830At16122 = shape {
+            left: 0px,
+            top: 0px,
+            width: 234px,
+            height: 132px,
+            fill: {image: {ref: imageCd6cb267cb73af5b, sizing: .stretch}},
+            type: .rect
+          }
+        }
+
+        frame7 = frame {
+          width: 344px,
+          height: 132px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: [
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 7.84%),
+                offset: point(0px, 1px),
+                blur-radius: 8px
+              }
+            },
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 12.1569%),
+                offset: point(0px, 0px),
+                blur-radius: 1px
+              }
+            }
+          ],
+          corner-radius: 8px,
+          children: [banner, screenshot20230830At16121],
+
+          banner = text {
+            left: 85px,
+            top: 51px,
+            fill: .black,
+            contents: "Banner",
+            font-size: 14,
+            font-family: "Inter",
+            font-style: "Semi Bold"
+          }
+
+          screenshot20230830At16121 = shape {
+            left: -2px,
+            top: -1px,
+            width: 236px,
+            height: 142px,
+            fill: {image: {ref: imageDbe0dcb3a705d414, sizing: .stretch}},
+            type: .rect
+          }
+        }
+
+        frame8 = frame {
+          width: 344px,
+          height: 132px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: [
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 7.84%),
+                offset: point(0px, 1px),
+                blur-radius: 8px
+              }
+            },
+            {
+              drop-shadow: {
+                color: rgb(7.84%, 7.84%, 7.84%, 12.1569%),
+                offset: point(0px, 0px),
+                blur-radius: 1px
+              }
+            }
+          ],
+          corner-radius: 8px,
+          children: [
+            banner,
+            screenshot20230830At16121,
+            screenshot20230830At16122
+          ],
+
+          banner = text {
+            left: 85px,
+            top: 51px,
+            fill: .black,
+            contents: "Banner",
+            font-size: 14,
+            font-family: "Inter",
+            font-style: "Semi Bold"
+          }
+
+          screenshot20230830At16121 = shape {
+            left: -2px,
+            top: -1px,
+            width: 214px,
+            height: 129px,
+            fill: {image: {ref: imageDbe0dcb3a705d414, sizing: .stretch}},
+            type: .rect
+          }
+
+          screenshot20230830At16122 = shape {
+            left: 0px,
+            top: 0px,
+            width: 234px,
+            height: 132px,
+            fill: {image: {ref: imageCd6cb267cb73af5b, sizing: .stretch}},
+            type: .rect
+          }
+        }
+      }
+    }
+
+    carouselIndicator = asset {
+      width: 63px,
+      height: 5px,
+      contents: iconCarouselIndicatorSlide3
+    }
+  }
+}
+
+export carouselIndicatorSlide1 = frame {
+  title: "Carousel Indicator / Property 1=slide 1",
+  left: 0px,
+  top: 325px,
+  layout: {item-gap: 7px},
+  overflow: .visible,
+  children: [rectangle1, indicator, indicator2, indicator3, indicator4],
+
+  rectangle1 = shape {
+    width: 15px,
+    height: 5px,
+    fill: colorTokens.colors.red-50,
+    type: .rect,
+    corner-radius: 32px
+  }
+
+  indicator = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+
+  indicator2 = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+
+  indicator3 = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+
+  indicator4 = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+}
+
+export carouselIndicatorSlide2 = frame {
+  title: "Carousel Indicator / Property 1=slide 2",
+  left: 0px,
+  top: 378px,
+  layout: {item-gap: 7px},
+  overflow: .visible,
+  children: [indicator, rectangle1, indicator2, indicator3, indicator4],
+
+  indicator = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+
+  rectangle1 = shape {
+    width: 15px,
+    height: 5px,
+    fill: colorTokens.colors.red-50,
+    type: .rect,
+    corner-radius: 32px
+  }
+
+  indicator2 = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+
+  indicator3 = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+
+  indicator4 = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+}
+
+export carouselIndicatorSlide3 = frame {
+  title: "Carousel Indicator / Property 1=slide 3",
+  left: 0px,
+  top: 431px,
+  layout: {item-gap: 7px},
+  overflow: .visible,
+  children: [indicator, indicator2, rectangle1, indicator3, indicator4],
+
+  indicator = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+
+  indicator2 = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+
+  rectangle1 = shape {
+    width: 15px,
+    height: 5px,
+    fill: colorTokens.colors.red-50,
+    type: .rect,
+    corner-radius: 32px
+  }
+
+  indicator3 = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+
+  indicator4 = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+}
+
+export carouselIndicatorSlide4 = frame {
+  title: "Carousel Indicator / Property 1=slide 4",
+  left: 0px,
+  top: 484px,
+  layout: {item-gap: 7px},
+  overflow: .visible,
+  children: [indicator, indicator2, indicator3, rectangle1, indicator4],
+
+  indicator = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+
+  indicator2 = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+
+  indicator3 = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+
+  rectangle1 = shape {
+    width: 15px,
+    height: 5px,
+    fill: colorTokens.colors.red-50,
+    type: .rect,
+    corner-radius: 32px
+  }
+
+  indicator4 = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+}
+
+export carouselIndicatorSlide5 = frame {
+  title: "Carousel Indicator / Property 1=slide 5",
+  left: 0px,
+  top: 537px,
+  layout: {item-gap: 7px},
+  overflow: .visible,
+  children: [indicator, indicator2, indicator3, indicator4, rectangle1],
+
+  indicator = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+
+  indicator2 = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+
+  indicator3 = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+
+  indicator4 = asset {
+    width: 5px,
+    height: 5px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconIndicator
+  }
+
+  rectangle1 = shape {
+    width: 15px,
+    height: 5px,
+    fill: colorTokens.colors.red-50,
+    type: .rect,
+    corner-radius: 32px
+  }
+}

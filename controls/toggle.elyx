@@ -1,0 +1,164 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/dw-icon-akun-smart-login-outline.svg" as iconDwIconAkunSmartLoginOutline
+
+export toggleFalseFalse = frame {
+  title: "Toggle / active=false, ?disabled=false",
+  left: 0px,
+  top: 0px,
+  width: 37.78px,
+  height: 20px,
+  children: [container, trigger],
+
+  container = shape {
+    left: 0px,
+    top: 0px,
+    width: 37.78px,
+    height: 20px,
+    fill: colorTokens.colors.neutral-20,
+    type: .rect,
+    corner-radius: 42px
+  }
+
+  trigger = shape {
+    left: 3px,
+    top: 2px,
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-00,
+    shadow: {
+      drop-shadow: {
+        color: rgb(0%, 0%, 0%, 14.9%),
+        offset: point(3px, 3px),
+        blur-radius: 3px,
+        spread: -3px
+      }
+    },
+    type: .ellipse
+  }
+}
+
+export toggleTrueFalse = frame {
+  title: "Toggle / active=true, ?disabled=false",
+  left: 0px,
+  top: 68px,
+  width: 37.78px,
+  height: 20px,
+  children: [container, trigger],
+
+  container = shape {
+    left: 0px,
+    top: 0px,
+    width: 37.78px,
+    height: 20px,
+    fill: colorTokens.colors.red-60,
+    type: .rect,
+    corner-radius: 42px
+  }
+
+  trigger = shape {
+    left: 19px,
+    top: 2px,
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-00,
+    shadow: {
+      drop-shadow: {
+        color: rgb(0%, 0%, 0%, 14.9%),
+        offset: point(-4px, 3px),
+        blur-radius: 3px,
+        spread: -3px
+      }
+    },
+    type: .ellipse
+  }
+}
+
+export toggleFalseTrue = frame {
+  title: "Toggle / active=false, ?disabled=true",
+  left: 0px,
+  top: 136px,
+  width: 37.78px,
+  height: 20px,
+  children: [container, trigger],
+
+  container = shape {
+    left: 0px,
+    top: 0px,
+    width: 37.78px,
+    height: 20px,
+    fill: colorTokens.colors.neutral-30,
+    type: .rect,
+    corner-radius: 42px
+  }
+
+  trigger = shape {
+    left: 3px,
+    top: 2px,
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-20,
+    type: .ellipse
+  }
+}
+
+export toggleTrueTrue = frame {
+  title: "Toggle / active=true, ?disabled=true",
+  left: 0px,
+  top: 204px,
+  width: 37.78px,
+  height: 20px,
+  children: [container, trigger],
+
+  container = shape {
+    left: 0px,
+    top: 0px,
+    width: 37.78px,
+    height: 20px,
+    fill: colorTokens.colors.red-20,
+    type: .rect,
+    corner-radius: 42px
+  }
+
+  trigger = shape {
+    left: 19px,
+    top: 2px,
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-10,
+    type: .ellipse
+  }
+}
+
+export toggleList = frame {
+  title: "_toggle-list",
+  left: 0px,
+  top: 352px,
+  layout: {item-gap: 16px},
+  overflow: .visible,
+  children: [frame850, toggle],
+
+  frame850 = frame {
+    width: 290.22px,
+    layout: {align-items: .center, item-gap: 24px},
+    overflow: .visible,
+    children: [dwIcon, ubahProfil],
+
+    dwIcon = asset {
+      width: 24px,
+      height: 24px,
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: iconDwIconAkunSmartLoginOutline
+    }
+
+    ubahProfil = text {
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: "Smart Login",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.14
+    }
+  }
+
+  toggle = frame : toggleTrueFalse {}
+}

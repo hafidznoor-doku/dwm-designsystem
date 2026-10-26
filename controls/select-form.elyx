@@ -1,0 +1,2024 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/info-outlined.svg" as iconInfoOutlined
+import "resources/assets/icons/arrow-drop-down-outlined.svg" as iconArrowDropDownOutlined
+import "resources/assets/icons/flag-indonesia.svg" as iconFlagIndonesia
+import "resources/assets/icons/right-icons-3.svg" as iconRightIcons3
+import "resources/assets/icons/line-3.svg" as iconLine3
+import "resources/assets/icons/right-icons-4.svg" as iconRightIcons4
+import "resources/assets/icons/line-4.svg" as iconLine4
+import "resources/assets/icons/icon-font-awesome-free-regular-l-lightbulb.svg" as iconIconFontAwesomeFreeRegularLLightbulb
+import "resources/assets/icons/line-1.svg" as iconLine1
+import "resources/assets/icons/bi-arrow-right-circle.svg" as iconBiArrowRightCircle
+import "resources/assets/icons/bi-plus.svg" as iconBiPlus
+
+export selectFormDefault = frame {
+  title: "Select Form / State=default",
+  left: 0px,
+  top: 0px,
+  width: 317px,
+  layout: {direction: .column, justify-content: .end, item-gap: 4px},
+  overflow: .visible,
+  children: [container, line, textHelper],
+
+  container = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 4px},
+    overflow: .visible,
+    children: [frame1, row],
+
+    frame1 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [noPonsel, info],
+
+      noPonsel = text {
+        fill: colorTokens.colors.neutral-80,
+        contents: "Label",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      info = asset {
+        width: 12px,
+        height: 12px,
+        fill: colorTokens.colors.neutral-80,
+        contents: iconInfoOutlined
+      }
+    }
+
+    row = frame {
+      width: 100%,
+      height: 24px,
+      layout: {justify-content: .space-between, align-items: .center},
+      overflow: .visible,
+      children: [row, rightIcons],
+
+      row = frame {
+        width: 272px,
+        layout: {align-items: .center, item-gap: 4px},
+        overflow: .visible,
+        children: [withoutFlag, withFlag, value],
+
+        withoutFlag = frame {
+          display: .none,
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [label62, label, arrowDropDown],
+
+          label62 = text {
+            fill: colorTokens.colors.neutral-80,
+            contents: "+62",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.14
+          }
+
+          label = text {
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          arrowDropDown = asset {
+            width: 16px,
+            height: 16px,
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: iconArrowDropDownOutlined
+          }
+        }
+
+        withFlag = frame {
+          display: .none,
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [flag, label, frame33526],
+
+          flag = asset {
+            width: 16px,
+            height: 16px,
+            contents: iconFlagIndonesia
+          }
+
+          label = text {
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          frame33526 = frame {
+            layout: {align-items: .center},
+            overflow: .visible,
+            children: [label62, arrowDropDown],
+
+            label62 = text {
+              fill: colorTokens.colors.neutral-80,
+              contents: "+62",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            arrowDropDown = asset {
+              width: 16px,
+              height: 16px,
+              fill: colorTokens.colors.neutral-30,
+              contents: iconArrowDropDownOutlined
+            }
+          }
+        }
+
+        value = text {
+          width: 235px,
+          fill: colorTokens.colors.neutral-30,
+          contents: "Select",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.14
+        }
+      }
+
+      rightIcons = asset {
+        width: 16px,
+        height: 24px,
+        fill: colorTokens.colors.neutral-60,
+        contents: iconRightIcons3
+      }
+    }
+  }
+
+  line = asset {
+    width: 317px,
+    height: 0px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconLine3
+  }
+
+  textHelper = text {
+    width: 100%,
+    fill: colorTokens.colors.neutral-60,
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.167
+  }
+}
+
+export selectFormPressed = frame {
+  title: "Select Form / State=pressed",
+  left: 0px,
+  top: 122px,
+  width: 317px,
+  layout: {direction: .column, justify-content: .end, item-gap: 4px},
+  overflow: .visible,
+  children: [container, line, textHelper, dropdownList],
+
+  container = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 4px},
+    overflow: .visible,
+    children: [frame1, row],
+
+    frame1 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [noPonsel, info],
+
+      noPonsel = text {
+        fill: colorTokens.colors.neutral-80,
+        contents: "Label",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      info = asset {
+        width: 12px,
+        height: 12px,
+        fill: colorTokens.colors.neutral-80,
+        contents: iconInfoOutlined
+      }
+    }
+
+    row = frame {
+      width: 100%,
+      height: 24px,
+      layout: {justify-content: .space-between, align-items: .center},
+      overflow: .visible,
+      children: [row, rightIcons],
+
+      row = frame {
+        width: 272px,
+        layout: {align-items: .center, item-gap: 4px},
+        overflow: .visible,
+        children: [withoutFlag, withFlag, value],
+
+        withoutFlag = frame {
+          display: .none,
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [label62, label, arrowDropDown],
+
+          label62 = text {
+            fill: colorTokens.colors.neutral-80,
+            contents: "+62",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.14
+          }
+
+          label = text {
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          arrowDropDown = asset {
+            width: 16px,
+            height: 16px,
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: iconArrowDropDownOutlined
+          }
+        }
+
+        withFlag = frame {
+          display: .none,
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [flag, label, frame33526],
+
+          flag = asset {
+            width: 16px,
+            height: 16px,
+            contents: iconFlagIndonesia
+          }
+
+          label = text {
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          frame33526 = frame {
+            layout: {align-items: .center},
+            overflow: .visible,
+            children: [label62, arrowDropDown],
+
+            label62 = text {
+              fill: colorTokens.colors.neutral-80,
+              contents: "+62",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            arrowDropDown = asset {
+              width: 16px,
+              height: 16px,
+              fill: colorTokens.colors.neutral-30,
+              contents: iconArrowDropDownOutlined
+            }
+          }
+        }
+
+        value = text {
+          width: 235px,
+          fill: colorTokens.colors.neutral-30,
+          contents: "Select",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.14
+        }
+      }
+
+      rightIcons = asset {
+        width: 16px,
+        height: 16px,
+        fill: colorTokens.colors.neutral-60,
+        contents: iconRightIcons4
+      }
+    }
+  }
+
+  line = asset {
+    width: 317px,
+    height: 0px,
+    fill: colorTokens.colors.red-20,
+    contents: iconLine4
+  }
+
+  textHelper = text {
+    width: 100%,
+    fill: colorTokens.colors.neutral-60,
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.167
+  }
+
+  dropdownList = frame {
+    left: 0px,
+    top: 52px,
+    width: 317px,
+    display: .none,
+    ignore-stack: .true,
+    layout: {direction: .column},
+    fill: colorTokens.colors.neutral-00,
+    border: {color: colorTokens.colors.neutral-20, position: .center},
+    shadow: [
+      {
+        drop-shadow: {
+          color: rgb(6.27%, 9.41%, 15.6863%, 3.1373%),
+          offset: point(0px, 8px),
+          blur-radius: 8px,
+          spread: -4px
+        }
+      },
+      {
+        drop-shadow: {
+          color: rgb(6.27%, 9.41%, 15.6863%, 7.84%),
+          offset: point(0px, 20px),
+          blur-radius: 24px,
+          spread: -4px
+        }
+      }
+    ],
+    corner-radius: 4px,
+    padding: [8px, 0px],
+    children: [
+      addListOption,
+      listOption,
+      listOption2,
+      listOption3,
+      listOption4,
+      listOption5
+    ],
+
+    addListOption = frame {
+      width: 100%,
+      display: .none,
+      layout: {direction: .column},
+      overflow: .visible,
+      children: [listOption, line1],
+
+      listOption = frame {
+        width: 100%,
+        layout: {align-items: .center, item-gap: 8px},
+        padding: [4px, 16px],
+        children: [
+          biArrowRightCircle,
+          contentSlotComponent,
+          textLayer,
+          biArrowRightCircle2
+        ],
+
+        biArrowRightCircle = frame {
+          width: 12px,
+          height: 12px
+        }
+
+        contentSlotComponent = frame {
+          width: 1px,
+          height: 100%,
+          display: .none,
+          layout: {
+            direction: .column,
+            justify-content: .center,
+            align-items: .center,
+            item-gap: 4px
+          },
+          fill: colorTokens.colors.cyan-05,
+          padding: [4px, 16px],
+          children: [iconFontAwesomeFreeRegularLLightbulb, swapComponentHere],
+
+          iconFontAwesomeFreeRegularLLightbulb = asset {
+            width: 10px,
+            height: 10px,
+            fill: .black,
+            contents: iconIconFontAwesomeFreeRegularLLightbulb
+          }
+
+          swapComponentHere = text {
+            width: 100%,
+            fill: .black,
+            contents: "Swap component here",
+            font-size: 8,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.5,
+            align: .center
+          }
+        }
+
+        textLayer = text {
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Add List Menu",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.429
+        }
+
+        biArrowRightCircle2 = frame {
+          width: 12px,
+          height: 12px,
+          display: .none
+        }
+      }
+
+      line1 = asset {
+        width: 205px,
+        height: 0px,
+        fill: rgb(91.76%, 92.549%, 94.1176%),
+        contents: iconLine1
+      }
+    }
+
+    listOption = frame {
+      width: 100%,
+      layout: {align-items: .center, item-gap: 8px},
+      padding: [4px, 16px],
+      children: [
+        biArrowRightCircle,
+        contentSlotComponent,
+        textLayer,
+        biArrowRightCircle2
+      ],
+
+      biArrowRightCircle = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: iconBiArrowRightCircle
+      }
+
+      contentSlotComponent = frame {
+        width: 1px,
+        height: 100%,
+        display: .none,
+        layout: {
+          direction: .column,
+          justify-content: .center,
+          align-items: .center,
+          item-gap: 4px
+        },
+        fill: colorTokens.colors.cyan-05,
+        padding: [4px, 16px],
+        children: [iconFontAwesomeFreeRegularLLightbulb, swapComponentHere],
+
+        iconFontAwesomeFreeRegularLLightbulb = asset {
+          width: 10px,
+          height: 10px,
+          fill: .black,
+          contents: iconIconFontAwesomeFreeRegularLLightbulb
+        }
+
+        swapComponentHere = text {
+          width: 100%,
+          fill: .black,
+          contents: "Swap component here",
+          font-size: 8,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.5,
+          align: .center
+        }
+      }
+
+      textLayer = text {
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: "Dropdown menu",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.429
+      }
+
+      biArrowRightCircle2 = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: iconBiArrowRightCircle
+      }
+    }
+
+    listOption2 = frame {
+      width: 100%,
+      layout: {align-items: .center, item-gap: 8px},
+      padding: [4px, 16px],
+      children: [
+        biArrowRightCircle,
+        contentSlotComponent,
+        textLayer,
+        biArrowRightCircle2
+      ],
+
+      biArrowRightCircle = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: iconBiArrowRightCircle
+      }
+
+      contentSlotComponent = frame {
+        width: 1px,
+        height: 100%,
+        display: .none,
+        layout: {
+          direction: .column,
+          justify-content: .center,
+          align-items: .center,
+          item-gap: 4px
+        },
+        fill: colorTokens.colors.cyan-05,
+        padding: [4px, 16px],
+        children: [iconFontAwesomeFreeRegularLLightbulb, swapComponentHere],
+
+        iconFontAwesomeFreeRegularLLightbulb = asset {
+          width: 10px,
+          height: 10px,
+          fill: .black,
+          contents: iconIconFontAwesomeFreeRegularLLightbulb
+        }
+
+        swapComponentHere = text {
+          width: 100%,
+          fill: .black,
+          contents: "Swap component here",
+          font-size: 8,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.5,
+          align: .center
+        }
+      }
+
+      textLayer = text {
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: "Dropdown menu",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.429
+      }
+
+      biArrowRightCircle2 = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: iconBiArrowRightCircle
+      }
+    }
+
+    listOption3 = frame {
+      width: 100%,
+      layout: {align-items: .center, item-gap: 8px},
+      padding: [4px, 16px],
+      children: [
+        biArrowRightCircle,
+        contentSlotComponent,
+        textLayer,
+        biArrowRightCircle2
+      ],
+
+      biArrowRightCircle = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: iconBiArrowRightCircle
+      }
+
+      contentSlotComponent = frame {
+        width: 1px,
+        height: 100%,
+        display: .none,
+        layout: {
+          direction: .column,
+          justify-content: .center,
+          align-items: .center,
+          item-gap: 4px
+        },
+        fill: colorTokens.colors.cyan-05,
+        padding: [4px, 16px],
+        children: [iconFontAwesomeFreeRegularLLightbulb, swapComponentHere],
+
+        iconFontAwesomeFreeRegularLLightbulb = asset {
+          width: 10px,
+          height: 10px,
+          fill: .black,
+          contents: iconIconFontAwesomeFreeRegularLLightbulb
+        }
+
+        swapComponentHere = text {
+          width: 100%,
+          fill: .black,
+          contents: "Swap component here",
+          font-size: 8,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.5,
+          align: .center
+        }
+      }
+
+      textLayer = text {
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: "Dropdown menu",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.429
+      }
+
+      biArrowRightCircle2 = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: iconBiArrowRightCircle
+      }
+    }
+
+    listOption4 = frame {
+      width: 100%,
+      layout: {align-items: .center, item-gap: 8px},
+      padding: [4px, 16px],
+      children: [
+        biArrowRightCircle,
+        contentSlotComponent,
+        textLayer,
+        biArrowRightCircle2
+      ],
+
+      biArrowRightCircle = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: iconBiArrowRightCircle
+      }
+
+      contentSlotComponent = frame {
+        width: 1px,
+        height: 100%,
+        display: .none,
+        layout: {
+          direction: .column,
+          justify-content: .center,
+          align-items: .center,
+          item-gap: 4px
+        },
+        fill: colorTokens.colors.cyan-05,
+        padding: [4px, 16px],
+        children: [iconFontAwesomeFreeRegularLLightbulb, swapComponentHere],
+
+        iconFontAwesomeFreeRegularLLightbulb = asset {
+          width: 10px,
+          height: 10px,
+          fill: .black,
+          contents: iconIconFontAwesomeFreeRegularLLightbulb
+        }
+
+        swapComponentHere = text {
+          width: 100%,
+          fill: .black,
+          contents: "Swap component here",
+          font-size: 8,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.5,
+          align: .center
+        }
+      }
+
+      textLayer = text {
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: "Dropdown menu",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.429
+      }
+
+      biArrowRightCircle2 = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: iconBiArrowRightCircle
+      }
+    }
+
+    listOption5 = frame {
+      width: 100%,
+      layout: {align-items: .center, item-gap: 8px},
+      padding: [4px, 16px],
+      children: [
+        biArrowRightCircle,
+        contentSlotComponent,
+        textLayer,
+        biArrowRightCircle2
+      ],
+
+      biArrowRightCircle = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: iconBiArrowRightCircle
+      }
+
+      contentSlotComponent = frame {
+        width: 1px,
+        height: 100%,
+        display: .none,
+        layout: {
+          direction: .column,
+          justify-content: .center,
+          align-items: .center,
+          item-gap: 4px
+        },
+        fill: colorTokens.colors.cyan-05,
+        padding: [4px, 16px],
+        children: [iconFontAwesomeFreeRegularLLightbulb, swapComponentHere],
+
+        iconFontAwesomeFreeRegularLLightbulb = asset {
+          width: 10px,
+          height: 10px,
+          fill: .black,
+          contents: iconIconFontAwesomeFreeRegularLLightbulb
+        }
+
+        swapComponentHere = text {
+          width: 100%,
+          fill: .black,
+          contents: "Swap component here",
+          font-size: 8,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.5,
+          align: .center
+        }
+      }
+
+      textLayer = text {
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: "Dropdown menu",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.429
+      }
+
+      biArrowRightCircle2 = asset {
+        width: 12px,
+        height: 12px,
+        display: .none,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: iconBiArrowRightCircle
+      }
+    }
+  }
+}
+
+export selectFormFilled = frame {
+  title: "Select Form / State=filled",
+  left: 0px,
+  top: 244px,
+  width: 317px,
+  layout: {direction: .column, justify-content: .end, item-gap: 4px},
+  overflow: .visible,
+  children: [container, line, textHelper],
+
+  container = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 4px},
+    overflow: .visible,
+    children: [frame1, row],
+
+    frame1 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [noPonsel, info],
+
+      noPonsel = text {
+        fill: colorTokens.colors.neutral-80,
+        contents: "Label",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      info = asset {
+        width: 12px,
+        height: 12px,
+        fill: colorTokens.colors.neutral-80,
+        contents: iconInfoOutlined
+      }
+    }
+
+    row = frame {
+      width: 100%,
+      height: 24px,
+      layout: {justify-content: .space-between, align-items: .center},
+      overflow: .visible,
+      children: [row, rightIcons],
+
+      row = frame {
+        width: 272px,
+        layout: {align-items: .center, item-gap: 4px},
+        overflow: .visible,
+        children: [withoutFlag, withFlag, value],
+
+        withoutFlag = frame {
+          display: .none,
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [label62, label, arrowDropDown],
+
+          label62 = text {
+            fill: colorTokens.colors.neutral-80,
+            contents: "+62",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.14
+          }
+
+          label = text {
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          arrowDropDown = asset {
+            width: 16px,
+            height: 16px,
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: iconArrowDropDownOutlined
+          }
+        }
+
+        withFlag = frame {
+          display: .none,
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [flag, label, frame33526],
+
+          flag = asset {
+            width: 16px,
+            height: 16px,
+            contents: iconFlagIndonesia
+          }
+
+          label = text {
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          frame33526 = frame {
+            layout: {align-items: .center},
+            overflow: .visible,
+            children: [label62, arrowDropDown],
+
+            label62 = text {
+              fill: colorTokens.colors.neutral-80,
+              contents: "+62",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            arrowDropDown = asset {
+              width: 16px,
+              height: 16px,
+              fill: colorTokens.colors.neutral-30,
+              contents: iconArrowDropDownOutlined
+            }
+          }
+        }
+
+        value = text {
+          width: 235px,
+          fill: colorTokens.colors.neutral-80,
+          contents: "Select",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.14
+        }
+      }
+
+      rightIcons = asset {
+        width: 16px,
+        height: 24px,
+        fill: colorTokens.colors.neutral-60,
+        contents: iconRightIcons3
+      }
+    }
+  }
+
+  line = asset {
+    width: 317px,
+    height: 0px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconLine3
+  }
+
+  textHelper = text {
+    width: 100%,
+    fill: colorTokens.colors.neutral-60,
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.167
+  }
+}
+
+export selectFormError = frame {
+  title: "Select Form / State=error",
+  left: 0px,
+  top: 366px,
+  width: 317px,
+  layout: {direction: .column, justify-content: .end, item-gap: 4px},
+  overflow: .visible,
+  children: [container, line, textHelper],
+
+  container = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 4px},
+    overflow: .visible,
+    children: [frame1, row],
+
+    frame1 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [noPonsel, info],
+
+      noPonsel = text {
+        fill: colorTokens.colors.neutral-80,
+        contents: "Label",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      info = asset {
+        width: 12px,
+        height: 12px,
+        fill: colorTokens.colors.neutral-80,
+        contents: iconInfoOutlined
+      }
+    }
+
+    row = frame {
+      width: 100%,
+      height: 24px,
+      layout: {justify-content: .space-between, align-items: .center},
+      overflow: .visible,
+      children: [row, rightIcons],
+
+      row = frame {
+        width: 272px,
+        layout: {align-items: .center, item-gap: 4px},
+        overflow: .visible,
+        children: [withoutFlag, withFlag, value],
+
+        withoutFlag = frame {
+          display: .none,
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [label62, label, arrowDropDown],
+
+          label62 = text {
+            fill: colorTokens.colors.neutral-80,
+            contents: "+62",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.14
+          }
+
+          label = text {
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          arrowDropDown = asset {
+            width: 16px,
+            height: 16px,
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: iconArrowDropDownOutlined
+          }
+        }
+
+        withFlag = frame {
+          display: .none,
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [flag, label, frame33526],
+
+          flag = asset {
+            width: 16px,
+            height: 16px,
+            contents: iconFlagIndonesia
+          }
+
+          label = text {
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          frame33526 = frame {
+            layout: {align-items: .center},
+            overflow: .visible,
+            children: [label62, arrowDropDown],
+
+            label62 = text {
+              fill: colorTokens.colors.neutral-80,
+              contents: "+62",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            arrowDropDown = asset {
+              width: 16px,
+              height: 16px,
+              fill: colorTokens.colors.neutral-30,
+              contents: iconArrowDropDownOutlined
+            }
+          }
+        }
+
+        value = text {
+          width: 235px,
+          fill: colorTokens.colors.neutral-30,
+          contents: "Select",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.14
+        }
+      }
+
+      rightIcons = asset {
+        width: 16px,
+        height: 24px,
+        fill: colorTokens.colors.neutral-60,
+        contents: iconRightIcons3
+      }
+    }
+  }
+
+  line = asset {
+    width: 317px,
+    height: 0px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconLine3
+  }
+
+  textHelper = text {
+    width: 100%,
+    fill: colorTokens.colors.red-80,
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.167
+  }
+}
+
+export selectFormDisable = frame {
+  title: "Select Form / State=disable",
+  left: 0px,
+  top: 488px,
+  width: 317px,
+  layout: {direction: .column, justify-content: .end, item-gap: 4px},
+  overflow: .visible,
+  children: [container, line, textHelper],
+
+  container = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 4px},
+    overflow: .visible,
+    children: [frame1, row],
+
+    frame1 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [noPonsel, info],
+
+      noPonsel = text {
+        fill: colorTokens.colors.neutral-30,
+        contents: "Label",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      info = asset {
+        width: 12px,
+        height: 12px,
+        fill: colorTokens.colors.neutral-30,
+        contents: iconInfoOutlined
+      }
+    }
+
+    row = frame {
+      width: 100%,
+      height: 24px,
+      layout: {justify-content: .space-between, align-items: .center},
+      overflow: .visible,
+      children: [row, rightIcons],
+
+      row = frame {
+        width: 272px,
+        layout: {align-items: .center, item-gap: 4px},
+        overflow: .visible,
+        children: [withoutFlag, withFlag, value],
+
+        withoutFlag = frame {
+          display: .none,
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [label62, label, arrowDropDown],
+
+          label62 = text {
+            fill: colorTokens.colors.neutral-80,
+            contents: "+62",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.14
+          }
+
+          label = text {
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          arrowDropDown = asset {
+            width: 16px,
+            height: 16px,
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: iconArrowDropDownOutlined
+          }
+        }
+
+        withFlag = frame {
+          display: .none,
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [flag, label, frame33526],
+
+          flag = asset {
+            width: 16px,
+            height: 16px,
+            contents: iconFlagIndonesia
+          }
+
+          label = text {
+            display: .none,
+            fill: colorTokens.colors.neutral-30,
+            contents: "-",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          frame33526 = frame {
+            layout: {align-items: .center},
+            overflow: .visible,
+            children: [label62, arrowDropDown],
+
+            label62 = text {
+              fill: colorTokens.colors.neutral-80,
+              contents: "+62",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            arrowDropDown = asset {
+              width: 16px,
+              height: 16px,
+              fill: colorTokens.colors.neutral-30,
+              contents: iconArrowDropDownOutlined
+            }
+          }
+        }
+
+        value = text {
+          width: 235px,
+          fill: colorTokens.colors.neutral-30,
+          contents: "Select",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.14
+        }
+      }
+
+      rightIcons = asset {
+        width: 16px,
+        height: 16px,
+        fill: colorTokens.colors.neutral-30,
+        contents: iconRightIcons4
+      }
+    }
+  }
+
+  line = asset {
+    width: 317px,
+    height: 0px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconLine3
+  }
+
+  textHelper = text {
+    width: 100%,
+    fill: colorTokens.colors.neutral-30,
+    contents: "Text helper",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.167
+  }
+}
+
+export dropdownList1 = frame {
+  title: "Dropdown List / Property 1=1",
+  left: 0px,
+  top: 690px,
+  width: 205px,
+  layout: {direction: .column},
+  fill: colorTokens.colors.neutral-00,
+  border: {color: rgb(91.76%, 92.549%, 94.1176%), position: .center},
+  shadow: [
+    {
+      drop-shadow: {
+        color: rgb(6.27%, 9.41%, 15.6863%, 3.1373%),
+        offset: point(0px, 8px),
+        blur-radius: 8px,
+        spread: -4px
+      }
+    },
+    {
+      drop-shadow: {
+        color: rgb(6.27%, 9.41%, 15.6863%, 7.84%),
+        offset: point(0px, 20px),
+        blur-radius: 24px,
+        spread: -4px
+      }
+    }
+  ],
+  corner-radius: 4px,
+  padding: [8px, 0px],
+  children: [addListOption, listOption, listOption2],
+
+  addListOption = frame {
+    width: 100%,
+    display: .none,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [listOption, line1],
+
+    listOption = frame : listOptionDefault {
+      biArrowRightCircle2 {
+        display: .none,
+        contents: iconBiPlus
+      }
+
+      biArrowRightCircle {
+        contents: iconBiPlus
+      }
+
+      textLayer {
+        contents: "Add List Menu"
+      }
+    }
+
+    line1 = asset {
+      width: 205px,
+      height: 0px,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      contents: iconLine1
+    }
+  }
+
+  listOption = frame : listOptionDefault {
+    biArrowRightCircle {
+      display: .none
+    }
+
+    biArrowRightCircle2 {
+      display: .none
+    }
+  }
+
+  listOption2 = frame : listOptionDefault {
+    display: .none,
+
+    biArrowRightCircle {
+      display: .none
+    }
+
+    biArrowRightCircle2 {
+      display: .none
+    }
+  }
+}
+
+export dropdownList5 = frame {
+  title: "Dropdown List / Property 1=5",
+  left: 253px,
+  top: 690px,
+  width: 205px,
+  layout: {direction: .column},
+  fill: colorTokens.colors.neutral-00,
+  border: {color: rgb(91.76%, 92.549%, 94.1176%), position: .center},
+  shadow: [
+    {
+      drop-shadow: {
+        color: rgb(6.27%, 9.41%, 15.6863%, 3.1373%),
+        offset: point(0px, 8px),
+        blur-radius: 8px,
+        spread: -4px
+      }
+    },
+    {
+      drop-shadow: {
+        color: rgb(6.27%, 9.41%, 15.6863%, 7.84%),
+        offset: point(0px, 20px),
+        blur-radius: 24px,
+        spread: -4px
+      }
+    }
+  ],
+  corner-radius: 4px,
+  padding: [8px, 0px],
+  children: [
+    addListOption,
+    listOption,
+    listOption2,
+    listOption3,
+    listOption4,
+    listOption5
+  ],
+
+  addListOption = frame {
+    width: 100%,
+    display: .none,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [listOption, line1],
+
+    listOption = frame : listOptionDefault {
+      biArrowRightCircle2 {
+        display: .none,
+        contents: iconBiPlus
+      }
+
+      biArrowRightCircle {
+        contents: iconBiPlus
+      }
+
+      textLayer {
+        contents: "Add List Menu"
+      }
+    }
+
+    line1 = asset {
+      width: 205px,
+      height: 0px,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      contents: iconLine1
+    }
+  }
+
+  listOption = frame : listOptionDefault {
+    biArrowRightCircle {
+      display: .none
+    }
+
+    biArrowRightCircle2 {
+      display: .none
+    }
+  }
+
+  listOption2 = frame : listOptionDefault {
+    biArrowRightCircle {
+      display: .none
+    }
+
+    biArrowRightCircle2 {
+      display: .none
+    }
+  }
+
+  listOption3 = frame : listOptionDefault {
+    biArrowRightCircle {
+      display: .none
+    }
+
+    biArrowRightCircle2 {
+      display: .none
+    }
+  }
+
+  listOption4 = frame : listOptionDefault {
+    biArrowRightCircle {
+      display: .none
+    }
+
+    biArrowRightCircle2 {
+      display: .none
+    }
+  }
+
+  listOption5 = frame : listOptionDefault {
+    biArrowRightCircle {
+      display: .none
+    }
+
+    biArrowRightCircle2 {
+      display: .none
+    }
+  }
+}
+
+export dropdownList10 = frame {
+  title: "Dropdown List / Property 1=10",
+  left: 506px,
+  top: 690px,
+  width: 205px,
+  layout: {direction: .column},
+  fill: colorTokens.colors.neutral-00,
+  border: {color: rgb(91.76%, 92.549%, 94.1176%), position: .center},
+  shadow: [
+    {
+      drop-shadow: {
+        color: rgb(6.27%, 9.41%, 15.6863%, 3.1373%),
+        offset: point(0px, 8px),
+        blur-radius: 8px,
+        spread: -4px
+      }
+    },
+    {
+      drop-shadow: {
+        color: rgb(6.27%, 9.41%, 15.6863%, 7.84%),
+        offset: point(0px, 20px),
+        blur-radius: 24px,
+        spread: -4px
+      }
+    }
+  ],
+  corner-radius: 4px,
+  padding: [8px, 0px],
+  children: [
+    addListOption,
+    listOption,
+    listOption2,
+    listOption3,
+    listOption4,
+    listOption5,
+    listOption6,
+    listOption7,
+    listOption8,
+    listOption9,
+    listOption10,
+    contentSlotComponent,
+    scrollbar
+  ],
+
+  addListOption = frame {
+    width: 100%,
+    display: .none,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [listOption, line1],
+
+    listOption = frame : listOptionDefault {
+      biArrowRightCircle2 {
+        display: .none,
+        contents: iconBiPlus
+      }
+
+      biArrowRightCircle {
+        contents: iconBiPlus
+      }
+
+      textLayer {
+        contents: "Add List Menu"
+      }
+    }
+
+    line1 = asset {
+      width: 205px,
+      height: 0px,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      contents: iconLine1
+    }
+  }
+
+  listOption = frame : listOptionDefault {
+    biArrowRightCircle {
+      display: .none
+    }
+
+    biArrowRightCircle2 {
+      display: .none
+    }
+  }
+
+  listOption2 = frame : listOptionDefault {
+    biArrowRightCircle {
+      display: .none
+    }
+
+    biArrowRightCircle2 {
+      display: .none
+    }
+  }
+
+  listOption3 = frame : listOptionDefault {
+    biArrowRightCircle {
+      display: .none
+    }
+
+    biArrowRightCircle2 {
+      display: .none
+    }
+  }
+
+  listOption4 = frame : listOptionDefault {
+    biArrowRightCircle {
+      display: .none
+    }
+
+    biArrowRightCircle2 {
+      display: .none
+    }
+  }
+
+  listOption5 = frame : listOptionDefault {
+    biArrowRightCircle {
+      display: .none
+    }
+
+    biArrowRightCircle2 {
+      display: .none
+    }
+  }
+
+  listOption6 = frame : listOptionDefault {
+    biArrowRightCircle {
+      display: .none
+    }
+
+    biArrowRightCircle2 {
+      display: .none
+    }
+  }
+
+  listOption7 = frame : listOptionDefault {
+    biArrowRightCircle {
+      display: .none
+    }
+
+    biArrowRightCircle2 {
+      display: .none
+    }
+  }
+
+  listOption8 = frame : listOptionDefault {
+    biArrowRightCircle {
+      display: .none
+    }
+
+    biArrowRightCircle2 {
+      display: .none
+    }
+  }
+
+  listOption9 = frame : listOptionDefault {
+    biArrowRightCircle {
+      display: .none
+    }
+
+    biArrowRightCircle2 {
+      display: .none
+    }
+  }
+
+  listOption10 = frame : listOptionDefault {
+    biArrowRightCircle {
+      display: .none
+    }
+
+    biArrowRightCircle2 {
+      display: .none
+    }
+  }
+
+  contentSlotComponent = frame {
+    width: 100%,
+    display: .none,
+    layout: {
+      direction: .column,
+      justify-content: .center,
+      align-items: .center,
+      item-gap: 4px
+    },
+    fill: colorTokens.colors.cyan-05,
+    padding: [4px, 16px],
+    children: [iconFontAwesomeFreeRegularLLightbulb, swapComponentHere],
+
+    iconFontAwesomeFreeRegularLLightbulb = asset {
+      width: 10px,
+      height: 10px,
+      fill: .black,
+      contents: iconIconFontAwesomeFreeRegularLLightbulb
+    }
+
+    swapComponentHere = text {
+      width: 100%,
+      fill: .black,
+      contents: "Swap component here",
+      font-size: 8,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  scrollbar = frame {
+    left: 197px,
+    top: 0px,
+    width: 8px,
+    height: 324px,
+    display: .none,
+    ignore-stack: .true,
+    fill: rgb(91.76%, 92.549%, 94.1176%),
+    children: scroll,
+
+    scroll = shape {
+      left: 2px,
+      top: 4.29px,
+      width: 4px,
+      height: 219.01px,
+      fill: rgb(80%, 80%, 80%),
+      type: .rect,
+      corner-radius: 14px
+    }
+  }
+}
+
+export listOptionDefault = frame {
+  title: "_list-option / _state=default",
+  left: 0px,
+  top: 1125px,
+  layout: {align-items: .center, item-gap: 8px},
+  padding: [4px, 16px],
+  children: [
+    biArrowRightCircle,
+    contentSlotComponent,
+    textLayer,
+    biArrowRightCircle2
+  ],
+
+  biArrowRightCircle = asset {
+    width: 12px,
+    height: 12px,
+    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+    contents: iconBiArrowRightCircle
+  }
+
+  contentSlotComponent = frame {
+    width: 1px,
+    height: 100%,
+    display: .none,
+    layout: {
+      direction: .column,
+      justify-content: .center,
+      align-items: .center,
+      item-gap: 4px
+    },
+    fill: colorTokens.colors.cyan-05,
+    padding: [4px, 16px],
+    children: [iconFontAwesomeFreeRegularLLightbulb, swapComponentHere],
+
+    iconFontAwesomeFreeRegularLLightbulb = asset {
+      width: 10px,
+      height: 10px,
+      fill: .black,
+      contents: iconIconFontAwesomeFreeRegularLLightbulb
+    }
+
+    swapComponentHere = text {
+      width: 100%,
+      fill: .black,
+      contents: "Swap component here",
+      font-size: 8,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  textLayer = text {
+    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+    contents: "Dropdown menu",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.429
+  }
+
+  biArrowRightCircle2 = asset {
+    width: 12px,
+    height: 12px,
+    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+    contents: iconBiArrowRightCircle
+  }
+}
+
+export listOptionSelected = frame {
+  title: "_list-option / _state=selected",
+  left: 0px,
+  top: 1201px,
+  layout: {align-items: .center, item-gap: 8px},
+  fill: rgb(98.0392%, 98.0392%, 98.0392%),
+  padding: [4px, 16px],
+  children: [
+    biArrowRightCircle,
+    contentSlotComponent,
+    textLayer,
+    biArrowRightCircle2
+  ],
+
+  biArrowRightCircle = asset {
+    width: 12px,
+    height: 12px,
+    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+    contents: iconBiArrowRightCircle
+  }
+
+  contentSlotComponent = frame {
+    width: 1px,
+    height: 100%,
+    display: .none,
+    layout: {
+      direction: .column,
+      justify-content: .center,
+      align-items: .center,
+      item-gap: 4px
+    },
+    fill: colorTokens.colors.cyan-05,
+    padding: [4px, 16px],
+    children: [iconFontAwesomeFreeRegularLLightbulb, swapComponentHere],
+
+    iconFontAwesomeFreeRegularLLightbulb = asset {
+      width: 10px,
+      height: 10px,
+      fill: .black,
+      contents: iconIconFontAwesomeFreeRegularLLightbulb
+    }
+
+    swapComponentHere = text {
+      width: 100%,
+      fill: .black,
+      contents: "Swap component here",
+      font-size: 8,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  textLayer = text {
+    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+    contents: "Dropdown menu",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.429
+  }
+
+  biArrowRightCircle2 = asset {
+    width: 12px,
+    height: 12px,
+    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+    contents: iconBiArrowRightCircle
+  }
+}
+
+export listOptionDisabled = frame {
+  title: "_list-option / _state=disabled",
+  left: 0px,
+  top: 1277px,
+  layout: {align-items: .center, item-gap: 8px},
+  padding: [4px, 16px],
+  children: [
+    biArrowRightCircle,
+    contentSlotComponent,
+    textLayer,
+    biArrowRightCircle2
+  ],
+
+  biArrowRightCircle = asset {
+    width: 12px,
+    height: 12px,
+    fill: rgb(70.1961%, 70.1961%, 70.1961%),
+    contents: iconBiArrowRightCircle
+  }
+
+  contentSlotComponent = frame {
+    width: 1px,
+    height: 100%,
+    display: .none,
+    layout: {
+      direction: .column,
+      justify-content: .center,
+      align-items: .center,
+      item-gap: 4px
+    },
+    fill: colorTokens.colors.cyan-05,
+    padding: [4px, 16px],
+    children: [iconFontAwesomeFreeRegularLLightbulb, swapComponentHere],
+
+    iconFontAwesomeFreeRegularLLightbulb = asset {
+      width: 10px,
+      height: 10px,
+      fill: .black,
+      contents: iconIconFontAwesomeFreeRegularLLightbulb
+    }
+
+    swapComponentHere = text {
+      width: 100%,
+      fill: .black,
+      contents: "Swap component here",
+      font-size: 8,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  textLayer = text {
+    fill: rgb(70.1961%, 70.1961%, 70.1961%),
+    contents: "Dropdown menu",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.429
+  }
+
+  biArrowRightCircle2 = asset {
+    width: 12px,
+    height: 12px,
+    fill: rgb(70.1961%, 70.1961%, 70.1961%),
+    contents: iconBiArrowRightCircle
+  }
+}
+
+export listOptionPresed = frame {
+  title: "_list-option / _state=presed",
+  left: 0px,
+  top: 1353px,
+  layout: {align-items: .center, item-gap: 8px},
+  fill: colorTokens.colors.red-10,
+  border: colorTokens.colors.red-60,
+  corner-radius: 4px,
+  padding: [4px, 16px],
+  children: [
+    biArrowRightCircle,
+    contentSlotComponent,
+    textLayer,
+    biArrowRightCircle2
+  ],
+
+  biArrowRightCircle = asset {
+    width: 12px,
+    height: 12px,
+    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+    contents: iconBiArrowRightCircle
+  }
+
+  contentSlotComponent = frame {
+    width: 1px,
+    height: 100%,
+    display: .none,
+    layout: {
+      direction: .column,
+      justify-content: .center,
+      align-items: .center,
+      item-gap: 4px
+    },
+    fill: colorTokens.colors.cyan-05,
+    padding: [4px, 16px],
+    children: [iconFontAwesomeFreeRegularLLightbulb, swapComponentHere],
+
+    iconFontAwesomeFreeRegularLLightbulb = asset {
+      width: 10px,
+      height: 10px,
+      fill: .black,
+      contents: iconIconFontAwesomeFreeRegularLLightbulb
+    }
+
+    swapComponentHere = text {
+      width: 100%,
+      fill: .black,
+      contents: "Swap component here",
+      font-size: 8,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.5,
+      align: .center
+    }
+  }
+
+  textLayer = text {
+    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+    contents: "Dropdown menu",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.429
+  }
+
+  biArrowRightCircle2 = asset {
+    width: 12px,
+    height: 12px,
+    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+    contents: iconBiArrowRightCircle
+  }
+}

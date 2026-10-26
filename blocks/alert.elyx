@@ -1,0 +1,305 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/priority-high-outlined.svg" as iconPriorityHighOutlined
+import "resources/assets/icons/highlight-off-outlined.svg" as iconHighlightOffOutlined
+import "resources/assets/icons/icon-font-awesome-free-solid-c-check-circle.svg" as iconIconFontAwesomeFreeSolidCCheckCircle
+import "resources/assets/icons/error-16px.svg" as iconError16px
+import "resources/assets/icons/icon-font-awesome-free-solid-e-exclamation-circle.svg" as iconIconFontAwesomeFreeSolidEExclamationCircle
+import "resources/assets/icons/cancel-16px.svg" as iconCancel16px
+import "resources/assets/icons/icon-font-awesome-free-solid-t-times-circle.svg" as iconIconFontAwesomeFreeSolidTTimesCircle
+import "resources/assets/icons/help-24px.svg" as iconHelp24px
+import "resources/assets/icons/icon-font-awesome-free-solid-q-question-circle.svg" as iconIconFontAwesomeFreeSolidQQuestionCircle
+
+export oldAlertDefault = frame {
+  title: "_old-alert / color=Default",
+  left: 0px,
+  top: 0px,
+  width: 328px,
+  layout: {align-items: .center, item-gap: 10px},
+  fill: colorTokens.colors.yellow-60,
+  corner-radius: 8px,
+  padding: [12px, 16px],
+  children: [group12, highlightOff],
+
+  group12 = frame {
+    width: 262px,
+    layout: {align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [priorityHigh, akunKamuBelumTerv],
+
+    priorityHigh = asset {
+      width: 16px,
+      height: 16px,
+      fill: colorTokens.colors.neutral-00,
+      contents: iconPriorityHighOutlined
+    }
+
+    akunKamuBelumTerv = text {
+      width: 230px,
+      fill: colorTokens.colors.neutral-00,
+      contents: "Akun kamu belum terverifikasi",
+      font-size: 13,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium"
+    }
+  }
+
+  highlightOff = asset {
+    width: 24px,
+    height: 24px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconHighlightOffOutlined
+  }
+}
+
+export oldAlertRed = frame {
+  title: "_old-alert / color=red",
+  left: 0px,
+  top: 96px,
+  width: 328px,
+  layout: {align-items: .center, item-gap: 10px},
+  fill: colorTokens.colors.red-60,
+  corner-radius: 8px,
+  padding: [12px, 16px],
+  children: [group12, highlightOff],
+
+  group12 = frame {
+    width: 262px,
+    layout: {align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [priorityHigh, akunKamuBelumTerv],
+
+    priorityHigh = asset {
+      width: 16px,
+      height: 16px,
+      fill: colorTokens.colors.neutral-00,
+      contents: iconPriorityHighOutlined
+    }
+
+    akunKamuBelumTerv = text {
+      width: 230px,
+      fill: colorTokens.colors.neutral-00,
+      contents: "Akun kamu belum terverifikasi",
+      font-size: 13,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium"
+    }
+  }
+
+  highlightOff = asset {
+    width: 24px,
+    height: 24px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconHighlightOffOutlined
+  }
+}
+
+export alertSuccess = frame {
+  title: "Alert / Property 1=Success",
+  left: 0px,
+  top: 272px,
+  width: 379px,
+  layout: {direction: .column, item-gap: 16px},
+  fill: colorTokens.colors.green-05,
+  border: colorTokens.colors.green-30,
+  corner-radius: 4px,
+  padding: 16px,
+  children: container,
+
+  container = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 8px},
+    children: [
+      iconFontAwesomeFreeSolidCCheckCircle,
+      iconFontAwesomeFreeSolidCCheckCircle2,
+      successAlertHereSYouCanSeeASuccessAlert
+    ],
+
+    iconFontAwesomeFreeSolidCCheckCircle = asset {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      fill: colorTokens.colors.green-80,
+      contents: iconIconFontAwesomeFreeSolidCCheckCircle
+    }
+
+    iconFontAwesomeFreeSolidCCheckCircle2 = asset {
+      width: 16px,
+      height: 16px,
+      fill: rgb(0%, 50.98%, 49.0196%),
+      contents: iconIconFontAwesomeFreeSolidCCheckCircle
+    }
+
+    successAlertHereSYouCanSeeASuccessAlert = text {
+      width: 323px,
+      fill: rgb(40%, 40%, 40%),
+      subrange: {
+        range: [13, 50],
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      },
+      contents: "Success Alert - Here's you can see a success alert",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.14
+    }
+  }
+}
+
+export alertWarning = frame {
+  title: "Alert / Property 1=Warning",
+  left: 0px,
+  top: 368px,
+  width: 381px,
+  layout: {direction: .column, item-gap: 16px},
+  fill: colorTokens.colors.yellow-05,
+  border: rgb(100%, 90.5882%, 83.1373%),
+  corner-radius: 4px,
+  padding: 16px,
+  children: container,
+
+  container = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 8px},
+    children: [
+      error16px,
+      iconFontAwesomeFreeSolidEExclamationCircle,
+      warningAlertHereSYouCanSeeAWarningAlert
+    ],
+
+    error16px = asset {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      fill: colorTokens.colors.yellow-80,
+      contents: iconError16px
+    }
+
+    iconFontAwesomeFreeSolidEExclamationCircle = asset {
+      width: 16px,
+      height: 16px,
+      fill: colorTokens.colors.yellow-70,
+      contents: iconIconFontAwesomeFreeSolidEExclamationCircle
+    }
+
+    warningAlertHereSYouCanSeeAWarningAlert = text {
+      width: 325px,
+      fill: rgb(40%, 40%, 40%),
+      subrange: {
+        range: [13, 50],
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      },
+      contents: "Warning Alert - Here's you can see a warning alert",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.14
+    }
+  }
+}
+
+export alertError = frame {
+  title: "Alert / Property 1=Error",
+  left: 0px,
+  top: 464px,
+  width: 353px,
+  layout: {direction: .column, item-gap: 16px},
+  fill: colorTokens.colors.red-05,
+  border: colorTokens.colors.red-20,
+  corner-radius: 4px,
+  padding: 16px,
+  children: container,
+
+  container = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 8px},
+    children: [
+      cancel16px,
+      iconFontAwesomeFreeSolidTTimesCircle,
+      errorAlertHereSYouCanSeeAnErrorAlert
+    ],
+
+    cancel16px = asset {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      fill: colorTokens.colors.red-80,
+      contents: iconCancel16px
+    }
+
+    iconFontAwesomeFreeSolidTTimesCircle = asset {
+      width: 16px,
+      height: 16px,
+      fill: colorTokens.colors.red-70,
+      contents: iconIconFontAwesomeFreeSolidTTimesCircle
+    }
+
+    errorAlertHereSYouCanSeeAnErrorAlert = text {
+      width: 297px,
+      fill: rgb(40%, 40%, 40%),
+      subrange: {
+        range: [11, 47],
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      },
+      contents: "Error Alert - Here's you can see an error alert",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.14
+    }
+  }
+}
+
+export alertNeutral = frame {
+  title: "Alert / Property 1=Neutral",
+  left: 0px,
+  top: 560px,
+  width: 384px,
+  layout: {direction: .column, item-gap: 16px},
+  fill: colorTokens.colors.neutral-05,
+  border: rgb(80%, 80%, 80%),
+  corner-radius: 4px,
+  padding: 16px,
+  children: container,
+
+  container = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 8px},
+    children: [
+      help24px,
+      iconFontAwesomeFreeSolidQQuestionCircle,
+      questionAlertHereSYouCanSeeAWarningAlert
+    ],
+
+    help24px = asset {
+      width: 16px,
+      height: 16px,
+      display: .none,
+      contents: iconHelp24px
+    }
+
+    iconFontAwesomeFreeSolidQQuestionCircle = asset {
+      width: 16px,
+      height: 16px,
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: iconIconFontAwesomeFreeSolidQQuestionCircle
+    }
+
+    questionAlertHereSYouCanSeeAWarningAlert = text {
+      width: 328px,
+      fill: rgb(40%, 40%, 40%),
+      subrange: {
+        range: [14, 51],
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      },
+      contents: "Question Alert - Here's you can see a warning alert",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.14
+    }
+  }
+}

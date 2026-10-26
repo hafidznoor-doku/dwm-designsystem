@@ -1,0 +1,385 @@
+import "tokens/colors.elyx" as colorTokens
+
+export stepperHorizontalStep1 = frame {
+  title: "Stepper Horizontal / Count step=Step 1",
+  left: 0px,
+  top: 0px,
+  width: 360px,
+  layout: {direction: .column, item-gap: 8px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: [frame2156, progressIndicator4],
+
+  frame2156 = frame {
+    width: 328px,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [stepper, subtitle],
+
+    stepper = frame {
+      layout: {direction: .column},
+      overflow: .visible,
+      children: [steps, currentStep],
+
+      steps = text {
+        fill: colorTokens.colors.red-60,
+        contents: "Langkah 1 dari 3",
+        font-size: 16,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.5
+      }
+
+      currentStep = text {
+        display: .none,
+        fill: rgb(20%, 20%, 20%),
+        contents: "Business Information",
+        font-size: 24,
+        font-family: "DIN Next LT Pro",
+        font-style: "Bold"
+      }
+    }
+
+    subtitle = text {
+      width: 328px,
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: "Buat PIN Kamu",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.429
+    }
+  }
+
+  progressIndicator4 = frame {
+    width: 328px,
+    layout: {item-gap: 4px},
+    overflow: .visible,
+    padding: [4px, 0px],
+    children: [
+      rectangle584,
+      rectangle590,
+      rectangle592,
+      rectangle586,
+      rectangle587,
+      rectangle589,
+      rectangle588
+    ],
+
+    rectangle584 = shape {
+      width: 106.67px,
+      height: 8px,
+      fill: colorTokens.colors.red-60,
+      type: .rect,
+      corner-radius: 18px
+    }
+
+    rectangle590 = shape {
+      width: 106.67px,
+      height: 8px,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      type: .rect,
+      corner-radius: 18px
+    }
+
+    rectangle592 = shape {
+      width: 106.67px,
+      height: 8px,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      type: .rect,
+      corner-radius: 18px
+    }
+
+    rectangle586 = shape {
+      width: 56.33px,
+      height: 8px,
+      display: .none,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      type: .rect,
+      corner-radius: 18px
+    }
+
+    rectangle587 = shape {
+      width: 56.33px,
+      height: 8px,
+      display: .none,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      type: .rect,
+      corner-radius: 18px
+    }
+
+    rectangle589 = shape {
+      width: 56.33px,
+      height: 8px,
+      display: .none,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      type: .rect,
+      corner-radius: 18px
+    }
+
+    rectangle588 = shape {
+      width: 56.33px,
+      height: 8px,
+      display: .none,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      type: .rect,
+      corner-radius: 18px
+    }
+  }
+}
+
+export stepperHorizontalStep2 = frame {
+  title: "Stepper Horizontal / Count step=Step 2",
+  left: 0px,
+  top: 116px,
+  width: 360px,
+  layout: {direction: .column, item-gap: 8px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: [frame2156, progressIndicator4],
+
+  frame2156 = frame {
+    width: 328px,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [stepper, subtitle],
+
+    stepper = frame {
+      layout: {direction: .column},
+      overflow: .visible,
+      children: [steps, currentStep],
+
+      steps = text {
+        fill: colorTokens.colors.red-60,
+        contents: "Langkah 2 dari 3",
+        font-size: 16,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.5
+      }
+
+      currentStep = text {
+        display: .none,
+        fill: rgb(20%, 20%, 20%),
+        contents: "Business Information",
+        font-size: 24,
+        font-family: "DIN Next LT Pro",
+        font-style: "Bold"
+      }
+    }
+
+    subtitle = text {
+      width: 328px,
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: "Buat PIN Kamu",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.429
+    }
+  }
+
+  progressIndicator4 = frame {
+    width: 328px,
+    layout: {item-gap: 4px},
+    overflow: .visible,
+    padding: [4px, 0px],
+    children: [
+      rectangle584,
+      rectangle593,
+      rectangle592,
+      rectangle586,
+      rectangle587,
+      rectangle589,
+      rectangle588
+    ],
+
+    rectangle584 = shape {
+      width: 106.67px,
+      height: 8px,
+      fill: colorTokens.colors.red-60,
+      type: .rect,
+      corner-radius: 18px
+    }
+
+    rectangle593 = shape {
+      width: 106.67px,
+      height: 8px,
+      fill: colorTokens.colors.red-60,
+      type: .rect,
+      corner-radius: 18px
+    }
+
+    rectangle592 = shape {
+      width: 106.67px,
+      height: 8px,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      type: .rect,
+      corner-radius: 18px
+    }
+
+    rectangle586 = shape {
+      width: 56.33px,
+      height: 8px,
+      display: .none,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      type: .rect,
+      corner-radius: 18px
+    }
+
+    rectangle587 = shape {
+      width: 56.33px,
+      height: 8px,
+      display: .none,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      type: .rect,
+      corner-radius: 18px
+    }
+
+    rectangle589 = shape {
+      width: 56.33px,
+      height: 8px,
+      display: .none,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      type: .rect,
+      corner-radius: 18px
+    }
+
+    rectangle588 = shape {
+      width: 56.33px,
+      height: 8px,
+      display: .none,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      type: .rect,
+      corner-radius: 18px
+    }
+  }
+}
+
+export stepperHorizontalStep3 = frame {
+  title: "Stepper Horizontal / Count step=Step 3",
+  left: 0px,
+  top: 232px,
+  width: 360px,
+  layout: {direction: .column, item-gap: 8px},
+  overflow: .visible,
+  padding: [0px, 16px],
+  children: [frame2156, progressIndicator4],
+
+  frame2156 = frame {
+    width: 328px,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [stepper, subtitle],
+
+    stepper = frame {
+      layout: {direction: .column},
+      overflow: .visible,
+      children: [steps, currentStep],
+
+      steps = text {
+        fill: colorTokens.colors.red-60,
+        contents: "Langkah 3 dari 3",
+        font-size: 16,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.5
+      }
+
+      currentStep = text {
+        display: .none,
+        fill: rgb(20%, 20%, 20%),
+        contents: "Business Information",
+        font-size: 24,
+        font-family: "DIN Next LT Pro",
+        font-style: "Bold"
+      }
+    }
+
+    subtitle = text {
+      width: 328px,
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: "Buat PIN Kamu",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.429
+    }
+  }
+
+  progressIndicator4 = frame {
+    width: 328px,
+    layout: {item-gap: 4px},
+    overflow: .visible,
+    padding: [4px, 0px],
+    children: [
+      rectangle584,
+      rectangle591,
+      rectangle592,
+      rectangle586,
+      rectangle587,
+      rectangle589,
+      rectangle588
+    ],
+
+    rectangle584 = shape {
+      width: 106.67px,
+      height: 8px,
+      fill: colorTokens.colors.red-60,
+      type: .rect,
+      corner-radius: 18px
+    }
+
+    rectangle591 = shape {
+      width: 106.67px,
+      height: 8px,
+      fill: colorTokens.colors.red-50,
+      type: .rect,
+      corner-radius: 18px
+    }
+
+    rectangle592 = shape {
+      width: 106.67px,
+      height: 8px,
+      fill: colorTokens.colors.red-50,
+      type: .rect,
+      corner-radius: 18px
+    }
+
+    rectangle586 = shape {
+      width: 56.33px,
+      height: 8px,
+      display: .none,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      type: .rect,
+      corner-radius: 18px
+    }
+
+    rectangle587 = shape {
+      width: 56.33px,
+      height: 8px,
+      display: .none,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      type: .rect,
+      corner-radius: 18px
+    }
+
+    rectangle589 = shape {
+      width: 56.33px,
+      height: 8px,
+      display: .none,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      type: .rect,
+      corner-radius: 18px
+    }
+
+    rectangle588 = shape {
+      width: 56.33px,
+      height: 8px,
+      display: .none,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      type: .rect,
+      corner-radius: 18px
+    }
+  }
+}

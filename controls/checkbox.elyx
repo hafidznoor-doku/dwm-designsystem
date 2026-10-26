@@ -1,0 +1,171 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/box.svg" as iconBox
+import "resources/assets/icons/box-2.svg" as iconBox2
+import "resources/assets/icons/box-3.svg" as iconBox3
+
+export checkboxDefault = frame {
+  title: "Checkbox / :state=Default",
+  left: 0px,
+  top: 0px,
+  layout: {justify-content: .center, item-gap: 8px},
+  overflow: .visible,
+  children: [box, textLayer],
+
+  box = asset {
+    width: 20px,
+    height: 20px,
+    contents: iconBox
+  }
+
+  textLayer = frame {
+    layout: {direction: .column, item-gap: 8px},
+    overflow: .visible,
+    children: [title, subHeading],
+
+    title = text {
+      width: 298px,
+      fill: colorTokens.colors.neutral-80,
+      contents: "Title",
+      font-size: 12,
+      font-family: "Noto Sans",
+      font-style: "Regular",
+      line-height: 1.5
+    }
+
+    subHeading = text {
+      width: 298px,
+      fill: colorTokens.colors.neutral-40,
+      contents: "sub heading",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+}
+
+export checkboxChecked = frame {
+  title: "Checkbox / :state=Checked",
+  left: 0px,
+  top: 96px,
+  layout: {item-gap: 8px},
+  overflow: .visible,
+  children: [box, textLayer],
+
+  box = asset {
+    width: 20px,
+    height: 20px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconBox2
+  }
+
+  textLayer = frame {
+    layout: {direction: .column, item-gap: 8px},
+    overflow: .visible,
+    children: [title, subHeading],
+
+    title = text {
+      width: 298px,
+      fill: colorTokens.colors.neutral-80,
+      contents: "Title",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+
+    subHeading = text {
+      width: 298px,
+      fill: colorTokens.colors.neutral-40,
+      contents: "sub heading",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+}
+
+export checkboxDisabledChecked = frame {
+  title: "Checkbox / :state=Disabled checked",
+  left: 0px,
+  top: 192px,
+  layout: {item-gap: 8px},
+  overflow: .visible,
+  children: [box, textLayer],
+
+  box = asset {
+    width: 20px,
+    height: 20px,
+    fill: colorTokens.colors.neutral-40,
+    contents: iconBox2
+  }
+
+  textLayer = frame {
+    layout: {direction: .column, item-gap: 8px},
+    overflow: .visible,
+    children: [title, subHeading],
+
+    title = text {
+      width: 298px,
+      fill: colorTokens.colors.neutral-30,
+      contents: "Title",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+
+    subHeading = text {
+      width: 298px,
+      fill: colorTokens.colors.neutral-30,
+      contents: "sub heading",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+}
+
+export checkboxDisabledDefault = frame {
+  title: "Checkbox / :state=Disabled default",
+  left: 0px,
+  top: 288px,
+  layout: {item-gap: 8px},
+  overflow: .visible,
+  children: [box, textLayer],
+
+  box = asset {
+    width: 20px,
+    height: 20px,
+    fill: colorTokens.colors.neutral-20,
+    contents: iconBox3
+  }
+
+  textLayer = frame {
+    layout: {direction: .column, item-gap: 8px},
+    overflow: .visible,
+    children: [title, subHeading],
+
+    title = text {
+      width: 298px,
+      fill: colorTokens.colors.neutral-30,
+      contents: "Title",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+
+    subHeading = text {
+      width: 298px,
+      fill: colorTokens.colors.neutral-30,
+      contents: "sub heading",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.14
+    }
+  }
+}

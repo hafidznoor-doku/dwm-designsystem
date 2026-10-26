@@ -1,0 +1,7 @@
+{
+  "name": "dwm-figma-import",
+  "private": true,
+  "type": "module",
+  "description": "Converts the Mobile Currency .fig file into this Elyx project",
+  "dependencies": { "kiwi-schema": "^0.5.0" }
+}

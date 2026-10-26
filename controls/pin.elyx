@@ -1,0 +1,2351 @@
+import "tokens/colors.elyx" as colorTokens
+import "controls/button.elyx" as buttonLib
+import "resources/assets/icons/pin.svg" as iconPin
+import "resources/assets/icons/group-13-2.svg" as iconGroup132
+import "resources/assets/icons/icon-face-id.svg" as iconIconFaceId
+import "resources/assets/icons/topbar-default.svg" as iconTopbarDefault
+import "resources/assets/icons/group-13-3.svg" as iconGroup133
+
+export pinAuthenticationDefault = frame {
+  title: "PIN / Property 1=authentication default",
+  left: 0px,
+  top: 0px,
+  width: 343px,
+  layout: {direction: .column, align-items: .center, item-gap: 60px},
+  fill: colorTokens.colors.red-50,
+  overflow: .visible,
+  children: [group6, frame425],
+
+  group6 = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 16px},
+    padding: [3px, 0px],
+    children: [selamatDatangKemba, silahkanMasukanPin],
+
+    selamatDatangKemba = text {
+      width: 217.27px,
+      fill: colorTokens.colors.neutral-00,
+      contents: "Selamat Datang Kembali",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    silahkanMasukanPin = text {
+      width: 343px,
+      fill: colorTokens.colors.neutral-00,
+      contents: "Silakan Masukkan PIN",
+      font-size: 15,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.2,
+      align: .center
+    }
+  }
+
+  frame425 = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 40px},
+    overflow: .visible,
+    children: [frame424, buttonAndroidNumeric],
+
+    frame424 = frame {
+      width: 100%,
+      layout: {direction: .column, align-items: .center, item-gap: 36px},
+      overflow: .visible,
+      children: [pin, button],
+
+      pin = asset {
+        width: 216px,
+        height: 16px,
+        fill: colorTokens.colors.red-80,
+        contents: iconPin
+      }
+
+      button = frame : buttonLib.buttonDefaultTextPrimaryDefault {
+        adsClick {
+          fill[0].color: colorTokens.colors.neutral-00,
+          display: .none
+        }
+
+        button {
+          fill[0].color: colorTokens.colors.neutral-00,
+          contents: "LUPA PIN?"
+        }
+
+        iconAdd {
+          fill[0].color: colorTokens.colors.neutral-00,
+          display: .none
+        }
+      }
+    }
+
+    buttonAndroidNumeric = frame {
+      width: 100%,
+      height: 347px,
+      overflow: .visible,
+      children: [
+        group13,
+        group11,
+        group8,
+        group5,
+        group12,
+        group10,
+        group7,
+        group4,
+        rectangle,
+        group9,
+        group6,
+        group3,
+        iconLayer
+      ],
+
+      group13 = asset {
+        left: 228.67px,
+        top: 260.25px,
+        width: 114.33px,
+        height: 86.75px,
+        contents: iconGroup132
+      }
+
+      group11 = frame {
+        left: 228.67px,
+        top: 173.5px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label9],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label9 = text {
+          left: 50.33px,
+          top: 34.5px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "9",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group8 = frame {
+        left: 228.67px,
+        top: 86.75px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label6],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label6 = text {
+          left: 50.33px,
+          top: 34.25px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "6",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group5 = frame {
+        left: 228.67px,
+        top: 0px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label3],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label3 = text {
+          left: 50.33px,
+          top: 34px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "3",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group12 = frame {
+        left: 114.33px,
+        top: 260.25px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label0],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label0 = text {
+          left: 50.67px,
+          top: 34.75px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "0",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group10 = frame {
+        left: 114.33px,
+        top: 173.5px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label8],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label8 = text {
+          left: 50.67px,
+          top: 34.5px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "8",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group7 = frame {
+        left: 114.33px,
+        top: 86.75px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label5],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label5 = text {
+          left: 50.67px,
+          top: 34.25px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "5",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group4 = frame {
+        left: 114.33px,
+        top: 0px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label2],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label2 = text {
+          left: 50.67px,
+          top: 34px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "2",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      rectangle = shape {
+        left: 0px,
+        top: 260.25px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      group9 = frame {
+        left: 0px,
+        top: 173.5px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label7],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label7 = text {
+          left: 51px,
+          top: 34.5px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "7",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group6 = frame {
+        left: 0px,
+        top: 86.75px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label4],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label4 = text {
+          left: 51px,
+          top: 34.25px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "4",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group3 = frame {
+        left: 0px,
+        top: 0px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label1],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label1 = text {
+          left: 51px,
+          top: 34px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "1",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      iconLayer = asset {
+        left: 42px,
+        top: 288px,
+        width: 32px,
+        height: 32px,
+        fill: colorTokens.colors.neutral-00,
+        contents: iconIconFaceId
+      }
+    }
+  }
+}
+
+export pinAuthenticationFilled = frame {
+  title: "PIN / Property 1=authentication filled",
+  left: 412px,
+  top: 0px,
+  width: 343px,
+  layout: {direction: .column, align-items: .center, item-gap: 60px},
+  fill: colorTokens.colors.red-50,
+  overflow: .visible,
+  children: [group6, frame425],
+
+  group6 = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 16px},
+    padding: [3px, 0px],
+    children: [selamatDatangKemba, silahkanMasukanPin],
+
+    selamatDatangKemba = text {
+      width: 217.27px,
+      fill: colorTokens.colors.neutral-00,
+      contents: "Selamat Datang Kembali",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    silahkanMasukanPin = text {
+      width: 343px,
+      fill: colorTokens.colors.neutral-00,
+      contents: "Silakan Masukkan PIN",
+      font-size: 15,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.2,
+      align: .center
+    }
+  }
+
+  frame425 = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 40px},
+    overflow: .visible,
+    children: [frame424, buttonAndroidNumeric],
+
+    frame424 = frame {
+      width: 100%,
+      layout: {direction: .column, align-items: .center, item-gap: 36px},
+      overflow: .visible,
+      children: [pin, button],
+
+      pin = asset {
+        width: 216px,
+        height: 16px,
+        fill: colorTokens.colors.neutral-00,
+        contents: iconPin
+      }
+
+      button = frame : buttonLib.buttonDefaultTextPrimaryDefault {
+        adsClick {
+          fill[0].color: colorTokens.colors.neutral-00,
+          display: .none
+        }
+
+        button {
+          fill[0].color: colorTokens.colors.neutral-00,
+          contents: "LUPA PIN?"
+        }
+
+        iconAdd {
+          fill[0].color: colorTokens.colors.neutral-00,
+          display: .none
+        }
+      }
+    }
+
+    buttonAndroidNumeric = frame {
+      width: 100%,
+      height: 347px,
+      overflow: .visible,
+      children: [
+        group13,
+        group11,
+        group8,
+        group5,
+        group12,
+        group10,
+        group7,
+        group4,
+        rectangle,
+        group9,
+        group6,
+        group3,
+        iconLayer
+      ],
+
+      group13 = asset {
+        left: 228.67px,
+        top: 260.25px,
+        width: 114.33px,
+        height: 86.75px,
+        contents: iconGroup132
+      }
+
+      group11 = frame {
+        left: 228.67px,
+        top: 173.5px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label9],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label9 = text {
+          left: 50.33px,
+          top: 34.5px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "9",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group8 = frame {
+        left: 228.67px,
+        top: 86.75px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label6],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label6 = text {
+          left: 50.33px,
+          top: 34.25px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "6",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group5 = frame {
+        left: 228.67px,
+        top: 0px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label3],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label3 = text {
+          left: 50.33px,
+          top: 34px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "3",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group12 = frame {
+        left: 114.33px,
+        top: 260.25px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label0],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label0 = text {
+          left: 50.67px,
+          top: 34.75px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "0",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group10 = frame {
+        left: 114.33px,
+        top: 173.5px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label8],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label8 = text {
+          left: 50.67px,
+          top: 34.5px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "8",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group7 = frame {
+        left: 114.33px,
+        top: 86.75px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label5],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label5 = text {
+          left: 50.67px,
+          top: 34.25px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "5",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group4 = frame {
+        left: 114.33px,
+        top: 0px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label2],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label2 = text {
+          left: 50.67px,
+          top: 34px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "2",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      rectangle = shape {
+        left: 0px,
+        top: 260.25px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      group9 = frame {
+        left: 0px,
+        top: 173.5px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label7],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label7 = text {
+          left: 51px,
+          top: 34.5px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "7",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group6 = frame {
+        left: 0px,
+        top: 86.75px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label4],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label4 = text {
+          left: 51px,
+          top: 34.25px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "4",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group3 = frame {
+        left: 0px,
+        top: 0px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label1],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label1 = text {
+          left: 51px,
+          top: 34px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "1",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      iconLayer = asset {
+        left: 42px,
+        top: 288px,
+        width: 32px,
+        height: 32px,
+        fill: colorTokens.colors.neutral-00,
+        contents: iconIconFaceId
+      }
+    }
+  }
+}
+
+export pinAuthenticationError = frame {
+  title: "PIN / Property 1=authentication error",
+  left: 824px,
+  top: 0px,
+  width: 343px,
+  layout: {direction: .column, align-items: .center, item-gap: 60px},
+  fill: colorTokens.colors.red-50,
+  overflow: .visible,
+  children: [group6, frame425],
+
+  group6 = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 16px},
+    padding: [3px, 0px],
+    children: [selamatDatangKemba, silahkanMasukanPin],
+
+    selamatDatangKemba = text {
+      width: 217.27px,
+      fill: colorTokens.colors.neutral-00,
+      contents: "Selamat Datang Kembali",
+      font-size: 20,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5,
+      align: .center
+    }
+
+    silahkanMasukanPin = text {
+      width: 343px,
+      fill: colorTokens.colors.neutral-00,
+      contents: "Silakan Masukkan PIN",
+      font-size: 15,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.2,
+      align: .center
+    }
+  }
+
+  frame425 = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 40px},
+    overflow: .visible,
+    children: [frame424, buttonAndroidNumeric],
+
+    frame424 = frame {
+      width: 100%,
+      layout: {direction: .column, align-items: .center, item-gap: 36px},
+      overflow: .visible,
+      children: [frame426, button],
+
+      frame426 = frame {
+        layout: {direction: .column, align-items: .center, item-gap: 24px},
+        overflow: .visible,
+        children: [pin, lupaPin],
+
+        pin = asset {
+          width: 216px,
+          height: 16px,
+          fill: colorTokens.colors.red-80,
+          contents: iconPin
+        }
+
+        lupaPin = text {
+          width: 341px,
+          height: 21px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "PIN salah. Silakan coba lagi",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1,
+          align: .center,
+          vertical-align: .center
+        }
+      }
+
+      button = frame : buttonLib.buttonDefaultTextPrimaryDefault {
+        adsClick {
+          fill[0].color: colorTokens.colors.neutral-00,
+          display: .none
+        }
+
+        button {
+          fill[0].color: colorTokens.colors.neutral-00,
+          contents: "LUPA PIN?"
+        }
+
+        iconAdd {
+          fill[0].color: colorTokens.colors.neutral-00,
+          display: .none
+        }
+      }
+    }
+
+    buttonAndroidNumeric = frame {
+      width: 100%,
+      height: 347px,
+      overflow: .visible,
+      children: [
+        group13,
+        group11,
+        group8,
+        group5,
+        group12,
+        group10,
+        group7,
+        group4,
+        rectangle,
+        group9,
+        group6,
+        group3,
+        iconLayer
+      ],
+
+      group13 = asset {
+        left: 228.67px,
+        top: 260.25px,
+        width: 114.33px,
+        height: 86.75px,
+        contents: iconGroup132
+      }
+
+      group11 = frame {
+        left: 228.67px,
+        top: 173.5px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label9],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label9 = text {
+          left: 50.33px,
+          top: 34.5px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "9",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group8 = frame {
+        left: 228.67px,
+        top: 86.75px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label6],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label6 = text {
+          left: 50.33px,
+          top: 34.25px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "6",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group5 = frame {
+        left: 228.67px,
+        top: 0px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label3],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label3 = text {
+          left: 50.33px,
+          top: 34px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "3",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group12 = frame {
+        left: 114.33px,
+        top: 260.25px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label0],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label0 = text {
+          left: 50.67px,
+          top: 34.75px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "0",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group10 = frame {
+        left: 114.33px,
+        top: 173.5px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label8],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label8 = text {
+          left: 50.67px,
+          top: 34.5px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "8",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group7 = frame {
+        left: 114.33px,
+        top: 86.75px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label5],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label5 = text {
+          left: 50.67px,
+          top: 34.25px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "5",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group4 = frame {
+        left: 114.33px,
+        top: 0px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label2],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label2 = text {
+          left: 50.67px,
+          top: 34px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "2",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      rectangle = shape {
+        left: 0px,
+        top: 260.25px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      group9 = frame {
+        left: 0px,
+        top: 173.5px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label7],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label7 = text {
+          left: 51px,
+          top: 34.5px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "7",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group6 = frame {
+        left: 0px,
+        top: 86.75px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label4],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label4 = text {
+          left: 51px,
+          top: 34.25px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "4",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      group3 = frame {
+        left: 0px,
+        top: 0px,
+        width: 115px,
+        height: 87px,
+        children: [rectangle, label1],
+
+        rectangle = shape {
+          left: 0px,
+          top: 0px,
+          width: 114.33px,
+          height: 86.75px,
+          fill: colorTokens.colors.red-50,
+          type: .rect
+        }
+
+        label1 = text {
+          left: 51px,
+          top: 34px,
+          fill: colorTokens.colors.neutral-00,
+          contents: "1",
+          font-size: 22,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          align: .center
+        }
+      }
+
+      iconLayer = asset {
+        left: 42px,
+        top: 288px,
+        width: 32px,
+        height: 32px,
+        fill: colorTokens.colors.neutral-00,
+        contents: iconIconFaceId
+      }
+    }
+  }
+}
+
+export pinTransactionalDefault = frame {
+  title: "PIN / Property 1=transactional default",
+  left: 0px,
+  top: 787px,
+  width: 360px,
+  height: 755px,
+  fill: colorTokens.colors.red-50,
+  children: [topbar, inputPin, buttonAndroidNumeric],
+
+  topbar = asset {
+    left: 0px,
+    top: 0px,
+    width: 360px,
+    height: 55px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconTopbarDefault
+  }
+
+  inputPin = frame {
+    left: 0px,
+    top: 97px,
+    width: 360px,
+    layout: {direction: .column, align-items: .center, item-gap: 60px},
+    overflow: .visible,
+    padding: [0px, 16px],
+    children: [row, frame427],
+
+    row = frame {
+      width: 100%,
+      layout: {direction: .column, align-items: .center, item-gap: 8px},
+      children: [masukanKodeVerifik, kodeVerifikasiYang],
+
+      masukanKodeVerifik = text {
+        width: 287.98px,
+        display: .none,
+        fill: colorTokens.colors.neutral-00,
+        contents: "Selamat Datang Kembali",
+        font-size: 20,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.5,
+        align: .center
+      }
+
+      kodeVerifikasiYang = text {
+        width: 100%,
+        fill: colorTokens.colors.neutral-00,
+        contents: "Silakan Masukkan PIN",
+        font-size: 16,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.5,
+        align: .center
+      }
+    }
+
+    frame427 = frame {
+      width: 100%,
+      layout: {direction: .column, align-items: .center, item-gap: 36px},
+      overflow: .visible,
+      children: [passwordInput, button],
+
+      passwordInput = frame {
+        width: 100%,
+        layout: {justify-content: .center, align-items: .center, item-gap: 24px},
+        overflow: .visible,
+        padding: [0px, 6px],
+        children: [
+          masterPinPasswordInput,
+          masterPinPasswordInput2,
+          masterPinPasswordInput3,
+          masterPinPasswordInput4,
+          masterPinPasswordInput5,
+          masterPinPasswordInput6
+        ],
+
+        masterPinPasswordInput = frame {
+          width: 16px,
+          height: 16px,
+          layout: {
+            direction: .column,
+            justify-content: .center,
+            align-items: .center,
+            item-gap: 10px
+          },
+          fill: colorTokens.colors.red-80,
+          corner-radius: 22px,
+          overflow: .visible,
+          padding: 10px
+        }
+
+        masterPinPasswordInput2 = frame {
+          width: 16px,
+          height: 16px,
+          layout: {
+            direction: .column,
+            justify-content: .center,
+            align-items: .center,
+            item-gap: 10px
+          },
+          fill: colorTokens.colors.red-80,
+          corner-radius: 22px,
+          overflow: .visible,
+          padding: 10px
+        }
+
+        masterPinPasswordInput3 = frame {
+          width: 16px,
+          height: 16px,
+          layout: {
+            direction: .column,
+            justify-content: .center,
+            align-items: .center,
+            item-gap: 10px
+          },
+          fill: colorTokens.colors.red-80,
+          corner-radius: 22px,
+          overflow: .visible,
+          padding: 10px
+        }
+
+        masterPinPasswordInput4 = frame {
+          width: 16px,
+          height: 16px,
+          layout: {
+            direction: .column,
+            justify-content: .center,
+            align-items: .center,
+            item-gap: 10px
+          },
+          fill: colorTokens.colors.red-80,
+          corner-radius: 22px,
+          overflow: .visible,
+          padding: 10px
+        }
+
+        masterPinPasswordInput5 = frame {
+          width: 16px,
+          height: 16px,
+          layout: {
+            direction: .column,
+            justify-content: .center,
+            align-items: .center,
+            item-gap: 10px
+          },
+          fill: colorTokens.colors.red-80,
+          corner-radius: 22px,
+          overflow: .visible,
+          padding: 10px
+        }
+
+        masterPinPasswordInput6 = frame {
+          width: 16px,
+          height: 16px,
+          layout: {
+            direction: .column,
+            justify-content: .center,
+            align-items: .center,
+            item-gap: 10px
+          },
+          fill: colorTokens.colors.red-80,
+          corner-radius: 22px,
+          overflow: .visible,
+          padding: 10px
+        }
+      }
+
+      button = frame : buttonLib.buttonDefaultTextPrimaryDefault {
+        adsClick {
+          fill[0].color: colorTokens.colors.neutral-00,
+          display: .none
+        }
+
+        button {
+          fill[0].color: colorTokens.colors.neutral-00,
+          contents: "LUPA PIN?"
+        }
+
+        iconAdd {
+          fill[0].color: colorTokens.colors.neutral-00,
+          display: .none
+        }
+      }
+    }
+  }
+
+  buttonAndroidNumeric = frame {
+    left: 9px,
+    top: 352px,
+    width: 343px,
+    height: 347px,
+    overflow: .visible,
+    children: [
+      group13,
+      group11,
+      group8,
+      group5,
+      group12,
+      group10,
+      group7,
+      group4,
+      rectangle,
+      group9,
+      group6,
+      group3,
+      iconLayer
+    ],
+
+    group13 = asset {
+      left: 228.67px,
+      top: 260.25px,
+      width: 114.33px,
+      height: 86.75px,
+      contents: iconGroup133
+    }
+
+    group11 = frame {
+      left: 228.67px,
+      top: 173.5px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label9],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label9 = text {
+        left: 50.33px,
+        top: 34.5px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "9",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    group8 = frame {
+      left: 228.67px,
+      top: 86.75px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label6],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label6 = text {
+        left: 50.33px,
+        top: 34.25px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "6",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    group5 = frame {
+      left: 228.67px,
+      top: 0px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label3],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label3 = text {
+        left: 50.33px,
+        top: 34px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "3",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    group12 = frame {
+      left: 114.33px,
+      top: 260.25px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label0],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label0 = text {
+        left: 50.67px,
+        top: 34.75px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "0",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    group10 = frame {
+      left: 114.33px,
+      top: 173.5px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label8],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label8 = text {
+        left: 50.67px,
+        top: 34.5px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "8",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    group7 = frame {
+      left: 114.33px,
+      top: 86.75px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label5],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label5 = text {
+        left: 50.67px,
+        top: 34.25px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "5",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    group4 = frame {
+      left: 114.33px,
+      top: 0px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label2],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label2 = text {
+        left: 50.67px,
+        top: 34px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "2",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    rectangle = shape {
+      left: 0px,
+      top: 260.25px,
+      width: 114.33px,
+      height: 86.75px,
+      fill: colorTokens.colors.red-50,
+      type: .rect
+    }
+
+    group9 = frame {
+      left: 0px,
+      top: 173.5px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label7],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label7 = text {
+        left: 51px,
+        top: 34.5px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "7",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    group6 = frame {
+      left: 0px,
+      top: 86.75px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label4],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label4 = text {
+        left: 51px,
+        top: 34.25px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "4",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    group3 = frame {
+      left: 0px,
+      top: 0px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label1],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label1 = text {
+        left: 51px,
+        top: 34px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "1",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    iconLayer = asset {
+      left: 42px,
+      top: 288px,
+      width: 32px,
+      height: 32px,
+      fill: colorTokens.colors.neutral-00,
+      contents: iconIconFaceId
+    }
+  }
+}
+
+export pinTransactionalFilled = frame {
+  title: "PIN / Property 1=transactional filled",
+  left: 432px,
+  top: 787px,
+  width: 360px,
+  height: 755px,
+  overflow: .visible,
+  children: pinDefaultLoginFilled,
+
+  pinDefaultLoginFilled = frame : pinTransactionalDefault {
+    left: 0px,
+    top: 0px,
+
+    inputPin {
+      frame427 {
+        passwordInput {
+          masterPinPasswordInput6 {
+            fill[0].color: colorTokens.colors.neutral-00
+          }
+
+          masterPinPasswordInput5 {
+            fill[0].color: colorTokens.colors.neutral-00
+          }
+
+          masterPinPasswordInput4 {
+            fill[0].color: colorTokens.colors.neutral-00
+          }
+
+          masterPinPasswordInput3 {
+            fill[0].color: colorTokens.colors.neutral-00
+          }
+
+          masterPinPasswordInput2 {
+            fill[0].color: colorTokens.colors.neutral-00
+          }
+
+          masterPinPasswordInput {
+            fill[0].color: colorTokens.colors.neutral-00
+          }
+        }
+      }
+    }
+  }
+}
+
+export pinTransactionalError = frame {
+  title: "PIN / Property 1=transactional error",
+  left: 864px,
+  top: 787px,
+  width: 360px,
+  height: 755px,
+  overflow: .visible,
+  children: [pinDefaultLogin, buttonAndroidNumeric],
+
+  pinDefaultLogin = frame {
+    left: 0px,
+    top: 0px,
+    width: 360px,
+    height: 755px,
+    fill: colorTokens.colors.red-50,
+    children: [topbar, inputPin],
+
+    topbar = asset {
+      left: 0px,
+      top: 0px,
+      width: 360px,
+      height: 55px,
+      fill: colorTokens.colors.neutral-00,
+      contents: iconTopbarDefault
+    }
+
+    inputPin = frame {
+      left: 0px,
+      top: 97px,
+      width: 360px,
+      layout: {direction: .column, align-items: .center, item-gap: 60px},
+      overflow: .visible,
+      padding: [0px, 16px],
+      children: [row, frame429],
+
+      row = frame {
+        width: 100%,
+        layout: {direction: .column, align-items: .center, item-gap: 8px},
+        children: [masukanKodeVerifik, kodeVerifikasiYang],
+
+        masukanKodeVerifik = text {
+          width: 287.98px,
+          display: .none,
+          fill: colorTokens.colors.neutral-00,
+          contents: "Selamat Datang Kembali",
+          font-size: 20,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.5,
+          align: .center
+        }
+
+        kodeVerifikasiYang = text {
+          width: 100%,
+          fill: colorTokens.colors.neutral-00,
+          contents: "Silakan Masukkan PIN",
+          font-size: 16,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.5,
+          align: .center
+        }
+      }
+
+      frame429 = frame {
+        width: 100%,
+        layout: {direction: .column, align-items: .center, item-gap: 36px},
+        overflow: .visible,
+        children: [frame428, button],
+
+        frame428 = frame {
+          width: 100%,
+          layout: {direction: .column, align-items: .center, item-gap: 24px},
+          overflow: .visible,
+          children: [passwordInput, lupaPin],
+
+          passwordInput = frame {
+            width: 100%,
+            layout: {
+              justify-content: .center,
+              align-items: .center,
+              item-gap: 24px
+            },
+            overflow: .visible,
+            padding: [0px, 6px],
+            children: [
+              masterPinPasswordInput,
+              masterPinPasswordInput2,
+              masterPinPasswordInput3,
+              masterPinPasswordInput4,
+              masterPinPasswordInput5,
+              masterPinPasswordInput6
+            ],
+
+            masterPinPasswordInput = frame {
+              width: 16px,
+              height: 16px,
+              layout: {
+                direction: .column,
+                justify-content: .center,
+                align-items: .center,
+                item-gap: 10px
+              },
+              fill: colorTokens.colors.red-80,
+              corner-radius: 22px,
+              overflow: .visible,
+              padding: 10px
+            }
+
+            masterPinPasswordInput2 = frame {
+              width: 16px,
+              height: 16px,
+              layout: {
+                direction: .column,
+                justify-content: .center,
+                align-items: .center,
+                item-gap: 10px
+              },
+              fill: colorTokens.colors.red-80,
+              corner-radius: 22px,
+              overflow: .visible,
+              padding: 10px
+            }
+
+            masterPinPasswordInput3 = frame {
+              width: 16px,
+              height: 16px,
+              layout: {
+                direction: .column,
+                justify-content: .center,
+                align-items: .center,
+                item-gap: 10px
+              },
+              fill: colorTokens.colors.red-80,
+              corner-radius: 22px,
+              overflow: .visible,
+              padding: 10px
+            }
+
+            masterPinPasswordInput4 = frame {
+              width: 16px,
+              height: 16px,
+              layout: {
+                direction: .column,
+                justify-content: .center,
+                align-items: .center,
+                item-gap: 10px
+              },
+              fill: colorTokens.colors.red-80,
+              corner-radius: 22px,
+              overflow: .visible,
+              padding: 10px
+            }
+
+            masterPinPasswordInput5 = frame {
+              width: 16px,
+              height: 16px,
+              layout: {
+                direction: .column,
+                justify-content: .center,
+                align-items: .center,
+                item-gap: 10px
+              },
+              fill: colorTokens.colors.red-80,
+              corner-radius: 22px,
+              overflow: .visible,
+              padding: 10px
+            }
+
+            masterPinPasswordInput6 = frame {
+              width: 16px,
+              height: 16px,
+              layout: {
+                direction: .column,
+                justify-content: .center,
+                align-items: .center,
+                item-gap: 10px
+              },
+              fill: colorTokens.colors.red-80,
+              corner-radius: 22px,
+              overflow: .visible,
+              padding: 10px
+            }
+          }
+
+          lupaPin = text {
+            width: 341px,
+            height: 21px,
+            fill: colorTokens.colors.neutral-00,
+            contents: "PIN salah. Silakan coba lagi",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1,
+            align: .center,
+            vertical-align: .center
+          }
+        }
+
+        button = frame : buttonLib.buttonDefaultTextPrimaryDefault {
+          adsClick {
+            fill[0].color: colorTokens.colors.neutral-00,
+            display: .none
+          }
+
+          button {
+            fill[0].color: colorTokens.colors.neutral-00,
+            contents: "LUPA PIN?"
+          }
+
+          iconAdd {
+            fill[0].color: colorTokens.colors.neutral-00,
+            display: .none
+          }
+        }
+      }
+    }
+  }
+
+  buttonAndroidNumeric = frame {
+    left: 8px,
+    top: 352px,
+    width: 343px,
+    height: 347px,
+    overflow: .visible,
+    children: [
+      group13,
+      group11,
+      group8,
+      group5,
+      group12,
+      group10,
+      group7,
+      group4,
+      rectangle,
+      group9,
+      group6,
+      group3,
+      iconLayer
+    ],
+
+    group13 = asset {
+      left: 228.67px,
+      top: 260.25px,
+      width: 114.33px,
+      height: 86.75px,
+      contents: iconGroup133
+    }
+
+    group11 = frame {
+      left: 228.67px,
+      top: 173.5px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label9],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label9 = text {
+        left: 50.33px,
+        top: 34.5px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "9",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    group8 = frame {
+      left: 228.67px,
+      top: 86.75px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label6],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label6 = text {
+        left: 50.33px,
+        top: 34.25px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "6",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    group5 = frame {
+      left: 228.67px,
+      top: 0px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label3],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label3 = text {
+        left: 50.33px,
+        top: 34px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "3",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    group12 = frame {
+      left: 114.33px,
+      top: 260.25px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label0],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label0 = text {
+        left: 50.67px,
+        top: 34.75px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "0",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    group10 = frame {
+      left: 114.33px,
+      top: 173.5px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label8],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label8 = text {
+        left: 50.67px,
+        top: 34.5px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "8",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    group7 = frame {
+      left: 114.33px,
+      top: 86.75px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label5],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label5 = text {
+        left: 50.67px,
+        top: 34.25px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "5",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    group4 = frame {
+      left: 114.33px,
+      top: 0px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label2],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label2 = text {
+        left: 50.67px,
+        top: 34px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "2",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    rectangle = shape {
+      left: 0px,
+      top: 260.25px,
+      width: 114.33px,
+      height: 86.75px,
+      fill: colorTokens.colors.red-50,
+      type: .rect
+    }
+
+    group9 = frame {
+      left: 0px,
+      top: 173.5px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label7],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label7 = text {
+        left: 51px,
+        top: 34.5px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "7",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    group6 = frame {
+      left: 0px,
+      top: 86.75px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label4],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label4 = text {
+        left: 51px,
+        top: 34.25px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "4",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    group3 = frame {
+      left: 0px,
+      top: 0px,
+      width: 115px,
+      height: 87px,
+      children: [rectangle, label1],
+
+      rectangle = shape {
+        left: 0px,
+        top: 0px,
+        width: 114.33px,
+        height: 86.75px,
+        fill: colorTokens.colors.red-50,
+        type: .rect
+      }
+
+      label1 = text {
+        left: 51px,
+        top: 34px,
+        fill: colorTokens.colors.neutral-00,
+        contents: "1",
+        font-size: 22,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        align: .center
+      }
+    }
+
+    iconLayer = asset {
+      left: 42px,
+      top: 288px,
+      width: 32px,
+      height: 32px,
+      fill: colorTokens.colors.neutral-00,
+      contents: iconIconFaceId
+    }
+  }
+}

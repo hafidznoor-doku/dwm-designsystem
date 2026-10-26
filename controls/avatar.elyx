@@ -1,0 +1,42 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/images/fd6fba10aa466fb2.png" as imageFd6fba10aa466fb2
+import "resources/assets/icons/pp-ilustrasi-icon-02.svg" as iconPpIlustrasiIcon02
+
+export avatarMale = frame {
+  title: "Avatar / gender=male",
+  left: 0px,
+  top: 0px,
+  width: 38px,
+  height: 38px,
+  fill: colorTokens.colors.neutral-00,
+  corner-radius: 8px,
+  children: ava14,
+
+  ava14 = shape {
+    left: -1px,
+    top: -1px,
+    width: 41px,
+    height: 41px,
+    fill: {image: {ref: imageFd6fba10aa466fb2, sizing: .stretch}},
+    type: .rect
+  }
+}
+
+export avatarFemale = frame {
+  title: "Avatar / gender=female",
+  left: 86px,
+  top: 0px,
+  width: 38px,
+  height: 38px,
+  fill: colorTokens.colors.neutral-00,
+  corner-radius: 8px,
+  children: ppIlustrasiIcon02,
+
+  ppIlustrasiIcon02 = asset {
+    left: 0px,
+    top: 0px,
+    width: 38px,
+    height: 38px,
+    contents: iconPpIlustrasiIcon02
+  }
+}

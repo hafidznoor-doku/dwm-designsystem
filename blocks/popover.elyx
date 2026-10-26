@@ -1,0 +1,1124 @@
+import "tokens/colors.elyx" as colorTokens
+import "controls/button.elyx" as buttonLib
+import "resources/assets/icons/frame-52.svg" as iconFrame52
+import "resources/assets/icons/frame-52-2.svg" as iconFrame522
+import "resources/assets/icons/frame-52-3.svg" as iconFrame523
+import "resources/assets/icons/frame-52-4.svg" as iconFrame524
+import "resources/assets/icons/frame-52-5.svg" as iconFrame525
+import "resources/assets/icons/frame-52-6.svg" as iconFrame526
+import "resources/assets/icons/frame-52-7.svg" as iconFrame527
+import "resources/assets/icons/frame-52-8.svg" as iconFrame528
+
+export popoverTopLeftLight = frame {
+  title: "Popover / Arrow=Top, Position=Left, Mode=Light",
+  left: 0px,
+  top: 0px,
+  width: 300px,
+  layout: {direction: .column, justify-content: .center, align-items: .center},
+  overflow: .visible,
+  children: [frame52, frame46],
+
+  frame52 = asset {
+    width: 300px,
+    height: 6px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconFrame52
+  }
+
+  frame46 = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 16px},
+    fill: colorTokens.colors.neutral-00,
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: 16px,
+    children: [frame45, frame515],
+
+    frame45 = frame {
+      width: 100%,
+      layout: {direction: .column, align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [
+        hiThisIsPopoverTitle,
+        andHereSSomeAmazingContentItSVeryEngagingRight
+      ],
+
+      hiThisIsPopoverTitle = text {
+        width: 100%,
+        fill: colorTokens.colors.neutral-80,
+        contents: "Hi, this is popover title",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.429
+      }
+
+      andHereSSomeAmazingContentItSVeryEngagingRight = text {
+        width: 100%,
+        fill: rgb(40%, 40%, 40%),
+        contents: "And here's some amazing content. It's very engaging, right?",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.33
+      }
+    }
+
+    frame515 = frame {
+      width: 100%,
+      layout: {
+        justify-content: .space-between,
+        align-items: .center,
+        item-gap: 48px
+      },
+      overflow: .visible,
+      children: [frame513, label14, frame514],
+
+      frame513 = frame {
+        display: .none,
+        layout: {item-gap: 8px},
+        overflow: .visible,
+        children: [ellipse2, ellipse3, ellipse4, ellipse5],
+
+        ellipse2 = shape {
+          width: 8px,
+          height: 8px,
+          fill: colorTokens.colors.red-60,
+          type: .ellipse
+        }
+
+        ellipse3 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+
+        ellipse4 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+
+        ellipse5 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+      }
+
+      label14 = text {
+        fill: colorTokens.colors.neutral-30,
+        contents: "1/4",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.167,
+        align: .center
+      }
+
+      frame514 = frame {
+        layout: {align-items: .center},
+        overflow: .visible,
+        children: [button, button2],
+
+        button = frame : buttonLib.buttonSmallTextNeutralDefault {
+          iconAdd {
+            display: .none
+          }
+
+          adsClick {
+            display: .none
+          }
+        }
+
+        button2 = frame : buttonLib.buttonSmallSecondaryDefault {
+          iconAdd {
+            display: .none
+          }
+
+          adsClick {
+            display: .none
+          }
+        }
+      }
+    }
+  }
+}
+
+export popoverTopCenterLight = frame {
+  title: "Popover / Arrow=Top, Position=Center, Mode=Light",
+  left: 0px,
+  top: 188px,
+  width: 300px,
+  layout: {direction: .column, justify-content: .center, align-items: .center},
+  overflow: .visible,
+  children: [frame52, frame46],
+
+  frame52 = asset {
+    width: 300px,
+    height: 6px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconFrame522
+  }
+
+  frame46 = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 16px},
+    fill: colorTokens.colors.neutral-00,
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: 16px,
+    children: [frame45, frame515],
+
+    frame45 = frame {
+      width: 100%,
+      layout: {direction: .column, align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [
+        hiThisIsPopoverTitle,
+        andHereSSomeAmazingContentItSVeryEngagingRight
+      ],
+
+      hiThisIsPopoverTitle = text {
+        width: 100%,
+        fill: colorTokens.colors.neutral-80,
+        contents: "Hi, this is popover title",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.429
+      }
+
+      andHereSSomeAmazingContentItSVeryEngagingRight = text {
+        width: 100%,
+        fill: rgb(40%, 40%, 40%),
+        contents: "And here's some amazing content. It's very engaging, right?",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.33
+      }
+    }
+
+    frame515 = frame {
+      width: 100%,
+      layout: {
+        justify-content: .space-between,
+        align-items: .center,
+        item-gap: 48px
+      },
+      overflow: .visible,
+      children: [frame513, label3Dari4, frame515],
+
+      frame513 = frame {
+        layout: {item-gap: 8px},
+        overflow: .visible,
+        children: [ellipse2, ellipse3, ellipse4, ellipse5],
+
+        ellipse2 = shape {
+          width: 8px,
+          height: 8px,
+          fill: colorTokens.colors.red-60,
+          type: .ellipse
+        }
+
+        ellipse3 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+
+        ellipse4 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+
+        ellipse5 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+      }
+
+      label3Dari4 = text {
+        display: .none,
+        fill: colorTokens.colors.neutral-30,
+        contents: "3 dari 4",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.167,
+        align: .center
+      }
+
+      frame515 = frame {
+        layout: {align-items: .center},
+        overflow: .visible,
+        children: [button, button2],
+
+        button = frame : buttonLib.buttonSmallTextNeutralDefault {
+          iconAdd {
+            display: .none
+          }
+
+          adsClick {
+            display: .none
+          }
+        }
+
+        button2 = frame : buttonLib.buttonSmallSecondaryDefault {
+          iconAdd {
+            display: .none
+          }
+
+          adsClick {
+            display: .none
+          }
+        }
+      }
+    }
+  }
+}
+
+export popoverTopRightLight = frame {
+  title: "Popover / Arrow=Top, Position=Right, Mode=Light",
+  left: 0px,
+  top: 376px,
+  width: 300px,
+  layout: {direction: .column, justify-content: .center, align-items: .center},
+  overflow: .visible,
+  children: [frame52, frame46],
+
+  frame52 = asset {
+    width: 300px,
+    height: 6px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconFrame523
+  }
+
+  frame46 = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 16px},
+    fill: colorTokens.colors.neutral-00,
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: 16px,
+    children: [frame45, frame515],
+
+    frame45 = frame {
+      width: 100%,
+      layout: {direction: .column, align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [
+        hiThisIsPopoverTitle,
+        andHereSSomeAmazingContentItSVeryEngagingRight
+      ],
+
+      hiThisIsPopoverTitle = text {
+        width: 100%,
+        fill: colorTokens.colors.neutral-80,
+        contents: "Hi, this is popover title",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.429
+      }
+
+      andHereSSomeAmazingContentItSVeryEngagingRight = text {
+        width: 100%,
+        fill: rgb(40%, 40%, 40%),
+        contents: "And here's some amazing content. It's very engaging, right?",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.33
+      }
+    }
+
+    frame515 = frame {
+      width: 100%,
+      layout: {
+        justify-content: .space-between,
+        align-items: .center,
+        item-gap: 48px
+      },
+      overflow: .visible,
+      children: [frame513, label3Dari4, frame515],
+
+      frame513 = frame {
+        layout: {item-gap: 8px},
+        overflow: .visible,
+        children: [ellipse2, ellipse3, ellipse4, ellipse5],
+
+        ellipse2 = shape {
+          width: 8px,
+          height: 8px,
+          fill: colorTokens.colors.red-60,
+          type: .ellipse
+        }
+
+        ellipse3 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+
+        ellipse4 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+
+        ellipse5 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+      }
+
+      label3Dari4 = text {
+        display: .none,
+        fill: colorTokens.colors.neutral-30,
+        contents: "3 dari 4",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.167,
+        align: .center
+      }
+
+      frame515 = frame {
+        layout: {align-items: .center},
+        overflow: .visible,
+        children: [button, button2],
+
+        button = frame : buttonLib.buttonSmallTextNeutralDefault {
+          iconAdd {
+            display: .none
+          }
+
+          adsClick {
+            display: .none
+          }
+        }
+
+        button2 = frame : buttonLib.buttonSmallSecondaryDefault {
+          iconAdd {
+            display: .none
+          }
+
+          adsClick {
+            display: .none
+          }
+        }
+      }
+    }
+  }
+}
+
+export popoverRightCenterLight = frame {
+  title: "Popover / Arrow=Right, Position=Center, Mode=Light",
+  left: 0px,
+  top: 564px,
+  width: 300px,
+  layout: {justify-content: .center, align-items: .center},
+  overflow: .visible,
+  children: [frame46, frame52],
+
+  frame46 = frame {
+    width: 294px,
+    layout: {direction: .column, item-gap: 16px},
+    fill: colorTokens.colors.neutral-00,
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: 16px,
+    children: [frame45, frame515],
+
+    frame45 = frame {
+      width: 100%,
+      layout: {direction: .column, align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [
+        hiThisIsPopoverTitle,
+        andHereSSomeAmazingContentItSVeryEngagingRight
+      ],
+
+      hiThisIsPopoverTitle = text {
+        width: 100%,
+        fill: colorTokens.colors.neutral-80,
+        contents: "Hi, this is popover title",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.429
+      }
+
+      andHereSSomeAmazingContentItSVeryEngagingRight = text {
+        width: 100%,
+        fill: rgb(40%, 40%, 40%),
+        contents: "And here's some amazing content. It's very engaging, right?",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.33
+      }
+    }
+
+    frame515 = frame {
+      width: 100%,
+      layout: {
+        justify-content: .space-between,
+        align-items: .center,
+        item-gap: 48px
+      },
+      overflow: .visible,
+      children: [frame513, label3Dari4, frame515],
+
+      frame513 = frame {
+        layout: {item-gap: 8px},
+        overflow: .visible,
+        children: [ellipse2, ellipse3, ellipse4, ellipse5],
+
+        ellipse2 = shape {
+          width: 8px,
+          height: 8px,
+          fill: colorTokens.colors.red-60,
+          type: .ellipse
+        }
+
+        ellipse3 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+
+        ellipse4 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+
+        ellipse5 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+      }
+
+      label3Dari4 = text {
+        display: .none,
+        fill: colorTokens.colors.neutral-30,
+        contents: "3 dari 4",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.167,
+        align: .center
+      }
+
+      frame515 = frame {
+        layout: {align-items: .center},
+        overflow: .visible,
+        children: [button, button2],
+
+        button = frame : buttonLib.buttonSmallTextNeutralDefault {
+          iconAdd {
+            display: .none
+          }
+
+          adsClick {
+            display: .none
+          }
+        }
+
+        button2 = frame : buttonLib.buttonSmallSecondaryDefault {
+          iconAdd {
+            display: .none
+          }
+
+          adsClick {
+            display: .none
+          }
+        }
+      }
+    }
+  }
+
+  frame52 = asset {
+    width: 37.5px,
+    height: 6px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconFrame524
+  }
+}
+
+export popoverBottomRightLight = frame {
+  title: "Popover / Arrow=Bottom, Position=Right, Mode=Light",
+  left: 0px,
+  top: 746px,
+  width: 300px,
+  layout: {direction: .column, justify-content: .center, align-items: .center},
+  overflow: .visible,
+  children: [frame46, frame52],
+
+  frame46 = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 16px},
+    fill: colorTokens.colors.neutral-00,
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: 16px,
+    children: [frame45, frame515],
+
+    frame45 = frame {
+      width: 100%,
+      layout: {direction: .column, align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [
+        hiThisIsPopoverTitle,
+        andHereSSomeAmazingContentItSVeryEngagingRight
+      ],
+
+      hiThisIsPopoverTitle = text {
+        width: 100%,
+        fill: colorTokens.colors.neutral-80,
+        contents: "Hi, this is popover title",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.429
+      }
+
+      andHereSSomeAmazingContentItSVeryEngagingRight = text {
+        width: 100%,
+        fill: rgb(40%, 40%, 40%),
+        contents: "And here's some amazing content. It's very engaging, right?",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.33
+      }
+    }
+
+    frame515 = frame {
+      width: 100%,
+      layout: {
+        justify-content: .space-between,
+        align-items: .center,
+        item-gap: 48px
+      },
+      overflow: .visible,
+      children: [frame513, label3Dari4, frame515],
+
+      frame513 = frame {
+        layout: {item-gap: 8px},
+        overflow: .visible,
+        children: [ellipse2, ellipse3, ellipse4, ellipse5],
+
+        ellipse2 = shape {
+          width: 8px,
+          height: 8px,
+          fill: colorTokens.colors.red-60,
+          type: .ellipse
+        }
+
+        ellipse3 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+
+        ellipse4 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+
+        ellipse5 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+      }
+
+      label3Dari4 = text {
+        display: .none,
+        fill: colorTokens.colors.neutral-30,
+        contents: "3 dari 4",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.167,
+        align: .center
+      }
+
+      frame515 = frame {
+        layout: {align-items: .center},
+        overflow: .visible,
+        children: [button, button2],
+
+        button = frame : buttonLib.buttonSmallTextNeutralDefault {
+          iconAdd {
+            display: .none
+          }
+
+          adsClick {
+            display: .none
+          }
+        }
+
+        button2 = frame : buttonLib.buttonSmallSecondaryDefault {
+          iconAdd {
+            display: .none
+          }
+
+          adsClick {
+            display: .none
+          }
+        }
+      }
+    }
+  }
+
+  frame52 = asset {
+    width: 300px,
+    height: 6px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconFrame525
+  }
+}
+
+export popoverBottomCenterLight = frame {
+  title: "Popover / Arrow=Bottom, Position=Center, Mode=Light",
+  left: 0px,
+  top: 934px,
+  width: 300px,
+  layout: {direction: .column, justify-content: .center, align-items: .center},
+  overflow: .visible,
+  children: [frame46, frame52],
+
+  frame46 = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 16px},
+    fill: colorTokens.colors.neutral-00,
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: 16px,
+    children: [frame45, frame515],
+
+    frame45 = frame {
+      width: 100%,
+      layout: {direction: .column, align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [
+        hiThisIsPopoverTitle,
+        andHereSSomeAmazingContentItSVeryEngagingRight
+      ],
+
+      hiThisIsPopoverTitle = text {
+        width: 100%,
+        fill: colorTokens.colors.neutral-80,
+        contents: "Hi, this is popover title",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.429
+      }
+
+      andHereSSomeAmazingContentItSVeryEngagingRight = text {
+        width: 100%,
+        fill: rgb(40%, 40%, 40%),
+        contents: "And here's some amazing content. It's very engaging, right?",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.33
+      }
+    }
+
+    frame515 = frame {
+      width: 100%,
+      layout: {
+        justify-content: .space-between,
+        align-items: .center,
+        item-gap: 48px
+      },
+      overflow: .visible,
+      children: [frame513, label3Dari4, frame515],
+
+      frame513 = frame {
+        layout: {item-gap: 8px},
+        overflow: .visible,
+        children: [ellipse2, ellipse3, ellipse4, ellipse5],
+
+        ellipse2 = shape {
+          width: 8px,
+          height: 8px,
+          fill: colorTokens.colors.red-60,
+          type: .ellipse
+        }
+
+        ellipse3 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+
+        ellipse4 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+
+        ellipse5 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+      }
+
+      label3Dari4 = text {
+        display: .none,
+        fill: colorTokens.colors.neutral-30,
+        contents: "3 dari 4",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.167,
+        align: .center
+      }
+
+      frame515 = frame {
+        layout: {align-items: .center},
+        overflow: .visible,
+        children: [button, button2],
+
+        button = frame : buttonLib.buttonSmallTextNeutralDefault {
+          iconAdd {
+            display: .none
+          }
+
+          adsClick {
+            display: .none
+          }
+        }
+
+        button2 = frame : buttonLib.buttonSmallSecondaryDefault {
+          iconAdd {
+            display: .none
+          }
+
+          adsClick {
+            display: .none
+          }
+        }
+      }
+    }
+  }
+
+  frame52 = asset {
+    width: 300px,
+    height: 6px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconFrame526
+  }
+}
+
+export popoverBottomLeftLight = frame {
+  title: "Popover / Arrow=Bottom, Position=Left, Mode=Light",
+  left: 0px,
+  top: 1122px,
+  width: 300px,
+  layout: {direction: .column, justify-content: .center, align-items: .center},
+  overflow: .visible,
+  children: [frame46, frame52],
+
+  frame46 = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 16px},
+    fill: colorTokens.colors.neutral-00,
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: 16px,
+    children: [frame45, frame515],
+
+    frame45 = frame {
+      width: 100%,
+      layout: {direction: .column, align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [
+        hiThisIsPopoverTitle,
+        andHereSSomeAmazingContentItSVeryEngagingRight
+      ],
+
+      hiThisIsPopoverTitle = text {
+        width: 100%,
+        fill: colorTokens.colors.neutral-80,
+        contents: "Hi, this is popover title",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.429
+      }
+
+      andHereSSomeAmazingContentItSVeryEngagingRight = text {
+        width: 100%,
+        fill: rgb(40%, 40%, 40%),
+        contents: "And here's some amazing content. It's very engaging, right?",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.33
+      }
+    }
+
+    frame515 = frame {
+      width: 100%,
+      layout: {
+        justify-content: .space-between,
+        align-items: .center,
+        item-gap: 48px
+      },
+      overflow: .visible,
+      children: [frame513, label3Dari4, frame515],
+
+      frame513 = frame {
+        layout: {item-gap: 8px},
+        overflow: .visible,
+        children: [ellipse2, ellipse3, ellipse4, ellipse5],
+
+        ellipse2 = shape {
+          width: 8px,
+          height: 8px,
+          fill: colorTokens.colors.red-60,
+          type: .ellipse
+        }
+
+        ellipse3 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+
+        ellipse4 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+
+        ellipse5 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+      }
+
+      label3Dari4 = text {
+        display: .none,
+        fill: colorTokens.colors.neutral-30,
+        contents: "3 dari 4",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.167,
+        align: .center
+      }
+
+      frame515 = frame {
+        layout: {align-items: .center},
+        overflow: .visible,
+        children: [button, button2],
+
+        button = frame : buttonLib.buttonSmallTextNeutralDefault {
+          iconAdd {
+            display: .none
+          }
+
+          adsClick {
+            display: .none
+          }
+        }
+
+        button2 = frame : buttonLib.buttonSmallSecondaryDefault {
+          iconAdd {
+            display: .none
+          }
+
+          adsClick {
+            display: .none
+          }
+        }
+      }
+    }
+  }
+
+  frame52 = asset {
+    width: 300px,
+    height: 6px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconFrame527
+  }
+}
+
+export popoverLeftCenterLight = frame {
+  title: "Popover / Arrow=Left, Position=Center, Mode=Light",
+  left: 0px,
+  top: 1310px,
+  width: 300px,
+  layout: {justify-content: .center, align-items: .center},
+  overflow: .visible,
+  children: [frame52, frame46],
+
+  frame52 = asset {
+    width: 134px,
+    height: 6px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconFrame528
+  }
+
+  frame46 = frame {
+    width: 294px,
+    layout: {direction: .column, item-gap: 16px},
+    fill: colorTokens.colors.neutral-00,
+    corner-radius: 4px,
+    overflow: .visible,
+    padding: 16px,
+    children: [frame45, frame515],
+
+    frame45 = frame {
+      width: 100%,
+      layout: {direction: .column, align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [
+        hiThisIsPopoverTitle,
+        andHereSSomeAmazingContentItSVeryEngagingRight
+      ],
+
+      hiThisIsPopoverTitle = text {
+        width: 100%,
+        fill: colorTokens.colors.neutral-80,
+        contents: "Hi, this is popover title",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.429
+      }
+
+      andHereSSomeAmazingContentItSVeryEngagingRight = text {
+        width: 100%,
+        fill: rgb(40%, 40%, 40%),
+        contents: "And here's some amazing content. It's very engaging, right?",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.33
+      }
+    }
+
+    frame515 = frame {
+      width: 100%,
+      layout: {
+        justify-content: .space-between,
+        align-items: .center,
+        item-gap: 48px
+      },
+      overflow: .visible,
+      children: [frame513, label3Dari4, frame515],
+
+      frame513 = frame {
+        layout: {item-gap: 8px},
+        overflow: .visible,
+        children: [ellipse2, ellipse3, ellipse4, ellipse5],
+
+        ellipse2 = shape {
+          width: 8px,
+          height: 8px,
+          fill: colorTokens.colors.red-60,
+          type: .ellipse
+        }
+
+        ellipse3 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+
+        ellipse4 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+
+        ellipse5 = shape {
+          width: 8px,
+          height: 8px,
+          fill: rgb(85.098%, 85.098%, 85.098%),
+          type: .ellipse
+        }
+      }
+
+      label3Dari4 = text {
+        display: .none,
+        fill: colorTokens.colors.neutral-30,
+        contents: "3 dari 4",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.167,
+        align: .center
+      }
+
+      frame515 = frame {
+        layout: {align-items: .center},
+        overflow: .visible,
+        children: [button, button2],
+
+        button = frame : buttonLib.buttonSmallTextNeutralDefault {
+          iconAdd {
+            display: .none
+          }
+
+          adsClick {
+            display: .none
+          }
+        }
+
+        button2 = frame : buttonLib.buttonSmallPrimaryDefault {
+          border[0]: .nil,
+
+          adsClick {
+            display: .none
+          }
+
+          iconAdd {
+            display: .none
+          }
+        }
+      }
+    }
+  }
+}

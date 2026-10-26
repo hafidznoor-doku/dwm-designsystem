@@ -1,0 +1,382 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/combined-shape-2.svg" as iconCombinedShape2
+import "resources/assets/icons/union.svg" as iconUnion
+import "resources/assets/icons/union-2.svg" as iconUnion2
+import "resources/assets/icons/line-8.svg" as iconLine8
+import "resources/assets/icons/path-copy-3.svg" as iconPathCopy3
+import "resources/assets/images/4407298b13b433be.png" as image4407298b13b433be
+import "resources/assets/icons/line-19.svg" as iconLine19
+
+export screen25ATransferTransferQrNonQrisConfirmationPage = frame {
+  title: "2.5.a Transfer - Transfer QR - Non QRIS - Confirmation page",
+  left: 0px,
+  top: 0px,
+  width: 390px,
+  height: 844px,
+  fill: colorTokens.colors.neutral-00,
+  children: frame815,
+
+  frame815 = frame {
+    left: 0px,
+    top: 0px,
+    width: 390px,
+    height: 844px,
+    layout: {direction: .column},
+    overflow: .visible,
+    padding: [0px, 0px, 16px],
+    children: [frame14373, frame814],
+
+    frame14373 = frame {
+      width: 390px,
+      layout: {direction: .column},
+      fill: colorTokens.colors.neutral-00,
+      overflow: .visible,
+      children: [frame14372, regularNavWLine],
+
+      frame14372 = frame {
+        height: 44px,
+        layout: {direction: .column, item-gap: 4px},
+        overflow: .visible,
+        children: iOSStatusBarXDefault,
+
+        iOSStatusBarXDefault = frame {
+          width: 393px,
+          height: 44px,
+          overflow: .visible,
+          children: [action, container],
+
+          action = frame {
+            left: 20.85px,
+            top: 14px,
+            width: 56.29px,
+            height: 18px,
+            children: time,
+
+            time = text {
+              left: 0px,
+              top: 0px,
+              width: 54px,
+              fill: rgb(30.1961%, 30.1961%, 30.1961%),
+              contents: "9:41",
+              font-size: 15,
+              font-family: "SF Pro Text",
+              font-style: "Semibold",
+              letter-spacing: -1.1%,
+              align: .center
+            }
+          }
+
+          container = frame {
+            left: 311px,
+            top: 16px,
+            width: 68px,
+            height: 14px,
+            children: [iconBattery, combinedShape, iconWiFi],
+
+            iconBattery = text {
+              left: 41px,
+              top: -3px,
+              fill: rgb(30.1961%, 30.1961%, 30.1961%),
+              contents: "􀛨",
+              font-size: 17,
+              font-family: "SF Pro Text",
+              font-style: "Regular"
+            }
+
+            combinedShape = asset {
+              left: 0.5px,
+              top: 1.6px,
+              width: 17.1px,
+              height: 10.7px,
+              fill: rgb(30.1961%, 30.1961%, 30.1961%),
+              contents: iconCombinedShape2
+            }
+
+            iconWiFi = text {
+              left: 21px,
+              top: -1px,
+              fill: rgb(30.1961%, 30.1961%, 30.1961%),
+              contents: "􀙇",
+              font-size: 14,
+              font-family: "SF Pro Text",
+              font-style: "Regular"
+            }
+          }
+        }
+      }
+
+      regularNavWLine = frame {
+        width: 100%,
+        height: 59.58px,
+        overflow: .visible,
+        children: regularNavWLine,
+
+        regularNavWLine = frame {
+          left: 0px,
+          top: 0px,
+          width: 390px,
+          height: 55px,
+          fill: colorTokens.colors.neutral-00,
+          children: [rectangle, frame295, line8],
+
+          rectangle = shape {
+            left: 0px,
+            top: 0px,
+            width: 360px,
+            height: 55px,
+            fill: colorTokens.colors.neutral-00,
+            type: .rect
+          }
+
+          frame295 = frame {
+            left: 0px,
+            top: 16px,
+            layout: {align-items: .center, item-gap: 24px},
+            overflow: .visible,
+            padding: [0px, 16px],
+            children: [union, union2, textLayer],
+
+            union = asset {
+              width: 13.79px,
+              height: 12.9px,
+              fill: rgb(30.1961%, 30.1961%, 30.1961%),
+              contents: iconUnion
+            }
+
+            union2 = asset {
+              width: 12.92px,
+              height: 12.92px,
+              display: .none,
+              fill: rgb(30.1961%, 30.1961%, 30.1961%),
+              contents: iconUnion2
+            }
+
+            textLayer = text {
+              fill: colorTokens.colors.red-60,
+              contents: "Konfirmasi Pembayaran",
+              font-size: 17,
+              font-family: "DIN Next LT Pro",
+              font-style: "Medium",
+              line-height: 1.41
+            }
+          }
+
+          line8 = asset {
+            left: 0px,
+            top: 55px,
+            width: 390px,
+            height: 0px,
+            fill: rgb(91.76%, 92.549%, 94.1176%),
+            contents: iconLine8
+          }
+        }
+      }
+    }
+
+    frame814 = frame {
+      width: 100%,
+      height: 745px,
+      layout: {
+        direction: .column,
+        justify-content: .space-between,
+        item-gap: 205px
+      },
+      overflow: .visible,
+      padding: [0px, 0px, 24px],
+      children: [frame813, frame2608211],
+
+      frame813 = frame {
+        width: 100%,
+        layout: {direction: .column, item-gap: 24px},
+        overflow: .visible,
+        children: [frame18, frame864],
+
+        frame18 = frame {
+          width: 100%,
+          layout: {direction: .column},
+          overflow: .visible,
+          children: [frame394, pathCopy3],
+
+          frame394 = frame {
+            width: 100%,
+            layout: {
+              justify-content: .space-between,
+              align-items: .center,
+              item-gap: 176px
+            },
+            fill: rgb(98.0392%, 98.0392%, 98.0392%),
+            overflow: .visible,
+            padding: [12px, 16px],
+            children: [saldoKamu, rp10000000],
+
+            saldoKamu = text {
+              fill: rgb(20%, 20%, 20%),
+              contents: "Saldo kamu",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.429
+            }
+
+            rp10000000 = text {
+              fill: rgb(20%, 20%, 20%),
+              contents: "Rp 9.000.000",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Medium",
+              line-height: 1.429,
+              align: .right
+            }
+          }
+
+          pathCopy3 = asset {
+            width: 360px,
+            height: 1px,
+            fill: rgb(91.76%, 92.549%, 94.1176%),
+            contents: iconPathCopy3
+          }
+        }
+
+        frame864 = frame {
+          width: 100%,
+          layout: {direction: .column, item-gap: 36px},
+          overflow: .visible,
+          children: [frame864, frame863],
+
+          frame864 = frame {
+            width: 100%,
+            layout: {align-items: .center, item-gap: 12px},
+            overflow: .visible,
+            padding: [0px, 16px],
+            children: [image70, frame436],
+
+            image70 = shape {
+              width: 48px,
+              height: 48px,
+              fill: {image: {ref: image4407298b13b433be}},
+              type: .rect
+            }
+
+            frame436 = frame {
+              layout: {direction: .column, item-gap: 4px},
+              overflow: .visible,
+              children: [justinArmstrong, bankCimbNiaga12],
+
+              justinArmstrong = text {
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "EasyEat",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.429
+              }
+
+              bankCimbNiaga12 = text {
+                fill: rgb(60%, 60%, 60%),
+                contents: "Jakarta",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.429
+              }
+            }
+          }
+
+          frame863 = frame {
+            width: 100%,
+            layout: {direction: .column, item-gap: 24px},
+            overflow: .visible,
+            padding: [0px, 16px],
+            children: [frame861, line19, frame862],
+
+            frame861 = frame {
+              width: 100%,
+              layout: {direction: .column, item-gap: 10px},
+              overflow: .visible,
+              children: frame20,
+
+              frame20 = frame {
+                width: 100%,
+                layout: {justify-content: .space-between, item-gap: 157px},
+                overflow: .visible,
+                children: [masukanNominal, masukanNominal2],
+
+                masukanNominal = text {
+                  fill: colorTokens.colors.neutral-70,
+                  contents: "Nominal Bayar",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Regular"
+                }
+
+                masukanNominal2 = text {
+                  fill: rgb(0%, 0%, 0%, 65.098%),
+                  contents: "Rp 2.974.500",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Medium",
+                  align: .right
+                }
+              }
+            }
+
+            line19 = asset {
+              width: 358px,
+              height: 0px,
+              fill: rgb(91.76%, 92.549%, 94.1176%),
+              contents: iconLine19
+            }
+
+            frame862 = frame {
+              width: 100%,
+              layout: {direction: .column, item-gap: 10px},
+              overflow: .visible,
+              children: frame20,
+
+              frame20 = frame {
+                width: 100%,
+                layout: {justify-content: .space-between, item-gap: 157px},
+                overflow: .visible,
+                children: [masukanNominal, masukanNominal2],
+
+                masukanNominal = text {
+                  fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                  contents: "Total Pembayaran",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Bold",
+                  line-height: 1.14
+                }
+
+                masukanNominal2 = text {
+                  fill: colorTokens.colors.neutral-80,
+                  contents: "Rp 2.974.500",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Bold",
+                  line-height: 1.14,
+                  align: .right
+                }
+              }
+            }
+          }
+        }
+      }
+
+      frame2608211 = frame {
+        width: 100%,
+        layout: {direction: .column, item-gap: 10px},
+        overflow: .visible,
+        padding: [0px, 16px],
+        children: buttonLargeFilledDefault,
+
+        buttonLargeFilledDefault = frame {
+          width: 100%,
+          height: 42px,
+          layout: {direction: .row},
+          overflow: .visible
+        }
+      }
+    }
+  }
+}

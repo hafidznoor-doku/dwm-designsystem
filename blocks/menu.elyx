@@ -1,0 +1,360 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/dwm-icon-biller-menu-pulsa.svg" as iconDwmIconBillerMenuPulsa
+import "resources/assets/icons/ellipse-3.svg" as iconEllipse3
+
+export billerMenuDefault = frame {
+  title: "Biller Menu / variant=Default",
+  left: 0px,
+  top: 0px,
+  width: 64px,
+  height: 72px,
+  layout: {
+    direction: .column,
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: 8px
+  },
+  overflow: .visible,
+  padding: [4px, 0px],
+  children: [dwmIcon, topUp],
+
+  dwmIcon = asset {
+    width: 48px,
+    height: 48px,
+    contents: iconDwmIconBillerMenuPulsa
+  }
+
+  topUp = text {
+    fill: colorTokens.colors.neutral-70,
+    contents: "Pulsa",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.33,
+    align: .center
+  }
+}
+
+export billerMenuDelete = frame {
+  title: "Biller Menu / variant=delete",
+  left: 0px,
+  top: 120px,
+  width: 64px,
+  height: 72px,
+  layout: {
+    direction: .column,
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: 8px
+  },
+  overflow: .visible,
+  padding: [4px, 0px],
+  children: [dwmIcon, topUp, delete],
+
+  dwmIcon = asset {
+    width: 48px,
+    height: 48px,
+    contents: iconDwmIconBillerMenuPulsa
+  }
+
+  topUp = text {
+    fill: colorTokens.colors.neutral-70,
+    contents: "Pulsa",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.33,
+    align: .center
+  }
+
+  delete = frame {
+    left: 0px,
+    top: 0px,
+    width: 16px,
+    height: 16px,
+    ignore-stack: .true,
+    children: [ellipse12, rectangle60],
+
+    ellipse12 = shape {
+      left: 0px,
+      top: 0px,
+      width: 16px,
+      height: 16px,
+      fill: colorTokens.colors.red-70,
+      type: .ellipse
+    }
+
+    rectangle60 = shape {
+      left: 2px,
+      top: 7px,
+      width: 12.44px,
+      height: 2.67px,
+      fill: colorTokens.colors.neutral-00,
+      type: .rect,
+      corner-radius: 8px
+    }
+  }
+}
+
+export billerMenuAdd = frame {
+  title: "Biller Menu / variant=add",
+  left: 0px,
+  top: 240px,
+  width: 64px,
+  height: 72px,
+  layout: {
+    direction: .column,
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: 8px
+  },
+  overflow: .visible,
+  padding: [4px, 0px],
+  children: [dwmIcon, topUp, add],
+
+  dwmIcon = asset {
+    width: 48px,
+    height: 48px,
+    contents: iconDwmIconBillerMenuPulsa
+  }
+
+  topUp = text {
+    fill: colorTokens.colors.neutral-70,
+    contents: "Pulsa",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.33,
+    align: .center
+  }
+
+  add = frame {
+    left: 0px,
+    top: 0px,
+    width: 16px,
+    height: 16px,
+    ignore-stack: .true,
+    children: [ellipse12, group439],
+
+    ellipse12 = shape {
+      left: 0px,
+      top: 0px,
+      width: 16px,
+      height: 16px,
+      fill: colorTokens.colors.green-50,
+      type: .ellipse
+    }
+
+    group439 = frame {
+      left: 2px,
+      top: 2px,
+      width: 12px,
+      height: 12px,
+      children: [rectangle60, rectangle61],
+
+      rectangle60 = shape {
+        left: 0px,
+        top: 4.62px,
+        width: 12px,
+        height: 2.77px,
+        fill: colorTokens.colors.neutral-00,
+        type: .rect,
+        corner-radius: 8px
+      }
+
+      rectangle61 = shape {
+        left: 0px,
+        top: 0px,
+        width: 12px,
+        height: 2.77px,
+        transform: [0, 1, 4.6154, -1, 0, 12],
+        fill: colorTokens.colors.neutral-00,
+        type: .rect,
+        corner-radius: 8px
+      }
+    }
+  }
+}
+
+export billerMenuEmpty = frame {
+  title: "Biller Menu / variant=empty",
+  left: 0px,
+  top: 360px,
+  width: 64px,
+  height: 72px,
+  layout: {
+    direction: .column,
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: 8px
+  },
+  overflow: .visible,
+  padding: [4px, 0px],
+  children: [ellipse13, rectangle63],
+
+  ellipse13 = shape {
+    width: 43px,
+    height: 43px,
+    fill: colorTokens.colors.neutral-20,
+    type: .ellipse
+  }
+
+  rectangle63 = shape {
+    width: 100%,
+    height: 16px,
+    fill: colorTokens.colors.neutral-20,
+    type: .rect,
+    corner-radius: 24px
+  }
+}
+
+export billerMenuAddDisabled = frame {
+  title: "Biller Menu / variant=add:disabled",
+  left: 0px,
+  top: 480px,
+  width: 64px,
+  height: 72px,
+  layout: {
+    direction: .column,
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: 8px
+  },
+  overflow: .visible,
+  padding: [4px, 0px],
+  children: [dwmIcon, topUp, add],
+
+  dwmIcon = asset {
+    width: 48px,
+    height: 48px,
+    contents: iconDwmIconBillerMenuPulsa
+  }
+
+  topUp = text {
+    fill: colorTokens.colors.neutral-70,
+    contents: "Pulsa",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.33,
+    align: .center
+  }
+
+  add = frame {
+    left: 0px,
+    top: 0px,
+    width: 16px,
+    height: 16px,
+    ignore-stack: .true,
+    children: [ellipse12, group439],
+
+    ellipse12 = shape {
+      left: 0px,
+      top: 0px,
+      width: 16px,
+      height: 16px,
+      fill: colorTokens.colors.neutral-20,
+      type: .ellipse
+    }
+
+    group439 = frame {
+      left: 2px,
+      top: 2px,
+      width: 12px,
+      height: 12px,
+      children: [rectangle60, rectangle61],
+
+      rectangle60 = shape {
+        left: 0px,
+        top: 4.62px,
+        width: 12px,
+        height: 2.77px,
+        fill: colorTokens.colors.neutral-00,
+        type: .rect,
+        corner-radius: 8px
+      }
+
+      rectangle61 = shape {
+        left: 0px,
+        top: 0px,
+        width: 12px,
+        height: 2.77px,
+        transform: [0, 1, 4.6154, -1, 0, 12],
+        fill: colorTokens.colors.neutral-00,
+        type: .rect,
+        corner-radius: 8px
+      }
+    }
+  }
+}
+
+export billerMenuLoading = frame {
+  title: "Biller Menu / variant=loading",
+  left: 0px,
+  top: 600px,
+  width: 64px,
+  height: 72px,
+  layout: {
+    direction: .column,
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: 8px
+  },
+  overflow: .visible,
+  padding: [4px, 0px],
+  children: [container, topUp],
+
+  container = frame {
+    width: 43px,
+    height: 43px,
+    overflow: .visible,
+    children: [ellipse14, circularSmall],
+
+    ellipse14 = shape {
+      left: 0px,
+      top: 0px,
+      width: 43px,
+      height: 43px,
+      fill: colorTokens.colors.neutral-20,
+      type: .ellipse
+    }
+
+    circularSmall = frame {
+      left: 10.5px,
+      top: 11px,
+      width: 22px,
+      height: 22px,
+      overflow: .visible,
+      children: [ellipse2, ellipse3],
+
+      ellipse2 = shape {
+        left: 0px,
+        top: 0px,
+        width: 22px,
+        height: 22px,
+        display: .none,
+        border: {color: colorTokens.colors.red-60, width: 4px},
+        type: .ellipse
+      }
+
+      ellipse3 = asset {
+        left: 0px,
+        top: 0px,
+        width: 22px,
+        height: 22px,
+        fill: colorTokens.colors.red-60,
+        contents: iconEllipse3
+      }
+    }
+  }
+
+  topUp = text {
+    fill: colorTokens.colors.neutral-70,
+    contents: "Pulsa",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.33,
+    align: .center
+  }
+}

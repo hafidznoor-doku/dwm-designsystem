@@ -1,0 +1,155 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/account-circle-round.svg" as iconAccountCircleRound
+import "resources/assets/icons/add-round.svg" as iconAddRound
+import "resources/assets/icons/verified-round.svg" as iconVerifiedRound
+import "resources/assets/icons/mode-edit-round.svg" as iconModeEditRound
+import "resources/assets/icons/hourglass-bottom-outlined.svg" as iconHourglassBottomOutlined
+import "resources/assets/icons/chevron-right.svg" as iconChevronRight
+
+export badgeBelumVerifikasi = frame {
+  title: "Badge / Property 1=belum-verifikasi",
+  left: 0px,
+  top: 0px,
+  layout: {direction: .row},
+  overflow: .visible,
+  children: badge,
+
+  badge = frame : badgeSudahVerifikasi {
+    badgeKycSudahVerifikasi {
+      border[0].color: colorTokens.colors.neutral-40,
+      fill[0].color: colorTokens.colors.neutral-40,
+
+      add2 {
+        fill[0].color: rgb(98.82%, 98.82%, 99.2157%),
+        contents: iconAddRound,
+        display: .visible
+      }
+
+      add {
+        display: .none,
+        contents: iconAccountCircleRound
+      }
+
+      textLayer {
+        contents: "Basic"
+      }
+    }
+  }
+}
+
+export badgeSedangVerifikasi = frame {
+  title: "Badge / Property 1=sedang-verifikasi",
+  left: 0px,
+  top: 72px,
+  layout: {direction: .row},
+  overflow: .visible,
+  children: badgeKycSedangVerifikasi,
+
+  badgeKycSedangVerifikasi = frame {
+    height: 24px,
+    layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+    fill: colorTokens.colors.yellow-60,
+    border: colorTokens.colors.yellow-60,
+    shadow: [
+      {
+        drop-shadow: {
+          color: rgb(7.84%, 7.84%, 7.84%, 7.84%),
+          offset: point(0px, 1px),
+          blur-radius: 8px
+        }
+      },
+      {
+        drop-shadow: {
+          color: rgb(7.84%, 7.84%, 7.84%, 12.1569%),
+          offset: point(0px, 0px),
+          blur-radius: 1px
+        }
+      }
+    ],
+    corner-radius: 42px,
+    padding: [4px, 12px],
+    children: [add, textLayer, add2],
+
+    add = asset {
+      width: 12px,
+      height: 12px,
+      fill: colorTokens.colors.red-05,
+      contents: iconHourglassBottomOutlined
+    }
+
+    textLayer = text {
+      fill: colorTokens.colors.red-05,
+      contents: "Verifikasi Diproses",
+      font-size: 12,
+      font-family: "Inter",
+      font-style: "Semi Bold",
+      line-height: 1.33
+    }
+
+    add2 = asset {
+      width: 12px,
+      height: 12px,
+      fill: colorTokens.colors.neutral-background,
+      contents: iconChevronRight
+    }
+  }
+}
+
+export badgeSudahVerifikasi = frame {
+  title: "Badge / Property 1=sudah-verifikasi",
+  left: 0px,
+  top: 144px,
+  layout: {direction: .row},
+  overflow: .visible,
+  children: badgeKycSudahVerifikasi,
+
+  badgeKycSudahVerifikasi = frame {
+    height: 24px,
+    layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+    fill: colorTokens.colors.green-50,
+    border: colorTokens.colors.green-50,
+    shadow: [
+      {
+        drop-shadow: {
+          color: rgb(7.84%, 7.84%, 7.84%, 7.84%),
+          offset: point(0px, 1px),
+          blur-radius: 8px
+        }
+      },
+      {
+        drop-shadow: {
+          color: rgb(7.84%, 7.84%, 7.84%, 12.1569%),
+          offset: point(0px, 0px),
+          blur-radius: 1px
+        }
+      }
+    ],
+    corner-radius: 42px,
+    padding: [4px, 12px],
+    children: [add, textLayer, add2],
+
+    add = asset {
+      width: 12px,
+      height: 12px,
+      fill: colorTokens.colors.neutral-00,
+      contents: iconVerifiedRound
+    }
+
+    textLayer = text {
+      fill: colorTokens.colors.neutral-00,
+      contents: "Premium",
+      font-size: 12,
+      font-family: "Inter",
+      font-style: "Semi Bold",
+      line-height: 1.33
+    }
+
+    add2 = asset {
+      width: 12px,
+      height: 12px,
+      display: .none,
+      fill: rgb(20.39%, 25.098%, 32.94%),
+      contents: iconModeEditRound
+    }
+  }
+}

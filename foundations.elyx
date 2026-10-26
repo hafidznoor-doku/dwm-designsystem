@@ -1,0 +1,2988 @@
+import "tokens/colors.elyx" as colorTokens
+import "tokens/typography.elyx" as typeTokens
+
+export colorPalette = frame {
+  title: "Color palette",
+  caption: "Primitive ramps from the Figma Color page. Red 50 is the DOKU brand red.",
+  left: 0px,
+  top: 0px,
+  layout: {direction: .column, item-gap: 16px},
+  fill: .white,
+  corner-radius: 16px,
+  padding: 32px,
+  children: [
+    redRamp,
+    neutralRamp,
+    greenRamp,
+    yellowRamp,
+    cyanRamp,
+    blueRamp,
+    purpleRamp,
+    pinkRamp
+  ],
+
+  redRamp = frame {
+    layout: {item-gap: 8px},
+    overflow: .visible,
+    children: [
+      swRed100,
+      swRed90,
+      swRed80,
+      swRed70,
+      swRed60,
+      swRed50,
+      swRed40,
+      swRed30,
+      swRed20,
+      swRed10,
+      swRed05
+    ],
+
+    swRed100 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.red-100,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "red-100",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#4B0C09",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swRed90 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.red-90,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "red-90",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#71130E",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swRed80 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.red-80,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "red-80",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#961912",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swRed70 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.red-70,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "red-70",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#BB1F17",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swRed60 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.red-60,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "red-60",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#CD1E15",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swRed50 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.red-50,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "red-50",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#E1251B",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swRed40 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.red-40,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "red-40",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#E64941",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swRed30 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.red-30,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "red-30",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#EB6E67",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swRed20 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.red-20,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "red-20",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#F0928D",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swRed10 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.red-10,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "red-10",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#F9D3D1",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swRed05 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.red-05,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "red-05",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#FFEFEE",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+  }
+
+  neutralRamp = frame {
+    layout: {item-gap: 8px},
+    overflow: .visible,
+    children: [
+      swNeutral100,
+      swNeutral90,
+      swNeutral80,
+      swNeutral70,
+      swNeutral60,
+      swNeutral50,
+      swNeutral40,
+      swNeutral30,
+      swNeutral20,
+      swNeutral10,
+      swNeutral05,
+      swNeutralBackground,
+      swNeutral00
+    ],
+
+    swNeutral100 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.neutral-100,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "neutral-100",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#171C23",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swNeutral90 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.neutral-90,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "neutral-90",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#212832",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swNeutral80 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.neutral-80,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "neutral-80",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#2C333C",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swNeutral70 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.neutral-70,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "neutral-70",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#3F464F",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swNeutral60 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.neutral-60,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "neutral-60",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#545B65",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swNeutral50 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.neutral-50,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "neutral-50",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#69707A",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swNeutral40 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.neutral-40,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "neutral-40",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#818995",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swNeutral30 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.neutral-30,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "neutral-30",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#ABB4C0",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swNeutral20 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.neutral-20,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "neutral-20",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#E5E8EC",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swNeutral10 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.neutral-10,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "neutral-10",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#F2F4F7",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swNeutral05 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.neutral-05,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "neutral-05",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#F9FAFB",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swNeutralBackground = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.neutral-background,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "neutral-background",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#F5F8FB",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swNeutral00 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.neutral-00,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "neutral-00",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#FFFFFF",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+  }
+
+  greenRamp = frame {
+    layout: {item-gap: 8px},
+    overflow: .visible,
+    children: [
+      swGreen100,
+      swGreen90,
+      swGreen80,
+      swGreen70,
+      swGreen60,
+      swGreen50,
+      swGreen40,
+      swGreen30,
+      swGreen20,
+      swGreen10,
+      swGreen05
+    ],
+
+    swGreen100 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.green-100,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "green-100",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#003634",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swGreen90 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.green-90,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "green-90",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#004947",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swGreen80 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.green-80,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "green-80",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#00514E",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swGreen70 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.green-70,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "green-70",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#006B67",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swGreen60 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.green-60,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "green-60",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#008681",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swGreen50 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.green-50,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "green-50",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#00A19B",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swGreen40 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.green-40,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "green-40",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#2BB1AC",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swGreen30 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.green-30,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "green-30",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#80D0CD",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swGreen20 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.green-20,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "green-20",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#AAE0DE",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swGreen10 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.green-10,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "green-10",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#CCECEB",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swGreen05 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.green-05,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "green-05",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#E8F8F7",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+  }
+
+  yellowRamp = frame {
+    layout: {item-gap: 8px},
+    overflow: .visible,
+    children: [
+      swYellow100,
+      swYellow90,
+      swYellow80,
+      swYellow70,
+      swYellow60,
+      swYellow50,
+      swYellow40,
+      swYellow30,
+      swYellow20,
+      swYellow10,
+      swYellow05
+    ],
+
+    swYellow100 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.yellow-100,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "yellow-100",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#552F0E",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swYellow90 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.yellow-90,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "yellow-90",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#7F4716",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swYellow80 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.yellow-80,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "yellow-80",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#AA5E1D",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swYellow70 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.yellow-70,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "yellow-70",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#D47624",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swYellow60 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.yellow-60,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "yellow-60",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#FF8D2B",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swYellow50 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.yellow-50,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "yellow-50",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#FFA04E",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swYellow40 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.yellow-40,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "yellow-40",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-70,
+        contents: "#FFB372",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swYellow30 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.yellow-30,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "yellow-30",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#FFC695",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swYellow20 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.yellow-20,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "yellow-20",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#FFD9B8",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swYellow10 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.yellow-10,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "yellow-10",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#FFE8D5",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swYellow05 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.yellow-05,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "yellow-05",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#FFF4EC",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+  }
+
+  cyanRamp = frame {
+    layout: {item-gap: 8px},
+    overflow: .visible,
+    children: [
+      swCyan100,
+      swCyan90,
+      swCyan80,
+      swCyan70,
+      swCyan60,
+      swCyan50,
+      swCyan40,
+      swCyan30,
+      swCyan20,
+      swCyan10,
+      swCyan05
+    ],
+
+    swCyan100 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.cyan-100,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "cyan-100",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#083841",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swCyan90 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.cyan-90,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "cyan-90",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#0D5462",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swCyan80 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.cyan-80,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "cyan-80",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#117083",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swCyan70 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.cyan-70,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "cyan-70",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#158CA3",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swCyan60 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.cyan-60,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "cyan-60",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#19A8C4",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swCyan50 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.cyan-50,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "cyan-50",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#3FB6CE",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swCyan40 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.cyan-40,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "cyan-40",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#66C5D8",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swCyan30 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.cyan-30,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "cyan-30",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#8CD3E1",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swCyan20 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.cyan-20,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "cyan-20",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#D1EEF3",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swCyan10 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.cyan-10,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "cyan-10",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#D1EEF3",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swCyan05 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.cyan-05,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "cyan-05",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#E8F6F9",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+  }
+
+  blueRamp = frame {
+    layout: {item-gap: 8px},
+    overflow: .visible,
+    children: [
+      swBlue100,
+      swBlue90,
+      swBlue80,
+      swBlue70,
+      swBlue60,
+      swBlue50,
+      swBlue40,
+      swBlue30,
+      swBlue20,
+      swBlue10,
+      swBlue05
+    ],
+
+    swBlue100 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.blue-100,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "blue-100",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#041639",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swBlue90 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.blue-90,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "blue-90",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#032362",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swBlue80 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.blue-80,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "blue-80",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#0B3484",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swBlue70 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.blue-70,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "blue-70",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#1747A6",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swBlue60 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.blue-60,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "blue-60",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#265DC8",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swBlue50 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.blue-50,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "blue-50",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#3975EA",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swBlue40 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.blue-40,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "blue-40",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#4B88FF",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swBlue30 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.blue-30,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "blue-30",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#74A3FF",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swBlue20 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.blue-20,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "blue-20",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#9CBEFF",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swBlue10 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.blue-10,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "blue-10",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#C4D8FF",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swBlue05 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.blue-05,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "blue-05",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#EDF3FF",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+  }
+
+  purpleRamp = frame {
+    layout: {item-gap: 8px},
+    overflow: .visible,
+    children: [
+      swPurple100,
+      swPurple90,
+      swPurple80,
+      swPurple70,
+      swPurple60,
+      swPurple50,
+      swPurple40,
+      swPurple30,
+      swPurple20,
+      swPurple10,
+      swPurple05
+    ],
+
+    swPurple100 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.purple-100,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "purple-100",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#2C1072",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPurple90 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.purple-90,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "purple-90",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#3B149F",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPurple80 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.purple-80,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "purple-80",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#4A16CF",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPurple70 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.purple-70,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "purple-70",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#5925DC",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPurple60 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.purple-60,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "purple-60",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#6938EF",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPurple50 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.purple-50,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "purple-50",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#7A5AF8",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPurple40 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.purple-40,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "purple-40",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#9B8AFB",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPurple30 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.purple-30,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "purple-30",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#BDB4FE",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPurple20 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.purple-20,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "purple-20",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#D9D6FE",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPurple10 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.purple-10,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "purple-10",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#EBE9FE",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPurple05 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.purple-05,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "purple-05",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#F4F3FF",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+  }
+
+  pinkRamp = frame {
+    layout: {item-gap: 8px},
+    overflow: .visible,
+    children: [
+      swPink100,
+      swPink90,
+      swPink80,
+      swPink70,
+      swPink60,
+      swPink50,
+      swPink40,
+      swPink30,
+      swPink20,
+      swPink10,
+      swPink05
+    ],
+
+    swPink100 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.pink-100,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "pink-100",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#851651",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPink90 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.pink-90,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "pink-90",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#9E165F",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPink80 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.pink-80,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "pink-80",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#C11574",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPink70 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.pink-70,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "pink-70",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#DD2590",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPink60 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.pink-60,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "pink-60",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#EE46BC",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPink50 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.pink-50,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "pink-50",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#F670C7",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPink40 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.pink-40,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: .white,
+        contents: "pink-40",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: .white,
+        contents: "#F98ED4",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPink30 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.pink-30,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "pink-30",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#FCB4E3",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPink20 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.pink-20,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "pink-20",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#FECDED",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPink10 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.pink-10,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "pink-10",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#FEDBF2",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+
+    swPink05 = frame {
+      width: 120px,
+      height: 96px,
+      layout: {direction: .column, justify-content: .end, item-gap: 2px},
+      fill: colorTokens.colors.pink-05,
+      border: rgb(0%, 0%, 0%, 7.84%),
+      corner-radius: 8px,
+      padding: 10px,
+      children: [name, hex],
+
+      name = text {
+        fill: colorTokens.colors.neutral-90,
+        contents: "pink-05",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      hex = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "#FDE9F6",
+        font-size: 11,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+  }
+}
+
+export typeScale = frame {
+  title: "Type scale",
+  caption: "Text/xl–xs steps in Regular, Medium and Bold. Components use DIN Next LT Pro.",
+  left: 1840px,
+  top: 0px,
+  width: 640px,
+  layout: {direction: .column, item-gap: 14px},
+  fill: .white,
+  corner-radius: 16px,
+  padding: 32px,
+  children: [
+    xlRegular,
+    xlMedium,
+    xlBold,
+    lgRegular,
+    lgMedium,
+    lgBold,
+    mdRegular,
+    mdMedium,
+    mdBold,
+    smRegular,
+    smMedium,
+    smBold,
+    xsRegular,
+    xsMedium,
+    xsBold
+  ],
+
+  xlRegular = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 24px},
+    children: [spec, sample],
+
+    spec = text {
+      width: 160px,
+      fill: colorTokens.colors.neutral-50,
+      contents: "xl/regular · 20/26",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular"
+    }
+
+    sample = text {
+      fill: colorTokens.colors.neutral-90,
+      contents: "Bayar tagihan dengan DOKU",
+      font-size: typeTokens.font-sizes.xl,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: typeTokens.line-heights.xl
+    }
+  }
+
+  xlMedium = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 24px},
+    children: [spec, sample],
+
+    spec = text {
+      width: 160px,
+      fill: colorTokens.colors.neutral-50,
+      contents: "xl/medium · 20/26",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular"
+    }
+
+    sample = text {
+      fill: colorTokens.colors.neutral-90,
+      contents: "Bayar tagihan dengan DOKU",
+      font-size: typeTokens.font-sizes.xl,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: typeTokens.line-heights.xl
+    }
+  }
+
+  xlBold = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 24px},
+    children: [spec, sample],
+
+    spec = text {
+      width: 160px,
+      fill: colorTokens.colors.neutral-50,
+      contents: "xl/bold · 20/26",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular"
+    }
+
+    sample = text {
+      fill: colorTokens.colors.neutral-90,
+      contents: "Bayar tagihan dengan DOKU",
+      font-size: typeTokens.font-sizes.xl,
+      font-family: "DIN Next LT Pro",
+      font-style: "Bold",
+      line-height: typeTokens.line-heights.xl
+    }
+  }
+
+  lgRegular = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 24px},
+    children: [spec, sample],
+
+    spec = text {
+      width: 160px,
+      fill: colorTokens.colors.neutral-50,
+      contents: "lg/regular · 16/20",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular"
+    }
+
+    sample = text {
+      fill: colorTokens.colors.neutral-90,
+      contents: "Bayar tagihan dengan DOKU",
+      font-size: typeTokens.font-sizes.lg,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: typeTokens.line-heights.lg
+    }
+  }
+
+  lgMedium = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 24px},
+    children: [spec, sample],
+
+    spec = text {
+      width: 160px,
+      fill: colorTokens.colors.neutral-50,
+      contents: "lg/medium · 16/20",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular"
+    }
+
+    sample = text {
+      fill: colorTokens.colors.neutral-90,
+      contents: "Bayar tagihan dengan DOKU",
+      font-size: typeTokens.font-sizes.lg,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: typeTokens.line-heights.lg
+    }
+  }
+
+  lgBold = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 24px},
+    children: [spec, sample],
+
+    spec = text {
+      width: 160px,
+      fill: colorTokens.colors.neutral-50,
+      contents: "lg/bold · 16/20",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular"
+    }
+
+    sample = text {
+      fill: colorTokens.colors.neutral-90,
+      contents: "Bayar tagihan dengan DOKU",
+      font-size: typeTokens.font-sizes.lg,
+      font-family: "DIN Next LT Pro",
+      font-style: "Bold",
+      line-height: typeTokens.line-heights.lg
+    }
+  }
+
+  mdRegular = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 24px},
+    children: [spec, sample],
+
+    spec = text {
+      width: 160px,
+      fill: colorTokens.colors.neutral-50,
+      contents: "md/regular · 14/20",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular"
+    }
+
+    sample = text {
+      fill: colorTokens.colors.neutral-90,
+      contents: "Bayar tagihan dengan DOKU",
+      font-size: typeTokens.font-sizes.md,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: typeTokens.line-heights.md
+    }
+  }
+
+  mdMedium = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 24px},
+    children: [spec, sample],
+
+    spec = text {
+      width: 160px,
+      fill: colorTokens.colors.neutral-50,
+      contents: "md/medium · 14/20",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular"
+    }
+
+    sample = text {
+      fill: colorTokens.colors.neutral-90,
+      contents: "Bayar tagihan dengan DOKU",
+      font-size: typeTokens.font-sizes.md,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: typeTokens.line-heights.md
+    }
+  }
+
+  mdBold = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 24px},
+    children: [spec, sample],
+
+    spec = text {
+      width: 160px,
+      fill: colorTokens.colors.neutral-50,
+      contents: "md/bold · 14/20",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular"
+    }
+
+    sample = text {
+      fill: colorTokens.colors.neutral-90,
+      contents: "Bayar tagihan dengan DOKU",
+      font-size: typeTokens.font-sizes.md,
+      font-family: "DIN Next LT Pro",
+      font-style: "Bold",
+      line-height: typeTokens.line-heights.md
+    }
+  }
+
+  smRegular = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 24px},
+    children: [spec, sample],
+
+    spec = text {
+      width: 160px,
+      fill: colorTokens.colors.neutral-50,
+      contents: "sm/regular · 12/18",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular"
+    }
+
+    sample = text {
+      fill: colorTokens.colors.neutral-90,
+      contents: "Bayar tagihan dengan DOKU",
+      font-size: typeTokens.font-sizes.sm,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: typeTokens.line-heights.sm
+    }
+  }
+
+  smMedium = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 24px},
+    children: [spec, sample],
+
+    spec = text {
+      width: 160px,
+      fill: colorTokens.colors.neutral-50,
+      contents: "sm/medium · 12/18",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular"
+    }
+
+    sample = text {
+      fill: colorTokens.colors.neutral-90,
+      contents: "Bayar tagihan dengan DOKU",
+      font-size: typeTokens.font-sizes.sm,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: typeTokens.line-heights.sm
+    }
+  }
+
+  smBold = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 24px},
+    children: [spec, sample],
+
+    spec = text {
+      width: 160px,
+      fill: colorTokens.colors.neutral-50,
+      contents: "sm/bold · 12/18",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular"
+    }
+
+    sample = text {
+      fill: colorTokens.colors.neutral-90,
+      contents: "Bayar tagihan dengan DOKU",
+      font-size: typeTokens.font-sizes.sm,
+      font-family: "DIN Next LT Pro",
+      font-style: "Bold",
+      line-height: typeTokens.line-heights.sm
+    }
+  }
+
+  xsRegular = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 24px},
+    children: [spec, sample],
+
+    spec = text {
+      width: 160px,
+      fill: colorTokens.colors.neutral-50,
+      contents: "xs/regular · 10/14",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular"
+    }
+
+    sample = text {
+      fill: colorTokens.colors.neutral-90,
+      contents: "Bayar tagihan dengan DOKU",
+      font-size: typeTokens.font-sizes.xs,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: typeTokens.line-heights.xs
+    }
+  }
+
+  xsMedium = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 24px},
+    children: [spec, sample],
+
+    spec = text {
+      width: 160px,
+      fill: colorTokens.colors.neutral-50,
+      contents: "xs/medium · 10/14",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular"
+    }
+
+    sample = text {
+      fill: colorTokens.colors.neutral-90,
+      contents: "Bayar tagihan dengan DOKU",
+      font-size: typeTokens.font-sizes.xs,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: typeTokens.line-heights.xs
+    }
+  }
+
+  xsBold = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 24px},
+    children: [spec, sample],
+
+    spec = text {
+      width: 160px,
+      fill: colorTokens.colors.neutral-50,
+      contents: "xs/bold · 10/14",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular"
+    }
+
+    sample = text {
+      fill: colorTokens.colors.neutral-90,
+      contents: "Bayar tagihan dengan DOKU",
+      font-size: typeTokens.font-sizes.xs,
+      font-family: "DIN Next LT Pro",
+      font-style: "Bold",
+      line-height: typeTokens.line-heights.xs
+    }
+  }
+}

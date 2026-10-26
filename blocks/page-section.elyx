@@ -1,0 +1,253 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/arrow-forward-round.svg" as iconArrowForwardRound
+import "resources/assets/images/14989a8d8b1d32dc.png" as image14989a8d8b1d32dc
+
+export sectionCta = frame {
+  title: "Section/CTA",
+  left: 0px,
+  top: 0px,
+  width: 360px,
+  layout: {
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: 187px
+  },
+  fill: colorTokens.colors.neutral-00,
+  overflow: .visible,
+  padding: 16px,
+  children: [investasiKamu, arrowForward],
+
+  investasiKamu = text {
+    fill: colorTokens.colors.neutral-80,
+    contents: "Mau berinvestasi?",
+    font-size: 16,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.5
+  }
+
+  arrowForward = asset {
+    width: 20px,
+    height: 20px,
+    fill: colorTokens.colors.neutral-60,
+    contents: iconArrowForwardRound
+  }
+}
+
+export sectionTitle = frame {
+  title: "Section/title",
+  left: 0px,
+  top: 180px,
+  width: 360px,
+  layout: {
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: 187px
+  },
+  fill: colorTokens.colors.neutral-00,
+  overflow: .visible,
+  children: [investasiKamu, buttonLargeOutlineDefault, arrowForward],
+
+  investasiKamu = text {
+    fill: colorTokens.colors.neutral-80,
+    contents: "Section",
+    font-size: 16,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.5
+  }
+
+  buttonLargeOutlineDefault = frame {
+    width: 151px,
+    height: 40px,
+    layout: {direction: .row},
+    border: {color: .black, position: .outside},
+    corner-radius: 4px,
+    overflow: .visible
+  }
+
+  arrowForward = asset {
+    width: 20px,
+    height: 20px,
+    fill: colorTokens.colors.neutral-60,
+    contents: iconArrowForwardRound
+  }
+}
+
+export sectionFeedback = frame {
+  title: "Section/Feedback",
+  left: 0px,
+  top: 348px,
+  width: 360px,
+  layout: {direction: .column, item-gap: 16px},
+  overflow: .visible,
+  padding: 16px,
+  children: ratingFrame,
+
+  ratingFrame = frame {
+    width: 100%,
+    layout: {direction: .column, align-items: .center, item-gap: 12px},
+    fill: colorTokens.colors.neutral-00,
+    corner-radius: 8px,
+    overflow: .visible,
+    padding: 16px,
+    children: [apakahKamuSukaDenganLayananDoku, choice],
+
+    apakahKamuSukaDenganLayananDoku = text {
+      fill: colorTokens.colors.neutral-80,
+      contents: "Apakah kamu suka dengan layanan DOKU?",
+      font-size: 14,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.429,
+      align: .center
+    }
+
+    choice = frame {
+      layout: {item-gap: 24px},
+      overflow: .visible,
+      children: [bad, good],
+
+      bad = frame {
+        layout: {align-items: .center},
+        overflow: .visible,
+        children: [frame871, button],
+
+        frame871 = frame {
+          width: 34px,
+          height: 34px,
+          overflow: .visible,
+          children: [ellipse3, intersect, frame872],
+
+          ellipse3 = shape {
+            left: 0px,
+            top: 0px,
+            width: 34px,
+            height: 34px,
+            fill: colorTokens.colors.green-10,
+            type: .ellipse
+          }
+
+          intersect = shape {
+            left: 0.92px,
+            top: 0px,
+            width: 33.08px,
+            height: 34px,
+            fill: {image: {ref: image14989a8d8b1d32dc, sizing: .stretch}},
+            type: .ellipse
+          }
+
+          frame872 = frame {
+            left: -7px,
+            top: -7px,
+            width: 48.53px,
+            height: 48.53px,
+            overflow: .visible,
+            children: [ellipse4, intersect],
+
+            ellipse4 = shape {
+              left: 0px,
+              top: 0px,
+              width: 34.31px,
+              height: 34.31px,
+              transform: [-0.7071, 0.7071, 24.26, -0.7071, -0.7071, 48.5277],
+              fill: colorTokens.colors.red-10,
+              type: .ellipse
+            }
+
+            intersect = shape {
+              left: 0px,
+              top: 0px,
+              width: 33.39px,
+              height: 34.31px,
+              transform: [-0.7071, 0.7071, 23.608, -0.7071, -0.7071, 47.87],
+              fill: {image: {ref: image14989a8d8b1d32dc, sizing: .stretch}},
+              type: .ellipse
+            }
+          }
+        }
+
+        button = frame {
+          height: 100%,
+          display: .none,
+          layout: {
+            justify-content: .center,
+            align-items: .center,
+            item-gap: 4px
+          },
+          corner-radius: 4px,
+          overflow: .visible,
+          padding: [8px, 16px],
+          children: myButton,
+
+          myButton = text {
+            fill: colorTokens.colors.red-50,
+            contents: "Tidak Terlalu",
+            font-size: 12,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1,
+            align: .center
+          }
+        }
+      }
+
+      good = frame {
+        layout: {align-items: .center, item-gap: 8px},
+        overflow: .visible,
+        children: [frame871, button],
+
+        frame871 = frame {
+          width: 34px,
+          height: 34px,
+          overflow: .visible,
+          children: [ellipse3, intersect],
+
+          ellipse3 = shape {
+            left: 0px,
+            top: 0px,
+            width: 34px,
+            height: 34px,
+            fill: colorTokens.colors.green-10,
+            type: .ellipse
+          }
+
+          intersect = shape {
+            left: 0.92px,
+            top: 0px,
+            width: 33.08px,
+            height: 34px,
+            fill: {image: {ref: image14989a8d8b1d32dc, sizing: .stretch}},
+            type: .ellipse
+          }
+        }
+
+        button = frame {
+          height: 100%,
+          display: .none,
+          layout: {
+            justify-content: .center,
+            align-items: .center,
+            item-gap: 4px
+          },
+          fill: colorTokens.colors.red-50,
+          border: colorTokens.colors.red-50,
+          corner-radius: 4px,
+          overflow: .visible,
+          padding: [8px, 16px],
+          children: myButton,
+
+          myButton = text {
+            fill: colorTokens.colors.neutral-00,
+            contents: "Ya, Suka!",
+            font-size: 12,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1,
+            align: .center
+          }
+        }
+      }
+    }
+  }
+}

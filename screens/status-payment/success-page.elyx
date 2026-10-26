@@ -1,0 +1,881 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/combined-shape-2.svg" as iconCombinedShape2
+import "resources/assets/icons/regular-nav-w-line-cross-empty-non-true.svg" as iconRegularNavWLineCrossEmptyNonTrue
+import "resources/assets/icons/icon-success.svg" as iconIconSuccess
+import "resources/assets/icons/icon-transferp2p.svg" as iconIconTransferp2p
+import "resources/assets/icons/chevron-up.svg" as iconChevronUp
+import "resources/assets/icons/emoney-doku-5.svg" as iconEmoneyDoku5
+import "resources/assets/icons/line-11.svg" as iconLine11
+import "resources/assets/icons/bi-arrow-left-2.svg" as iconBiArrowLeft2
+import "resources/assets/icons/bi-plus-3.svg" as iconBiPlus3
+import "resources/assets/images/b389d5def60a2b7e.png" as imageB389d5def60a2b7e
+import "resources/assets/images/ad5c59882915be93.png" as imageAd5c59882915be93
+import "resources/assets/icons/bi-x-circle-fill.svg" as iconBiXCircleFill
+import "resources/assets/icons/group-412.svg" as iconGroup412
+import "resources/assets/images/14989a8d8b1d32dc.png" as image14989a8d8b1d32dc
+import "resources/assets/icons/chevron-right-3.svg" as iconChevronRight3
+
+export successPage = frame {
+  title: "success page",
+  left: 0px,
+  top: 0px,
+  width: 390px,
+  height: 844px,
+  layout: {direction: .column},
+  fill: colorTokens.colors.neutral-00,
+  children: [frame14373, paymentSuccess],
+
+  frame14373 = frame {
+    width: 390px,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: frame14372,
+
+    frame14372 = frame {
+      height: 44px,
+      layout: {direction: .column, item-gap: 4px},
+      overflow: .visible,
+      children: iOSStatusBarXDefault,
+
+      iOSStatusBarXDefault = frame {
+        width: 393px,
+        height: 44px,
+        overflow: .visible,
+        children: [action, container],
+
+        action = frame {
+          left: 20.85px,
+          top: 14px,
+          width: 56.29px,
+          height: 18px,
+          children: time,
+
+          time = text {
+            left: 0px,
+            top: 0px,
+            width: 54px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "9:41",
+            font-size: 15,
+            font-family: "SF Pro Text",
+            font-style: "Semibold",
+            letter-spacing: -1.1%,
+            align: .center
+          }
+        }
+
+        container = frame {
+          left: 311px,
+          top: 16px,
+          width: 68px,
+          height: 14px,
+          children: [iconBattery, combinedShape, iconWiFi],
+
+          iconBattery = text {
+            left: 41px,
+            top: -3px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "􀛨",
+            font-size: 17,
+            font-family: "SF Pro Text",
+            font-style: "Regular"
+          }
+
+          combinedShape = asset {
+            left: 0.5px,
+            top: 1.6px,
+            width: 17.1px,
+            height: 10.7px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: iconCombinedShape2
+          }
+
+          iconWiFi = text {
+            left: 21px,
+            top: -1px,
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "􀙇",
+            font-size: 14,
+            font-family: "SF Pro Text",
+            font-style: "Regular"
+          }
+        }
+      }
+    }
+  }
+
+  paymentSuccess = frame {
+    width: 390px,
+    layout: {direction: .column, align-items: .center, item-gap: 8px},
+    overflow: .visible,
+    children: [regularNavWLine, successDetail, frame738],
+
+    regularNavWLine = asset {
+      width: 360px,
+      height: 55px,
+      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+      contents: iconRegularNavWLineCrossEmptyNonTrue
+    }
+
+    successDetail = frame {
+      width: 100%,
+      layout: {direction: .column, align-items: .center, item-gap: 24px},
+      overflow: .visible,
+      children: [
+        frame771,
+        frame735,
+        rectangle68,
+        frame877,
+        rectangle69,
+        banner,
+        frame876
+      ],
+
+      frame771 = frame {
+        width: 100%,
+        layout: {direction: .column, align-items: .center, item-gap: 16px},
+        overflow: .visible,
+        children: [iconSuccess, frame866],
+
+        iconSuccess = asset {
+          width: 56px,
+          height: 56px,
+          contents: iconIconSuccess
+        }
+
+        frame866 = frame {
+          layout: {direction: .column, align-items: .center, item-gap: 8px},
+          overflow: .visible,
+          children: [rp2974500, pembayaranBerhasil, label01Februari20241438],
+
+          rp2974500 = text {
+            fill: rgb(20%, 20%, 20%),
+            contents: " Rp100.000",
+            font-size: 28,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.286,
+            align: .center
+          }
+
+          pembayaranBerhasil = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Transfer Berhasil",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429,
+            align: .center
+          }
+
+          label01Februari20241438 = text {
+            fill: rgb(40%, 40%, 40%),
+            contents: "01 Februari 2024 - 14:38",
+            font-size: 12,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.33,
+            align: .center
+          }
+        }
+      }
+
+      frame735 = frame {
+        width: 100%,
+        layout: {align-items: .center, item-gap: 12px},
+        overflow: .visible,
+        padding: [0px, 16px],
+        children: [iconPurchase, easyEatJakarta],
+
+        iconPurchase = asset {
+          width: 33px,
+          height: 33px,
+          contents: iconIconTransferp2p
+        }
+
+        easyEatJakarta = text {
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Ulfa Intania\n081234567890",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.429
+        }
+      }
+
+      rectangle68 = shape {
+        width: 100%,
+        height: 6px,
+        fill: colorTokens.colors.neutral-background,
+        type: .rect
+      }
+
+      frame877 = frame {
+        width: 100%,
+        layout: {direction: .column, item-gap: 16px},
+        overflow: .visible,
+        padding: [0px, 16px],
+        children: [frame868, detailTransaksiNotes, button],
+
+        frame868 = frame {
+          width: 100%,
+          layout: {direction: .column, item-gap: 8px},
+          overflow: .visible,
+          children: frame867,
+
+          frame867 = frame {
+            width: 100%,
+            layout: {
+              justify-content: .space-between,
+              align-items: .center,
+              item-gap: 202px
+            },
+            overflow: .visible,
+            children: [rincianTransaksi, chevronUp],
+
+            rincianTransaksi = text {
+              fill: rgb(20%, 20%, 20%),
+              contents: "Rincian Transaksi",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Medium",
+              line-height: 1.429
+            }
+
+            chevronUp = asset {
+              width: 13px,
+              height: 13px,
+              fill: rgb(30.1961%, 30.1961%, 30.1961%),
+              contents: iconChevronUp
+            }
+          }
+        }
+
+        detailTransaksiNotes = frame {
+          width: 100%,
+          layout: {direction: .column, item-gap: 16px},
+          overflow: .visible,
+          children: [frame774, slotComponentDefault, line11, noted],
+
+          frame774 = frame {
+            height: 140px,
+            display: .none,
+            layout: {direction: .column, item-gap: 8px},
+            overflow: .visible,
+            children: [frame773, slotComponentDefault, slotComponentDefault2],
+
+            frame773 = frame {
+              width: 329px,
+              layout: {justify-content: .space-between, item-gap: 83px},
+              overflow: .visible,
+              children: [frame740, frame743],
+
+              frame740 = frame {
+                layout: {direction: .column, item-gap: 10px},
+                overflow: .visible,
+                children: [
+                  status,
+                  metodePembayaran,
+                  nomorTelkomsel,
+                  admin,
+                  totalBayar
+                ],
+
+                status = text {
+                  fill: rgb(60%, 60%, 60%),
+                  contents: "Status",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Regular",
+                  line-height: 1.429
+                }
+
+                metodePembayaran = text {
+                  fill: rgb(60%, 60%, 60%),
+                  contents: "Metode Pembayaran",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Regular",
+                  line-height: 1.429
+                }
+
+                nomorTelkomsel = text {
+                  fill: rgb(60%, 60%, 60%),
+                  contents: "Nomor telkomsel",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Regular",
+                  line-height: 1.429
+                }
+
+                admin = text {
+                  fill: rgb(60%, 60%, 60%),
+                  contents: "ADMIN ",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Regular",
+                  line-height: 1.429
+                }
+
+                totalBayar = text {
+                  fill: rgb(40%, 40%, 40%),
+                  contents: "TOTAL BAYAR",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Medium",
+                  line-height: 1.429
+                }
+              }
+
+              frame743 = frame {
+                layout: {direction: .column, align-items: .end, item-gap: 10px},
+                overflow: .visible,
+                children: [sukses, frame466, label081234567890, label, rp100000],
+
+                sukses = text {
+                  fill: colorTokens.colors.green-50,
+                  contents: "Sukses",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Regular",
+                  line-height: 1.429
+                }
+
+                frame466 = frame {
+                  width: 107px,
+                  layout: {
+                    justify-content: .end,
+                    align-items: .center,
+                    item-gap: 4px
+                  },
+                  overflow: .visible,
+                  children: [emoneyDoku, eWallet],
+
+                  emoneyDoku = asset {
+                    width: 20px,
+                    height: 20px,
+                    fill: colorTokens.colors.red-60,
+                    contents: iconEmoneyDoku5
+                  }
+
+                  eWallet = text {
+                    width: 51px,
+                    height: 18px,
+                    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                    contents: "e-wallet",
+                    font-size: 14,
+                    font-family: "DIN Next LT Pro",
+                    font-style: "Regular",
+                    line-height: 1.429,
+                    align: .right,
+                    vertical-align: .bottom
+                  }
+                }
+
+                label081234567890 = text {
+                  fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                  contents: "081234567890",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Regular",
+                  line-height: 1.429
+                }
+
+                label = text {
+                  fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                  contents: "-",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Regular",
+                  line-height: 1.429
+                }
+
+                rp100000 = text {
+                  fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                  contents: "Rp 100.000",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Medium",
+                  line-height: 1.429
+                }
+              }
+            }
+
+            slotComponentDefault = frame {
+              width: 100%,
+              height: 0.1px,
+              display: .none,
+              layout: {align-items: .center, item-gap: 8px},
+              padding: [4px, 16px]
+            }
+
+            slotComponentDefault2 = frame {
+              width: 100%,
+              height: 0.1px,
+              display: .none,
+              layout: {align-items: .center, item-gap: 8px},
+              padding: [4px, 16px]
+            }
+          }
+
+          slotComponentDefault = frame {
+            width: 100%,
+            height: 0.1px,
+            display: .none,
+            layout: {align-items: .center, item-gap: 8px},
+            padding: [4px, 16px]
+          }
+
+          line11 = asset {
+            width: 358px,
+            height: 0px,
+            contents: iconLine11
+          }
+
+          noted = frame {
+            width: 100%,
+            layout: {direction: .column, item-gap: 16px},
+            overflow: .visible,
+            children: [
+              kamuJugaDapatMelihatRincianTransaksiIniPadaHalamanAktivitas,
+              button,
+              button2
+            ],
+
+            kamuJugaDapatMelihatRincianTransaksiIniPadaHalamanAktivitas = text {
+              width: 328px,
+              fill: rgb(40%, 40%, 40%),
+              contents: "Kamu juga dapat melihat rincian transaksi ini  pada halaman aktivitas ",
+              font-size: 12,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.33,
+              align: .center
+            }
+
+            button = frame {
+              width: 100%,
+              display: .none,
+              layout: {direction: .column, align-items: .center, item-gap: 10px},
+              fill: colorTokens.colors.neutral-00,
+              border: colorTokens.colors.red-50,
+              corner-radius: 4px,
+              overflow: .visible,
+              padding: [12px, 24px],
+              children: content,
+
+              content = frame {
+                layout: {align-items: .center, item-gap: 8px},
+                children: [biArrowLeft, button, biPlus],
+
+                biArrowLeft = asset {
+                  width: 14px,
+                  height: 14px,
+                  display: .none,
+                  contents: iconBiArrowLeft2
+                }
+
+                button = text {
+                  fill: colorTokens.colors.red-60,
+                  contents: "LIHAT AKTIVITAS TRANSAKSI",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Medium",
+                  line-height: 1.14,
+                  letter-spacing: 7.1%,
+                  align: .center
+                }
+
+                biPlus = asset {
+                  width: 14px,
+                  height: 14px,
+                  display: .none,
+                  contents: iconBiPlus3
+                }
+              }
+            }
+
+            button2 = frame {
+              width: 329px,
+              display: .none,
+              layout: {
+                justify-content: .center,
+                align-items: .center,
+                item-gap: 4px
+              },
+              fill: colorTokens.colors.neutral-00,
+              border: rgb(80%, 80%, 80%),
+              corner-radius: 4px,
+              overflow: .visible,
+              padding: [10px, 16px],
+              children: myButton,
+
+              myButton = text {
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "LIHAT AKTIVITAS TRANSAKSI",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.429,
+                align: .center
+              }
+            }
+          }
+        }
+
+        button = frame {
+          width: 100%,
+          display: .none,
+          layout: {
+            justify-content: .center,
+            align-items: .center,
+            item-gap: 4px
+          },
+          fill: colorTokens.colors.red-50,
+          border: colorTokens.colors.red-50,
+          corner-radius: 4px,
+          overflow: .visible,
+          padding: [10px, 16px],
+          children: myButton,
+
+          myButton = text {
+            fill: colorTokens.colors.neutral-00,
+            contents: "Back to Merchant",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.429,
+            align: .center
+          }
+        }
+      }
+
+      rectangle69 = shape {
+        width: 100%,
+        height: 6px,
+        fill: colorTokens.colors.neutral-background,
+        type: .rect
+      }
+
+      banner = frame {
+        width: 100%,
+        layout: {direction: .column, align-items: .center, item-gap: 12px},
+        overflow: .visible,
+        children: [imagePromoSlide, frame877, group412],
+
+        imagePromoSlide = frame {
+          width: 327px,
+          height: 126px,
+          display: .none,
+          children: [rectangle2, bitmap, rectangle27Copy],
+
+          rectangle2 = shape {
+            left: 0px,
+            top: 0px,
+            width: 327px,
+            height: 126px,
+            fill: rgb(84.7059%, 84.7059%, 84.7059%),
+            type: .rect,
+            corner-radius: 4px
+          }
+
+          bitmap = shape {
+            left: -14.27px,
+            top: -5.42px,
+            width: 354.58px,
+            height: 132.79px,
+            fill: {image: {ref: imageB389d5def60a2b7e, sizing: .stretch}},
+            type: .rect
+          }
+
+          rectangle27Copy = shape {
+            left: 0px,
+            top: 0px,
+            width: 327px,
+            height: 126px,
+            fill: {
+              linear-gradient: {
+                from: point(6.6%, 0%),
+                to: point(6.6%, 86.9%),
+                stops: [
+                  stop(0%, rgb(100%, 100%, 100%, 0%)),
+                  stop(100%, rgb(0%, 0%, 0%, 21.96%))
+                ]
+              }
+            },
+            type: .rect
+          }
+        }
+
+        frame877 = frame {
+          width: 327px,
+          height: 126px,
+          overflow: .visible,
+          children: [image31, biXCircleFill],
+
+          image31 = shape {
+            left: 0px,
+            top: 0px,
+            width: 327px,
+            height: 126px,
+            fill: {image: {ref: imageAd5c59882915be93, sizing: .stretch}},
+            type: .rect,
+            corner-radius: 4px
+          }
+
+          biXCircleFill = asset {
+            left: 307px,
+            top: 4px,
+            width: 24px,
+            height: 24px,
+            fill: rgb(91.76%, 92.549%, 94.1176%),
+            contents: iconBiXCircleFill
+          }
+        }
+
+        group412 = asset {
+          width: 58px,
+          height: 6px,
+          contents: iconGroup412
+        }
+      }
+
+      frame876 = frame {
+        width: 100%,
+        layout: {direction: .column, align-items: .center, item-gap: 10px},
+        fill: colorTokens.colors.neutral-background,
+        overflow: .visible,
+        padding: 14px,
+        children: ratingFrame,
+
+        ratingFrame = frame {
+          width: 336px,
+          layout: {direction: .column, align-items: .center, item-gap: 12px},
+          fill: colorTokens.colors.neutral-00,
+          corner-radius: 8px,
+          overflow: .visible,
+          padding: 16px,
+          children: [apakahKamuSukaDenganLayananDoku, frame875],
+
+          apakahKamuSukaDenganLayananDoku = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Apakah kamu suka dengan layanan DOKU?",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429,
+            align: .center
+          }
+
+          frame875 = frame {
+            layout: {item-gap: 24px},
+            overflow: .visible,
+            children: [frame874, frame873],
+
+            frame874 = frame {
+              layout: {align-items: .center},
+              overflow: .visible,
+              children: [frame871, button],
+
+              frame871 = frame {
+                width: 34px,
+                height: 34px,
+                overflow: .visible,
+                children: [ellipse3, intersect, frame872],
+
+                ellipse3 = shape {
+                  left: 0px,
+                  top: 0px,
+                  width: 34px,
+                  height: 34px,
+                  fill: colorTokens.colors.green-10,
+                  type: .ellipse
+                }
+
+                intersect = shape {
+                  left: 0.92px,
+                  top: 0px,
+                  width: 33.08px,
+                  height: 34px,
+                  fill: {image: {ref: image14989a8d8b1d32dc, sizing: .stretch}},
+                  type: .ellipse
+                }
+
+                frame872 = frame {
+                  left: -7px,
+                  top: -7px,
+                  width: 48.53px,
+                  height: 48.53px,
+                  overflow: .visible,
+                  children: [ellipse4, intersect],
+
+                  ellipse4 = shape {
+                    left: 0px,
+                    top: 0px,
+                    width: 34.31px,
+                    height: 34.31px,
+                    transform: [
+                      -0.7071,
+                      0.7071,
+                      24.26,
+                      -0.7071,
+                      -0.7071,
+                      48.5277
+                    ],
+                    fill: colorTokens.colors.red-10,
+                    type: .ellipse
+                  }
+
+                  intersect = shape {
+                    left: 0px,
+                    top: 0px,
+                    width: 33.39px,
+                    height: 34.31px,
+                    transform: [
+                      -0.7071,
+                      0.7071,
+                      23.608,
+                      -0.7071,
+                      -0.7071,
+                      47.87
+                    ],
+                    fill: {
+                      image: {ref: image14989a8d8b1d32dc, sizing: .stretch}
+                    },
+                    type: .ellipse
+                  }
+                }
+              }
+
+              button = frame {
+                height: 100%,
+                display: .none,
+                layout: {
+                  justify-content: .center,
+                  align-items: .center,
+                  item-gap: 4px
+                },
+                corner-radius: 4px,
+                overflow: .visible,
+                padding: [8px, 16px],
+                children: myButton,
+
+                myButton = text {
+                  fill: colorTokens.colors.red-50,
+                  contents: "Tidak Terlalu",
+                  font-size: 12,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Medium",
+                  line-height: 1,
+                  align: .center
+                }
+              }
+            }
+
+            frame873 = frame {
+              layout: {align-items: .center, item-gap: 8px},
+              overflow: .visible,
+              children: [frame871, button],
+
+              frame871 = frame {
+                width: 34px,
+                height: 34px,
+                overflow: .visible,
+                children: [ellipse3, intersect],
+
+                ellipse3 = shape {
+                  left: 0px,
+                  top: 0px,
+                  width: 34px,
+                  height: 34px,
+                  fill: colorTokens.colors.green-10,
+                  type: .ellipse
+                }
+
+                intersect = shape {
+                  left: 0.92px,
+                  top: 0px,
+                  width: 33.08px,
+                  height: 34px,
+                  fill: {image: {ref: image14989a8d8b1d32dc, sizing: .stretch}},
+                  type: .ellipse
+                }
+              }
+
+              button = frame {
+                height: 100%,
+                display: .none,
+                layout: {
+                  justify-content: .center,
+                  align-items: .center,
+                  item-gap: 4px
+                },
+                fill: colorTokens.colors.red-50,
+                border: colorTokens.colors.red-50,
+                corner-radius: 4px,
+                overflow: .visible,
+                padding: [8px, 16px],
+                children: myButton,
+
+                myButton = text {
+                  fill: colorTokens.colors.neutral-00,
+                  contents: "Ya, Suka!",
+                  font-size: 12,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Medium",
+                  line-height: 1,
+                  align: .center
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    frame738 = frame {
+      width: 316px,
+      display: .none,
+      layout: {
+        justify-content: .space-between,
+        align-items: .center,
+        item-gap: 128px
+      },
+      overflow: .visible,
+      children: [frame737, chevronRight],
+
+      frame737 = frame {
+        layout: {direction: .column},
+        overflow: .visible,
+        children: [butuhBantuan, kunjungiHalamanBantuan],
+
+        butuhBantuan = text {
+          fill: rgb(20%, 20%, 20%),
+          contents: "Butuh Bantuan?",
+          font-size: 16,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.5,
+          align: .center
+        }
+
+        kunjungiHalamanBantuan = text {
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Kunjungi halaman bantuan",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.429,
+          align: .center
+        }
+      }
+
+      chevronRight = asset {
+        width: 24px,
+        height: 24px,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: iconChevronRight3
+      }
+    }
+  }
+}

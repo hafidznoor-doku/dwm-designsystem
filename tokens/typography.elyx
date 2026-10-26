@@ -1,0 +1,32 @@
+// DOKU Mobile Currency type scale (Figma "Typography" page).
+// Components in the source file are set in DIN Next LT Pro; the newer guideline moves to Inter.
+export font-families = tokens {
+  brand: "DIN Next LT Pro",
+  ui: "Inter"
+}
+
+// Font sizes per step: xl 20, lg 16, md 14, sm 12, xs 10.
+export font-sizes = tokens {
+  xl: 20,
+  lg: 16,
+  md: 14,
+  sm: 12,
+  xs: 10
+}
+
+// Line heights as multipliers of the font size (Inter scale: 26/20/20/18/14 px).
+export line-heights = tokens {
+  xl: 1.3,
+  lg: 1.25,
+  md: 1.429,
+  sm: 1.5,
+  xs: 1.4
+}
+
+// Weights available at every step: Regular, Medium, Semi Bold, Bold.
+export font-styles = tokens {
+  regular: "Regular",
+  medium: "Medium",
+  semibold: "Semi Bold",
+  bold: "Bold"
+}

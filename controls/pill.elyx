@@ -1,0 +1,361 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/pan-tool-outlined.svg" as iconPanToolOutlined
+import "resources/assets/icons/payment-outlined.svg" as iconPaymentOutlined
+
+export switch = frame {
+  title: "switch",
+  left: 0px,
+  top: 0px,
+  layout: {direction: .row},
+  overflow: .visible,
+  children: [masterPill, masterPill2],
+
+  masterPill = frame {
+    layout: {justify-content: .center, align-items: .center, item-gap: 10px},
+    fill: colorTokens.colors.neutral-20,
+    corner-radius: 40px,
+    overflow: .visible,
+    padding: [6px, 8px],
+    children: [panTool, qris],
+
+    panTool = asset {
+      width: 12px,
+      height: 12px,
+      fill: colorTokens.colors.red-50,
+      contents: iconPanToolOutlined
+    }
+
+    qris = text {
+      fill: colorTokens.colors.red-50,
+      contents: "QRIS",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      align: .center
+    }
+  }
+
+  masterPill2 = frame {
+    layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+    corner-radius: 40px,
+    overflow: .visible,
+    padding: [6px, 8px],
+    children: [payment, qris],
+
+    payment = asset {
+      width: 12px,
+      height: 12px,
+      fill: colorTokens.colors.neutral-50,
+      contents: iconPaymentOutlined
+    }
+
+    qris = text {
+      fill: colorTokens.colors.neutral-50,
+      contents: "QRIS",
+      font-size: 12,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      align: .center
+    }
+  }
+}
+
+export pillDefaultLarge = frame {
+  title: "_pill / :state=default, Size=Large",
+  left: 0px,
+  top: 154px,
+  height: 32px,
+  layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+  border: colorTokens.colors.neutral-10,
+  corner-radius: 16px,
+  overflow: .visible,
+  padding: [6px, 12px],
+  children: [creditCard, qris],
+
+  creditCard = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-50,
+    contents: iconPaymentOutlined
+  }
+
+  qris = text {
+    fill: colorTokens.colors.neutral-50,
+    contents: "QRIS",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.167,
+    align: .center
+  }
+}
+
+export pillSelectedLarge = frame {
+  title: "_pill / :state=selected, Size=Large",
+  left: 116px,
+  top: 154px,
+  height: 32px,
+  layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+  fill: colorTokens.colors.red-50,
+  corner-radius: 16px,
+  overflow: .visible,
+  padding: [6px, 12px],
+  children: [creditCard, qris],
+
+  creditCard = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconPaymentOutlined
+  }
+
+  qris = text {
+    fill: colorTokens.colors.neutral-00,
+    contents: "QRIS",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.167,
+    align: .center
+  }
+}
+
+export pillDisabledLarge = frame {
+  title: "_pill / :state=disabled, Size=Large",
+  left: 232px,
+  top: 154px,
+  height: 32px,
+  layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+  corner-radius: 16px,
+  overflow: .visible,
+  padding: [6px, 12px],
+  children: [creditCard, qris],
+
+  creditCard = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconPaymentOutlined
+  }
+
+  qris = text {
+    fill: colorTokens.colors.neutral-30,
+    contents: "QRIS",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.167,
+    align: .center
+  }
+}
+
+export pillDefaultMedium = frame {
+  title: "_pill / :state=default, Size=Medium",
+  left: 0px,
+  top: 234px,
+  height: 28px,
+  layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+  border: colorTokens.colors.neutral-10,
+  corner-radius: 16px,
+  overflow: .visible,
+  padding: [6px, 12px],
+  children: [creditCard, qris],
+
+  creditCard = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-50,
+    contents: iconPaymentOutlined
+  }
+
+  qris = text {
+    fill: colorTokens.colors.neutral-50,
+    contents: "QRIS",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.167,
+    align: .center
+  }
+}
+
+export pillSelectedMedium = frame {
+  title: "_pill / :state=selected, Size=Medium",
+  left: 116px,
+  top: 234px,
+  height: 28px,
+  layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+  fill: colorTokens.colors.red-50,
+  corner-radius: 16px,
+  overflow: .visible,
+  padding: [6px, 12px],
+  children: [creditCard, qris],
+
+  creditCard = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-00,
+    contents: iconPaymentOutlined
+  }
+
+  qris = text {
+    fill: colorTokens.colors.neutral-00,
+    contents: "QRIS",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.167,
+    align: .center
+  }
+}
+
+export pillDisabledMedium = frame {
+  title: "_pill / :state=disabled, Size=Medium",
+  left: 232px,
+  top: 234px,
+  height: 28px,
+  layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+  corner-radius: 16px,
+  overflow: .visible,
+  padding: [6px, 12px],
+  children: [creditCard, qris],
+
+  creditCard = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconPaymentOutlined
+  }
+
+  qris = text {
+    fill: colorTokens.colors.neutral-30,
+    contents: "QRIS",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.167,
+    align: .center
+  }
+}
+
+export filterPillDefaultMedium = frame {
+  title: "_filter-pill / Property 1=default, Size=Medium",
+  left: 0px,
+  top: 390px,
+  height: 32px,
+  layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+  fill: colorTokens.colors.neutral-00,
+  border: colorTokens.colors.neutral-20,
+  corner-radius: 16px,
+  overflow: .visible,
+  padding: [6px, 12px],
+  children: [creditCard, qris],
+
+  creditCard = asset {
+    width: 12px,
+    height: 12px,
+    fill: rgb(80%, 80%, 80%),
+    contents: iconPaymentOutlined
+  }
+
+  qris = text {
+    fill: rgb(80%, 80%, 80%),
+    contents: "QRIS",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.167,
+    align: .center
+  }
+}
+
+export filterPillSelectedMedium = frame {
+  title: "_filter-pill / Property 1=selected, Size=Medium",
+  left: 116px,
+  top: 390px,
+  height: 32px,
+  layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+  fill: colorTokens.colors.neutral-20,
+  corner-radius: 16px,
+  overflow: .visible,
+  padding: [6px, 12px],
+  children: [creditCard, qris],
+
+  creditCard = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.red-60,
+    contents: iconPaymentOutlined
+  }
+
+  qris = text {
+    fill: colorTokens.colors.red-60,
+    contents: "QRIS",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.167,
+    align: .center
+  }
+}
+
+export filterPillDefaultLarge = frame {
+  title: "_filter-pill / Property 1=default, Size=Large",
+  left: 0px,
+  top: 470px,
+  height: 40px,
+  layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+  fill: colorTokens.colors.neutral-00,
+  border: colorTokens.colors.neutral-20,
+  corner-radius: 32px,
+  overflow: .visible,
+  padding: [6px, 12px],
+  children: [creditCard, qris],
+
+  creditCard = asset {
+    width: 12px,
+    height: 12px,
+    fill: rgb(80%, 80%, 80%),
+    contents: iconPaymentOutlined
+  }
+
+  qris = text {
+    fill: rgb(80%, 80%, 80%),
+    contents: "QRIS",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.167,
+    align: .center
+  }
+}
+
+export filterPillSelectedLarge = frame {
+  title: "_filter-pill / Property 1=selected, Size=Large",
+  left: 126px,
+  top: 470px,
+  height: 40px,
+  layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+  fill: colorTokens.colors.neutral-20,
+  corner-radius: 32px,
+  overflow: .visible,
+  padding: [6px, 12px],
+  children: [creditCard, qris],
+
+  creditCard = asset {
+    width: 12px,
+    height: 12px,
+    fill: colorTokens.colors.red-60,
+    contents: iconPaymentOutlined
+  }
+
+  qris = text {
+    fill: colorTokens.colors.red-60,
+    contents: "QRIS",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.167,
+    align: .center
+  }
+}

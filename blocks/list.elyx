@@ -1,0 +1,2789 @@
+import "tokens/colors.elyx" as colorTokens
+import "controls/avatar.elyx" as avatarLib
+import "resources/assets/images/38de7ad060c35e61.png" as image38de7ad060c35e61
+import "resources/assets/icons/chevron-right-outlined-3.svg" as iconChevronRightOutlined3
+import "resources/assets/images/c13f6df33a558bc4.png" as imageC13f6df33a558bc4
+import "resources/assets/icons/icon-purchase.svg" as iconIconPurchase
+import "resources/assets/icons/chevron-right-outlined.svg" as iconChevronRightOutlined
+import "resources/assets/icons/line-border.svg" as iconLineBorder
+import "resources/assets/icons/icon-purchase-2.svg" as iconIconPurchase2
+import "resources/assets/images/45c66b6664c652b4.png" as image45c66b6664c652b4
+import "resources/assets/icons/more-vert-outlined.svg" as iconMoreVertOutlined
+import "resources/assets/icons/line-border-2.svg" as iconLineBorder2
+import "resources/assets/icons/frame-2441.svg" as iconFrame2441
+import "resources/assets/icons/line-border-3.svg" as iconLineBorder3
+import "resources/assets/icons/icon-purchase-3.svg" as iconIconPurchase3
+import "resources/assets/icons/frame-2441-2.svg" as iconFrame24412
+import "resources/assets/icons/frame-2441-3.svg" as iconFrame24413
+import "resources/assets/images/1e687f58e0170f69.png" as image1e687f58e0170f69
+import "resources/assets/icons/account-circle-outlined.svg" as iconAccountCircleOutlined
+import "resources/assets/icons/line-border-4.svg" as iconLineBorder4
+import "resources/assets/icons/bank-bca.svg" as iconBankBca
+import "resources/assets/icons/star-border-purple500-outlined.svg" as iconStarBorderPurple500Outlined
+import "resources/assets/icons/line-border-5.svg" as iconLineBorder5
+import "resources/assets/icons/bank-bca-2.svg" as iconBankBca2
+import "resources/assets/icons/bank-bca-3.svg" as iconBankBca3
+import "resources/assets/icons/emoney-doku-3.svg" as iconEmoneyDoku3
+import "resources/assets/icons/icon-purchase-4.svg" as iconIconPurchase4
+import "resources/assets/icons/ellipse-2.svg" as iconEllipse2
+import "resources/assets/icons/frame-300.svg" as iconFrame300
+import "resources/assets/icons/remove-red-eye.svg" as iconRemoveRedEye
+import "resources/assets/icons/ellipse-1.svg" as iconEllipse1
+import "resources/assets/icons/emoney-doku-4.svg" as iconEmoneyDoku4
+import "resources/assets/icons/arrow-forward-ios-outlined.svg" as iconArrowForwardIosOutlined
+
+export ccVisa = frame {
+  title: "cc/visa",
+  left: 0px,
+  top: 0px,
+  width: 44px,
+  height: 32px,
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px
+  },
+  fill: colorTokens.colors.neutral-00,
+  border: colorTokens.colors.neutral-20,
+  corner-radius: 4px,
+  overflow: .visible,
+  padding: [4px, 3px],
+  children: ccVisa,
+
+  ccVisa = frame {
+    width: 38px,
+    height: 16px,
+    children: bitmap,
+
+    bitmap = shape {
+      left: 1.03px,
+      top: 2.2px,
+      width: 36.05px,
+      height: 11.69px,
+      fill: {image: {ref: image38de7ad060c35e61, sizing: .stretch}},
+      type: .rect
+    }
+  }
+}
+
+export list = frame {
+  title: "list",
+  left: 0px,
+  top: 160px,
+  width: 228px,
+  layout: {
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: 16px
+  },
+  overflow: .visible,
+  children: [left, chevronRight],
+
+  left = frame {
+    layout: {align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [frame1, content],
+
+    frame1 = frame {
+      layout: {direction: .column, item-gap: 10px},
+      overflow: .visible,
+      children: ccVisa,
+
+      ccVisa = frame : ::ccVisa {
+        width: .auto,
+        height: .auto,
+        border[0].color: .black
+      }
+    }
+
+    content = frame {
+      layout: {direction: .column},
+      overflow: .visible,
+      children: [title, subtitle],
+
+      title = text {
+        fill: colorTokens.colors.neutral-80,
+        contents: "4*** **** **** 1234",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        letter-spacing: 14.3%
+      }
+
+      subtitle = text {
+        fill: colorTokens.colors.neutral-60,
+        contents: "Carla Wildner",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular"
+      }
+    }
+  }
+
+  chevronRight = asset {
+    width: 16px,
+    height: 16px,
+    fill: colorTokens.colors.neutral-60,
+    contents: iconChevronRightOutlined3
+  }
+}
+
+export ccMastercard = frame {
+  title: "cc/mastercard",
+  left: 0px,
+  top: 328px,
+  width: 44px,
+  height: 32px,
+  layout: {
+    direction: .column,
+    justify-content: .center,
+    align-items: .center,
+    item-gap: 10px
+  },
+  fill: colorTokens.colors.neutral-00,
+  border: colorTokens.colors.neutral-20,
+  corner-radius: 4px,
+  overflow: .visible,
+  padding: [4px, 3px],
+  children: ccMastercard,
+
+  ccMastercard = frame {
+    width: 57px,
+    height: 24px,
+    children: bitmap,
+
+    bitmap = shape {
+      left: 14.98px,
+      top: 1.22px,
+      width: 27.21px,
+      height: 21.39px,
+      fill: {image: {ref: imageC13f6df33a558bc4, sizing: .stretch}},
+      type: .rect
+    }
+  }
+}
+
+export detailTransactions = frame {
+  title: "Detail Transactions",
+  left: 0px,
+  top: 488px,
+  width: 358px,
+  layout: {direction: .column, item-gap: 8px},
+  overflow: .visible,
+  children: [pulsaTelkomsel, listHistoryTransactions],
+
+  pulsaTelkomsel = text {
+    width: 100%,
+    fill: colorTokens.colors.neutral-80,
+    contents: "Pembayaran",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.429
+  }
+
+  listHistoryTransactions = frame : ::listHistoryTransactions {
+    width: 100%,
+
+    container {
+      statusNominal {
+        width: 227px,
+
+        statusTextContainer {
+          width: 227px,
+
+          mohonMaafSaatIni {
+            display: .none
+          }
+        }
+
+        chevronRight {
+          display: .none
+        }
+      }
+
+      logoContent {
+        content {
+          label2019073109052 {
+            display: .none
+          }
+
+          pulsaTelkomsel {
+            contents: "Telkomsel"
+          }
+
+          label201907310905 {
+            contents: "081234567890"
+          }
+        }
+
+        iconLayer {
+          contents: iconIconPurchase
+        }
+      }
+    }
+
+    lineBorder {
+      display: .none
+    }
+  }
+}
+
+export billerName = frame {
+  title: "Biller Name",
+  left: 0px,
+  top: 684px,
+  layout: {direction: .column},
+  overflow: .visible,
+  children: listTransactions,
+
+  listTransactions = frame {
+    width: 100%,
+    layout: {direction: .column},
+    overflow: .visible,
+    padding: [16px, 0px],
+    children: [listItem, lineBorder],
+
+    listItem = frame {
+      width: 100%,
+      layout: {align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      padding: [0px, 16px],
+      children: [left, moreVert],
+
+      left = frame {
+        width: 326px,
+        layout: {align-items: .center, item-gap: 12px},
+        overflow: .visible,
+        children: [avatar, content],
+
+        avatar = frame {
+          width: 36px,
+          height: 36px,
+          overflow: .visible,
+          children: pln,
+
+          pln = shape {
+            left: 0px,
+            top: 0px,
+            width: 36px,
+            height: 36px,
+            fill: {image: {ref: image45c66b6664c652b4, sizing: .stretch}},
+            type: .rect
+          }
+        }
+
+        content = frame {
+          width: 278px,
+          layout: {direction: .column, item-gap: 8px},
+          overflow: .visible,
+          children: [title, container],
+
+          title = text {
+            width: 100%,
+            fill: colorTokens.colors.neutral-80,
+            contents: "Token PLN",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+
+          container = frame {
+            width: 100%,
+            display: .none,
+            layout: {item-gap: 4px},
+            overflow: .visible,
+            children: [subtitle, additionalInfo],
+
+            subtitle = text {
+              fill: colorTokens.colors.neutral-60,
+              contents: "141576291203",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            additionalInfo = frame {
+              display: .none,
+              layout: {align-items: .center, item-gap: 4px},
+              overflow: .visible,
+              children: [subtitle, subtitle2],
+
+              subtitle = text {
+                fill: colorTokens.colors.neutral-60,
+                contents: "|",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.14
+              }
+
+              subtitle2 = text {
+                fill: colorTokens.colors.neutral-60,
+                contents: "4352143457",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.14
+              }
+            }
+          }
+        }
+      }
+
+      moreVert = asset {
+        width: 24px,
+        height: 24px,
+        display: .none,
+        fill: .black,
+        contents: iconMoreVertOutlined
+      }
+    }
+
+    lineBorder = asset {
+      width: 358px,
+      height: 16px,
+      display: .none,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      contents: iconLineBorder2
+    }
+  }
+}
+
+export profileWalletAccount = frame {
+  title: "Profile Wallet Account",
+  left: 0px,
+  top: 880px,
+  layout: {direction: .column},
+  overflow: .visible,
+  children: listTransactions,
+
+  listTransactions = frame : ::listTransactions {
+    listItem {
+      left {
+        width: 326px,
+
+        content {
+          width: 278px,
+
+          container {
+            additionalInfo {
+              display: .none
+            }
+
+            subtitle {
+              contents: "DOKU ID: 1234567890"
+            }
+          }
+        }
+      }
+
+      moreVert {
+        display: .none
+      }
+
+      padding-top: 16px,
+      padding-left: 16px,
+      padding-bottom: 16px,
+      padding-right: 16px
+    }
+
+    lineBorder {
+      display: .none
+    }
+  }
+}
+
+export listBenefit = frame {
+  title: "_list-benefit",
+  left: 0px,
+  top: 1080px,
+  width: 352px,
+  layout: {direction: .column},
+  overflow: .visible,
+  children: [frame33592, lineBorder],
+
+  frame33592 = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    padding: [0px, 16px],
+    children: [frame2441, frame2411],
+
+    frame2441 = asset {
+      width: 40px,
+      height: 40px,
+      contents: iconFrame2441
+    }
+
+    frame2411 = frame {
+      width: 264px,
+      layout: {direction: .column, item-gap: 2px},
+      overflow: .visible,
+      children: [
+        transferDanMintaDana,
+        gratisBiayaTransferBankDanMintaDanaKeSesamaPengguna
+      ],
+
+      transferDanMintaDana = text {
+        width: 100%,
+        fill: rgb(20%, 20%, 20%),
+        contents: "Transfer dan Minta Dana",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.429
+      }
+
+      gratisBiayaTransferBankDanMintaDanaKeSesamaPengguna = text {
+        width: 100%,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: "Gratis biaya transfer bank dan minta dana ke sesama pengguna",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.429
+      }
+    }
+  }
+
+  lineBorder = asset {
+    width: 352px,
+    height: 16px,
+    fill: rgb(91.76%, 92.549%, 94.1176%),
+    contents: iconLineBorder3
+  }
+}
+
+export listItemsHistoryTransaction = frame {
+  title: "List Items / Property 1=history transaction",
+  left: 0px,
+  top: 1286px,
+  width: 362px,
+  layout: {direction: .column, item-gap: 20px},
+  overflow: .visible,
+  children: [pulsaTelkomsel, frame33597],
+
+  pulsaTelkomsel = text {
+    fill: colorTokens.colors.neutral-60,
+    contents: "Minggu, 02 Juli 2023",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.429
+  }
+
+  frame33597 = frame {
+    width: 100%,
+    layout: {direction: .column, item-gap: 16px},
+    overflow: .visible,
+    children: [
+      listHistoryTransactions,
+      listHistoryTransactions2,
+      listHistoryTransactions3
+    ],
+
+    listHistoryTransactions = frame : ::listHistoryTransactions {
+      width: 100%,
+
+      container {
+        logoContent {
+          iconLayer {
+            contents: iconIconPurchase3
+          }
+        }
+      }
+    }
+
+    listHistoryTransactions2 = frame : ::listHistoryTransactions {
+      width: 100%,
+
+      container {
+        logoContent {
+          iconLayer {
+            contents: iconIconPurchase3
+          }
+        }
+      }
+    }
+
+    listHistoryTransactions3 = frame : ::listHistoryTransactions {
+      width: 100%,
+
+      container {
+        logoContent {
+          iconLayer {
+            contents: iconIconPurchase3
+          }
+        }
+      }
+    }
+  }
+}
+
+export listItemsBenefit = frame {
+  title: "List Items / Property 1=benefit",
+  left: 434px,
+  top: 1286px,
+  width: 358px,
+  layout: {direction: .column, item-gap: 16px},
+  corner-radius: 8px,
+  overflow: .visible,
+  children: [listBenefit, listBenefit2, listBenefit3],
+
+  listBenefit = frame : ::listBenefit {
+    frame33592 {
+      frame2411 {
+        width: 270px
+      }
+    }
+  }
+
+  listBenefit2 = frame : ::listBenefit {
+    frame33592 {
+      frame2411 {
+        width: 270px
+      }
+
+      frame2441 {
+        contents: iconFrame24412
+      }
+    }
+  }
+
+  listBenefit3 = frame : ::listBenefit {
+    frame33592 {
+      frame2411 {
+        width: 270px
+      }
+
+      frame2441 {
+        contents: iconFrame24413
+      }
+    }
+
+    lineBorder {
+      display: .none
+    }
+  }
+}
+
+export listItemsTransactionsFavorite = frame {
+  title: "List Items / Property 1=transactions favorite",
+  left: 0px,
+  top: 1621px,
+  width: 358px,
+  layout: {direction: .column, item-gap: 16px},
+  overflow: .visible,
+  padding: [16px, 0px],
+  children: [
+    listTransactions,
+    listTransactions2,
+    listTransactions3,
+    listTransactions4,
+    listTransactions5
+  ],
+
+  listTransactions = frame : ::listTransactions {}
+
+  listTransactions2 = frame : ::listTransactions {}
+
+  listTransactions3 = frame : ::listTransactions {}
+
+  listTransactions4 = frame : ::listTransactions {}
+
+  listTransactions5 = frame : ::listTransactions {
+    lineBorder {
+      display: .none
+    }
+  }
+}
+
+export listItemsFavoriteTransactions = frame {
+  title: "List Items / Property 1=favorite transactions",
+  left: 430px,
+  top: 1621px,
+  width: 358px,
+  layout: {direction: .column, item-gap: 16px},
+  overflow: .visible,
+  padding: [16px, 0px],
+  children: [
+    listTransactions,
+    listTransactions2,
+    listTransactions3,
+    listTransactions4,
+    listTransactions5
+  ],
+
+  listTransactions = frame : ::listTransactions {
+    listItem {
+      left {
+        content {
+          container {
+            additionalInfo {
+              display: .none
+            }
+
+            subtitle {
+              contents: "081234567890"
+            }
+          }
+        }
+      }
+    }
+  }
+
+  listTransactions2 = frame : ::listTransactions {
+    listItem {
+      left {
+        content {
+          container {
+            additionalInfo {
+              display: .none
+            }
+
+            subtitle {
+              contents: "081234567890"
+            }
+          }
+
+          title {
+            contents: "Pulsa Telkomsel Ulfa"
+          }
+        }
+      }
+    }
+  }
+
+  listTransactions3 = frame {
+    width: 100%,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [listItem, lineBorder],
+
+    listItem = frame {
+      width: 100%,
+      layout: {align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      padding: [0px, 16px],
+      children: [left, moreVert],
+
+      left = frame {
+        width: 286px,
+        layout: {align-items: .center, item-gap: 12px},
+        overflow: .visible,
+        children: [avatar, content],
+
+        avatar = frame {
+          width: 36px,
+          height: 36px,
+          overflow: .visible,
+          children: pln,
+
+          pln = shape {
+            left: 0px,
+            top: 0px,
+            width: 36px,
+            height: 36px,
+            fill: {image: {ref: image45c66b6664c652b4, sizing: .stretch}},
+            type: .rect
+          }
+        }
+
+        content = frame {
+          width: 238px,
+          layout: {direction: .column, item-gap: 8px},
+          overflow: .visible,
+          children: [title, container],
+
+          title = text {
+            width: 100%,
+            fill: colorTokens.colors.neutral-80,
+            contents: "Token PLN",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+
+          container = frame {
+            width: 100%,
+            layout: {item-gap: 4px},
+            overflow: .visible,
+            children: [subtitle, additionalInfo],
+
+            subtitle = text {
+              fill: colorTokens.colors.neutral-60,
+              contents: "1415762891203",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            additionalInfo = frame {
+              display: .none,
+              layout: {align-items: .center, item-gap: 4px},
+              overflow: .visible,
+              children: [subtitle, subtitle2],
+
+              subtitle = text {
+                fill: colorTokens.colors.neutral-60,
+                contents: "|",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.14
+              }
+
+              subtitle2 = text {
+                fill: colorTokens.colors.neutral-60,
+                contents: "4352143457",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.14
+              }
+            }
+          }
+        }
+      }
+
+      moreVert = asset {
+        width: 24px,
+        height: 24px,
+        fill: .black,
+        contents: iconMoreVertOutlined
+      }
+    }
+
+    lineBorder = asset {
+      width: 358px,
+      height: 16px,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      contents: iconLineBorder2
+    }
+  }
+
+  listTransactions4 = frame {
+    width: 100%,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [listItem, lineBorder],
+
+    listItem = frame {
+      width: 100%,
+      layout: {align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      padding: [0px, 16px],
+      children: [left, moreVert],
+
+      left = frame {
+        width: 286px,
+        layout: {align-items: .center, item-gap: 12px},
+        overflow: .visible,
+        children: [avatar, content],
+
+        avatar = frame {
+          width: 36px,
+          height: 36px,
+          children: image10,
+
+          image10 = shape {
+            left: 5px,
+            top: 5px,
+            width: 156px,
+            height: 156px,
+            fill: {image: {ref: image1e687f58e0170f69, sizing: .stretch}},
+            type: .rect
+          }
+        }
+
+        content = frame {
+          width: 238px,
+          layout: {direction: .column, item-gap: 8px},
+          overflow: .visible,
+          children: [title, container],
+
+          title = text {
+            width: 100%,
+            fill: colorTokens.colors.neutral-80,
+            contents: "XL",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+
+          container = frame {
+            width: 100%,
+            layout: {item-gap: 4px},
+            overflow: .visible,
+            children: [subtitle, additionalInfo],
+
+            subtitle = text {
+              fill: colorTokens.colors.neutral-60,
+              contents: "081234567890",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            additionalInfo = frame {
+              display: .none,
+              layout: {align-items: .center, item-gap: 4px},
+              overflow: .visible,
+              children: [subtitle, subtitle2],
+
+              subtitle = text {
+                fill: colorTokens.colors.neutral-60,
+                contents: "|",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.14
+              }
+
+              subtitle2 = text {
+                fill: colorTokens.colors.neutral-60,
+                contents: "4352143457",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.14
+              }
+            }
+          }
+        }
+      }
+
+      moreVert = asset {
+        width: 24px,
+        height: 24px,
+        fill: .black,
+        contents: iconMoreVertOutlined
+      }
+    }
+
+    lineBorder = asset {
+      width: 358px,
+      height: 16px,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      contents: iconLineBorder2
+    }
+  }
+
+  listTransactions5 = frame : ::listTransactions {
+    listItem {
+      left {
+        content {
+          container {
+            additionalInfo {
+              display: .none
+            }
+
+            subtitle {
+              contents: "081234567890"
+            }
+          }
+
+          title {
+            contents: "John Doe"
+          }
+        }
+      }
+    }
+
+    lineBorder {
+      display: .none
+    }
+  }
+}
+
+export listItemsTransferContact = frame {
+  title: "List Items / Property 1=transfer contact",
+  left: 0px,
+  top: 2053px,
+  width: 363px,
+  layout: {direction: .column, item-gap: 16px},
+  overflow: .visible,
+  padding: [16px, 0px],
+  children: [
+    listTransactions,
+    listTransactions2,
+    listTransactions3,
+    listTransactions4,
+    listTransactions5
+  ],
+
+  listTransactions = frame {
+    width: 100%,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [listItem, lineBorder],
+
+    listItem = frame {
+      width: 100%,
+      layout: {align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      padding: [0px, 16px],
+      children: [left, moreVert],
+
+      left = frame {
+        width: 331px,
+        layout: {align-items: .center, item-gap: 12px},
+        overflow: .visible,
+        children: [avatar, content],
+
+        avatar = asset {
+          width: 36px,
+          height: 36px,
+          fill: colorTokens.colors.red-50,
+          contents: iconAccountCircleOutlined
+        }
+
+        content = frame {
+          width: 283px,
+          layout: {direction: .column, item-gap: 8px},
+          overflow: .visible,
+          children: [title, container],
+
+          title = text {
+            width: 100%,
+            fill: colorTokens.colors.neutral-80,
+            contents: "Tatiana Dorwart",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+
+          container = frame {
+            width: 100%,
+            layout: {item-gap: 4px},
+            overflow: .visible,
+            children: [subtitle, additionalInfo],
+
+            subtitle = text {
+              fill: colorTokens.colors.neutral-60,
+              contents: "081293017751",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            additionalInfo = frame {
+              display: .none,
+              layout: {align-items: .center, item-gap: 4px},
+              overflow: .visible,
+              children: [subtitle, subtitle2],
+
+              subtitle = text {
+                fill: colorTokens.colors.neutral-60,
+                contents: "|",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.14
+              }
+
+              subtitle2 = text {
+                fill: colorTokens.colors.neutral-60,
+                contents: "4352143457",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.14
+              }
+            }
+          }
+        }
+      }
+
+      moreVert = asset {
+        width: 24px,
+        height: 24px,
+        display: .none,
+        fill: .black,
+        contents: iconMoreVertOutlined
+      }
+    }
+
+    lineBorder = asset {
+      width: 363px,
+      height: 16px,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      contents: iconLineBorder4
+    }
+  }
+
+  listTransactions2 = frame {
+    width: 100%,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [listItem, lineBorder],
+
+    listItem = frame {
+      width: 100%,
+      layout: {align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      padding: [0px, 16px],
+      children: [left, moreVert],
+
+      left = frame {
+        width: 331px,
+        layout: {align-items: .center, item-gap: 12px},
+        overflow: .visible,
+        children: [avatar, content],
+
+        avatar = asset {
+          width: 36px,
+          height: 36px,
+          fill: colorTokens.colors.red-50,
+          contents: iconAccountCircleOutlined
+        }
+
+        content = frame {
+          width: 283px,
+          layout: {direction: .column, item-gap: 8px},
+          overflow: .visible,
+          children: [title, container],
+
+          title = text {
+            width: 100%,
+            fill: colorTokens.colors.neutral-80,
+            contents: "Tatiana Dorwart",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+
+          container = frame {
+            width: 100%,
+            layout: {item-gap: 4px},
+            overflow: .visible,
+            children: [subtitle, additionalInfo],
+
+            subtitle = text {
+              fill: colorTokens.colors.neutral-60,
+              contents: "081293017751",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            additionalInfo = frame {
+              display: .none,
+              layout: {align-items: .center, item-gap: 4px},
+              overflow: .visible,
+              children: [subtitle, subtitle2],
+
+              subtitle = text {
+                fill: colorTokens.colors.neutral-60,
+                contents: "|",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.14
+              }
+
+              subtitle2 = text {
+                fill: colorTokens.colors.neutral-60,
+                contents: "4352143457",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.14
+              }
+            }
+          }
+        }
+      }
+
+      moreVert = asset {
+        width: 24px,
+        height: 24px,
+        display: .none,
+        fill: .black,
+        contents: iconMoreVertOutlined
+      }
+    }
+
+    lineBorder = asset {
+      width: 363px,
+      height: 16px,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      contents: iconLineBorder4
+    }
+  }
+
+  listTransactions3 = frame {
+    width: 100%,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [listItem, lineBorder],
+
+    listItem = frame {
+      width: 100%,
+      layout: {align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      padding: [0px, 16px],
+      children: [left, moreVert],
+
+      left = frame {
+        width: 331px,
+        layout: {align-items: .center, item-gap: 12px},
+        overflow: .visible,
+        children: [avatar, content],
+
+        avatar = asset {
+          width: 36px,
+          height: 36px,
+          fill: colorTokens.colors.red-50,
+          contents: iconAccountCircleOutlined
+        }
+
+        content = frame {
+          width: 283px,
+          layout: {direction: .column, item-gap: 8px},
+          overflow: .visible,
+          children: [title, container],
+
+          title = text {
+            width: 100%,
+            fill: colorTokens.colors.neutral-80,
+            contents: "Tatiana Dorwart",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+
+          container = frame {
+            width: 100%,
+            layout: {item-gap: 4px},
+            overflow: .visible,
+            children: [subtitle, additionalInfo],
+
+            subtitle = text {
+              fill: colorTokens.colors.neutral-60,
+              contents: "081293017751",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            additionalInfo = frame {
+              display: .none,
+              layout: {align-items: .center, item-gap: 4px},
+              overflow: .visible,
+              children: [subtitle, subtitle2],
+
+              subtitle = text {
+                fill: colorTokens.colors.neutral-60,
+                contents: "|",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.14
+              }
+
+              subtitle2 = text {
+                fill: colorTokens.colors.neutral-60,
+                contents: "4352143457",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.14
+              }
+            }
+          }
+        }
+      }
+
+      moreVert = asset {
+        width: 24px,
+        height: 24px,
+        display: .none,
+        fill: .black,
+        contents: iconMoreVertOutlined
+      }
+    }
+
+    lineBorder = asset {
+      width: 363px,
+      height: 16px,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      contents: iconLineBorder4
+    }
+  }
+
+  listTransactions4 = frame {
+    width: 100%,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [listItem, lineBorder],
+
+    listItem = frame {
+      width: 100%,
+      layout: {align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      padding: [0px, 16px],
+      children: [left, moreVert],
+
+      left = frame {
+        width: 331px,
+        layout: {align-items: .center, item-gap: 12px},
+        overflow: .visible,
+        children: [avatar, content],
+
+        avatar = asset {
+          width: 36px,
+          height: 36px,
+          fill: colorTokens.colors.red-50,
+          contents: iconAccountCircleOutlined
+        }
+
+        content = frame {
+          width: 283px,
+          layout: {direction: .column, item-gap: 8px},
+          overflow: .visible,
+          children: [title, container],
+
+          title = text {
+            width: 100%,
+            fill: colorTokens.colors.neutral-80,
+            contents: "Tatiana Dorwart",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+
+          container = frame {
+            width: 100%,
+            layout: {item-gap: 4px},
+            overflow: .visible,
+            children: [subtitle, additionalInfo],
+
+            subtitle = text {
+              fill: colorTokens.colors.neutral-60,
+              contents: "081293017751",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            additionalInfo = frame {
+              display: .none,
+              layout: {align-items: .center, item-gap: 4px},
+              overflow: .visible,
+              children: [subtitle, subtitle2],
+
+              subtitle = text {
+                fill: colorTokens.colors.neutral-60,
+                contents: "|",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.14
+              }
+
+              subtitle2 = text {
+                fill: colorTokens.colors.neutral-60,
+                contents: "4352143457",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.14
+              }
+            }
+          }
+        }
+      }
+
+      moreVert = asset {
+        width: 24px,
+        height: 24px,
+        display: .none,
+        fill: .black,
+        contents: iconMoreVertOutlined
+      }
+    }
+
+    lineBorder = asset {
+      width: 363px,
+      height: 16px,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      contents: iconLineBorder4
+    }
+  }
+
+  listTransactions5 = frame {
+    width: 100%,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [listItem, lineBorder],
+
+    listItem = frame {
+      width: 100%,
+      layout: {align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      padding: [0px, 16px],
+      children: [left, moreVert],
+
+      left = frame {
+        width: 331px,
+        layout: {align-items: .center, item-gap: 12px},
+        overflow: .visible,
+        children: [avatar, content],
+
+        avatar = asset {
+          width: 36px,
+          height: 36px,
+          fill: colorTokens.colors.red-50,
+          contents: iconAccountCircleOutlined
+        }
+
+        content = frame {
+          width: 283px,
+          layout: {direction: .column, item-gap: 8px},
+          overflow: .visible,
+          children: [title, container],
+
+          title = text {
+            width: 100%,
+            fill: colorTokens.colors.neutral-80,
+            contents: "Tatiana Dorwart",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+
+          container = frame {
+            width: 100%,
+            layout: {item-gap: 4px},
+            overflow: .visible,
+            children: [subtitle, additionalInfo],
+
+            subtitle = text {
+              fill: colorTokens.colors.neutral-60,
+              contents: "081293017751",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            additionalInfo = frame {
+              display: .none,
+              layout: {align-items: .center, item-gap: 4px},
+              overflow: .visible,
+              children: [subtitle, subtitle2],
+
+              subtitle = text {
+                fill: colorTokens.colors.neutral-60,
+                contents: "|",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.14
+              }
+
+              subtitle2 = text {
+                fill: colorTokens.colors.neutral-60,
+                contents: "4352143457",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.14
+              }
+            }
+          }
+        }
+      }
+
+      moreVert = asset {
+        width: 24px,
+        height: 24px,
+        display: .none,
+        fill: .black,
+        contents: iconMoreVertOutlined
+      }
+    }
+
+    lineBorder = asset {
+      width: 358px,
+      height: 16px,
+      display: .none,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      contents: iconLineBorder2
+    }
+  }
+}
+
+export listItemsDestinationBank = frame {
+  title: "List Items / Property 1=destination bank",
+  left: 436px,
+  top: 2053px,
+  width: 359px,
+  layout: {direction: .column, item-gap: 16px},
+  overflow: .visible,
+  padding: [16px, 0px],
+  children: [
+    listPaymentChannel,
+    listPaymentChannel2,
+    listPaymentChannel3,
+    listPaymentChannel4,
+    listPaymentChannel5
+  ],
+
+  listPaymentChannel = frame : ::listPaymentChannel {
+    width: 100%,
+
+    container {
+      logoContent {
+        width: 327px,
+
+        content {
+          width: 279px,
+
+          name {
+            display: .none
+          }
+
+          container {
+            accountNumber {
+              display: .none
+            }
+          }
+        }
+
+        bankLogo {
+          contents: iconBankBca
+        }
+      }
+
+      starBorderPurple500 {
+        display: .none
+      }
+
+      padding-top: 0px,
+      padding-left: 16px,
+      padding-bottom: 0px,
+      padding-right: 16px
+    }
+  }
+
+  listPaymentChannel2 = frame : ::listPaymentChannel {
+    width: 100%,
+
+    container {
+      logoContent {
+        width: 327px,
+
+        content {
+          width: 279px,
+
+          name {
+            display: .none
+          }
+
+          container {
+            accountNumber {
+              display: .none
+            }
+
+            bankName {
+              contents: "BRI"
+            }
+          }
+        }
+
+        bankLogo {
+          contents: iconBankBca
+        }
+      }
+
+      starBorderPurple500 {
+        display: .none
+      }
+
+      padding-top: 0px,
+      padding-left: 16px,
+      padding-bottom: 0px,
+      padding-right: 16px
+    }
+  }
+
+  listPaymentChannel3 = frame : ::listPaymentChannel {
+    width: 100%,
+
+    container {
+      logoContent {
+        width: 327px,
+
+        content {
+          width: 279px,
+
+          name {
+            display: .none
+          }
+
+          container {
+            accountNumber {
+              display: .none
+            }
+
+            bankName {
+              contents: "BNI"
+            }
+          }
+        }
+
+        bankLogo {
+          contents: iconBankBca
+        }
+      }
+
+      starBorderPurple500 {
+        display: .none
+      }
+
+      padding-top: 0px,
+      padding-left: 16px,
+      padding-bottom: 0px,
+      padding-right: 16px
+    }
+  }
+
+  listPaymentChannel4 = frame : ::listPaymentChannel {
+    width: 100%,
+
+    container {
+      logoContent {
+        width: 327px,
+
+        content {
+          width: 279px,
+
+          name {
+            display: .none
+          }
+
+          container {
+            accountNumber {
+              display: .none
+            }
+
+            bankName {
+              contents: "Mandiri"
+            }
+          }
+        }
+
+        bankLogo {
+          contents: iconBankBca
+        }
+      }
+
+      starBorderPurple500 {
+        display: .none
+      }
+
+      padding-top: 0px,
+      padding-left: 16px,
+      padding-bottom: 0px,
+      padding-right: 16px
+    }
+  }
+
+  listPaymentChannel5 = frame : ::listPaymentChannel {
+    width: 100%,
+
+    container {
+      logoContent {
+        width: 327px,
+
+        content {
+          width: 279px,
+
+          name {
+            display: .none
+          }
+
+          container {
+            accountNumber {
+              display: .none
+            }
+
+            bankName {
+              contents: "CIMB Niaga"
+            }
+          }
+        }
+
+        bankLogo {
+          contents: iconBankBca
+        }
+      }
+
+      starBorderPurple500 {
+        display: .none
+      }
+
+      padding-top: 0px,
+      padding-left: 16px,
+      padding-bottom: 0px,
+      padding-right: 16px
+    }
+
+    lineBorder {
+      display: .none
+    }
+  }
+}
+
+export listItemsTransferWallet = frame {
+  title: "List Items / Property 1=transfer wallet",
+  left: 0px,
+  top: 2485px,
+  width: 359px,
+  layout: {direction: .column, item-gap: 16px},
+  overflow: .visible,
+  padding: 16px,
+  children: [listPaymentChannel, listPaymentChannel2, listPaymentChannel3],
+
+  listPaymentChannel = frame : ::listPaymentChannel {
+    width: 100%,
+
+    container {
+      logoContent {
+        width: 327px,
+
+        content {
+          width: 279px
+        }
+
+        bankLogo {
+          contents: iconBankBca3
+        }
+      }
+
+      starBorderPurple500 {
+        display: .none
+      }
+    }
+  }
+
+  listPaymentChannel2 = frame : ::listPaymentChannel {
+    width: 100%,
+
+    container {
+      logoContent {
+        width: 327px,
+
+        content {
+          width: 279px
+        }
+
+        bankLogo {
+          contents: iconBankBca3
+        }
+      }
+
+      starBorderPurple500 {
+        display: .none
+      }
+    }
+  }
+
+  listPaymentChannel3 = frame : ::listPaymentChannel {
+    width: 100%,
+
+    container {
+      logoContent {
+        width: 327px,
+
+        content {
+          width: 279px
+        }
+
+        bankLogo {
+          contents: iconBankBca3
+        }
+      }
+
+      starBorderPurple500 {
+        display: .none
+      }
+    }
+
+    lineBorder {
+      display: .none
+    }
+  }
+}
+
+export listItemsHistoryTransfers = frame {
+  title: "List Items / Property 1=history transfers",
+  left: 431px,
+  top: 2485px,
+  width: 359px,
+  layout: {direction: .column, item-gap: 16px},
+  overflow: .visible,
+  padding: 16px,
+  children: [
+    listPaymentChannel,
+    listPaymentChannel2,
+    listPaymentChannel3,
+    listPaymentChannel4,
+    listPaymentChannel5
+  ],
+
+  listPaymentChannel = frame : ::listPaymentChannel {
+    width: 100%,
+
+    container {
+      logoContent {
+        bankLogo {
+          fill[0].color: colorTokens.colors.red-50,
+          contents: iconEmoneyDoku3
+        }
+
+        width: 287px,
+
+        content {
+          width: 239px,
+
+          container {
+            accountNumber {
+              display: .none
+            }
+
+            bankName {
+              contents: "081234567890"
+            }
+          }
+        }
+      }
+    }
+  }
+
+  listPaymentChannel2 = frame : ::listPaymentChannel {
+    width: 100%,
+
+    container {
+      logoContent {
+        width: 287px,
+
+        content {
+          width: 239px,
+
+          name {
+            contents: "Ulfa Intania"
+          }
+
+          container {
+            bankName {
+              contents: "Mandiri"
+            }
+          }
+        }
+
+        bankLogo {
+          contents: iconBankBca
+        }
+      }
+    }
+  }
+
+  listPaymentChannel3 = frame : ::listPaymentChannel {
+    width: 100%,
+
+    container {
+      logoContent {
+        width: 287px,
+
+        content {
+          width: 239px,
+
+          name {
+            contents: "Palti Gorat"
+          }
+        }
+
+        bankLogo {
+          contents: iconBankBca
+        }
+      }
+    }
+  }
+
+  listPaymentChannel4 = frame : ::listPaymentChannel {
+    width: 100%,
+
+    container {
+      logoContent {
+        width: 287px,
+
+        content {
+          width: 239px,
+
+          name {
+            contents: "Shabrina Safira"
+          }
+        }
+
+        bankLogo {
+          contents: iconBankBca
+        }
+      }
+    }
+  }
+
+  listPaymentChannel5 = frame : ::listPaymentChannel {
+    width: 100%,
+
+    container {
+      logoContent {
+        bankLogo {
+          fill[0].color: colorTokens.colors.red-50,
+          contents: iconEmoneyDoku3
+        }
+
+        width: 287px,
+
+        content {
+          width: 239px,
+
+          container {
+            accountNumber {
+              display: .none
+            }
+
+            bankName {
+              contents: "081234567890"
+            }
+          }
+
+          name {
+            contents: "Yerikho Ristian"
+          }
+        }
+      }
+    }
+  }
+}
+
+export listItemsHelpCenteTransaction = frame {
+  title: "List Items / Property 1=help cente transaction",
+  left: 0px,
+  top: 2912px,
+  layout: {align-items: .center, item-gap: 22px},
+  overflow: .visible,
+  children: [frame33606, frame33607, frame33608],
+
+  frame33606 = frame {
+    width: 260px,
+    layout: {direction: .column, item-gap: 4px},
+    fill: colorTokens.colors.neutral-background,
+    border: colorTokens.colors.neutral-20,
+    corner-radius: 8px,
+    overflow: .visible,
+    padding: 12px,
+    children: [bankCimbNiaga14, listHistoryTransactions],
+
+    bankCimbNiaga14 = text {
+      fill: rgb(80%, 80%, 80%),
+      contents: "06 Desember 2021",
+      font-size: 11,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.455
+    }
+
+    listHistoryTransactions = frame : ::listHistoryTransactions {
+      width: 100%,
+
+      container {
+        statusNominal {
+          width: 105px,
+
+          statusTextContainer {
+            width: 105px
+          }
+
+          chevronRight {
+            display: .none
+          }
+        }
+
+        logoContent {
+          content {
+            label2019073109052 {
+              display: .none
+            }
+
+            pulsaTelkomsel {
+              contents: "Telkomsel"
+            }
+
+            label201907310905 {
+              contents: "081234567890"
+            }
+          }
+
+          iconLayer {
+            contents: iconIconPurchase
+          }
+        }
+      }
+
+      lineBorder {
+        display: .none
+      }
+    }
+  }
+
+  frame33607 = frame {
+    width: 260px,
+    layout: {direction: .column, item-gap: 4px},
+    fill: colorTokens.colors.neutral-background,
+    border: colorTokens.colors.neutral-20,
+    corner-radius: 8px,
+    overflow: .visible,
+    padding: 12px,
+    children: [bankCimbNiaga14, listHistoryTransactions],
+
+    bankCimbNiaga14 = text {
+      fill: rgb(80%, 80%, 80%),
+      contents: "06 Desember 2021",
+      font-size: 11,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.455
+    }
+
+    listHistoryTransactions = frame : ::listHistoryTransactions {
+      width: 100%,
+
+      container {
+        statusNominal {
+          width: 105px,
+
+          statusTextContainer {
+            width: 105px
+          }
+
+          chevronRight {
+            display: .none
+          }
+        }
+
+        logoContent {
+          content {
+            label2019073109052 {
+              display: .none
+            }
+
+            pulsaTelkomsel {
+              contents: "Telkomsel"
+            }
+
+            label201907310905 {
+              contents: "081234567890"
+            }
+          }
+
+          iconLayer {
+            contents: iconIconPurchase4
+          }
+        }
+      }
+
+      lineBorder {
+        display: .none
+      }
+    }
+  }
+
+  frame33608 = frame {
+    width: 260px,
+    layout: {direction: .column, item-gap: 4px},
+    fill: colorTokens.colors.neutral-background,
+    border: colorTokens.colors.neutral-20,
+    corner-radius: 8px,
+    overflow: .visible,
+    padding: 12px,
+    children: [bankCimbNiaga14, listHistoryTransactions],
+
+    bankCimbNiaga14 = text {
+      fill: rgb(80%, 80%, 80%),
+      contents: "06 Desember 2021",
+      font-size: 10,
+      font-family: "DIN Next LT Pro",
+      font-style: "Regular",
+      line-height: 1.2
+    }
+
+    listHistoryTransactions = frame : ::listHistoryTransactions {
+      width: 100%,
+
+      container {
+        statusNominal {
+          width: 105px,
+
+          statusTextContainer {
+            width: 105px
+          }
+
+          chevronRight {
+            display: .none
+          }
+        }
+
+        logoContent {
+          content {
+            label2019073109052 {
+              display: .none
+            }
+
+            pulsaTelkomsel {
+              contents: "Telkomsel"
+            }
+
+            label201907310905 {
+              contents: "081234567890"
+            }
+          }
+
+          iconLayer {
+            contents: iconIconPurchase4
+          }
+        }
+      }
+
+      lineBorder {
+        display: .none
+      }
+    }
+  }
+}
+
+export listHistoryTransactions = frame {
+  title: "_list-history-transactions",
+  left: 0px,
+  top: 3126.03px,
+  width: 362px,
+  layout: {direction: .column, justify-content: .center},
+  overflow: .visible,
+  children: [container, lineBorder],
+
+  container = frame {
+    width: 100%,
+    layout: {justify-content: .space-between, align-items: .center},
+    overflow: .visible,
+    children: [logoContent, statusNominal],
+
+    logoContent = frame {
+      layout: {align-items: .center, item-gap: 12px},
+      overflow: .visible,
+      children: [iconLayer, content],
+
+      iconLayer = asset {
+        width: 40px,
+        height: 40px,
+        contents: iconIconPurchase2
+      }
+
+      content = frame {
+        layout: {direction: .column, item-gap: 4px},
+        overflow: .visible,
+        children: [pulsaTelkomsel, label201907310905, label2019073109052],
+
+        pulsaTelkomsel = text {
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "QRIS",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium"
+        }
+
+        label201907310905 = text {
+          fill: rgb(60%, 60%, 60%),
+          contents: "Kafe Gamat",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.33
+        }
+
+        label2019073109052 = text {
+          fill: rgb(70.1961%, 70.1961%, 70.1961%),
+          contents: "07 Juli 2023 - 08:08",
+          font-size: 10,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.2
+        }
+      }
+    }
+
+    statusNominal = frame {
+      width: 224px,
+      layout: {justify-content: .end, align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [statusTextContainer, chevronRight],
+
+      statusTextContainer = frame {
+        width: 196px,
+        height: 100%,
+        layout: {
+          direction: .column,
+          justify-content: .center,
+          align-items: .end,
+          item-gap: 2px
+        },
+        overflow: .visible,
+        children: [mohonMaafSaatIni, rp100000],
+
+        mohonMaafSaatIni = text {
+          width: 100%,
+          height: 22.03px,
+          fill: colorTokens.colors.green-40,
+          contents: "Sukses",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1,
+          align: .right,
+          vertical-align: .center
+        }
+
+        rp100000 = text {
+          width: 100%,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "- Rp54.000",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Bold",
+          line-height: 1.429,
+          align: .right
+        }
+      }
+
+      chevronRight = asset {
+        width: 24px,
+        height: 24px,
+        fill: rgb(60%, 60%, 60%),
+        contents: iconChevronRightOutlined
+      }
+    }
+  }
+
+  lineBorder = asset {
+    width: 362px,
+    height: 16px,
+    fill: rgb(91.76%, 92.549%, 94.1176%),
+    contents: iconLineBorder
+  }
+}
+
+export cardInfoSaldo = frame {
+  title: "Card Info Saldo",
+  left: 0px,
+  top: 3323.03px,
+  width: 358px,
+  layout: {align-items: .center, item-gap: 12px},
+  fill: colorTokens.colors.neutral-00,
+  border: colorTokens.colors.neutral-10,
+  shadow: [
+    {
+      drop-shadow: {
+        color: rgb(7.84%, 7.84%, 7.84%, 7.84%),
+        offset: point(0px, 4px),
+        blur-radius: 12px,
+        spread: 2px
+      }
+    },
+    {
+      drop-shadow: {
+        color: rgb(7.84%, 7.84%, 7.84%, 12.1569%),
+        offset: point(0px, 0px),
+        blur-radius: 1px
+      }
+    }
+  ],
+  corner-radius: 8px,
+  padding: 12px,
+  children: [ellipse2, frame300, frame8, ellipse1],
+
+  ellipse2 = asset {
+    left: 0px,
+    top: 0px,
+    width: 238px,
+    height: 62px,
+    display: .none,
+    transform: [-0.866, 0.5, 405.11, -0.5, -0.866, 91.69],
+    ignore-stack: .true,
+    contents: iconEllipse2
+  }
+
+  frame300 = asset {
+    width: 32px,
+    height: 32px,
+    contents: iconFrame300
+  }
+
+  frame8 = frame {
+    width: 290px,
+    layout: {direction: .column, item-gap: 4px},
+    overflow: .visible,
+    children: [frame2, frame14232],
+
+    frame2 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: saldoDokuEWallet,
+
+      saldoDokuEWallet = text {
+        fill: rgb(20.39%, 25.098%, 32.94%),
+        contents: "Saldo DOKU e-Wallet",
+        font-size: 12,
+        font-family: "Inter",
+        font-style: "Regular",
+        line-height: 1.33
+      }
+    }
+
+    frame14232 = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [rp898931, removeRedEye],
+
+      rp898931 = text {
+        fill: rgb(20.39%, 25.098%, 32.94%),
+        contents: "Rp898.931",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.14
+      }
+
+      removeRedEye = asset {
+        width: 24px,
+        height: 24px,
+        display: .none,
+        fill: rgb(19.6078%, 19.6078%, 19.6078%),
+        contents: iconRemoveRedEye
+      }
+    }
+  }
+
+  ellipse1 = asset {
+    left: -27.51px,
+    top: -49px,
+    width: 410px,
+    height: 107px,
+    display: .none,
+    ignore-stack: .true,
+    contents: iconEllipse1
+  }
+}
+
+export listTransactions = frame {
+  title: "_list-transactions",
+  left: 0px,
+  top: 3515.03px,
+  width: 358px,
+  layout: {direction: .column},
+  overflow: .visible,
+  children: [listItem, lineBorder],
+
+  listItem = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    padding: [0px, 16px],
+    children: [left, moreVert],
+
+    left = frame {
+      width: 286px,
+      layout: {align-items: .center, item-gap: 12px},
+      overflow: .visible,
+      children: [avatar, content],
+
+      avatar = frame : avatarLib.avatarMale {
+        width: 36px,
+        height: 36px,
+
+        ava14 {
+          left: -0.95px,
+          top: -0.95px,
+          width: 38.84px,
+          height: 38.84px
+        }
+      }
+
+      content = frame {
+        width: 238px,
+        layout: {direction: .column, item-gap: 8px},
+        overflow: .visible,
+        children: [title, container],
+
+        title = text {
+          width: 100%,
+          fill: colorTokens.colors.neutral-80,
+          contents: "Tatiana Dorwart",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.14
+        }
+
+        container = frame {
+          width: 100%,
+          layout: {item-gap: 4px},
+          overflow: .visible,
+          children: [subtitle, additionalInfo],
+
+          subtitle = text {
+            fill: colorTokens.colors.neutral-60,
+            contents: "Bank Mandiri",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.14
+          }
+
+          additionalInfo = frame {
+            layout: {align-items: .center, item-gap: 4px},
+            overflow: .visible,
+            children: [subtitle, subtitle2],
+
+            subtitle = text {
+              fill: colorTokens.colors.neutral-60,
+              contents: "|",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            subtitle2 = text {
+              fill: colorTokens.colors.neutral-60,
+              contents: "4352143457",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+          }
+        }
+      }
+    }
+
+    moreVert = asset {
+      width: 24px,
+      height: 24px,
+      fill: .black,
+      contents: iconMoreVertOutlined
+    }
+  }
+
+  lineBorder = asset {
+    width: 358px,
+    height: 16px,
+    fill: rgb(91.76%, 92.549%, 94.1176%),
+    contents: iconLineBorder2
+  }
+}
+
+export profileReceiverAccount = frame {
+  title: "Profile Receiver Account",
+  left: 0px,
+  top: 3707.03px,
+  width: 358px,
+  layout: {direction: .column, item-gap: 8px},
+  fill: colorTokens.colors.blue-05,
+  corner-radius: [8px, 8px, 0px, 0px],
+  overflow: .visible,
+  padding: 16px,
+  children: [transferKe, listTransactions],
+
+  transferKe = text {
+    width: 314px,
+    fill: colorTokens.colors.neutral-70,
+    contents: "Transfer ke",
+    font-size: 14,
+    font-family: "DIN Next LT Pro",
+    font-style: "Regular",
+    line-height: 1.14
+  }
+
+  listTransactions = frame {
+    width: 100%,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [listItem, lineBorder],
+
+    listItem = frame {
+      width: 100%,
+      layout: {align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [left, moreVert],
+
+      left = frame {
+        width: 326px,
+        layout: {align-items: .center, item-gap: 12px},
+        overflow: .visible,
+        children: [avatar, content],
+
+        avatar = asset {
+          width: 36px,
+          height: 36px,
+          fill: colorTokens.colors.red-50,
+          contents: iconEmoneyDoku4
+        }
+
+        content = frame {
+          width: 278px,
+          layout: {direction: .column, item-gap: 8px},
+          overflow: .visible,
+          children: [title, container],
+
+          title = text {
+            width: 100%,
+            fill: colorTokens.colors.neutral-80,
+            contents: "Tatiana Dorwart",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.14
+          }
+
+          container = frame {
+            width: 100%,
+            layout: {item-gap: 4px},
+            overflow: .visible,
+            children: [subtitle, additionalInfo],
+
+            subtitle = text {
+              fill: colorTokens.colors.neutral-60,
+              contents: "081234567890",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+
+            additionalInfo = frame {
+              display: .none,
+              layout: {align-items: .center, item-gap: 4px},
+              overflow: .visible,
+              children: [subtitle, subtitle2],
+
+              subtitle = text {
+                fill: colorTokens.colors.neutral-60,
+                contents: "|",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.14
+              }
+
+              subtitle2 = text {
+                fill: colorTokens.colors.neutral-60,
+                contents: "4352143457",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Regular",
+                line-height: 1.14
+              }
+            }
+          }
+        }
+      }
+
+      moreVert = asset {
+        width: 24px,
+        height: 24px,
+        display: .none,
+        fill: .black,
+        contents: iconMoreVertOutlined
+      }
+    }
+
+    lineBorder = asset {
+      width: 358px,
+      height: 16px,
+      display: .none,
+      fill: rgb(91.76%, 92.549%, 94.1176%),
+      contents: iconLineBorder2
+    }
+  }
+}
+
+export listPaymentChannel = frame {
+  title: "_list-payment-channel",
+  left: 0px,
+  top: 3935.03px,
+  width: 359px,
+  layout: {direction: .column},
+  overflow: .visible,
+  children: [container, lineBorder],
+
+  container = frame {
+    width: 100%,
+    layout: {align-items: .center, item-gap: 16px},
+    overflow: .visible,
+    children: [logoContent, starBorderPurple500],
+
+    logoContent = frame {
+      width: 319px,
+      layout: {align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [bankLogo, content],
+
+      bankLogo = asset {
+        width: 32px,
+        height: 32px,
+        contents: iconBankBca2
+      }
+
+      content = frame {
+        width: 271px,
+        layout: {direction: .column, item-gap: 4px},
+        overflow: .visible,
+        children: [name, container],
+
+        name = text {
+          width: 100%,
+          fill: colorTokens.colors.neutral-80,
+          contents: "Safira Maulidina",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.429
+        }
+
+        container = frame {
+          width: 100%,
+          layout: {item-gap: 4px},
+          overflow: .visible,
+          children: [bankName, accountNumber],
+
+          bankName = text {
+            fill: colorTokens.colors.neutral-70,
+            contents: "BCA",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          accountNumber = frame {
+            layout: {align-items: .center, item-gap: 4px},
+            overflow: .visible,
+            children: [separator, accountNumber],
+
+            separator = text {
+              fill: colorTokens.colors.neutral-70,
+              contents: "|",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.429
+            }
+
+            accountNumber = text {
+              fill: colorTokens.colors.neutral-70,
+              contents: "1514761927",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.429
+            }
+          }
+        }
+      }
+    }
+
+    starBorderPurple500 = asset {
+      width: 24px,
+      height: 24px,
+      fill: rgb(100%, 80.39%, 23.5294%),
+      contents: iconStarBorderPurple500Outlined
+    }
+  }
+
+  lineBorder = asset {
+    width: 359px,
+    height: 16px,
+    fill: rgb(91.76%, 92.549%, 94.1176%),
+    contents: iconLineBorder5
+  }
+}
+
+export helpCenterListItemsOnProgress = frame {
+  title: "Help Center List Items / Property 1=on progress",
+  left: 0px,
+  top: 4123.0298px,
+  width: 328px,
+  layout: {justify-content: .center, align-items: .center, item-gap: 16px},
+  fill: colorTokens.colors.neutral-00,
+  border: rgb(98.0392%, 98.0392%, 98.0392%),
+  corner-radius: 8px,
+  overflow: .visible,
+  padding: 8px,
+  children: [frame5, arrowForwardIos],
+
+  frame5 = frame {
+    width: 264px,
+    layout: {direction: .column, item-gap: 8px},
+    overflow: .visible,
+    children: [badge, frame773],
+
+    badge = frame {
+      layout: {
+        direction: .column,
+        justify-content: .center,
+        align-items: .center,
+        item-gap: 10px
+      },
+      fill: rgb(100%, 90.5882%, 83.1373%),
+      corner-radius: 8px,
+      padding: 8px,
+      children: warning,
+
+      warning = text {
+        fill: rgb(97.25%, 55.29%, 16.86%),
+        contents: "Diproses",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1,
+        letter-spacing: 0.5%,
+        align: .center
+      }
+    }
+
+    frame773 = frame {
+      layout: {direction: .column},
+      overflow: .visible,
+      children: [promoCeban, promoCeban2],
+
+      promoCeban = text {
+        fill: rgb(60%, 60%, 60%),
+        contents: "Tiket #12312312 ",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.167
+      }
+
+      promoCeban2 = text {
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: "Dana belum di refund",
+        font-size: 16,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.5
+      }
+    }
+  }
+
+  arrowForwardIos = asset {
+    width: 24px,
+    height: 24px,
+    fill: .black,
+    contents: iconArrowForwardIosOutlined
+  }
+}
+
+export helpCenterListItemsSuccess = frame {
+  title: "Help Center List Items / Property 1=success",
+  left: 0px,
+  top: 4261.0298px,
+  width: 328px,
+  layout: {justify-content: .center, align-items: .center, item-gap: 16px},
+  fill: colorTokens.colors.neutral-00,
+  border: rgb(98.0392%, 98.0392%, 98.0392%),
+  corner-radius: 8px,
+  overflow: .visible,
+  padding: 8px,
+  children: [frame5, arrowForwardIos],
+
+  frame5 = frame {
+    width: 264px,
+    layout: {direction: .column, item-gap: 8px},
+    overflow: .visible,
+    children: [badge, frame773],
+
+    badge = frame {
+      layout: {
+        direction: .column,
+        justify-content: .center,
+        align-items: .center,
+        item-gap: 10px
+      },
+      fill: rgb(77.25%, 92.94%, 91.37%),
+      corner-radius: 8px,
+      padding: 8px,
+      children: success,
+
+      success = text {
+        fill: colorTokens.colors.green-50,
+        contents: "Selesai",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1,
+        letter-spacing: 0.5%,
+        align: .center
+      }
+    }
+
+    frame773 = frame {
+      layout: {direction: .column},
+      overflow: .visible,
+      children: [promoCeban, promoCeban2],
+
+      promoCeban = text {
+        fill: rgb(60%, 60%, 60%),
+        contents: "Tiket #12312312 ",
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.167
+      }
+
+      promoCeban2 = text {
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: "Dana belum di refund",
+        font-size: 16,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium",
+        line-height: 1.5
+      }
+    }
+  }
+
+  arrowForwardIos = asset {
+    width: 24px,
+    height: 24px,
+    fill: .black,
+    contents: iconArrowForwardIosOutlined
+  }
+}

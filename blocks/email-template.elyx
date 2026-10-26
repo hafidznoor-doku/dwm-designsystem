@@ -1,0 +1,4723 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/arrow-back.svg" as iconArrowBack
+import "resources/assets/icons/arrow-forward.svg" as iconArrowForward
+import "resources/assets/icons/refresh.svg" as iconRefresh
+import "resources/assets/icons/group-2-2.svg" as iconGroup22
+import "resources/assets/icons/more-vertical-initial.svg" as iconMoreVerticalInitial
+import "resources/assets/icons/side-nav-gmail-new.svg" as iconSideNavGmailNew
+import "resources/assets/icons/frame-2.svg" as iconFrame2
+import "resources/assets/icons/frame-2-2.svg" as iconFrame22
+import "resources/assets/icons/frame-2-3.svg" as iconFrame23
+import "resources/assets/icons/frame-2-4.svg" as iconFrame24
+import "resources/assets/icons/frame-2-5.svg" as iconFrame25
+import "resources/assets/icons/frame-2-6.svg" as iconFrame26
+import "resources/assets/icons/frame-2-7.svg" as iconFrame27
+import "resources/assets/icons/frame-2-8.svg" as iconFrame28
+import "resources/assets/icons/frame-2-9.svg" as iconFrame29
+import "resources/assets/icons/divider-horizontal.svg" as iconDividerHorizontal
+import "resources/assets/icons/frame-2-10.svg" as iconFrame210
+import "resources/assets/icons/frame-2-11.svg" as iconFrame211
+import "resources/assets/images/d0a796bd7dbaed93.png" as imageD0a796bd7dbaed93
+import "resources/assets/images/2c7c46a40cfe70c3.png" as image2c7c46a40cfe70c3
+import "resources/assets/images/548753795ce9b028.png" as image548753795ce9b028
+import "resources/assets/images/9aeb7b7e1c3f4a5d.png" as image9aeb7b7e1c3f4a5d
+import "resources/assets/icons/divider-horizontal-2.svg" as iconDividerHorizontal2
+import "resources/assets/images/2aa895e442ed37b1.png" as image2aa895e442ed37b1
+import "resources/assets/icons/line-arrow-right-hover-no.svg" as iconLineArrowRightHoverNo
+import "resources/assets/icons/icon-help-outline.svg" as iconIconHelpOutline
+import "resources/assets/icons/icon-settings.svg" as iconIconSettings
+import "resources/assets/icons/ellipse-4.svg" as iconEllipse4
+import "resources/assets/icons/ellipse-5.svg" as iconEllipse5
+import "resources/assets/icons/ellipse-6.svg" as iconEllipse6
+import "resources/assets/icons/ellipse-7.svg" as iconEllipse7
+import "resources/assets/images/219d761bc92372d4.jpg" as image219d761bc92372d4
+import "resources/assets/icons/icon-menu.svg" as iconIconMenu
+import "resources/assets/images/a7d97cd97dffb4ef.png" as imageA7d97cd97dffb4ef
+import "resources/assets/icons/search-hover-no.svg" as iconSearchHoverNo
+import "resources/assets/icons/arrow-down.svg" as iconArrowDown
+import "resources/assets/icons/line-arrow-right-hover-no-2.svg" as iconLineArrowRightHoverNo2
+import "resources/assets/icons/line-arrow-left-hover-no.svg" as iconLineArrowLeftHoverNo
+import "resources/assets/icons/frame-28.svg" as iconFrame282
+import "resources/assets/icons/email-row-label-important-initial.svg" as iconEmailRowLabelImportantInitial
+import "resources/assets/icons/close.svg" as iconClose
+import "resources/assets/icons/close-2.svg" as iconClose2
+import "resources/assets/icons/frame-41.svg" as iconFrame41
+import "resources/assets/icons/avatar-3.svg" as iconAvatar3
+import "resources/assets/icons/arrow-down-2.svg" as iconArrowDown2
+import "resources/assets/icons/email-row-star-initial.svg" as iconEmailRowStarInitial
+import "resources/assets/icons/icon-reply.svg" as iconIconReply
+import "resources/assets/icons/more-vertical-initial-2.svg" as iconMoreVerticalInitial2
+import "resources/assets/icons/icon-image.svg" as iconIconImage
+import "resources/assets/icons/group-3-3.svg" as iconGroup33
+import "resources/assets/icons/ilustration.svg" as iconIlustration
+import "resources/assets/icons/line-2-2.svg" as iconLine22
+import "resources/assets/icons/mail.svg" as iconMail
+import "resources/assets/icons/phone.svg" as iconPhone
+import "resources/assets/icons/divider-horizontal-3.svg" as iconDividerHorizontal3
+import "resources/assets/images/7acc6212118226a1.png" as image7acc6212118226a1
+import "resources/assets/icons/icon-reply-2.svg" as iconIconReply2
+import "resources/assets/icons/icon-reply-all.svg" as iconIconReplyAll
+import "resources/assets/icons/icon-forward.svg" as iconIconForward
+import "resources/assets/icons/icon-minimize-expand.svg" as iconIconMinimizeExpand
+import "resources/assets/icons/icon-open-in-initial.svg" as iconIconOpenInInitial
+import "resources/assets/icons/icon-close-initial.svg" as iconIconCloseInitial
+import "resources/assets/icons/icon-minimize-initial.svg" as iconIconMinimizeInitial
+import "resources/assets/icons/divider-horizontal-4.svg" as iconDividerHorizontal4
+import "resources/assets/icons/arrow-down-3.svg" as iconArrowDown3
+import "resources/assets/icons/draft-toolbar-icons-undo-initial.svg" as iconDraftToolbarIconsUndoInitial
+import "resources/assets/icons/draft-toolbar-icons-redo-initial.svg" as iconDraftToolbarIconsRedoInitial
+import "resources/assets/icons/frame-46.svg" as iconFrame46
+import "resources/assets/icons/draft-toolbar-icons-bold-initial.svg" as iconDraftToolbarIconsBoldInitial
+import "resources/assets/icons/draft-toolbar-icons-italic-initial.svg" as iconDraftToolbarIconsItalicInitial
+import "resources/assets/icons/draft-toolbar-icons-underline-initial.svg" as iconDraftToolbarIconsUnderlineInitial
+import "resources/assets/icons/frame-47.svg" as iconFrame47
+import "resources/assets/icons/frame-48.svg" as iconFrame48
+import "resources/assets/icons/draft-toolbar-icons-list-number-initial.svg" as iconDraftToolbarIconsListNumberInitial
+import "resources/assets/icons/draft-toolbar-icons-list-bullet-initial.svg" as iconDraftToolbarIconsListBulletInitial
+import "resources/assets/icons/draft-toolbar-icons-indent-decrease-initial.svg" as iconDraftToolbarIconsIndentDecreaseInitial
+import "resources/assets/icons/draft-toolbar-icons-indent-increase-initial.svg" as iconDraftToolbarIconsIndentIncreaseInitial
+import "resources/assets/icons/arrow-down-4.svg" as iconArrowDown4
+import "resources/assets/icons/draft-icons.svg" as iconDraftIcons
+import "resources/assets/icons/delete-icons.svg" as iconDeleteIcons
+import "resources/assets/icons/logo.svg" as iconLogo
+import "resources/assets/icons/vector-27.svg" as iconVector27
+import "resources/assets/icons/vector-131.svg" as iconVector131
+import "resources/assets/icons/border-bottom.svg" as iconBorderBottom
+import "resources/assets/icons/border-bottom-2.svg" as iconBorderBottom2
+import "resources/assets/icons/border-bottom-3.svg" as iconBorderBottom3
+import "resources/assets/icons/border-bottom-4.svg" as iconBorderBottom4
+import "resources/assets/icons/border-bottom-5.svg" as iconBorderBottom5
+import "resources/assets/icons/border-bottom-6.svg" as iconBorderBottom6
+import "resources/assets/icons/keyboard-arrow-left-24px.svg" as iconKeyboardArrowLeft24px
+import "resources/assets/icons/more.svg" as iconMore
+import "resources/assets/icons/keyboard-arrow-right-24px.svg" as iconKeyboardArrowRight24px
+import "resources/assets/icons/border-bottom-7.svg" as iconBorderBottom7
+import "resources/assets/icons/border-bottom-8.svg" as iconBorderBottom8
+import "resources/assets/icons/keyboard-arrow-left-24px-2.svg" as iconKeyboardArrowLeft24px2
+import "resources/assets/icons/more-2.svg" as iconMore2
+import "resources/assets/icons/keyboard-arrow-right-24px-2.svg" as iconKeyboardArrowRight24px2
+import "resources/assets/icons/copy.svg" as iconCopy
+import "resources/assets/icons/line-1-2.svg" as iconLine12
+
+export emailTemplate = frame {
+  title: "Email Template",
+  left: 0px,
+  top: 0px,
+  width: 1440px,
+  height: 1847px,
+  overflow: .visible,
+  children: [browser, view],
+
+  browser = frame {
+    left: 0px,
+    top: 0px,
+    width: 1440px,
+    height: 86.83px,
+    fill: rgb(12.549%, 12.94%, 14.1176%),
+    corner-radius: [8px, 8px, 0px, 0px],
+    children: [rectangle16, ellipse17, ellipse18, ellipse19, frame25, more],
+
+    rectangle16 = shape {
+      left: 0px,
+      top: 24px,
+      width: 1440px,
+      height: 48px,
+      fill: rgb(20.78%, 21.1765%, 22.7451%),
+      type: .rect
+    }
+
+    ellipse17 = shape {
+      left: 8px,
+      top: 7px,
+      width: 10px,
+      height: 10px,
+      fill: rgb(92.94%, 39.6078%, 35.29%),
+      type: .ellipse
+    }
+
+    ellipse18 = shape {
+      left: 26px,
+      top: 7px,
+      width: 10px,
+      height: 10px,
+      fill: rgb(88.2353%, 75.6863%, 29.8%),
+      type: .ellipse
+    }
+
+    ellipse19 = shape {
+      left: 44px,
+      top: 7px,
+      width: 10px,
+      height: 10px,
+      fill: rgb(44.7059%, 74.5098%, 27.84%),
+      type: .ellipse
+    }
+
+    frame25 = frame {
+      left: 8px,
+      top: 32px,
+      width: 1398px,
+      layout: {align-items: .center, item-gap: 24px},
+      overflow: .visible,
+      children: [arrowBack, arrowForward, refresh, frame26],
+
+      arrowBack = asset {
+        width: 28px,
+        height: 28px,
+        fill: rgb(94.5098%, 95.29%, 95.6863%),
+        contents: iconArrowBack
+      }
+
+      arrowForward = asset {
+        width: 28px,
+        height: 28px,
+        fill: rgb(52.549%, 53.33%, 54.1176%),
+        contents: iconArrowForward
+      }
+
+      refresh = asset {
+        width: 28px,
+        height: 28px,
+        fill: rgb(94.5098%, 95.29%, 95.6863%),
+        contents: iconRefresh
+      }
+
+      frame26 = frame {
+        width: 1242px,
+        layout: {align-items: .center, item-gap: 13px},
+        fill: rgb(12.549%, 12.94%, 14.1176%),
+        corner-radius: 30px,
+        overflow: .visible,
+        padding: [8px, 8px, 8px, 16px],
+        children: [group2, gmailCom],
+
+        group2 = asset {
+          width: 9.9px,
+          height: 13px,
+          fill: rgb(94.5098%, 95.29%, 95.6863%),
+          contents: iconGroup22
+        }
+
+        gmailCom = text {
+          fill: colorTokens.colors.neutral-00,
+          contents: "gmail.com",
+          font-size: 14,
+          font-family: "Roboto",
+          font-style: "Regular"
+        }
+      }
+    }
+
+    more = asset {
+      left: 1408px,
+      top: 32px,
+      width: 32px,
+      height: 32px,
+      fill: rgb(52.549%, 53.33%, 54.1176%),
+      contents: iconMoreVerticalInitial
+    }
+  }
+
+  view = frame {
+    left: 0px,
+    top: 72px,
+    width: 1440px,
+    height: 1775px,
+    fill: colorTokens.colors.neutral-00,
+    children: [frame9, rightSidebar, verticalSpacer, header, emailView, drafts],
+
+    frame9 = frame {
+      left: 0px,
+      top: 64px,
+      width: 248px,
+      height: 1711px,
+      children: [frame7, frame8, sideNav, meetMenu],
+
+      frame7 = frame {
+        left: 8px,
+        top: 16px,
+        width: 142px,
+        height: 47px
+      }
+
+      frame8 = frame {
+        left: 8px,
+        top: 15px,
+        layout: {align-items: .center, item-gap: 16px},
+        fill: colorTokens.colors.neutral-00,
+        shadow: [
+          {
+            drop-shadow: {
+              color: rgb(0%, 0%, 0%, 14.9%),
+              offset: point(0px, 1px),
+              blur-radius: 2px
+            }
+          },
+          {
+            drop-shadow: {
+              color: rgb(0%, 0%, 0%, 14.9%),
+              offset: point(0px, 1px),
+              blur-radius: 3px,
+              spread: 1px
+            }
+          }
+        ],
+        corner-radius: 40px,
+        padding: [12px, 20px, 12px, 12px],
+        children: [sideNavGmailNew, compose],
+
+        sideNavGmailNew = asset {
+          width: 24px,
+          height: 24px,
+          contents: iconSideNavGmailNew
+        }
+
+        compose = text {
+          fill: rgb(23.92%, 25.098%, 26.27%),
+          contents: "Compose",
+          font-size: 13,
+          font-family: "Lato",
+          font-style: "Medium",
+          letter-spacing: -1%
+        }
+      }
+
+      sideNav = frame {
+        left: 0px,
+        top: 79px,
+        layout: {direction: .column},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        children: [
+          sideNav,
+          sideNav2,
+          sideNav3,
+          sideNav4,
+          sideNav5,
+          sideNav6,
+          sideNav7,
+          sideNav8,
+          sideNav9
+        ],
+
+        sideNav = frame {
+          layout: {direction: .row},
+          overflow: .visible,
+          children: sideNavBase,
+
+          sideNavBase = frame {
+            width: 232px,
+            height: 32px,
+            layout: {
+              justify-content: .space-between,
+              align-items: .center,
+              item-gap: 16px
+            },
+            fill: rgb(97.6471%, 91.37%, 90.5882%),
+            corner-radius: [0px, 32px, 32px, 0px],
+            padding: [4px, 16px, 4px, 8px],
+            children: [frame3, more, label3],
+
+            frame3 = frame {
+              layout: {align-items: .center, item-gap: 16px},
+              overflow: .visible,
+              children: [frame2, frame1],
+
+              frame2 = asset {
+                width: 38px,
+                height: 22px,
+                fill: rgb(78.43%, 25.098%, 19.2157%),
+                contents: iconFrame2
+              }
+
+              frame1 = frame {
+                layout: {align-items: .center, item-gap: 16px},
+                overflow: .visible,
+                children: base,
+
+                base = text {
+                  fill: rgb(78.43%, 25.098%, 19.2157%),
+                  contents: "Inbox",
+                  font-size: 14,
+                  font-family: "Roboto",
+                  font-style: "Bold"
+                }
+              }
+            }
+
+            more = asset {
+              width: 32px,
+              height: 32px,
+              display: .none,
+              fill: rgb(46.27%, 46.27%, 46.27%),
+              contents: iconMoreVerticalInitial
+            }
+
+            label3 = text {
+              fill: rgb(78.43%, 25.098%, 19.2157%),
+              contents: "3",
+              font-size: 12,
+              font-family: "Roboto",
+              font-style: "Bold",
+              align: .right
+            }
+          }
+        }
+
+        sideNav2 = frame {
+          layout: {direction: .row},
+          overflow: .visible,
+          children: sideNavBase,
+
+          sideNavBase = frame {
+            width: 232px,
+            height: 32px,
+            layout: {align-items: .center, item-gap: 16px},
+            fill: colorTokens.colors.neutral-00,
+            corner-radius: [0px, 32px, 32px, 0px],
+            padding: [4px, 16px, 4px, 8px],
+            children: [frame3, more, label3],
+
+            frame3 = frame {
+              layout: {align-items: .center, item-gap: 16px},
+              overflow: .visible,
+              children: [frame2, frame1],
+
+              frame2 = asset {
+                width: 38px,
+                height: 22px,
+                contents: iconFrame22
+              }
+
+              frame1 = frame {
+                layout: {align-items: .center, item-gap: 16px},
+                overflow: .visible,
+                children: base,
+
+                base = text {
+                  fill: rgb(12.549%, 12.94%, 14.1176%),
+                  contents: "Starred",
+                  font-size: 14,
+                  font-family: "Roboto",
+                  font-style: "Regular"
+                }
+              }
+            }
+
+            more = asset {
+              width: 32px,
+              height: 32px,
+              display: .none,
+              fill: rgb(46.27%, 46.27%, 46.27%),
+              contents: iconMoreVerticalInitial
+            }
+
+            label3 = text {
+              display: .none,
+              fill: rgb(46.27%, 46.27%, 46.27%),
+              contents: "3",
+              font-size: 12,
+              font-family: "Roboto",
+              font-style: "Regular",
+              align: .right
+            }
+          }
+        }
+
+        sideNav3 = frame {
+          layout: {direction: .row},
+          overflow: .visible,
+          children: sideNavBase,
+
+          sideNavBase = frame {
+            width: 232px,
+            height: 32px,
+            layout: {align-items: .center, item-gap: 16px},
+            fill: colorTokens.colors.neutral-00,
+            corner-radius: [0px, 32px, 32px, 0px],
+            padding: [4px, 16px, 4px, 8px],
+            children: [frame3, more, label3],
+
+            frame3 = frame {
+              layout: {align-items: .center, item-gap: 16px},
+              overflow: .visible,
+              children: [frame2, frame1],
+
+              frame2 = asset {
+                width: 38px,
+                height: 22px,
+                contents: iconFrame23
+              }
+
+              frame1 = frame {
+                layout: {align-items: .center, item-gap: 16px},
+                overflow: .visible,
+                children: base,
+
+                base = text {
+                  fill: rgb(12.549%, 12.94%, 14.1176%),
+                  contents: "Snoozed",
+                  font-size: 14,
+                  font-family: "Roboto",
+                  font-style: "Regular"
+                }
+              }
+            }
+
+            more = asset {
+              width: 32px,
+              height: 32px,
+              display: .none,
+              fill: rgb(46.27%, 46.27%, 46.27%),
+              contents: iconMoreVerticalInitial
+            }
+
+            label3 = text {
+              display: .none,
+              fill: rgb(46.27%, 46.27%, 46.27%),
+              contents: "3",
+              font-size: 12,
+              font-family: "Roboto",
+              font-style: "Regular",
+              align: .right
+            }
+          }
+        }
+
+        sideNav4 = frame {
+          layout: {direction: .row},
+          overflow: .visible,
+          children: sideNavBase,
+
+          sideNavBase = frame {
+            width: 232px,
+            height: 32px,
+            layout: {align-items: .center, item-gap: 16px},
+            fill: colorTokens.colors.neutral-00,
+            corner-radius: [0px, 32px, 32px, 0px],
+            padding: [4px, 16px, 4px, 8px],
+            children: [frame3, more, label3],
+
+            frame3 = frame {
+              layout: {align-items: .center, item-gap: 16px},
+              overflow: .visible,
+              children: [frame2, frame1],
+
+              frame2 = asset {
+                width: 38px,
+                height: 22px,
+                contents: iconFrame24
+              }
+
+              frame1 = frame {
+                layout: {align-items: .center, item-gap: 16px},
+                overflow: .visible,
+                children: base,
+
+                base = text {
+                  fill: rgb(12.549%, 12.94%, 14.1176%),
+                  contents: "Sent",
+                  font-size: 14,
+                  font-family: "Roboto",
+                  font-style: "Regular"
+                }
+              }
+            }
+
+            more = asset {
+              width: 32px,
+              height: 32px,
+              display: .none,
+              fill: rgb(46.27%, 46.27%, 46.27%),
+              contents: iconMoreVerticalInitial
+            }
+
+            label3 = text {
+              display: .none,
+              fill: rgb(46.27%, 46.27%, 46.27%),
+              contents: "3",
+              font-size: 12,
+              font-family: "Roboto",
+              font-style: "Regular",
+              align: .right
+            }
+          }
+        }
+
+        sideNav5 = frame {
+          layout: {direction: .row},
+          overflow: .visible,
+          children: sideNavBase,
+
+          sideNavBase = frame {
+            width: 232px,
+            height: 32px,
+            layout: {
+              justify-content: .space-between,
+              align-items: .center,
+              item-gap: 16px
+            },
+            fill: colorTokens.colors.neutral-00,
+            corner-radius: [0px, 32px, 32px, 0px],
+            padding: [4px, 16px, 4px, 8px],
+            children: [frame3, more, label3],
+
+            frame3 = frame {
+              layout: {align-items: .center, item-gap: 16px},
+              overflow: .visible,
+              children: [frame2, frame1],
+
+              frame2 = asset {
+                width: 38px,
+                height: 22px,
+                contents: iconFrame25
+              }
+
+              frame1 = frame {
+                layout: {align-items: .center, item-gap: 16px},
+                overflow: .visible,
+                children: base,
+
+                base = text {
+                  fill: rgb(12.549%, 12.94%, 14.1176%),
+                  contents: "Drafts",
+                  font-size: 14,
+                  font-family: "Roboto",
+                  font-style: "Bold"
+                }
+              }
+            }
+
+            more = asset {
+              width: 32px,
+              height: 32px,
+              display: .none,
+              fill: rgb(46.27%, 46.27%, 46.27%),
+              contents: iconMoreVerticalInitial
+            }
+
+            label3 = text {
+              fill: rgb(46.27%, 46.27%, 46.27%),
+              contents: "1",
+              font-size: 12,
+              font-family: "Roboto",
+              font-style: "Regular",
+              align: .right
+            }
+          }
+        }
+
+        sideNav6 = frame {
+          layout: {direction: .row},
+          overflow: .visible,
+          children: sideNavBase,
+
+          sideNavBase = frame {
+            width: 232px,
+            height: 32px,
+            layout: {
+              justify-content: .space-between,
+              align-items: .center,
+              item-gap: 16px
+            },
+            fill: colorTokens.colors.neutral-00,
+            corner-radius: [0px, 32px, 32px, 0px],
+            padding: [4px, 16px, 4px, 8px],
+            children: [frame3, more, label3],
+
+            frame3 = frame {
+              layout: {align-items: .center, item-gap: 16px},
+              overflow: .visible,
+              children: [frame2, frame1],
+
+              frame2 = asset {
+                width: 38px,
+                height: 22px,
+                contents: iconFrame26
+              }
+
+              frame1 = frame {
+                layout: {align-items: .center, item-gap: 16px},
+                overflow: .visible,
+                children: base,
+
+                base = text {
+                  fill: rgb(12.549%, 12.94%, 14.1176%),
+                  contents: "Spam",
+                  font-size: 14,
+                  font-family: "Roboto",
+                  font-style: "Bold"
+                }
+              }
+            }
+
+            more = asset {
+              width: 32px,
+              height: 32px,
+              display: .none,
+              fill: rgb(46.27%, 46.27%, 46.27%),
+              contents: iconMoreVerticalInitial
+            }
+
+            label3 = text {
+              fill: rgb(46.27%, 46.27%, 46.27%),
+              contents: "3",
+              font-size: 12,
+              font-family: "Roboto",
+              font-style: "Regular",
+              align: .right
+            }
+          }
+        }
+
+        sideNav7 = frame {
+          layout: {direction: .row},
+          overflow: .visible,
+          children: sideNavBase,
+
+          sideNavBase = frame {
+            width: 232px,
+            height: 32px,
+            layout: {align-items: .center, item-gap: 16px},
+            fill: colorTokens.colors.neutral-00,
+            corner-radius: [0px, 32px, 32px, 0px],
+            padding: [4px, 16px, 4px, 8px],
+            children: [frame3, more, label3],
+
+            frame3 = frame {
+              layout: {align-items: .center, item-gap: 16px},
+              overflow: .visible,
+              children: [frame2, frame1],
+
+              frame2 = asset {
+                width: 38px,
+                height: 22px,
+                contents: iconFrame27
+              }
+
+              frame1 = frame {
+                layout: {align-items: .center, item-gap: 16px},
+                overflow: .visible,
+                children: base,
+
+                base = text {
+                  fill: rgb(12.549%, 12.94%, 14.1176%),
+                  contents: "Trash",
+                  font-size: 14,
+                  font-family: "Roboto",
+                  font-style: "Regular"
+                }
+              }
+            }
+
+            more = asset {
+              width: 32px,
+              height: 32px,
+              display: .none,
+              fill: rgb(46.27%, 46.27%, 46.27%),
+              contents: iconMoreVerticalInitial
+            }
+
+            label3 = text {
+              display: .none,
+              fill: rgb(46.27%, 46.27%, 46.27%),
+              contents: "3",
+              font-size: 12,
+              font-family: "Roboto",
+              font-style: "Regular",
+              align: .right
+            }
+          }
+        }
+
+        sideNav8 = frame {
+          layout: {direction: .row},
+          overflow: .visible,
+          children: sideNavBase,
+
+          sideNavBase = frame {
+            width: 232px,
+            height: 32px,
+            layout: {align-items: .center, item-gap: 16px},
+            fill: colorTokens.colors.neutral-00,
+            corner-radius: [0px, 32px, 32px, 0px],
+            padding: [4px, 16px, 4px, 8px],
+            children: [frame3, more, label3],
+
+            frame3 = frame {
+              layout: {align-items: .center, item-gap: 16px},
+              overflow: .visible,
+              children: [frame2, frame1],
+
+              frame2 = asset {
+                width: 38px,
+                height: 22px,
+                contents: iconFrame28
+              }
+
+              frame1 = frame {
+                layout: {align-items: .center, item-gap: 16px},
+                overflow: .visible,
+                children: base,
+
+                base = text {
+                  fill: rgb(12.549%, 12.94%, 14.1176%),
+                  contents: "Categories",
+                  font-size: 14,
+                  font-family: "Roboto",
+                  font-style: "Bold"
+                }
+              }
+            }
+
+            more = asset {
+              width: 32px,
+              height: 32px,
+              display: .none,
+              fill: rgb(46.27%, 46.27%, 46.27%),
+              contents: iconMoreVerticalInitial
+            }
+
+            label3 = text {
+              display: .none,
+              fill: rgb(46.27%, 46.27%, 46.27%),
+              contents: "3",
+              font-size: 12,
+              font-family: "Roboto",
+              font-style: "Regular",
+              align: .right
+            }
+          }
+        }
+
+        sideNav9 = frame {
+          layout: {direction: .row},
+          overflow: .visible,
+          children: sideNavBase,
+
+          sideNavBase = frame {
+            width: 232px,
+            height: 32px,
+            layout: {align-items: .center, item-gap: 16px},
+            fill: colorTokens.colors.neutral-00,
+            corner-radius: [0px, 32px, 32px, 0px],
+            padding: [4px, 16px, 4px, 8px],
+            children: [frame3, more, label3],
+
+            frame3 = frame {
+              layout: {align-items: .center, item-gap: 16px},
+              overflow: .visible,
+              children: [frame2, frame1],
+
+              frame2 = asset {
+                width: 38px,
+                height: 22px,
+                contents: iconFrame29
+              }
+
+              frame1 = frame {
+                layout: {align-items: .center, item-gap: 16px},
+                overflow: .visible,
+                children: base,
+
+                base = text {
+                  fill: rgb(12.549%, 12.94%, 14.1176%),
+                  contents: "More",
+                  font-size: 14,
+                  font-family: "Roboto",
+                  font-style: "Regular"
+                }
+              }
+            }
+
+            more = asset {
+              width: 32px,
+              height: 32px,
+              display: .none,
+              fill: rgb(46.27%, 46.27%, 46.27%),
+              contents: iconMoreVerticalInitial
+            }
+
+            label3 = text {
+              display: .none,
+              fill: rgb(46.27%, 46.27%, 46.27%),
+              contents: "3",
+              font-size: 12,
+              font-family: "Roboto",
+              font-style: "Regular",
+              align: .right
+            }
+          }
+        }
+      }
+
+      meetMenu = frame {
+        left: 0px,
+        top: 1499px,
+        width: 248px,
+        layout: {direction: .column, item-gap: 8px},
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        padding: [4px, 0px, 16px],
+        children: [dividerHorizontal, frame5, dividerHorizontal2, frame6],
+
+        dividerHorizontal = asset {
+          width: 248px,
+          height: 0px,
+          fill: rgb(92.94%, 93.7255%, 94.5098%),
+          contents: iconDividerHorizontal
+        }
+
+        frame5 = frame {
+          layout: {direction: .column, align-items: .center},
+          overflow: .visible,
+          children: [heading, sideNav, sideNav2],
+
+          heading = frame {
+            width: 232px,
+            height: 32px,
+            layout: {item-gap: 10px},
+            overflow: .visible,
+            padding: [8px, 8px, 8px, 24px],
+            children: meet,
+
+            meet = text {
+              fill: rgb(12.549%, 12.94%, 14.1176%),
+              contents: "Meet",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Medium"
+            }
+          }
+
+          sideNav = frame {
+            layout: {direction: .row},
+            overflow: .visible,
+            children: sideNavBase,
+
+            sideNavBase = frame {
+              width: 232px,
+              height: 32px,
+              layout: {align-items: .center, item-gap: 16px},
+              fill: colorTokens.colors.neutral-00,
+              corner-radius: [0px, 32px, 32px, 0px],
+              padding: [4px, 16px, 4px, 8px],
+              children: [frame3, more, label3],
+
+              frame3 = frame {
+                layout: {align-items: .center, item-gap: 16px},
+                overflow: .visible,
+                children: [frame2, frame1],
+
+                frame2 = asset {
+                  width: 38px,
+                  height: 22px,
+                  contents: iconFrame210
+                }
+
+                frame1 = frame {
+                  layout: {align-items: .center, item-gap: 16px},
+                  overflow: .visible,
+                  children: base,
+
+                  base = text {
+                    fill: rgb(12.549%, 12.94%, 14.1176%),
+                    contents: "New meeting",
+                    font-size: 14,
+                    font-family: "Roboto",
+                    font-style: "Regular"
+                  }
+                }
+              }
+
+              more = asset {
+                width: 32px,
+                height: 32px,
+                display: .none,
+                fill: rgb(46.27%, 46.27%, 46.27%),
+                contents: iconMoreVerticalInitial
+              }
+
+              label3 = text {
+                display: .none,
+                fill: rgb(46.27%, 46.27%, 46.27%),
+                contents: "3",
+                font-size: 12,
+                font-family: "Roboto",
+                font-style: "Regular",
+                align: .right
+              }
+            }
+          }
+
+          sideNav2 = frame {
+            layout: {direction: .row},
+            overflow: .visible,
+            children: sideNavBase,
+
+            sideNavBase = frame {
+              width: 232px,
+              height: 32px,
+              layout: {align-items: .center, item-gap: 16px},
+              fill: colorTokens.colors.neutral-00,
+              corner-radius: [0px, 32px, 32px, 0px],
+              padding: [4px, 16px, 4px, 8px],
+              children: [frame3, more, label3],
+
+              frame3 = frame {
+                layout: {align-items: .center, item-gap: 16px},
+                overflow: .visible,
+                children: [frame2, frame1],
+
+                frame2 = asset {
+                  width: 38px,
+                  height: 22px,
+                  contents: iconFrame211
+                }
+
+                frame1 = frame {
+                  layout: {align-items: .center, item-gap: 16px},
+                  overflow: .visible,
+                  children: base,
+
+                  base = text {
+                    fill: rgb(12.549%, 12.94%, 14.1176%),
+                    contents: "Join a meeting",
+                    font-size: 14,
+                    font-family: "Roboto",
+                    font-style: "Regular"
+                  }
+                }
+              }
+
+              more = asset {
+                width: 32px,
+                height: 32px,
+                display: .none,
+                fill: rgb(46.27%, 46.27%, 46.27%),
+                contents: iconMoreVerticalInitial
+              }
+
+              label3 = text {
+                display: .none,
+                fill: rgb(46.27%, 46.27%, 46.27%),
+                contents: "3",
+                font-size: 12,
+                font-family: "Roboto",
+                font-style: "Regular",
+                align: .right
+              }
+            }
+          }
+        }
+
+        dividerHorizontal2 = asset {
+          width: 248px,
+          height: 0px,
+          fill: rgb(92.94%, 93.7255%, 94.5098%),
+          contents: iconDividerHorizontal
+        }
+
+        frame6 = frame {
+          layout: {direction: .column, item-gap: 16px},
+          overflow: .visible,
+          padding: [8px, 24px],
+          children: [hangouts, buttonBlue],
+
+          hangouts = text {
+            fill: rgb(12.549%, 12.94%, 14.1176%),
+            contents: "Hangouts",
+            font-size: 14,
+            font-family: "Roboto",
+            font-style: "Medium"
+          }
+
+          buttonBlue = frame {
+            width: 200px,
+            height: 32px,
+            fill: rgb(30.98%, 50.5882%, 89.8%),
+            corner-radius: 2px,
+            children: signIn,
+
+            signIn = text {
+              left: 79px,
+              top: 8px,
+              fill: colorTokens.colors.neutral-00,
+              contents: "Sign in",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Medium",
+              align: .center
+            }
+          }
+        }
+      }
+    }
+
+    rightSidebar = frame {
+      left: 1384px,
+      top: 64px,
+      width: 56px,
+      height: 1711px,
+      fill: colorTokens.colors.neutral-00,
+      shadow: {
+        inner-shadow: {
+          color: rgb(92.94%, 93.7255%, 94.5098%),
+          offset: point(1px, 0px),
+          blur-radius: 0px
+        }
+      },
+      children: [frame10, lineArrow],
+
+      frame10 = frame {
+        left: 18px,
+        top: 24px,
+        layout: {direction: .column, item-gap: 34px},
+        overflow: .visible,
+        children: [
+          image11,
+          image12,
+          image13,
+          image14,
+          dividerHorizontal,
+          image15
+        ],
+
+        image11 = shape {
+          width: 20px,
+          height: 20px,
+          fill: {image: {ref: imageD0a796bd7dbaed93}},
+          type: .rect
+        }
+
+        image12 = shape {
+          width: 20px,
+          height: 20px,
+          fill: {image: {ref: image2c7c46a40cfe70c3}},
+          type: .rect
+        }
+
+        image13 = shape {
+          width: 20px,
+          height: 20px,
+          fill: {image: {ref: image548753795ce9b028}},
+          type: .rect
+        }
+
+        image14 = shape {
+          width: 20px,
+          height: 20px,
+          fill: {image: {ref: image9aeb7b7e1c3f4a5d}},
+          type: .rect
+        }
+
+        dividerHorizontal = asset {
+          width: 20px,
+          height: 0px,
+          fill: rgb(92.94%, 93.7255%, 94.5098%),
+          contents: iconDividerHorizontal2
+        }
+
+        image15 = shape {
+          width: 20px,
+          height: 20px,
+          fill: {image: {ref: image2aa895e442ed37b1}},
+          type: .rect
+        }
+      }
+
+      lineArrow = asset {
+        left: 17px,
+        top: 1672px,
+        width: 22px,
+        height: 22px,
+        contents: iconLineArrowRightHoverNo
+      }
+    }
+
+    verticalSpacer = frame {
+      left: 1368px,
+      top: 168px,
+      width: 16px,
+      height: 732px
+    }
+
+    header = frame {
+      left: 0px,
+      top: 0px,
+      width: 1440px,
+      height: 64px,
+      fill: colorTokens.colors.neutral-00,
+      shadow: {
+        inner-shadow: {
+          color: rgb(92.94%, 93.7255%, 94.5098%),
+          offset: point(0px, -1px),
+          blur-radius: 0px
+        }
+      },
+      children: [right, logoHamburger, searchBar],
+
+      right = frame {
+        left: 1262px,
+        top: 12px,
+        layout: {justify-content: .end, align-items: .center, item-gap: 16px},
+        overflow: .visible,
+        children: [iconHelpOutline, iconSettings, iconApps, avatar],
+
+        iconHelpOutline = asset {
+          width: 24px,
+          height: 24px,
+          contents: iconIconHelpOutline
+        }
+
+        iconSettings = asset {
+          width: 24px,
+          height: 24px,
+          contents: iconIconSettings
+        }
+
+        iconApps = frame {
+          width: 24px,
+          height: 24px,
+          overflow: .visible,
+          children: [
+            ellipse8,
+            ellipse11,
+            ellipse14,
+            ellipse9,
+            ellipse12,
+            ellipse15,
+            ellipse10,
+            ellipse13,
+            ellipse16
+          ],
+
+          ellipse8 = shape {
+            left: 4px,
+            top: 4px,
+            width: 4px,
+            height: 4px,
+            fill: rgb(0%, 0%, 0%, 54.1176%),
+            type: .ellipse
+          }
+
+          ellipse11 = shape {
+            left: 4px,
+            top: 10px,
+            width: 4px,
+            height: 4px,
+            fill: rgb(0%, 0%, 0%, 54.1176%),
+            type: .ellipse
+          }
+
+          ellipse14 = shape {
+            left: 4px,
+            top: 16px,
+            width: 4px,
+            height: 4px,
+            fill: rgb(0%, 0%, 0%, 54.1176%),
+            type: .ellipse
+          }
+
+          ellipse9 = shape {
+            left: 16px,
+            top: 4px,
+            width: 4px,
+            height: 4px,
+            fill: rgb(0%, 0%, 0%, 54.1176%),
+            type: .ellipse
+          }
+
+          ellipse12 = shape {
+            left: 16px,
+            top: 10px,
+            width: 4px,
+            height: 4px,
+            fill: rgb(0%, 0%, 0%, 54.1176%),
+            type: .ellipse
+          }
+
+          ellipse15 = shape {
+            left: 16px,
+            top: 16px,
+            width: 4px,
+            height: 4px,
+            fill: rgb(0%, 0%, 0%, 54.1176%),
+            type: .ellipse
+          }
+
+          ellipse10 = shape {
+            left: 10px,
+            top: 4px,
+            width: 4px,
+            height: 4px,
+            fill: rgb(0%, 0%, 0%, 54.1176%),
+            type: .ellipse
+          }
+
+          ellipse13 = shape {
+            left: 10px,
+            top: 10px,
+            width: 4px,
+            height: 4px,
+            fill: rgb(0%, 0%, 0%, 54.1176%),
+            type: .ellipse
+          }
+
+          ellipse16 = shape {
+            left: 10px,
+            top: 16px,
+            width: 4px,
+            height: 4px,
+            fill: rgb(0%, 0%, 0%, 54.1176%),
+            type: .ellipse
+          }
+        }
+
+        avatar = frame {
+          width: 40px,
+          height: 40px,
+          overflow: .visible,
+          children: [ellipse4, ellipse5, ellipse6, ellipse7, ellipse2],
+
+          ellipse4 = asset {
+            left: 2.28px,
+            top: 28.34px,
+            width: 31.11px,
+            height: 11.66px,
+            fill: rgb(34.5098%, 64.7059%, 36.0784%),
+            contents: iconEllipse4
+          }
+
+          ellipse5 = asset {
+            left: 0px,
+            top: 11.23px,
+            width: 4.11px,
+            height: 18.16px,
+            fill: rgb(94.9%, 74.5098%, 25.88%),
+            contents: iconEllipse5
+          }
+
+          ellipse6 = asset {
+            left: 2.02px,
+            top: 0px,
+            width: 31.42px,
+            height: 12.11px,
+            fill: rgb(85.098%, 31.76%, 25.098%),
+            contents: iconEllipse6
+          }
+
+          ellipse7 = asset {
+            left: 32.02px,
+            top: 5.14px,
+            width: 7.98px,
+            height: 29.75px,
+            fill: rgb(31.76%, 52.549%, 92.549%),
+            contents: iconEllipse7
+          }
+
+          ellipse2 = shape {
+            left: 4px,
+            top: 4px,
+            width: 32px,
+            height: 32px,
+            fill: {image: {ref: image219d761bc92372d4, sizing: .stretch}},
+            type: .ellipse
+          }
+        }
+      }
+
+      logoHamburger = frame {
+        left: 8px,
+        top: 4px,
+        layout: {align-items: .center, item-gap: 20px},
+        overflow: .visible,
+        padding: 8px,
+        children: [iconMenu, logo],
+
+        iconMenu = asset {
+          width: 24px,
+          height: 24px,
+          contents: iconIconMenu
+        }
+
+        logo = frame {
+          width: 109px,
+          height: 40px,
+          overflow: .visible,
+          children: image16,
+
+          image16 = shape {
+            left: 0px,
+            top: 0px,
+            width: 109px,
+            height: 40px,
+            fill: {image: {ref: imageA7d97cd97dffb4ef}},
+            type: .rect
+          }
+        }
+      }
+
+      searchBar = frame {
+        left: 248px,
+        top: 9px,
+        width: 720px,
+        height: 46px,
+        fill: rgb(94.5098%, 95.29%, 95.6863%),
+        corner-radius: 8px,
+        children: [frame17, arrow],
+
+        frame17 = frame {
+          left: 17px,
+          top: 11px,
+          layout: {align-items: .center, item-gap: 20px},
+          overflow: .visible,
+          children: [search, searchMail],
+
+          search = asset {
+            width: 24px,
+            height: 24px,
+            contents: iconSearchHoverNo
+          }
+
+          searchMail = text {
+            fill: rgb(0%, 0%, 0%, 54.1176%),
+            contents: "Search mail",
+            font-size: 16,
+            font-family: "Roboto",
+            font-style: "Regular",
+            line-height: 1.2,
+            letter-spacing: -1%
+          }
+        }
+
+        arrow = asset {
+          left: 688px,
+          top: 12px,
+          width: 22px,
+          height: 22px,
+          contents: iconArrowDown
+        }
+      }
+    }
+
+    emailView = frame {
+      left: 248px,
+      top: 64px,
+      width: 1120px,
+      height: 1694.98px,
+      layout: {direction: .column},
+      fill: rgb(70.5882%, 33.33%, 33.33%),
+      overflow: .visible,
+      children: [
+        actionMenu,
+        subject,
+        recipientTimestamp,
+        displayImages,
+        emailArea
+      ],
+
+      actionMenu = frame {
+        width: 100%,
+        height: 48px,
+        fill: colorTokens.colors.neutral-00,
+        shadow: {
+          inner-shadow: {
+            color: rgb(92.94%, 93.7255%, 94.5098%),
+            offset: point(0px, -1px),
+            blur-radius: 0px
+          }
+        },
+        overflow: .visible,
+        children: [lineArrow, lineArrow2, paginationTop, frame28],
+
+        lineArrow = asset {
+          left: 1088px,
+          top: 13px,
+          width: 22px,
+          height: 22px,
+          contents: iconLineArrowRightHoverNo2
+        }
+
+        lineArrow2 = asset {
+          left: 1051px,
+          top: 13px,
+          width: 22px,
+          height: 22px,
+          contents: iconLineArrowLeftHoverNo
+        }
+
+        paginationTop = frame {
+          left: 933px,
+          top: 8px,
+          layout: {item-gap: 10px},
+          overflow: .visible,
+          padding: 8px,
+          children: label150Of2619,
+
+          label150Of2619 = text {
+            fill: rgb(0%, 0%, 0%, 54.1176%),
+            contents: "1–50 of 2,619",
+            font-size: 14,
+            font-family: "Roboto",
+            font-style: "Regular"
+          }
+        }
+
+        frame28 = asset {
+          left: 11px,
+          top: 8px,
+          width: 462px,
+          height: 32px,
+          contents: iconFrame282
+        }
+      }
+
+      subject = frame {
+        width: 100%,
+        height: 69px,
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        children: [layoutSubject, frame41],
+
+        layoutSubject = frame {
+          left: 67px,
+          top: 20px,
+          layout: {align-items: .center, item-gap: 8px},
+          overflow: .visible,
+          children: [emailViewSubject, emailRowLabelImportant, categoryBadge],
+
+          emailViewSubject = frame {
+            layout: {item-gap: 10px},
+            overflow: .visible,
+            children: subjectOfEmail,
+
+            subjectOfEmail = text {
+              fill: rgb(12.549%, 12.94%, 14.1176%),
+              contents: "Email Subject",
+              font-size: 22,
+              font-family: "Roboto",
+              font-style: "Regular",
+              line-height: 1.2,
+              letter-spacing: -1%
+            }
+          }
+
+          emailRowLabelImportant = asset {
+            width: 22px,
+            height: 22px,
+            contents: iconEmailRowLabelImportantInitial
+          }
+
+          categoryBadge = frame {
+            layout: {item-gap: 4px},
+            overflow: .visible,
+            children: [categoryBadge, categoryBadge2],
+
+            categoryBadge = frame {
+              layout: {align-items: .center, item-gap: 4px},
+              fill: rgb(0%, 0%, 0%, 5.098%),
+              corner-radius: 4px,
+              overflow: .visible,
+              padding: [2px, 4px],
+              children: [inbox, close],
+
+              inbox = text {
+                fill: rgb(0%, 0%, 0%, 60%),
+                contents: "Inbox",
+                font-size: 12,
+                font-family: "Roboto",
+                font-style: "Medium",
+                line-height: 1.2,
+                letter-spacing: 0.75%
+              }
+
+              close = asset {
+                width: 8px,
+                height: 8px,
+                contents: iconClose
+              }
+            }
+
+            categoryBadge2 = frame {
+              display: .none,
+              layout: {align-items: .center, item-gap: 4px},
+              fill: rgb(59.6078%, 84.31%, 89.41%),
+              corner-radius: 4px,
+              overflow: .visible,
+              padding: [2px, 4px],
+              children: [promotions, close],
+
+              promotions = text {
+                fill: rgb(5.098%, 23.1373%, 26.6667%),
+                contents: "Promotions",
+                font-size: 12,
+                font-family: "Roboto",
+                font-style: "Medium",
+                line-height: 1.2,
+                letter-spacing: 0.75%
+              }
+
+              close = asset {
+                width: 8px,
+                height: 8px,
+                fill: rgb(5.098%, 23.1373%, 26.6667%),
+                contents: iconClose2
+              }
+            }
+          }
+        }
+
+        frame41 = asset {
+          left: 1048px,
+          top: 23px,
+          width: 57px,
+          height: 20px,
+          contents: iconFrame41
+        }
+      }
+
+      recipientTimestamp = frame {
+        width: 100%,
+        height: 52px,
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        children: [layoutToFrom, timestamp],
+
+        layoutToFrom = frame {
+          left: 16px,
+          top: 6px,
+          layout: {align-items: .center, item-gap: 12px},
+          overflow: .visible,
+          children: [avatar, frame39],
+
+          avatar = asset {
+            width: 40px,
+            height: 40px,
+            contents: iconAvatar3
+          }
+
+          frame39 = frame {
+            layout: {direction: .column, item-gap: 4px},
+            overflow: .visible,
+            children: [frame33, emailViewTo],
+
+            frame33 = frame {
+              layout: {align-items: .end, item-gap: 4px},
+              overflow: .visible,
+              children: [emailViewFromName, emailViewFromEmail, unsubscribe],
+
+              emailViewFromName = frame {
+                width: 97px,
+                layout: {item-gap: 10px},
+                overflow: .visible,
+                children: recipientName,
+
+                recipientName = text {
+                  fill: rgb(12.549%, 12.94%, 14.1176%),
+                  contents: "Michelle Rivera",
+                  font-size: 14,
+                  font-family: "Roboto",
+                  font-style: "Bold"
+                }
+              }
+
+              emailViewFromEmail = frame {
+                layout: {direction: .row},
+                overflow: .visible,
+                children: [label, emailDomainCom, label2],
+
+                label = text {
+                  fill: rgb(0%, 0%, 0%, 54.1176%),
+                  contents: "<",
+                  font-size: 12,
+                  font-family: "Roboto",
+                  font-style: "Medium",
+                  line-height: 1.2,
+                  letter-spacing: 0.75%
+                }
+
+                emailDomainCom = text {
+                  fill: rgb(0%, 0%, 0%, 54.1176%),
+                  contents: "michelle.rivera@example.com",
+                  font-size: 12,
+                  font-family: "Roboto",
+                  font-style: "Medium",
+                  line-height: 1.2,
+                  letter-spacing: 0.75%
+                }
+
+                label2 = text {
+                  fill: rgb(0%, 0%, 0%, 54.1176%),
+                  contents: ">",
+                  font-size: 12,
+                  font-family: "Roboto",
+                  font-style: "Medium",
+                  line-height: 1.2,
+                  letter-spacing: 0.75%
+                }
+              }
+
+              unsubscribe = text {
+                fill: rgb(0%, 0%, 0%, 54.1176%),
+                contents: "Unsubscribe",
+                font-size: 11.2,
+                font-family: "Roboto",
+                font-style: "Medium",
+                line-height: 1.2,
+                letter-spacing: 0.75%,
+                underline: .single
+              }
+            }
+
+            emailViewTo = frame {
+              layout: {item-gap: 4px},
+              overflow: .visible,
+              children: [emailViewToTo, frame35],
+
+              emailViewToTo = frame {
+                width: 11px,
+                height: 14px,
+                overflow: .visible,
+                children: to,
+
+                to = text {
+                  left: 0px,
+                  top: 0px,
+                  fill: rgb(0%, 0%, 0%, 54.1176%),
+                  contents: "to",
+                  font-size: 12,
+                  font-family: "Roboto",
+                  font-style: "Medium",
+                  line-height: 1.2,
+                  letter-spacing: 0.75%
+                }
+              }
+
+              frame35 = frame {
+                layout: {direction: .row},
+                overflow: .visible,
+                children: [emailViewToNames, arrow],
+
+                emailViewToNames = frame {
+                  layout: {item-gap: 10px},
+                  overflow: .visible,
+                  children: me,
+
+                  me = text {
+                    fill: rgb(0%, 0%, 0%, 54.1176%),
+                    contents: "me",
+                    font-size: 12,
+                    font-family: "Roboto",
+                    font-style: "Medium",
+                    line-height: 1.2,
+                    letter-spacing: 0.75%
+                  }
+                }
+
+                arrow = asset {
+                  width: 16px,
+                  height: 16px,
+                  contents: iconArrowDown2
+                }
+              }
+            }
+          }
+        }
+
+        timestamp = frame {
+          left: 865px,
+          top: 0px,
+          layout: {justify-content: .end, align-items: .center, item-gap: 17px},
+          overflow: .visible,
+          children: [emailViewTimeStamp, emailRowStar, iconReply, more],
+
+          emailViewTimeStamp = frame {
+            layout: {justify-content: .end, align-items: .center, item-gap: 4px},
+            overflow: .visible,
+            children: [label914Am, label8HoursAgo],
+
+            label914Am = text {
+              fill: rgb(0%, 0%, 0%, 60%),
+              contents: "9:14 AM",
+              font-size: 12,
+              font-family: "Roboto",
+              font-style: "Medium",
+              line-height: 1.2,
+              letter-spacing: 0.75%
+            }
+
+            label8HoursAgo = text {
+              fill: rgb(0%, 0%, 0%, 60%),
+              contents: "(8 hours ago)",
+              font-size: 12,
+              font-family: "Roboto",
+              font-style: "Medium",
+              line-height: 1.2,
+              letter-spacing: 0.75%
+            }
+          }
+
+          emailRowStar = asset {
+            width: 22px,
+            height: 22px,
+            contents: iconEmailRowStarInitial
+          }
+
+          iconReply = asset {
+            width: 22px,
+            height: 22px,
+            contents: iconIconReply
+          }
+
+          more = asset {
+            width: 22px,
+            height: 32px,
+            fill: rgb(46.27%, 46.27%, 46.27%),
+            contents: iconMoreVerticalInitial2
+          }
+        }
+      }
+
+      displayImages = frame {
+        width: 1120px,
+        height: 38px,
+        display: .none,
+        fill: colorTokens.colors.neutral-00,
+        overflow: .visible,
+        children: frame43,
+
+        frame43 = frame {
+          left: 34px,
+          top: 5px,
+          width: 1069px,
+          layout: {align-items: .center, item-gap: 11px},
+          fill: colorTokens.colors.neutral-00,
+          border: rgb(0%, 0%, 0%, 5.098%),
+          overflow: .visible,
+          padding: [4px, 8px],
+          children: [iconImage, frame42],
+
+          iconImage = asset {
+            width: 20px,
+            height: 20px,
+            contents: iconIconImage
+          }
+
+          frame42 = frame {
+            layout: {item-gap: 2px},
+            overflow: .visible,
+            children: [
+              imagesAreNotDisplayed,
+              displayImagesBelow,
+              label,
+              alwaysDisplayImagesFromEmailDomainCom
+            ],
+
+            imagesAreNotDisplayed = text {
+              fill: rgb(0%, 0%, 0%, 67.0588%),
+              contents: "Images are not displayed.",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Bold"
+            }
+
+            displayImagesBelow = text {
+              fill: rgb(6.6667%, 33.33%, 80%),
+              contents: "Display images below",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Medium",
+              line-height: 1.2,
+              letter-spacing: -1%
+            }
+
+            label = text {
+              fill: rgb(0%, 0%, 0%, 67.0588%),
+              contents: "-",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Medium",
+              line-height: 1.2,
+              letter-spacing: -1%
+            }
+
+            alwaysDisplayImagesFromEmailDomainCom = text {
+              fill: rgb(6.6667%, 33.33%, 80%),
+              contents: "Always display images from email@domain.com",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Medium",
+              line-height: 1.2,
+              letter-spacing: -1%
+            }
+          }
+        }
+      }
+
+      emailArea = frame {
+        width: 100%,
+        height: 1525.98px,
+        layout: {direction: .column, item-gap: 24px},
+        fill: colorTokens.colors.neutral-00,
+        padding: [13px, 20px, 13px, 70px],
+        children: [
+          emailContainer,
+          smartCompose,
+          dividerHorizontal,
+          frame14762,
+          smartCompose2,
+          dividerHorizontal2,
+          actionButtons
+        ],
+
+        emailContainer = frame {
+          width: 100%,
+          layout: {direction: .column, align-items: .center, item-gap: 10px},
+          fill: colorTokens.colors.neutral-background,
+          overflow: .visible,
+          padding: [48px, 0px],
+          children: emailAtom,
+
+          emailAtom = frame : emailAtomConfirmation {}
+        }
+
+        smartCompose = frame {
+          layout: {item-gap: 8px},
+          overflow: .visible,
+          children: [
+            emailViewAutoReply4,
+            emailViewAutoReply5,
+            emailViewAutoReply6
+          ],
+
+          emailViewAutoReply4 = frame {
+            layout: {item-gap: 10px},
+            border: rgb(0%, 0%, 0%, 16.0784%),
+            corner-radius: 8px,
+            overflow: .visible,
+            padding: [8px, 16px],
+            children: lookingForwardToIt,
+
+            lookingForwardToIt = text {
+              fill: rgb(10.1961%, 45.098%, 90.98%),
+              contents: "Looking forward to it!",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Medium",
+              line-height: 1.2,
+              letter-spacing: -1%
+            }
+          }
+
+          emailViewAutoReply5 = frame {
+            layout: {item-gap: 10px},
+            border: rgb(0%, 0%, 0%, 16.0784%),
+            corner-radius: 8px,
+            overflow: .visible,
+            padding: [8px, 16px],
+            children: weWillBeThere,
+
+            weWillBeThere = text {
+              fill: rgb(10.1961%, 45.098%, 90.98%),
+              contents: "We will be there!",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Medium",
+              line-height: 1.2,
+              letter-spacing: -1%
+            }
+          }
+
+          emailViewAutoReply6 = frame {
+            layout: {item-gap: 10px},
+            border: rgb(0%, 0%, 0%, 16.0784%),
+            corner-radius: 8px,
+            overflow: .visible,
+            padding: [8px, 16px],
+            children: thanksForTheUpdate,
+
+            thanksForTheUpdate = text {
+              fill: rgb(10.1961%, 45.098%, 90.98%),
+              contents: "Thanks for the update!",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Medium",
+              line-height: 1.2,
+              letter-spacing: -1%
+            }
+          }
+        }
+
+        dividerHorizontal = asset {
+          width: 1030px,
+          height: 0px,
+          fill: rgb(92.94%, 93.7255%, 94.5098%),
+          contents: iconDividerHorizontal3
+        }
+
+        frame14762 = frame {
+          layout: {direction: .column, item-gap: 12px},
+          overflow: .visible,
+          children: [frame14761, frame14763],
+
+          frame14761 = frame {
+            layout: {direction: .row},
+            overflow: .visible,
+            children: [textContent, textContent2, frame14764],
+
+            textContent = text {
+              fill: .black,
+              contents: "One Attachments",
+              font-size: 12,
+              font-family: "Roboto",
+              font-style: "Bold",
+              line-height: 1.2,
+              letter-spacing: 0.75%
+            }
+
+            textContent2 = text {
+              fill: .black,
+              contents: "• ",
+              font-size: 12,
+              font-family: "Roboto",
+              font-style: "Regular",
+              line-height: 1.2,
+              letter-spacing: 0.75%
+            }
+
+            frame14764 = frame {
+              layout: {align-items: .center, item-gap: 4px},
+              overflow: .visible,
+              children: [textContent, screenshot20250504At2234131],
+
+              textContent = text {
+                fill: .black,
+                contents: "Scanned by Gmail",
+                font-size: 12,
+                font-family: "Roboto",
+                font-style: "Regular",
+                line-height: 1.2,
+                letter-spacing: 0.75%
+              }
+
+              screenshot20250504At2234131 = shape {
+                width: 13px,
+                height: 13px,
+                fill: {image: {ref: image7acc6212118226a1, sizing: .stretch}},
+                type: .rect
+              }
+            }
+          }
+
+          frame14763 = frame {
+            layout: {item-gap: 12px},
+            overflow: .visible,
+            children: [
+              containerAttachementFile,
+              containerAttachementFile2,
+              containerAttachementFile3
+            ],
+
+            containerAttachementFile = frame {
+              width: 166px,
+              height: 108px,
+              layout: {
+                justify-content: .center,
+                align-items: .center,
+                item-gap: 10px
+              },
+              fill: colorTokens.colors.neutral-05,
+              border: rgb(91.76%, 92.549%, 94.1176%),
+              overflow: .visible,
+              padding: [33px, 40px],
+              children: attachmentFile1,
+
+              attachmentFile1 = text {
+                fill: .black,
+                contents: "Attachment File 1",
+                font-size: 12,
+                font-family: "Roboto",
+                font-style: "Medium",
+                line-height: 1.2,
+                letter-spacing: 0.75%,
+                align: .center
+              }
+            }
+
+            containerAttachementFile2 = frame {
+              width: 166px,
+              height: 108px,
+              display: .none,
+              layout: {
+                justify-content: .center,
+                align-items: .center,
+                item-gap: 10px
+              },
+              fill: colorTokens.colors.neutral-05,
+              border: rgb(91.76%, 92.549%, 94.1176%),
+              overflow: .visible,
+              padding: [33px, 40px]
+            }
+
+            containerAttachementFile3 = frame {
+              width: 166px,
+              height: 108px,
+              display: .none,
+              layout: {
+                justify-content: .center,
+                align-items: .center,
+                item-gap: 10px
+              },
+              fill: colorTokens.colors.neutral-05,
+              border: rgb(91.76%, 92.549%, 94.1176%),
+              overflow: .visible,
+              padding: [33px, 40px]
+            }
+          }
+        }
+
+        smartCompose2 = frame {
+          display: .none,
+          layout: {item-gap: 8px},
+          overflow: .visible,
+          children: [
+            emailViewAutoReply4,
+            emailViewAutoReply5,
+            emailViewAutoReply6
+          ],
+
+          emailViewAutoReply4 = frame {
+            layout: {item-gap: 10px},
+            border: rgb(0%, 0%, 0%, 16.0784%),
+            corner-radius: 8px,
+            overflow: .visible,
+            padding: [8px, 16px],
+            children: lookingForwardToIt,
+
+            lookingForwardToIt = text {
+              fill: rgb(10.1961%, 45.098%, 90.98%),
+              contents: "Looking forward to it!",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Medium",
+              line-height: 1.2,
+              letter-spacing: -1%
+            }
+          }
+
+          emailViewAutoReply5 = frame {
+            layout: {item-gap: 10px},
+            border: rgb(0%, 0%, 0%, 16.0784%),
+            corner-radius: 8px,
+            overflow: .visible,
+            padding: [8px, 16px],
+            children: weWillBeThere,
+
+            weWillBeThere = text {
+              fill: rgb(10.1961%, 45.098%, 90.98%),
+              contents: "We will be there!",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Medium",
+              line-height: 1.2,
+              letter-spacing: -1%
+            }
+          }
+
+          emailViewAutoReply6 = frame {
+            layout: {item-gap: 10px},
+            border: rgb(0%, 0%, 0%, 16.0784%),
+            corner-radius: 8px,
+            overflow: .visible,
+            padding: [8px, 16px],
+            children: thanksForTheUpdate,
+
+            thanksForTheUpdate = text {
+              fill: rgb(10.1961%, 45.098%, 90.98%),
+              contents: "Thanks for the update!",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Medium",
+              line-height: 1.2,
+              letter-spacing: -1%
+            }
+          }
+        }
+
+        dividerHorizontal2 = asset {
+          width: 1030px,
+          height: 0px,
+          display: .none,
+          fill: rgb(92.94%, 93.7255%, 94.5098%),
+          contents: iconDividerHorizontal3
+        }
+
+        actionButtons = frame {
+          layout: {item-gap: 12px},
+          overflow: .visible,
+          children: [actionButton, actionButton2, actionButton3],
+
+          actionButton = frame {
+            layout: {align-items: .center, item-gap: 11px},
+            border: rgb(0%, 0%, 0%, 16.0784%),
+            corner-radius: 4px,
+            overflow: .visible,
+            padding: [8px, 22px, 8px, 16px],
+            children: [iconReply, reply],
+
+            iconReply = asset {
+              width: 20px,
+              height: 20px,
+              contents: iconIconReply2
+            }
+
+            reply = text {
+              fill: rgb(0%, 0%, 0%, 54.1176%),
+              contents: "Reply",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Medium",
+              line-height: 1.2,
+              letter-spacing: -1%
+            }
+          }
+
+          actionButton2 = frame {
+            display: .none,
+            layout: {align-items: .center, item-gap: 8px},
+            border: rgb(0%, 0%, 0%, 16.0784%),
+            corner-radius: 4px,
+            overflow: .visible,
+            padding: [8px, 16px, 8px, 14px],
+            children: [iconReplyAll, replyAll],
+
+            iconReplyAll = asset {
+              width: 20px,
+              height: 20px,
+              contents: iconIconReplyAll
+            }
+
+            replyAll = text {
+              fill: rgb(0%, 0%, 0%, 54.1176%),
+              contents: "Reply all",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Medium",
+              line-height: 1.2,
+              letter-spacing: -1%
+            }
+          }
+
+          actionButton3 = frame {
+            layout: {align-items: .center, item-gap: 8px},
+            border: rgb(0%, 0%, 0%, 16.0784%),
+            corner-radius: 4px,
+            overflow: .visible,
+            padding: [8px, 16px, 8px, 12px],
+            children: [iconForward, forward],
+
+            iconForward = asset {
+              width: 20px,
+              height: 20px,
+              contents: iconIconForward
+            }
+
+            forward = text {
+              fill: rgb(0%, 0%, 0%, 54.1176%),
+              contents: "Forward",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Medium",
+              line-height: 1.2,
+              letter-spacing: -1%
+            }
+          }
+        }
+      }
+    }
+
+    drafts = frame {
+      left: 512px,
+      top: 1167px,
+      display: .none,
+      layout: {justify-content: .end, align-items: .end, item-gap: 4px},
+      overflow: .visible,
+      children: [compose, compose2],
+
+      compose = frame {
+        width: 260px,
+        height: 40px,
+        overflow: .visible,
+        children: newMessageHeader,
+
+        newMessageHeader = frame {
+          left: 0px,
+          top: 0px,
+          width: 260px,
+          height: 40px,
+          fill: rgb(25.88%, 25.88%, 25.88%),
+          corner-radius: [8px, 8px, 0px, 0px],
+          children: [
+            newMessageTitle,
+            iconMinimizeInitial,
+            iconOpenInInitial,
+            iconCloseInitial
+          ],
+
+          newMessageTitle = text {
+            left: 16px,
+            top: 12px,
+            fill: colorTokens.colors.neutral-00,
+            contents: "New Message",
+            font-size: 14,
+            font-family: "Roboto",
+            font-style: "Medium",
+            line-height: 1.2,
+            letter-spacing: -1%
+          }
+
+          iconMinimizeInitial = asset {
+            left: 184px,
+            top: 12px,
+            width: 16px,
+            height: 16px,
+            contents: iconIconMinimizeExpand
+          }
+
+          iconOpenInInitial = asset {
+            left: 208px,
+            top: 12px,
+            width: 16px,
+            height: 16px,
+            contents: iconIconOpenInInitial
+          }
+
+          iconCloseInitial = asset {
+            left: 232px,
+            top: 12px,
+            width: 16px,
+            height: 16px,
+            contents: iconIconCloseInitial
+          }
+        }
+      }
+
+      compose2 = frame {
+        width: 600px,
+        height: 608px,
+        overflow: .visible,
+        children: emailPopover,
+
+        emailPopover = frame {
+          left: 0px,
+          top: 0px,
+          width: 600px,
+          height: 608px,
+          fill: colorTokens.colors.neutral-00,
+          shadow: [
+            {
+              drop-shadow: {
+                color: rgb(0%, 0%, 0%, 14.1176%),
+                offset: point(0px, 8px),
+                blur-radius: 10px,
+                spread: 1px
+              }
+            },
+            {
+              drop-shadow: {
+                color: rgb(0%, 0%, 0%, 12.1569%),
+                offset: point(0px, 3px),
+                blur-radius: 14px,
+                spread: 2px
+              }
+            },
+            {
+              drop-shadow: {
+                color: rgb(0%, 0%, 0%, 20%),
+                offset: point(0px, 5px),
+                blur-radius: 5px,
+                spread: -3px
+              }
+            }
+          ],
+          corner-radius: [8px, 8px, 0px, 0px],
+          children: [newMessageHeader, body],
+
+          newMessageHeader = frame {
+            left: 0px,
+            top: 0px,
+            width: 600px,
+            height: 40px,
+            fill: rgb(25.88%, 25.88%, 25.88%),
+            corner-radius: [8px, 8px, 0px, 0px],
+            children: [
+              newMessageTitle,
+              iconMinimizeInitial,
+              iconOpenInInitial,
+              iconCloseInitial
+            ],
+
+            newMessageTitle = text {
+              left: 16px,
+              top: 12px,
+              fill: colorTokens.colors.neutral-00,
+              contents: "New Message",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Medium",
+              line-height: 1.2,
+              letter-spacing: -1%
+            }
+
+            iconMinimizeInitial = asset {
+              left: 524px,
+              top: 12px,
+              width: 16px,
+              height: 16px,
+              contents: iconIconMinimizeInitial
+            }
+
+            iconOpenInInitial = asset {
+              left: 548px,
+              top: 12px,
+              width: 16px,
+              height: 16px,
+              contents: iconIconOpenInInitial
+            }
+
+            iconCloseInitial = asset {
+              left: 572px,
+              top: 12px,
+              width: 16px,
+              height: 16px,
+              contents: iconIconCloseInitial
+            }
+          }
+
+          body = frame {
+            left: 0px,
+            top: 40px,
+            width: 600px,
+            height: 568px,
+            fill: colorTokens.colors.neutral-00,
+            children: [
+              subject,
+              bodyText,
+              recipients,
+              cc,
+              bcc,
+              dividerHorizontal,
+              dividerHorizontal2,
+              buttonSend,
+              formatText,
+              draftIcons,
+              deleteIcons
+            ],
+
+            subject = text {
+              left: 16px,
+              top: 46px,
+              fill: rgb(0%, 0%, 0%, 54.1176%),
+              contents: "Subject",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Regular"
+            }
+
+            bodyText = text {
+              left: 16px,
+              top: 82px,
+              width: 563px,
+              fill: rgb(12.549%, 12.94%, 14.1176%),
+              contents: "Body Text",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Regular"
+            }
+
+            recipients = text {
+              left: 16px,
+              top: 10px,
+              fill: rgb(0%, 0%, 0%, 54.1176%),
+              contents: "Recipients",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Regular"
+            }
+
+            cc = text {
+              left: 535px,
+              top: 10px,
+              fill: rgb(0%, 0%, 0%, 54.1176%),
+              contents: "Cc",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Regular"
+            }
+
+            bcc = text {
+              left: 556px,
+              top: 10px,
+              fill: rgb(0%, 0%, 0%, 54.1176%),
+              contents: "Bcc",
+              font-size: 14,
+              font-family: "Roboto",
+              font-style: "Regular"
+            }
+
+            dividerHorizontal = asset {
+              left: 16px,
+              top: 71px,
+              width: 568px,
+              height: 0px,
+              fill: rgb(92.94%, 93.7255%, 94.5098%),
+              contents: iconDividerHorizontal4
+            }
+
+            dividerHorizontal2 = asset {
+              left: 16px,
+              top: 35px,
+              width: 568px,
+              height: 0px,
+              fill: rgb(92.94%, 93.7255%, 94.5098%),
+              contents: iconDividerHorizontal4
+            }
+
+            buttonSend = frame {
+              left: 16px,
+              top: 519px,
+              width: 98px,
+              height: 36px,
+              fill: rgb(10.1961%, 45.098%, 90.98%),
+              corner-radius: 4px,
+              children: [rectangle24, send, arrow],
+
+              rectangle24 = shape {
+                left: 72px,
+                top: 0px,
+                width: 1px,
+                height: 36px,
+                fill: rgb(9.41%, 35.29%, 73.7255%),
+                type: .rect
+              }
+
+              send = text {
+                left: 19px,
+                top: 9px,
+                fill: colorTokens.colors.neutral-00,
+                contents: "Send",
+                font-size: 14,
+                font-family: "Roboto",
+                font-style: "Medium",
+                line-height: 1.2,
+                letter-spacing: -1%
+              }
+
+              arrow = asset {
+                left: 78px,
+                top: 10px,
+                width: 16px,
+                height: 16px,
+                fill: colorTokens.colors.neutral-00,
+                contents: iconArrowDown3
+              }
+            }
+
+            formatText = frame {
+              left: 14px,
+              top: 464px,
+              display: .none,
+              layout: {align-items: .center, item-gap: 7px},
+              fill: colorTokens.colors.neutral-00,
+              shadow: [
+                {
+                  drop-shadow: {
+                    color: rgb(0%, 0%, 0%, 14.1176%),
+                    offset: point(0px, 4px),
+                    blur-radius: 4px
+                  }
+                },
+                {
+                  drop-shadow: {
+                    color: rgb(0%, 0%, 0%, 12.1569%),
+                    offset: point(0px, 1px),
+                    blur-radius: 10px,
+                    spread: -1px
+                  }
+                },
+                {
+                  drop-shadow: {
+                    color: rgb(0%, 0%, 0%, 20%),
+                    offset: point(0px, 2px),
+                    blur-radius: 4px,
+                    spread: -1px
+                  }
+                }
+              ],
+              corner-radius: 2px,
+              padding: 6px,
+              children: [
+                draftToolbarIcons,
+                draftToolbarIcons2,
+                dividerHorizontal,
+                frame45,
+                dividerHorizontal2,
+                frame46,
+                dividerHorizontal3,
+                draftToolbarIcons3,
+                draftToolbarIcons4,
+                draftToolbarIcons5,
+                frame47,
+                dividerHorizontal4,
+                frame48,
+                draftToolbarIcons6,
+                draftToolbarIcons7,
+                draftToolbarIcons8,
+                draftToolbarIcons9,
+                dividerHorizontal5,
+                arrow
+              ],
+
+              draftToolbarIcons = asset {
+                width: 24px,
+                height: 24px,
+                contents: iconDraftToolbarIconsUndoInitial
+              }
+
+              draftToolbarIcons2 = asset {
+                width: 24px,
+                height: 24px,
+                contents: iconDraftToolbarIconsRedoInitial
+              }
+
+              dividerHorizontal = asset {
+                width: 20px,
+                height: 0px,
+                fill: rgb(92.94%, 93.7255%, 94.5098%),
+                contents: iconDividerHorizontal2
+              }
+
+              frame45 = frame {
+                width: 92px,
+                layout: {align-items: .center, item-gap: 14px},
+                overflow: .visible,
+                children: [sansSerif, arrow],
+
+                sansSerif = text {
+                  fill: rgb(12.549%, 12.94%, 14.1176%),
+                  contents: "Sans Serif",
+                  font-size: 14,
+                  font-family: "Roboto",
+                  font-style: "Medium",
+                  line-height: 1.2,
+                  letter-spacing: -1%
+                }
+
+                arrow = asset {
+                  width: 16px,
+                  height: 16px,
+                  fill: rgb(12.549%, 12.94%, 14.1176%),
+                  contents: iconArrowDown3
+                }
+              }
+
+              dividerHorizontal2 = asset {
+                width: 20px,
+                height: 0px,
+                fill: rgb(92.94%, 93.7255%, 94.5098%),
+                contents: iconDividerHorizontal2
+              }
+
+              frame46 = asset {
+                width: 35px,
+                height: 24px,
+                contents: iconFrame46
+              }
+
+              dividerHorizontal3 = asset {
+                width: 20px,
+                height: 0px,
+                fill: rgb(92.94%, 93.7255%, 94.5098%),
+                contents: iconDividerHorizontal2
+              }
+
+              draftToolbarIcons3 = asset {
+                width: 24px,
+                height: 24px,
+                contents: iconDraftToolbarIconsBoldInitial
+              }
+
+              draftToolbarIcons4 = asset {
+                width: 24px,
+                height: 24px,
+                contents: iconDraftToolbarIconsItalicInitial
+              }
+
+              draftToolbarIcons5 = asset {
+                width: 24px,
+                height: 24px,
+                contents: iconDraftToolbarIconsUnderlineInitial
+              }
+
+              frame47 = asset {
+                width: 38px,
+                height: 24px,
+                contents: iconFrame47
+              }
+
+              dividerHorizontal4 = asset {
+                width: 20px,
+                height: 0px,
+                fill: rgb(92.94%, 93.7255%, 94.5098%),
+                contents: iconDividerHorizontal2
+              }
+
+              frame48 = asset {
+                width: 38px,
+                height: 24px,
+                contents: iconFrame48
+              }
+
+              draftToolbarIcons6 = asset {
+                width: 24px,
+                height: 24px,
+                contents: iconDraftToolbarIconsListNumberInitial
+              }
+
+              draftToolbarIcons7 = asset {
+                width: 24px,
+                height: 24px,
+                contents: iconDraftToolbarIconsListBulletInitial
+              }
+
+              draftToolbarIcons8 = asset {
+                width: 24px,
+                height: 24px,
+                contents: iconDraftToolbarIconsIndentDecreaseInitial
+              }
+
+              draftToolbarIcons9 = asset {
+                width: 24px,
+                height: 24px,
+                contents: iconDraftToolbarIconsIndentIncreaseInitial
+              }
+
+              dividerHorizontal5 = asset {
+                width: 20px,
+                height: 0px,
+                fill: rgb(92.94%, 93.7255%, 94.5098%),
+                contents: iconDividerHorizontal2
+              }
+
+              arrow = asset {
+                width: 16px,
+                height: 16px,
+                contents: iconArrowDown4
+              }
+            }
+
+            draftIcons = asset {
+              left: 125px,
+              top: 523px,
+              width: 252px,
+              height: 28px,
+              contents: iconDraftIcons
+            }
+
+            deleteIcons = asset {
+              left: 534px,
+              top: 524px,
+              width: 52px,
+              height: 24px,
+              contents: iconDeleteIcons
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+export emailAtomConfirmation = frame {
+  title: "_email-atom / Variants=confirmation",
+  left: 0px,
+  top: 2296px,
+  layout: {direction: .column, item-gap: 40px},
+  overflow: .visible,
+  children: [
+    frame5,
+    dokuPaymentsEcosystemPaymentGatewayTransferServicesCollaborativeCommerce
+  ],
+
+  frame5 = frame {
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [rectangle6, frame4],
+
+    rectangle6 = shape {
+      width: 100%,
+      height: 8px,
+      fill: colorTokens.colors.red-50,
+      type: .rect,
+      corner-radius: [8px, 8px, 0px, 0px]
+    }
+
+    frame4 = frame {
+      layout: {direction: .column, item-gap: 36px},
+      fill: colorTokens.colors.neutral-00,
+      corner-radius: [0px, 0px, 8px, 8px],
+      overflow: .visible,
+      padding: 40px,
+      children: [group3, emailConfirmation, ilustration, frame7, line2, frame6],
+
+      group3 = asset {
+        width: 54px,
+        height: 54px,
+        fill: colorTokens.colors.red-50,
+        contents: iconGroup33
+      }
+
+      emailConfirmation = text {
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: "Email Confirmation",
+        font-size: 32,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      ilustration = asset {
+        width: 593px,
+        height: 308px,
+        contents: iconIlustration
+      }
+
+      frame7 = frame {
+        layout: {direction: .column, item-gap: 36px},
+        overflow: .visible,
+        children: [
+          hiBudiBudimanThankYouForRegisteringDokuMerchantToCompleteTheRegistrationProcessPleaseConfirmYourEmailAddressByClickingTheButtonBelow,
+          button,
+          whenYouReReadyToIntegrateWithDokuYouCanCheckOutTheDeveloperSDocumentationHere
+        ],
+
+        hiBudiBudimanThankYouForRegisteringDokuMerchantToCompleteTheRegistrationProcessPleaseConfirmYourEmailAddressByClickingTheButtonBelow = text {
+          width: 574px,
+          height: 86px,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          subrange: {
+            range: [3, 15],
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium"
+          },
+          contents: "Hi Budi Budiman,\n\nThank you for registering DOKU Merchant. To complete the registration process, please confirm your email address by clicking the button below:",
+          font-size: 16,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.5
+        }
+
+        button = frame {
+          layout: {
+            justify-content: .center,
+            align-items: .center,
+            item-gap: 4px
+          },
+          fill: colorTokens.colors.red-50,
+          border: colorTokens.colors.red-50,
+          corner-radius: 4px,
+          overflow: .visible,
+          padding: [10px, 16px],
+          children: myButton,
+
+          myButton = text {
+            fill: colorTokens.colors.neutral-00,
+            contents: "ACTION BUTTON",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.429,
+            align: .center
+          }
+        }
+
+        whenYouReReadyToIntegrateWithDokuYouCanCheckOutTheDeveloperSDocumentationHere = text {
+          width: 574px,
+          height: 58.02px,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          subrange: {
+            range: [90, 94],
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            fill: colorTokens.colors.red-50
+          },
+          contents: "When you’re ready to integrate with DOKU, you can check out the developer’s documentation here.",
+          font-size: 16,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.5
+        }
+      }
+
+      line2 = asset {
+        width: 574px,
+        height: 0px,
+        fill: rgb(90.1961%, 90.1961%, 90.1961%),
+        contents: iconLine22
+      }
+
+      frame6 = frame {
+        layout: {direction: .column, item-gap: 24px},
+        overflow: .visible,
+        children: [
+          shouldYouNeedAnyFurtherInformationPleaseDoNotHesitateToContactUs,
+          frame3
+        ],
+
+        shouldYouNeedAnyFurtherInformationPleaseDoNotHesitateToContactUs = text {
+          width: 574px,
+          height: 28px,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Should you need any further information, please do not hesitate to contact us",
+          font-size: 16,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.5
+        }
+
+        frame3 = frame {
+          layout: {item-gap: 33px},
+          overflow: .visible,
+          children: [mail, telp],
+
+          mail = frame {
+            width: 145px,
+            height: 23.96px,
+            children: [careDokuCom, mail],
+
+            careDokuCom = text {
+              left: 32px,
+              top: 0px,
+              width: 113px,
+              height: 23.96px,
+              fill: colorTokens.colors.red-50,
+              contents: "care@doku.com",
+              font-size: 16,
+              font-family: "DIN Next LT Pro",
+              font-style: "Medium",
+              line-height: 1.5
+            }
+
+            mail = asset {
+              left: 0px,
+              top: 0px,
+              width: 24px,
+              height: 23.96px,
+              fill: rgb(30.1961%, 30.1961%, 30.1961%),
+              contents: iconMail
+            }
+          }
+
+          telp = frame {
+            width: 133px,
+            height: 23.96px,
+            children: [label0211500963, phone],
+
+            label0211500963 = text {
+              left: 32px,
+              top: 0px,
+              width: 101px,
+              height: 23.96px,
+              fill: colorTokens.colors.red-50,
+              contents: "(021) 1500963",
+              font-size: 16,
+              font-family: "DIN Next LT Pro",
+              font-style: "Medium",
+              line-height: 1.5
+            }
+
+            phone = asset {
+              left: 0px,
+              top: 0px,
+              width: 24px,
+              height: 23.96px,
+              fill: rgb(30.1961%, 30.1961%, 30.1961%),
+              contents: iconPhone
+            }
+          }
+        }
+      }
+    }
+  }
+
+  dokuPaymentsEcosystemPaymentGatewayTransferServicesCollaborativeCommerce = text {
+    width: 100%,
+    height: 43px,
+    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+    subrange: [
+      {
+        range: [0, 4],
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Bold",
+        fill: rgb(30.1961%, 30.1961%, 30.1961%)
+      },
+      {range: [4, 5], fill: rgb(30.1961%, 30.1961%, 30.1961%)},
+      {
+        range: [5, 84],
+        font-size: 12,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        fill: rgb(30.1961%, 30.1961%, 30.1961%)
+      }
+    ],
+    contents: "DOKU Payments Ecosystem\nPayment Gateway | Transfer Services | Collaborative Commerce",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.5,
+    align: .center
+  }
+}
+
+export emailAtomInvoice = frame {
+  title: "_email-atom / Variants=invoice",
+  left: 808px,
+  top: 2296px,
+  width: 704px,
+  height: 854px,
+  overflow: .visible,
+  children: [frame1, rectangle5],
+
+  frame1 = frame {
+    left: 0px,
+    top: 8.57px,
+    width: 704px,
+    height: 845.43px,
+    layout: {direction: .column, align-items: .center, item-gap: 16px},
+    fill: colorTokens.colors.neutral-00,
+    corner-radius: [0px, 0px, 8px, 8px],
+    overflow: .visible,
+    padding: 40px,
+    children: [
+      headerEng,
+      custHeaderEng,
+      contCustomerEng,
+      line1,
+      customizeFooter,
+      custFooterEng,
+      footerEng
+    ],
+
+    headerEng = frame {
+      width: 100%,
+      height: 184px,
+      layout: {direction: .column, align-items: .center, item-gap: 16px},
+      overflow: .visible,
+      children: [frame2463, group2523],
+
+      frame2463 = frame {
+        width: 100%,
+        layout: {justify-content: .space-between, item-gap: 221px},
+        overflow: .visible,
+        children: [frame2471, logo],
+
+        frame2471 = frame {
+          layout: {direction: .column},
+          overflow: .visible,
+          children: [invoice, frame2469],
+
+          invoice = text {
+            width: 305px,
+            fill: colorTokens.colors.blue-100,
+            contents: "Invoice",
+            font-size: 24,
+            font-family: "Inter",
+            font-style: "Bold"
+          }
+
+          frame2469 = frame {
+            layout: {item-gap: 16px},
+            overflow: .visible,
+            children: frame2467,
+
+            frame2467 = frame {
+              layout: {direction: .column},
+              overflow: .visible,
+              children: invoiceNumberInv202320242025,
+
+              invoiceNumberInv202320242025 = text {
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "Invoice Number: INV202320242025",
+                font-size: 13,
+                font-family: "Inter",
+                font-style: "Medium",
+                line-height: 1.538
+              }
+            }
+          }
+        }
+
+        logo = asset {
+          width: 51px,
+          height: 51px,
+          fill: colorTokens.colors.red-50,
+          contents: iconLogo
+        }
+      }
+
+      group2523 = frame {
+        width: 100%,
+        height: 117px,
+        children: [to, vector27, vector133, vector131, vector132, dates, dates2],
+
+        to = frame {
+          left: 220.52px,
+          top: 14.62px,
+          width: 181.75px,
+          height: 96.11px,
+          layout: {direction: .column, item-gap: 6px},
+          overflow: .visible,
+          children: [billTo, frame3605],
+
+          billTo = text {
+            fill: colorTokens.colors.neutral-80,
+            contents: "Bill to:",
+            font-size: 13,
+            font-family: "Inter",
+            font-style: "Semi Bold",
+            line-height: 1.077
+          }
+
+          frame3605 = frame {
+            width: 100%,
+            layout: {direction: .column, item-gap: 6px},
+            overflow: .visible,
+            children: [
+              johnDoe,
+              johndoeGmailCom0812345678910JakartaIndonesia53771
+            ],
+
+            johnDoe = text {
+              width: 100%,
+              fill: colorTokens.colors.neutral-50,
+              contents: "John Doe",
+              font-size: 12,
+              font-family: "Inter",
+              font-style: "Semi Bold",
+              line-height: 1.167
+            }
+
+            johndoeGmailCom0812345678910JakartaIndonesia53771 = text {
+              width: 100%,
+              fill: colorTokens.colors.neutral-40,
+              contents: "johndoe@gmail.com\n0812345678910\nJakarta, Indonesia - 53771",
+              font-size: 11,
+              font-family: "Inter",
+              font-style: "Regular",
+              line-height: 1.27
+            }
+          }
+        }
+
+        vector27 = asset {
+          left: 0px,
+          top: 0px,
+          width: 624px,
+          height: 0px,
+          fill: rgb(84.31%, 85.49%, 87.84%),
+          contents: iconVector27
+        }
+
+        vector133 = asset {
+          left: 0px,
+          top: 117px,
+          width: 624px,
+          height: 0px,
+          fill: rgb(84.31%, 85.49%, 87.84%),
+          contents: iconVector27
+        }
+
+        vector131 = asset {
+          left: 201.13px,
+          top: 0px,
+          width: 0px,
+          height: 117px,
+          fill: rgb(84.31%, 85.49%, 87.84%),
+          contents: iconVector131
+        }
+
+        vector132 = asset {
+          left: 421.65px,
+          top: 0px,
+          width: 0px,
+          height: 117px,
+          fill: rgb(84.31%, 85.49%, 87.84%),
+          contents: iconVector131
+        }
+
+        dates = frame {
+          left: 0px,
+          top: 14.62px,
+          width: 181.75px,
+          height: 87.75px,
+          layout: {direction: .column, item-gap: 16px},
+          overflow: .visible,
+          children: [frame3596, frame896],
+
+          frame3596 = frame {
+            width: 100%,
+            layout: {direction: .column, item-gap: 6px},
+            overflow: .visible,
+            children: [invoiceDate, label01August2023],
+
+            invoiceDate = text {
+              fill: colorTokens.colors.neutral-80,
+              contents: "Invoice Date:",
+              font-size: 13,
+              font-family: "Inter",
+              font-style: "Semi Bold",
+              line-height: 1.077
+            }
+
+            label01August2023 = text {
+              width: 150px,
+              fill: colorTokens.colors.neutral-50,
+              contents: "01 August 2023",
+              font-size: 12,
+              font-family: "Inter",
+              font-style: "Semi Bold",
+              line-height: 1.167
+            }
+          }
+
+          frame896 = frame {
+            width: 100%,
+            layout: {direction: .column, item-gap: 6px},
+            overflow: .visible,
+            children: [dueDate, label15August2023],
+
+            dueDate = text {
+              fill: colorTokens.colors.neutral-80,
+              contents: "Due Date:",
+              font-size: 13,
+              font-family: "Inter",
+              font-style: "Semi Bold",
+              line-height: 1.077
+            }
+
+            label15August2023 = text {
+              width: 150px,
+              fill: colorTokens.colors.neutral-50,
+              contents: "15 August 2023",
+              font-size: 12,
+              font-family: "Inter",
+              font-style: "Semi Bold",
+              line-height: 1.167
+            }
+          }
+        }
+
+        dates2 = frame {
+          left: 441.04px,
+          top: 14.62px,
+          width: 181.75px,
+          height: 87.75px,
+          layout: {direction: .column, item-gap: 16px},
+          overflow: .visible,
+          children: [frame3596, frame896],
+
+          frame3596 = frame {
+            width: 100%,
+            layout: {direction: .column, item-gap: 6px},
+            overflow: .visible,
+            children: [from, doku],
+
+            from = text {
+              fill: colorTokens.colors.neutral-80,
+              contents: "From:",
+              font-size: 13,
+              font-family: "Inter",
+              font-style: "Semi Bold",
+              line-height: 1.077
+            }
+
+            doku = text {
+              width: 150px,
+              fill: colorTokens.colors.neutral-50,
+              contents: "DOKU",
+              font-size: 12,
+              font-family: "Inter",
+              font-style: "Semi Bold",
+              line-height: 1.167
+            }
+          }
+
+          frame896 = frame {
+            width: 100%,
+            display: .none,
+            layout: {direction: .column, item-gap: 6px},
+            overflow: .visible,
+            children: [orderNumberReference, odr202320242025],
+
+            orderNumberReference = text {
+              fill: colorTokens.colors.neutral-80,
+              contents: "Order Number/Reference:",
+              font-size: 13,
+              font-family: "Inter",
+              font-style: "Semi Bold",
+              line-height: 1.077
+            }
+
+            odr202320242025 = text {
+              width: 150px,
+              fill: colorTokens.colors.neutral-50,
+              contents: "ODR 202320242025",
+              font-size: 12,
+              font-family: "Inter",
+              font-style: "Semi Bold",
+              line-height: 1.167
+            }
+          }
+        }
+      }
+    }
+
+    custHeaderEng = frame {
+      layout: {direction: .column, item-gap: 15px},
+      overflow: .visible,
+      children: dearCustomer,
+
+      dearCustomer = text {
+        width: 624px,
+        fill: colorTokens.colors.neutral-70,
+        contents: "Dear Customer,",
+        font-size: 13,
+        font-family: "Inter",
+        font-style: "Bold",
+        line-height: 1.846
+      }
+    }
+
+    contCustomerEng = frame {
+      width: 624px,
+      layout: {direction: .column, item-gap: 12px},
+      overflow: .visible,
+      children: [frame14277, tableEng, button, frame14998],
+
+      frame14277 = frame {
+        width: 100%,
+        layout: {direction: .column, item-gap: 8px},
+        overflow: .visible,
+        children: frame2477,
+
+        frame2477 = frame {
+          width: 100%,
+          layout: {direction: .column, item-gap: 4px},
+          overflow: .visible,
+          children: [
+            waitingForYourPayment,
+            thankYouForYourOrderBelowAreTheDetailsOfYourTransaction
+          ],
+
+          waitingForYourPayment = text {
+            width: 624px,
+            fill: colorTokens.colors.neutral-70,
+            contents: "Waiting for Your Payment",
+            font-size: 14,
+            font-family: "Inter",
+            font-style: "Bold",
+            line-height: 1.71
+          }
+
+          thankYouForYourOrderBelowAreTheDetailsOfYourTransaction = text {
+            width: 100%,
+            fill: colorTokens.colors.neutral-70,
+            contents: "Thank you for your order. Below are the details of your transaction:",
+            font-size: 13,
+            font-family: "Inter",
+            font-style: "Regular",
+            line-height: 1.538
+          }
+        }
+      }
+
+      tableEng = frame {
+        width: 100%,
+        height: 279px,
+        layout: {direction: .column, align-items: .end},
+        overflow: .visible,
+        children: [table, table2],
+
+        table = frame {
+          width: 100%,
+          height: 125px,
+          overflow: .visible,
+          children: [tableFull, pagination],
+
+          tableFull = frame {
+            left: 0px,
+            top: 0px,
+            width: 628px,
+            layout: {align-items: .center},
+            children: [frame53, frame55, frame56, frame57],
+
+            frame53 = frame {
+              width: 204px,
+              layout: {direction: .column, item-gap: 2px},
+              children: [tableHeaderNumber, frame43],
+
+              tableHeaderNumber = frame {
+                width: 100%,
+                layout: {direction: .column},
+                fill: colorTokens.colors.neutral-05,
+                overflow: .visible,
+                children: [frame1, borderBottom],
+
+                frame1 = frame {
+                  width: 100%,
+                  layout: {direction: .column, item-gap: 10px},
+                  padding: [8px, 16px],
+                  children: subtotalRp,
+
+                  subtotalRp = text {
+                    width: 100%,
+                    fill: colorTokens.colors.neutral-100,
+                    contents: "Description",
+                    font-size: 13,
+                    font-family: "Inter",
+                    font-style: "Bold",
+                    line-height: 1.846
+                  }
+                }
+
+                borderBottom = asset {
+                  width: 204px,
+                  height: 0px,
+                  fill: rgb(98.0392%, 98.0392%, 98.0392%),
+                  contents: iconBorderBottom
+                }
+              }
+
+              frame43 = frame {
+                width: 100%,
+                layout: {direction: .column, item-gap: 1px},
+                children: [tableCellNumber, tableCellNumber2],
+
+                tableCellNumber = frame {
+                  width: 100%,
+                  height: 41px,
+                  layout: {direction: .column},
+                  fill: colorTokens.colors.neutral-00,
+                  overflow: .visible,
+                  children: [frame1, borderBottom],
+
+                  frame1 = frame {
+                    width: 100%,
+                    layout: {direction: .column, item-gap: 10px},
+                    padding: [8px, 16px],
+                    children: tShirtDoku,
+
+                    tShirtDoku = text {
+                      width: 100%,
+                      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                      contents: "T-shirt DOKU",
+                      font-size: 12,
+                      font-family: "Inter",
+                      font-style: "Regular",
+                      line-height: 2
+                    }
+                  }
+
+                  borderBottom = asset {
+                    width: 204px,
+                    height: 1px,
+                    fill: rgb(98.0392%, 98.0392%, 98.0392%),
+                    contents: iconBorderBottom2
+                  }
+                }
+
+                tableCellNumber2 = frame {
+                  width: 100%,
+                  height: 41px,
+                  layout: {direction: .column},
+                  fill: colorTokens.colors.neutral-00,
+                  overflow: .visible,
+                  children: [frame1, borderBottom],
+
+                  frame1 = frame {
+                    width: 100%,
+                    layout: {direction: .column, item-gap: 10px},
+                    padding: [8px, 16px],
+                    children: goodieBagDoku,
+
+                    goodieBagDoku = text {
+                      width: 100%,
+                      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                      contents: "Goodie Bag DOKU",
+                      font-size: 12,
+                      font-family: "Inter",
+                      font-style: "Regular",
+                      line-height: 2
+                    }
+                  }
+
+                  borderBottom = asset {
+                    width: 204px,
+                    height: 1px,
+                    fill: rgb(98.0392%, 98.0392%, 98.0392%),
+                    contents: iconBorderBottom2
+                  }
+                }
+              }
+            }
+
+            frame55 = frame {
+              width: 78px,
+              layout: {direction: .column, item-gap: 2px},
+              children: [tableHeaderNumber, frame43],
+
+              tableHeaderNumber = frame {
+                width: 100%,
+                layout: {direction: .column},
+                fill: colorTokens.colors.neutral-05,
+                overflow: .visible,
+                children: [frame1, borderBottom],
+
+                frame1 = frame {
+                  width: 100%,
+                  layout: {direction: .column, item-gap: 10px},
+                  padding: [8px, 16px],
+                  children: subtotalRp,
+
+                  subtotalRp = text {
+                    width: 100%,
+                    fill: colorTokens.colors.neutral-100,
+                    contents: "Qty",
+                    font-size: 13,
+                    font-family: "Inter",
+                    font-style: "Bold",
+                    line-height: 1.846,
+                    align: .right
+                  }
+                }
+
+                borderBottom = asset {
+                  width: 78px,
+                  height: 0px,
+                  fill: rgb(98.0392%, 98.0392%, 98.0392%),
+                  contents: iconBorderBottom3
+                }
+              }
+
+              frame43 = frame {
+                width: 100%,
+                layout: {direction: .column, item-gap: 1px},
+                children: [tableCellNumber, tableCellNumber2],
+
+                tableCellNumber = frame {
+                  width: 100%,
+                  height: 41px,
+                  layout: {direction: .column},
+                  fill: colorTokens.colors.neutral-00,
+                  overflow: .visible,
+                  children: [frame1, borderBottom],
+
+                  frame1 = frame {
+                    width: 100%,
+                    layout: {direction: .column, item-gap: 10px},
+                    padding: [8px, 16px],
+                    children: label1,
+
+                    label1 = text {
+                      width: 100%,
+                      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                      contents: "1",
+                      font-size: 12,
+                      font-family: "Inter",
+                      font-style: "Regular",
+                      line-height: 2,
+                      align: .right
+                    }
+                  }
+
+                  borderBottom = asset {
+                    width: 78px,
+                    height: 1px,
+                    fill: rgb(98.0392%, 98.0392%, 98.0392%),
+                    contents: iconBorderBottom4
+                  }
+                }
+
+                tableCellNumber2 = frame {
+                  width: 100%,
+                  height: 41px,
+                  layout: {direction: .column},
+                  fill: colorTokens.colors.neutral-00,
+                  overflow: .visible,
+                  children: [frame1, borderBottom],
+
+                  frame1 = frame {
+                    width: 100%,
+                    layout: {direction: .column, item-gap: 10px},
+                    padding: [8px, 16px],
+                    children: label2,
+
+                    label2 = text {
+                      width: 100%,
+                      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                      contents: "2",
+                      font-size: 12,
+                      font-family: "Inter",
+                      font-style: "Regular",
+                      line-height: 2,
+                      align: .right
+                    }
+                  }
+
+                  borderBottom = asset {
+                    width: 78px,
+                    height: 1px,
+                    fill: rgb(98.0392%, 98.0392%, 98.0392%),
+                    contents: iconBorderBottom4
+                  }
+                }
+              }
+            }
+
+            frame56 = frame {
+              width: 142px,
+              layout: {direction: .column, item-gap: 2px},
+              children: [tableHeaderNumber, frame43],
+
+              tableHeaderNumber = frame {
+                width: 100%,
+                layout: {direction: .column},
+                fill: colorTokens.colors.neutral-05,
+                overflow: .visible,
+                children: [frame1, borderBottom],
+
+                frame1 = frame {
+                  width: 100%,
+                  layout: {direction: .column, item-gap: 10px},
+                  padding: [8px, 16px],
+                  children: subtotalRp,
+
+                  subtotalRp = text {
+                    width: 100%,
+                    fill: colorTokens.colors.neutral-100,
+                    contents: "Price (IDR)",
+                    font-size: 13,
+                    font-family: "Inter",
+                    font-style: "Bold",
+                    line-height: 1.846,
+                    align: .right
+                  }
+                }
+
+                borderBottom = asset {
+                  width: 142px,
+                  height: 0px,
+                  fill: rgb(98.0392%, 98.0392%, 98.0392%),
+                  contents: iconBorderBottom5
+                }
+              }
+
+              frame43 = frame {
+                width: 100%,
+                layout: {direction: .column, item-gap: 1px},
+                children: [tableCellNumber, tableCellNumber2],
+
+                tableCellNumber = frame {
+                  width: 100%,
+                  height: 41px,
+                  layout: {direction: .column},
+                  fill: colorTokens.colors.neutral-00,
+                  overflow: .visible,
+                  children: [frame1, borderBottom],
+
+                  frame1 = frame {
+                    width: 100%,
+                    layout: {direction: .column, item-gap: 10px},
+                    padding: [8px, 16px],
+                    children: label600000,
+
+                    label600000 = text {
+                      width: 100%,
+                      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                      contents: "600,000",
+                      font-size: 12,
+                      font-family: "Inter",
+                      font-style: "Regular",
+                      line-height: 2,
+                      align: .right
+                    }
+                  }
+
+                  borderBottom = asset {
+                    width: 142px,
+                    height: 1px,
+                    fill: rgb(98.0392%, 98.0392%, 98.0392%),
+                    contents: iconBorderBottom6
+                  }
+                }
+
+                tableCellNumber2 = frame {
+                  width: 100%,
+                  height: 41px,
+                  layout: {direction: .column},
+                  fill: colorTokens.colors.neutral-00,
+                  overflow: .visible,
+                  children: [frame1, borderBottom],
+
+                  frame1 = frame {
+                    width: 100%,
+                    layout: {direction: .column, item-gap: 10px},
+                    padding: [8px, 16px],
+                    children: label600000,
+
+                    label600000 = text {
+                      width: 100%,
+                      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                      contents: "600,000",
+                      font-size: 12,
+                      font-family: "Inter",
+                      font-style: "Regular",
+                      line-height: 2,
+                      align: .right
+                    }
+                  }
+
+                  borderBottom = asset {
+                    width: 142px,
+                    height: 1px,
+                    fill: rgb(98.0392%, 98.0392%, 98.0392%),
+                    contents: iconBorderBottom6
+                  }
+                }
+              }
+            }
+
+            frame57 = frame {
+              width: 204px,
+              layout: {direction: .column, item-gap: 2px},
+              children: [tableHeaderNumber, frame43],
+
+              tableHeaderNumber = frame {
+                width: 100%,
+                layout: {direction: .column},
+                fill: colorTokens.colors.neutral-05,
+                overflow: .visible,
+                children: [frame1, borderBottom],
+
+                frame1 = frame {
+                  width: 100%,
+                  layout: {direction: .column, item-gap: 10px},
+                  padding: [8px, 16px],
+                  children: subtotalRp,
+
+                  subtotalRp = text {
+                    width: 100%,
+                    fill: colorTokens.colors.neutral-100,
+                    contents: "Subtotal (IDR)",
+                    font-size: 13,
+                    font-family: "Inter",
+                    font-style: "Bold",
+                    line-height: 1.846,
+                    align: .right
+                  }
+                }
+
+                borderBottom = asset {
+                  width: 204px,
+                  height: 0px,
+                  fill: rgb(98.0392%, 98.0392%, 98.0392%),
+                  contents: iconBorderBottom
+                }
+              }
+
+              frame43 = frame {
+                width: 100%,
+                layout: {direction: .column, item-gap: 1px},
+                children: [tableCellNumber, tableCellNumber2],
+
+                tableCellNumber = frame {
+                  width: 100%,
+                  height: 41px,
+                  layout: {direction: .column},
+                  fill: colorTokens.colors.neutral-00,
+                  overflow: .visible,
+                  children: [frame1, borderBottom],
+
+                  frame1 = frame {
+                    width: 100%,
+                    layout: {direction: .column, item-gap: 10px},
+                    padding: [8px, 16px],
+                    children: label600000,
+
+                    label600000 = text {
+                      width: 100%,
+                      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                      contents: "600,000",
+                      font-size: 12,
+                      font-family: "Inter",
+                      font-style: "Regular",
+                      line-height: 2,
+                      align: .right
+                    }
+                  }
+
+                  borderBottom = asset {
+                    width: 204px,
+                    height: 1px,
+                    fill: rgb(98.0392%, 98.0392%, 98.0392%),
+                    contents: iconBorderBottom2
+                  }
+                }
+
+                tableCellNumber2 = frame {
+                  width: 100%,
+                  height: 41px,
+                  layout: {direction: .column},
+                  fill: colorTokens.colors.neutral-00,
+                  overflow: .visible,
+                  children: [frame1, borderBottom],
+
+                  frame1 = frame {
+                    width: 100%,
+                    layout: {direction: .column, item-gap: 10px},
+                    padding: [8px, 16px],
+                    children: label600000,
+
+                    label600000 = text {
+                      width: 100%,
+                      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                      contents: "600,000",
+                      font-size: 12,
+                      font-family: "Inter",
+                      font-style: "Regular",
+                      line-height: 2,
+                      align: .right
+                    }
+                  }
+
+                  borderBottom = asset {
+                    width: 204px,
+                    height: 1px,
+                    fill: rgb(98.0392%, 98.0392%, 98.0392%),
+                    contents: iconBorderBottom2
+                  }
+                }
+              }
+            }
+          }
+
+          pagination = frame {
+            left: 256.87px,
+            top: 114.62px,
+            width: 367.13px,
+            height: 10.38px,
+            display: .none,
+            overflow: .visible,
+            children: [
+              frame1,
+              keyboardArrowLeft24px,
+              layer1,
+              layer2,
+              layer3,
+              layer4,
+              layer5,
+              more,
+              keyboardArrowRight24px,
+              layer6
+            ],
+
+            frame1 = frame {
+              left: 3px,
+              top: 1.5px,
+              layout: {direction: .column, align-items: .center, item-gap: 10px},
+              padding: 10px,
+              children: show1To10Of100Entries,
+
+              show1To10Of100Entries = text {
+                fill: .black,
+                contents: "show 1 to 10 of 100 entries",
+                font-size: 16,
+                font-family: "Inter",
+                font-style: "Regular",
+                align: .right
+              }
+            }
+
+            keyboardArrowLeft24px = asset {
+              left: 131.57px,
+              top: 0px,
+              width: 26.31px,
+              height: 10.38px,
+              fill: rgb(90.1961%, 90.1961%, 90.1961%),
+              contents: iconKeyboardArrowLeft24px
+            }
+
+            layer1 = frame {
+              left: 159.76px,
+              top: 0px,
+              width: 26.31px,
+              height: 10.38px,
+              children: [rectangle3, label1],
+
+              rectangle3 = shape {
+                left: 0px,
+                top: 0px,
+                width: 26.31px,
+                height: 10.38px,
+                fill: rgb(76.86%, 76.86%, 76.86%),
+                type: .rect,
+                corner-radius: 8px
+              }
+
+              label1 = text {
+                left: 10.02px,
+                top: 1.73px,
+                width: 5.64px,
+                height: 7.16px,
+                fill: colorTokens.colors.neutral-100,
+                contents: "1",
+                font-size: 16,
+                font-family: "Inter",
+                font-style: "Medium",
+                line-height: 1.8,
+                vertical-align: .center
+              }
+            }
+
+            layer2 = frame {
+              left: 198.6px,
+              top: 1.73px,
+              width: 5.64px,
+              height: 7.16px,
+              children: [rectangle2, label2],
+
+              rectangle2 = shape {
+                left: -10.65px,
+                top: -1.73px,
+                width: 26.31px,
+                height: 10.38px,
+                display: .none,
+                fill: rgb(90.1961%, 90.1961%, 90.1961%),
+                type: .rect,
+                corner-radius: 8px
+              }
+
+              label2 = text {
+                left: 0px,
+                top: 0px,
+                width: 5.64px,
+                height: 7.16px,
+                fill: rgb(20%, 20%, 20%),
+                contents: "2",
+                font-size: 16,
+                font-family: "Inter",
+                font-style: "Regular",
+                line-height: 1.8,
+                vertical-align: .center
+              }
+            }
+
+            layer3 = frame {
+              left: 226.79px,
+              top: 1.73px,
+              width: 5.64px,
+              height: 7.16px,
+              children: [rectangle3, label3],
+
+              rectangle3 = shape {
+                left: -10.65px,
+                top: -1.73px,
+                width: 26.31px,
+                height: 10.38px,
+                display: .none,
+                fill: rgb(90.1961%, 90.1961%, 90.1961%),
+                type: .rect,
+                corner-radius: 8px
+              }
+
+              label3 = text {
+                left: 0px,
+                top: 0px,
+                width: 5.64px,
+                height: 7.16px,
+                fill: rgb(20%, 20%, 20%),
+                contents: "3",
+                font-size: 16,
+                font-family: "Inter",
+                font-style: "Regular",
+                line-height: 1.8,
+                vertical-align: .center
+              }
+            }
+
+            layer4 = frame {
+              left: 254.99px,
+              top: 1.73px,
+              width: 5.64px,
+              height: 7.16px,
+              children: [rectangle3, label4],
+
+              rectangle3 = shape {
+                left: -10.65px,
+                top: -1.73px,
+                width: 26.31px,
+                height: 10.38px,
+                display: .none,
+                fill: rgb(90.1961%, 90.1961%, 90.1961%),
+                type: .rect,
+                corner-radius: 8px
+              }
+
+              label4 = text {
+                left: 0px,
+                top: 0px,
+                width: 5.64px,
+                height: 7.16px,
+                fill: rgb(20%, 20%, 20%),
+                contents: "4",
+                font-size: 16,
+                font-family: "Inter",
+                font-style: "Regular",
+                line-height: 1.8,
+                vertical-align: .center
+              }
+            }
+
+            layer5 = frame {
+              left: 283.18px,
+              top: 1.73px,
+              width: 5.64px,
+              height: 7.16px,
+              children: [rectangle3, label5],
+
+              rectangle3 = shape {
+                left: -10.65px,
+                top: -1.73px,
+                width: 26.31px,
+                height: 10.38px,
+                display: .none,
+                fill: rgb(90.1961%, 90.1961%, 90.1961%),
+                type: .rect,
+                corner-radius: 8px
+              }
+
+              label5 = text {
+                left: 0px,
+                top: 0px,
+                width: 5.64px,
+                height: 7.16px,
+                fill: rgb(20%, 20%, 20%),
+                contents: "5",
+                font-size: 16,
+                font-family: "Inter",
+                font-style: "Regular",
+                line-height: 1.8,
+                vertical-align: .center
+              }
+            }
+
+            more = asset {
+              left: 300.72px,
+              top: 3.21px,
+              width: 10.02px,
+              height: 3.95px,
+              fill: rgb(41.96%, 42.35%, 49.41%),
+              contents: iconMore
+            }
+
+            keyboardArrowRight24px = asset {
+              left: 0px,
+              top: 0px,
+              width: 26.31px,
+              height: 10.38px,
+              transform: [-1, 0, 367.13, 0, 1, 0],
+              contents: iconKeyboardArrowRight24px
+            }
+
+            layer6 = frame {
+              left: 320.14px,
+              top: 1.48px,
+              width: 11.28px,
+              height: 7.16px,
+              children: [rectangle3, label10],
+
+              rectangle3 = shape {
+                left: -7.52px,
+                top: -1.48px,
+                width: 26.31px,
+                height: 10.38px,
+                display: .none,
+                fill: rgb(90.1961%, 90.1961%, 90.1961%),
+                type: .rect,
+                corner-radius: 8px
+              }
+
+              label10 = text {
+                left: 0px,
+                top: 0px,
+                width: 11.28px,
+                height: 7.16px,
+                fill: rgb(20%, 20%, 20%),
+                contents: "10",
+                font-size: 16,
+                font-family: "Inter",
+                font-style: "Regular",
+                line-height: 1.8,
+                vertical-align: .center
+              }
+            }
+          }
+        }
+
+        table2 = frame {
+          width: 383px,
+          height: 154px,
+          overflow: .visible,
+          children: [tableFull, pagination],
+
+          tableFull = frame {
+            left: 81px,
+            top: 0px,
+            width: 304px,
+            layout: {justify-content: .end, align-items: .center},
+            children: [frame56, frame43],
+
+            frame56 = frame {
+              width: 132px,
+              layout: {direction: .column, item-gap: 2px},
+              children: frame43,
+
+              frame43 = frame {
+                width: 100%,
+                layout: {direction: .column, item-gap: 1px},
+                children: [tableCellNumber, tableCellNumber2, tableCellNumber3],
+
+                tableCellNumber = frame {
+                  width: 100%,
+                  height: 41px,
+                  layout: {direction: .column},
+                  fill: colorTokens.colors.neutral-00,
+                  overflow: .visible,
+                  children: [frame1, borderBottom],
+
+                  frame1 = frame {
+                    width: 100%,
+                    layout: {direction: .column, item-gap: 10px},
+                    padding: [8px, 16px],
+                    children: total,
+
+                    total = text {
+                      width: 100%,
+                      fill: colorTokens.colors.neutral-100,
+                      contents: "Total",
+                      font-size: 13,
+                      font-family: "Inter",
+                      font-style: "Bold",
+                      line-height: 1.846
+                    }
+                  }
+
+                  borderBottom = asset {
+                    width: 132px,
+                    height: 1px,
+                    fill: rgb(98.0392%, 98.0392%, 98.0392%),
+                    contents: iconBorderBottom7
+                  }
+                }
+
+                tableCellNumber2 = frame {
+                  width: 100%,
+                  layout: {direction: .column},
+                  fill: colorTokens.colors.neutral-00,
+                  overflow: .visible,
+                  children: [frame1, borderBottom],
+
+                  frame1 = frame {
+                    width: 100%,
+                    layout: {direction: .column, item-gap: 10px},
+                    padding: [8px, 16px],
+                    children: amountPaid,
+
+                    amountPaid = text {
+                      width: 100%,
+                      fill: colorTokens.colors.neutral-100,
+                      contents: "Amount Paid",
+                      font-size: 13,
+                      font-family: "Inter",
+                      font-style: "Bold",
+                      line-height: 1.846
+                    }
+                  }
+
+                  borderBottom = frame {
+                    left: 0px,
+                    top: 40px,
+                    width: 132px,
+                    height: 1px,
+                    ignore-stack: .true,
+                    overflow: .visible
+                  }
+                }
+
+                tableCellNumber3 = frame {
+                  width: 100%,
+                  height: 42px,
+                  layout: {direction: .column},
+                  fill: colorTokens.colors.neutral-00,
+                  overflow: .visible,
+                  children: [borderBottom, frame1, borderBottom2],
+
+                  borderBottom = asset {
+                    width: 132px,
+                    height: 1px,
+                    fill: colorTokens.colors.red-50,
+                    contents: iconBorderBottom7
+                  }
+
+                  frame1 = frame {
+                    width: 100%,
+                    layout: {direction: .column, item-gap: 10px},
+                    padding: [8px, 16px],
+                    children: amountDue,
+
+                    amountDue = text {
+                      width: 100%,
+                      fill: colorTokens.colors.red-50,
+                      contents: "Amount Due",
+                      font-size: 13,
+                      font-family: "Inter",
+                      font-style: "Bold",
+                      line-height: 1.846
+                    }
+                  }
+
+                  borderBottom2 = asset {
+                    width: 132px,
+                    height: 1px,
+                    fill: colorTokens.colors.red-50,
+                    contents: iconBorderBottom7
+                  }
+                }
+              }
+            }
+
+            frame43 = frame {
+              width: 172px,
+              layout: {direction: .column, item-gap: 1px},
+              children: [tableCellNumber, tableCellNumber2, tableCellNumber3],
+
+              tableCellNumber = frame {
+                width: 100%,
+                height: 41px,
+                layout: {direction: .column},
+                fill: colorTokens.colors.neutral-00,
+                overflow: .visible,
+                children: [frame1, borderBottom],
+
+                frame1 = frame {
+                  width: 100%,
+                  layout: {direction: .column, item-gap: 10px},
+                  padding: [8px, 16px],
+                  children: label1200000,
+
+                  label1200000 = text {
+                    width: 100%,
+                    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                    contents: "1,200,000",
+                    font-size: 13,
+                    font-family: "Inter",
+                    font-style: "Medium",
+                    line-height: 1.846,
+                    align: .right
+                  }
+                }
+
+                borderBottom = asset {
+                  width: 172px,
+                  height: 1px,
+                  fill: rgb(98.0392%, 98.0392%, 98.0392%),
+                  contents: iconBorderBottom8
+                }
+              }
+
+              tableCellNumber2 = frame {
+                width: 100%,
+                layout: {direction: .column},
+                fill: colorTokens.colors.neutral-00,
+                overflow: .visible,
+                children: [frame1, borderBottom],
+
+                frame1 = frame {
+                  width: 100%,
+                  layout: {direction: .column, item-gap: 10px},
+                  padding: [8px, 16px],
+                  children: label0,
+
+                  label0 = text {
+                    width: 100%,
+                    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                    contents: "0",
+                    font-size: 13,
+                    font-family: "Inter",
+                    font-style: "Medium",
+                    line-height: 1.846,
+                    align: .right
+                  }
+                }
+
+                borderBottom = frame {
+                  left: 0px,
+                  top: 40px,
+                  width: 172px,
+                  height: 1px,
+                  ignore-stack: .true,
+                  overflow: .visible
+                }
+              }
+
+              tableCellNumber3 = frame {
+                width: 100%,
+                height: 42px,
+                layout: {direction: .column},
+                fill: colorTokens.colors.neutral-00,
+                overflow: .visible,
+                children: [borderBottom, frame1, borderBottom2],
+
+                borderBottom = asset {
+                  width: 172px,
+                  height: 1px,
+                  fill: colorTokens.colors.red-50,
+                  contents: iconBorderBottom8
+                }
+
+                frame1 = frame {
+                  width: 100%,
+                  layout: {direction: .column, item-gap: 10px},
+                  padding: [8px, 16px],
+                  children: label1200000,
+
+                  label1200000 = text {
+                    width: 100%,
+                    fill: colorTokens.colors.red-50,
+                    contents: "1,200,000",
+                    font-size: 13,
+                    font-family: "Inter",
+                    font-style: "Medium",
+                    line-height: 1.846,
+                    align: .right
+                  }
+                }
+
+                borderBottom2 = asset {
+                  width: 172px,
+                  height: 1px,
+                  fill: colorTokens.colors.red-50,
+                  contents: iconBorderBottom8
+                }
+              }
+            }
+          }
+
+          pagination = frame {
+            left: 157.66px,
+            top: 141.22px,
+            width: 225.34px,
+            height: 12.78px,
+            display: .none,
+            overflow: .visible,
+            children: [
+              frame1,
+              keyboardArrowLeft24px,
+              layer1,
+              layer2,
+              layer3,
+              layer4,
+              layer5,
+              more,
+              keyboardArrowRight24px,
+              layer6
+            ],
+
+            frame1 = frame {
+              left: 3px,
+              top: 1.5px,
+              layout: {direction: .column, align-items: .center, item-gap: 10px},
+              padding: 10px,
+              children: show1To10Of100Entries,
+
+              show1To10Of100Entries = text {
+                fill: .black,
+                contents: "show 1 to 10 of 100 entries",
+                font-size: 16,
+                font-family: "Inter",
+                font-style: "Regular",
+                align: .right
+              }
+            }
+
+            keyboardArrowLeft24px = asset {
+              left: 80.75px,
+              top: 0px,
+              width: 16.15px,
+              height: 12.78px,
+              fill: rgb(90.1961%, 90.1961%, 90.1961%),
+              contents: iconKeyboardArrowLeft24px2
+            }
+
+            layer1 = frame {
+              left: 98.06px,
+              top: 0px,
+              width: 16.15px,
+              height: 12.78px,
+              children: [rectangle3, label1],
+
+              rectangle3 = shape {
+                left: 0px,
+                top: 0px,
+                width: 16.15px,
+                height: 12.78px,
+                fill: rgb(76.86%, 76.86%, 76.86%),
+                type: .rect,
+                corner-radius: 8px
+              }
+
+              label1 = text {
+                left: 6.15px,
+                top: 2.13px,
+                width: 3.46px,
+                height: 8.83px,
+                fill: colorTokens.colors.neutral-100,
+                contents: "1",
+                font-size: 16,
+                font-family: "Inter",
+                font-style: "Medium",
+                line-height: 1.8,
+                vertical-align: .center
+              }
+            }
+
+            layer2 = frame {
+              left: 121.9px,
+              top: 2.13px,
+              width: 3.46px,
+              height: 8.83px,
+              children: [rectangle2, label2],
+
+              rectangle2 = shape {
+                left: -6.54px,
+                top: -2.13px,
+                width: 16.15px,
+                height: 12.78px,
+                display: .none,
+                fill: rgb(90.1961%, 90.1961%, 90.1961%),
+                type: .rect,
+                corner-radius: 8px
+              }
+
+              label2 = text {
+                left: 0px,
+                top: 0px,
+                width: 3.46px,
+                height: 8.83px,
+                fill: rgb(20%, 20%, 20%),
+                contents: "2",
+                font-size: 16,
+                font-family: "Inter",
+                font-style: "Regular",
+                line-height: 1.8,
+                vertical-align: .center
+              }
+            }
+
+            layer3 = frame {
+              left: 139.2px,
+              top: 2.13px,
+              width: 3.46px,
+              height: 8.83px,
+              children: [rectangle3, label3],
+
+              rectangle3 = shape {
+                left: -6.54px,
+                top: -2.13px,
+                width: 16.15px,
+                height: 12.78px,
+                display: .none,
+                fill: rgb(90.1961%, 90.1961%, 90.1961%),
+                type: .rect,
+                corner-radius: 8px
+              }
+
+              label3 = text {
+                left: 0px,
+                top: 0px,
+                width: 3.46px,
+                height: 8.83px,
+                fill: rgb(20%, 20%, 20%),
+                contents: "3",
+                font-size: 16,
+                font-family: "Inter",
+                font-style: "Regular",
+                line-height: 1.8,
+                vertical-align: .center
+              }
+            }
+
+            layer4 = frame {
+              left: 156.51px,
+              top: 2.13px,
+              width: 3.46px,
+              height: 8.83px,
+              children: [rectangle3, label4],
+
+              rectangle3 = shape {
+                left: -6.54px,
+                top: -2.13px,
+                width: 16.15px,
+                height: 12.78px,
+                display: .none,
+                fill: rgb(90.1961%, 90.1961%, 90.1961%),
+                type: .rect,
+                corner-radius: 8px
+              }
+
+              label4 = text {
+                left: 0px,
+                top: 0px,
+                width: 3.46px,
+                height: 8.83px,
+                fill: rgb(20%, 20%, 20%),
+                contents: "4",
+                font-size: 16,
+                font-family: "Inter",
+                font-style: "Regular",
+                line-height: 1.8,
+                vertical-align: .center
+              }
+            }
+
+            layer5 = frame {
+              left: 173.81px,
+              top: 2.13px,
+              width: 3.46px,
+              height: 8.83px,
+              children: [rectangle3, label5],
+
+              rectangle3 = shape {
+                left: -6.54px,
+                top: -2.13px,
+                width: 16.15px,
+                height: 12.78px,
+                display: .none,
+                fill: rgb(90.1961%, 90.1961%, 90.1961%),
+                type: .rect,
+                corner-radius: 8px
+              }
+
+              label5 = text {
+                left: 0px,
+                top: 0px,
+                width: 3.46px,
+                height: 8.83px,
+                fill: rgb(20%, 20%, 20%),
+                contents: "5",
+                font-size: 16,
+                font-family: "Inter",
+                font-style: "Regular",
+                line-height: 1.8,
+                vertical-align: .center
+              }
+            }
+
+            more = asset {
+              left: 184.58px,
+              top: 3.96px,
+              width: 6.15px,
+              height: 4.87px,
+              fill: rgb(41.96%, 42.35%, 49.41%),
+              contents: iconMore2
+            }
+
+            keyboardArrowRight24px = asset {
+              left: 0px,
+              top: 0px,
+              width: 16.15px,
+              height: 12.78px,
+              transform: [-1, 0, 225.3394, 0, 1, 0],
+              contents: iconKeyboardArrowRight24px2
+            }
+
+            layer6 = frame {
+              left: 196.5px,
+              top: 1.83px,
+              width: 6.92px,
+              height: 8.83px,
+              children: [rectangle3, label10],
+
+              rectangle3 = shape {
+                left: -4.61px,
+                top: -1.83px,
+                width: 16.15px,
+                height: 12.78px,
+                display: .none,
+                fill: rgb(90.1961%, 90.1961%, 90.1961%),
+                type: .rect,
+                corner-radius: 8px
+              }
+
+              label10 = text {
+                left: 0px,
+                top: 0px,
+                width: 6.92px,
+                height: 8.83px,
+                fill: rgb(20%, 20%, 20%),
+                contents: "10",
+                font-size: 16,
+                font-family: "Inter",
+                font-style: "Regular",
+                line-height: 1.8,
+                vertical-align: .center
+              }
+            }
+          }
+        }
+      }
+
+      button = frame {
+        layout: {justify-content: .center, align-items: .center, item-gap: 4px},
+        fill: colorTokens.colors.red-50,
+        border: colorTokens.colors.red-50,
+        corner-radius: 4px,
+        overflow: .visible,
+        padding: [10px, 16px],
+        children: myButton,
+
+        myButton = text {
+          fill: colorTokens.colors.neutral-00,
+          contents: "Pay Now",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.429,
+          align: .center
+        }
+      }
+
+      frame14998 = frame {
+        layout: {align-items: .center},
+        overflow: .visible,
+        children: [
+          orUseTheLinkToProceedWithThePaymentHttpsWwwDokuComUV12tEWS,
+          copy
+        ],
+
+        orUseTheLinkToProceedWithThePaymentHttpsWwwDokuComUV12tEWS = text {
+          width: 497px,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          subrange: [
+            {range: [0, 45], font-size: 13, fill: colorTokens.colors.neutral-70},
+            {
+              range: [45, 75],
+              font-size: 13,
+              font-family: "Inter",
+              font-style: "Medium"
+            }
+          ],
+          contents: "or use the link to proceed with the payment: https://www.doku.com/u/V12tEWS",
+          font-size: 13,
+          font-family: "Inter",
+          font-style: "Regular",
+          line-height: 1.538
+        }
+
+        copy = asset {
+          width: 16px,
+          height: 16px,
+          fill: rgb(40%, 40%, 40%),
+          contents: iconCopy
+        }
+      }
+    }
+
+    line1 = asset {
+      width: 624px,
+      height: 0px,
+      fill: rgb(90.1961%, 90.1961%, 90.1961%),
+      contents: iconLine12
+    }
+
+    customizeFooter = text {
+      width: 100%,
+      display: .none,
+      fill: colorTokens.colors.neutral-70,
+      contents: "Customize Footer",
+      font-size: 13,
+      font-family: "Inter",
+      font-style: "Bold",
+      line-height: 1.846
+    }
+
+    custFooterEng = frame {
+      width: 624px,
+      layout: {direction: .column, item-gap: 15px},
+      overflow: .visible,
+      children: thankYou,
+
+      thankYou = text {
+        width: 100%,
+        fill: colorTokens.colors.neutral-70,
+        contents: "Thank you!",
+        font-size: 13,
+        font-family: "Inter",
+        font-style: "Bold",
+        line-height: 1.846
+      }
+    }
+
+    footerEng = frame {
+      width: 100%,
+      layout: {direction: .column, item-gap: 16px},
+      overflow: .visible,
+      children: [
+        customizeFooter,
+        thisEmailIsSentAutomaticallyByOurSystemPleaseDoNotReplyToThisEmail
+      ],
+
+      customizeFooter = text {
+        width: 100%,
+        display: .none,
+        fill: colorTokens.colors.neutral-70,
+        contents: "Customize Footer",
+        font-size: 13,
+        font-family: "Inter",
+        font-style: "Bold",
+        line-height: 1.846
+      }
+
+      thisEmailIsSentAutomaticallyByOurSystemPleaseDoNotReplyToThisEmail = text {
+        width: 100%,
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: "This email is sent automatically by our system. Please do not reply to this email",
+        font-size: 10,
+        font-family: "Inter",
+        font-style: "Regular",
+        line-height: 1.8
+      }
+    }
+  }
+
+  rectangle5 = shape {
+    left: 0px,
+    top: 0px,
+    width: 704px,
+    height: 8.58px,
+    fill: colorTokens.colors.red-50,
+    type: .rect,
+    corner-radius: [8px, 8px, 0px, 0px]
+  }
+}

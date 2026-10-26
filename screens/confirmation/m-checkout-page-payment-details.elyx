@@ -1,0 +1,1536 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/images/4407298b13b433be.png" as image4407298b13b433be
+import "resources/assets/icons/line-20.svg" as iconLine20
+import "resources/assets/icons/copy-3.svg" as iconCopy3
+import "resources/assets/icons/icon-font-awesome-free-solid-c-check-circle-2.svg" as iconIconFontAwesomeFreeSolidCCheckCircle2
+import "resources/assets/icons/bi-check-circle-fill.svg" as iconBiCheckCircleFill
+import "resources/assets/images/ad9d4d5eb69ca2a2.png" as imageAd9d4d5eb69ca2a2
+import "resources/assets/icons/bi-info-circle.svg" as iconBiInfoCircle
+import "resources/assets/icons/bi-info-circle-fill-2.svg" as iconBiInfoCircleFill2
+import "resources/assets/icons/icon-font-awesome-free-solid-c-chevron-down.svg" as iconIconFontAwesomeFreeSolidCChevronDown
+import "resources/assets/icons/line-23.svg" as iconLine23
+import "resources/assets/icons/icon-font-awesome-free-solid-i-info-circle-2.svg" as iconIconFontAwesomeFreeSolidIInfoCircle2
+import "resources/assets/icons/emoney-doku-7.svg" as iconEmoneyDoku7
+import "resources/assets/icons/select-2.svg" as iconSelect2
+
+export mCheckoutPagePaymentDetails = frame {
+  title: "m/checkout-page/payment-details",
+  left: 0px,
+  top: 0px,
+  width: 390px,
+  height: 938px,
+  fill: colorTokens.colors.neutral-00,
+  children: [frame11269, footerMobileIndo, frame11270],
+
+  frame11269 = frame {
+    left: 16px,
+    top: 155px,
+    height: 714px,
+    layout: {direction: .column, item-gap: 20px},
+    overflow: .visible,
+    children: [frame11274, frame11273],
+
+    frame11274 = frame {
+      width: 358px,
+      layout: {direction: .column, align-items: .center, item-gap: 8px},
+      overflow: .visible,
+      children: [merchantLogoName, ordersummaryMobileIndo],
+
+      merchantLogoName = frame {
+        layout: {
+          direction: .column,
+          justify-content: .center,
+          align-items: .center,
+          item-gap: 4px
+        },
+        overflow: .visible,
+        children: [image70, easyEat],
+
+        image70 = shape {
+          width: 48px,
+          height: 48px,
+          fill: {image: {ref: image4407298b13b433be}},
+          type: .rect
+        }
+
+        easyEat = text {
+          fill: rgb(20%, 20%, 20%),
+          contents: "EasyEat",
+          font-size: 16,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.5
+        }
+      }
+
+      ordersummaryMobileIndo = frame {
+        width: 100%,
+        layout: {direction: .column, item-gap: 12px},
+        fill: colorTokens.colors.neutral-05,
+        border: colorTokens.colors.neutral-20,
+        corner-radius: 8px,
+        overflow: .visible,
+        padding: 16px,
+        children: [frame11217, frame11218, toast],
+
+        frame11217 = frame {
+          width: 100%,
+          layout: {direction: .column},
+          overflow: .visible,
+          children: [frame70, nomorInvoice2022122210007658],
+
+          frame70 = frame {
+            width: 100%,
+            layout: {
+              justify-content: .space-between,
+              align-items: .center,
+              item-gap: 76px
+            },
+            overflow: .visible,
+            children: [ringkasanPesanan, lihatDetail],
+
+            ringkasanPesanan = text {
+              fill: rgb(30.1961%, 30.1961%, 30.1961%),
+              contents: "Ringkasan Pesanan",
+              font-size: 16,
+              font-family: "DIN Next LT Pro",
+              font-style: "Medium",
+              line-height: 1.5
+            }
+
+            lihatDetail = text {
+              fill: colorTokens.colors.red-60,
+              contents: "Lihat Detail",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Medium",
+              line-height: 1.429,
+              align: .right
+            }
+          }
+
+          nomorInvoice2022122210007658 = text {
+            fill: rgb(70.1961%, 70.1961%, 70.1961%),
+            contents: "Nomor Invoice: 2022122210007658",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+        }
+
+        frame11218 = frame {
+          layout: {direction: .column},
+          overflow: .visible,
+          children: [totalPembayaran, frame11220],
+
+          totalPembayaran = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Total Pembayaran",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+
+          frame11220 = frame {
+            layout: {align-items: .center, item-gap: 8px},
+            overflow: .visible,
+            children: [group6, frame11363],
+
+            group6 = frame {
+              width: 122px,
+              height: 28px,
+              children: [idr3305000, line20],
+
+              idr3305000 = text {
+                left: 0px,
+                top: 0px,
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: "IDR 3.305.000",
+                font-size: 20,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.4
+              }
+
+              line20 = asset {
+                left: 1px,
+                top: 14px,
+                width: 121px,
+                height: 0px,
+                fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                contents: iconLine20
+              }
+            }
+
+            frame11363 = frame {
+              layout: {align-items: .center, item-gap: 4px},
+              overflow: .visible,
+              children: [idr2974500, copy],
+
+              idr2974500 = text {
+                fill: colorTokens.colors.red-60,
+                contents: "IDR 2.974.500",
+                font-size: 24,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.33
+              }
+
+              copy = asset {
+                width: 20px,
+                height: 20px,
+                fill: rgb(60%, 60%, 60%),
+                contents: iconCopy3
+              }
+            }
+          }
+        }
+
+        toast = frame {
+          width: 100%,
+          layout: {align-items: .center, item-gap: 12px},
+          fill: colorTokens.colors.green-05,
+          border: colorTokens.colors.green-30,
+          corner-radius: 4px,
+          padding: [12px, 16px],
+          children: [container, button],
+
+          container = frame {
+            width: 243px,
+            layout: {align-items: .center, item-gap: 12px},
+            children: [
+              iconFontAwesomeFreeSolidCCheckCircle,
+              biCheckCircleFill,
+              promoBerlakuAndaHematRp330500
+            ],
+
+            iconFontAwesomeFreeSolidCCheckCircle = asset {
+              width: 24px,
+              height: 24px,
+              display: .none,
+              fill: colorTokens.colors.green-80,
+              contents: iconIconFontAwesomeFreeSolidCCheckCircle2
+            }
+
+            biCheckCircleFill = asset {
+              width: 16px,
+              height: 16px,
+              display: .none,
+              fill: rgb(0%, 50.98%, 49.0196%),
+              contents: iconBiCheckCircleFill
+            }
+
+            promoBerlakuAndaHematRp330500 = text {
+              width: 243px,
+              fill: colorTokens.colors.green-80,
+              contents: "Promo berlaku. Anda hemat Rp 330.500",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.14
+            }
+          }
+
+          button = frame {
+            height: 100%,
+            layout: {
+              justify-content: .center,
+              align-items: .center,
+              item-gap: 4px
+            },
+            corner-radius: 4px,
+            overflow: .visible,
+            children: myButton,
+
+            myButton = text {
+              fill: colorTokens.colors.red-50,
+              contents: "Hapus",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Medium",
+              line-height: 1.429,
+              align: .right
+            }
+          }
+        }
+      }
+    }
+
+    frame11273 = frame {
+      layout: {direction: .column, item-gap: 20px},
+      overflow: .visible,
+      children: [informationBcaMobileIndo, howToPayMobileIndo, input],
+
+      informationBcaMobileIndo = frame {
+        layout: {direction: .column, item-gap: 20px},
+        overflow: .visible,
+        children: frame22,
+
+        frame22 = frame {
+          width: 358px,
+          layout: {direction: .column, item-gap: 20px},
+          fill: colorTokens.colors.neutral-05,
+          border: rgb(91.76%, 92.549%, 94.1176%),
+          corner-radius: 8px,
+          overflow: .visible,
+          padding: 16px,
+          children: [frame64, frame2608197],
+
+          frame64 = frame {
+            width: 326px,
+            layout: {direction: .column, item-gap: 20px},
+            overflow: .visible,
+            children: [silakanBayarKe, frame19],
+
+            silakanBayarKe = text {
+              fill: rgb(30.1961%, 30.1961%, 30.1961%),
+              contents: "Silakan bayar ke",
+              font-size: 16,
+              font-family: "DIN Next LT Pro",
+              font-style: "Medium",
+              line-height: 1.5
+            }
+
+            frame19 = frame {
+              width: 100%,
+              layout: {direction: .column, item-gap: 12px},
+              overflow: .visible,
+              children: [frame16, frame17, frame18, frame19],
+
+              frame16 = frame {
+                width: 100%,
+                layout: {direction: .column},
+                overflow: .visible,
+                children: [virtualAccount, mandiri, bca],
+
+                virtualAccount = text {
+                  width: 100%,
+                  fill: colorTokens.colors.neutral-60,
+                  contents: "Virtual Account",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Regular",
+                  line-height: 1.429
+                }
+
+                mandiri = text {
+                  width: 100%,
+                  fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                  contents: "Mandiri",
+                  font-size: 20,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Medium",
+                  line-height: 1.4
+                }
+
+                bca = shape {
+                  left: 229px,
+                  top: 4px,
+                  width: 96.51px,
+                  height: 40px,
+                  ignore-stack: .true,
+                  fill: {image: {ref: imageAd9d4d5eb69ca2a2, sizing: .fit}},
+                  type: .rect
+                }
+              }
+
+              frame17 = frame {
+                width: 100%,
+                layout: {direction: .column},
+                overflow: .visible,
+                children: [nomorVirtualAccount, frame63],
+
+                nomorVirtualAccount = text {
+                  width: 100%,
+                  fill: colorTokens.colors.neutral-60,
+                  contents: "Nomor Virtual Account ",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Regular",
+                  line-height: 1.429
+                }
+
+                frame63 = frame {
+                  width: 100%,
+                  layout: {align-items: .center, item-gap: 6px},
+                  overflow: .visible,
+                  children: [label1900800000000952, copy],
+
+                  label1900800000000952 = text {
+                    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                    contents: "1900800000000952",
+                    font-size: 20,
+                    font-family: "DIN Next LT Pro",
+                    font-style: "Medium",
+                    line-height: 1.4
+                  }
+
+                  copy = asset {
+                    width: 20px,
+                    height: 20px,
+                    fill: rgb(60%, 60%, 60%),
+                    contents: iconCopy3
+                  }
+                }
+              }
+
+              frame18 = frame {
+                width: 100%,
+                display: .none,
+                layout: {direction: .column},
+                overflow: .visible,
+                children: [totalAmountToPay, idr2974500],
+
+                totalAmountToPay = text {
+                  width: 100%,
+                  fill: colorTokens.colors.neutral-60,
+                  contents: "Total Amount to Pay",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Regular",
+                  line-height: 1.429
+                }
+
+                idr2974500 = text {
+                  width: 100%,
+                  fill: colorTokens.colors.red-60,
+                  contents: "IDR 2.974.500",
+                  font-size: 20,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Medium",
+                  line-height: 1.4
+                }
+              }
+
+              frame19 = frame {
+                width: 100%,
+                layout: {direction: .column},
+                overflow: .visible,
+                children: [bayarSebelum, label30April20241125Pm],
+
+                bayarSebelum = text {
+                  width: 100%,
+                  fill: colorTokens.colors.neutral-60,
+                  contents: "Bayar Sebelum",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Regular",
+                  line-height: 1.429
+                }
+
+                label30April20241125Pm = text {
+                  width: 100%,
+                  fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                  contents: "30 April 2024, 11.25 PM",
+                  font-size: 20,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Medium",
+                  line-height: 1.4
+                }
+              }
+            }
+          }
+
+          frame2608197 = frame {
+            width: 100%,
+            layout: {direction: .column, item-gap: 16px},
+            overflow: .visible,
+            children: [frame2608202, frame2608196],
+
+            frame2608202 = frame {
+              width: 100%,
+              layout: {direction: .column, item-gap: 14px},
+              overflow: .visible,
+              children: [button, button2],
+
+              button = frame {
+                width: 100%,
+                layout: {
+                  justify-content: .center,
+                  align-items: .center,
+                  item-gap: 4px
+                },
+                fill: colorTokens.colors.red-50,
+                border: colorTokens.colors.red-50,
+                corner-radius: 4px,
+                overflow: .visible,
+                padding: [10px, 16px],
+                children: myButton,
+
+                myButton = text {
+                  fill: colorTokens.colors.neutral-00,
+                  contents: "Bayar via Aplikasi Bank",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Medium",
+                  line-height: 1.429,
+                  align: .center
+                }
+              }
+
+              button2 = frame {
+                width: 100%,
+                layout: {
+                  justify-content: .center,
+                  align-items: .center,
+                  item-gap: 4px
+                },
+                fill: colorTokens.colors.neutral-00,
+                border: colorTokens.colors.red-50,
+                corner-radius: 4px,
+                overflow: .visible,
+                padding: [10px, 16px],
+                children: myButton,
+
+                myButton = text {
+                  fill: colorTokens.colors.red-60,
+                  contents: "Cek Status Pembayaran",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Medium",
+                  line-height: 1.429,
+                  align: .center
+                }
+              }
+            }
+
+            frame2608196 = frame {
+              width: 100%,
+              layout: {direction: .column},
+              overflow: .visible,
+              children: [adaKendala, button],
+
+              adaKendala = text {
+                fill: colorTokens.colors.neutral-50,
+                contents: "Ada kendala?",
+                font-size: 14,
+                font-family: "DIN Next LT Pro",
+                font-style: "Medium",
+                line-height: 1.429
+              }
+
+              button = frame {
+                width: 100%,
+                layout: {align-items: .center, item-gap: 4px},
+                corner-radius: 4px,
+                overflow: .visible,
+                children: myButton,
+
+                myButton = text {
+                  fill: colorTokens.colors.red-50,
+                  contents: "Scan Barcode untuk Bayar",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Medium",
+                  line-height: 1.429,
+                  align: .center
+                }
+              }
+            }
+          }
+        }
+      }
+
+      howToPayMobileIndo = frame {
+        layout: {direction: .column, item-gap: 24px},
+        overflow: .visible,
+        children: howToPay,
+
+        howToPay = frame {
+          layout: {direction: .column, item-gap: 6px},
+          overflow: .visible,
+          children: [bagaimanaCaraMembayar, frame14396],
+
+          bagaimanaCaraMembayar = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Bagaimana cara membayar",
+            font-size: 16,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.5
+          }
+
+          frame14396 = frame {
+            layout: {direction: .column},
+            fill: colorTokens.colors.neutral-00,
+            border: {color: rgb(91.76%, 92.549%, 94.1176%), position: .outside},
+            corner-radius: 8px,
+            overflow: .visible,
+            children: [
+              cardHowToPayMobileIndo,
+              line23,
+              cardHowToPayMobileIndo2,
+              line24,
+              cardHowToPayMobileIndo3
+            ],
+
+            cardHowToPayMobileIndo = frame {
+              width: 358px,
+              layout: {
+                direction: .column,
+                justify-content: .center,
+                item-gap: 16px
+              },
+              fill: colorTokens.colors.neutral-00,
+              corner-radius: [8px, 8px, 0px, 0px],
+              overflow: .visible,
+              padding: [10px, 16px],
+              children: [container, atmBca],
+
+              container = frame {
+                width: 100%,
+                layout: {direction: .column},
+                overflow: .visible,
+                children: [trigger, content],
+
+                trigger = frame {
+                  width: 100%,
+                  layout: {align-items: .center, item-gap: 8px},
+                  overflow: .visible,
+                  children: [header, iconFontAwesomeFreeSolidCChevronDown],
+
+                  header = frame {
+                    width: 302px,
+                    layout: {align-items: .center, item-gap: 8px},
+                    overflow: .visible,
+                    children: [biInfoCircle, atmBca, biInfoCircle2, badge],
+
+                    biInfoCircle = asset {
+                      width: 16px,
+                      height: 16px,
+                      display: .none,
+                      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                      contents: iconBiInfoCircle
+                    }
+
+                    atmBca = text {
+                      fill: rgb(20%, 20%, 20%),
+                      contents: "ATM BCA",
+                      font-size: 16,
+                      font-family: "DIN Next LT Pro",
+                      font-style: "Regular",
+                      line-height: 1.5
+                    }
+
+                    biInfoCircle2 = asset {
+                      width: 16px,
+                      height: 16px,
+                      display: .none,
+                      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                      contents: iconBiInfoCircle
+                    }
+
+                    badge = frame {
+                      display: .none,
+                      layout: {
+                        justify-content: .center,
+                        align-items: .center,
+                        item-gap: 4px
+                      },
+                      fill: colorTokens.colors.green-10,
+                      corner-radius: 8px,
+                      padding: 8px,
+                      children: [badge, biInfoCircleFill],
+
+                      badge = text {
+                        fill: colorTokens.colors.green-50,
+                        contents: "Badge",
+                        font-size: 12,
+                        font-family: "DIN Next LT Pro",
+                        font-style: "Medium",
+                        line-height: 1,
+                        letter-spacing: 0.5%,
+                        align: .center
+                      }
+
+                      biInfoCircleFill = asset {
+                        width: 12px,
+                        height: 12px,
+                        display: .none,
+                        fill: rgb(0%, 50.98%, 49.0196%),
+                        contents: iconBiInfoCircleFill2
+                      }
+                    }
+                  }
+
+                  iconFontAwesomeFreeSolidCChevronDown = asset {
+                    width: 16px,
+                    height: 16px,
+                    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                    contents: iconIconFontAwesomeFreeSolidCChevronDown
+                  }
+                }
+
+                content = frame {
+                  width: 100%,
+                  height: 8.1px,
+                  display: .none,
+                  layout: {direction: .column, item-gap: 10px},
+                  overflow: .visible,
+                  padding: [8px, 0px],
+                  children: slotComponentLayout,
+
+                  slotComponentLayout = frame {
+                    display: .none,
+                    layout: {item-gap: 16px},
+                    overflow: .visible,
+                    children: slotComponentDefault,
+
+                    slotComponentDefault = frame {
+                      width: 225px,
+                      height: 100%,
+                      layout: {align-items: .center, item-gap: 8px},
+                      padding: [4px, 16px]
+                    }
+                  }
+                }
+              }
+
+              atmBca = frame {
+                width: 100%,
+                display: .none,
+                layout: {direction: .column, item-gap: 12px},
+                fill: colorTokens.colors.neutral-05,
+                corner-radius: 4px,
+                overflow: .visible,
+                padding: 16px,
+                children: [
+                  howToPay,
+                  insertYourAtmCardAndEnterThePinSelectOtherTransactionOnTheMainMenuSelectTransferSelectToBcaVirtualAccountEnterBcaVirtualAccount1234567890ThenPressCorrectEnterTheTotalAmountToPayThenPressCorrectCheckTheTransactionDetailsSelectYesToFinishThePaymentOrNoIfThereIsAnyIncorrectDetails
+                ],
+
+                howToPay = text {
+                  width: 100%,
+                  fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                  contents: "How to Pay",
+                  font-size: 16,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Bold",
+                  line-height: 1.5
+                }
+
+                insertYourAtmCardAndEnterThePinSelectOtherTransactionOnTheMainMenuSelectTransferSelectToBcaVirtualAccountEnterBcaVirtualAccount1234567890ThenPressCorrectEnterTheTotalAmountToPayThenPressCorrectCheckTheTransactionDetailsSelectYesToFinishThePaymentOrNoIfThereIsAnyIncorrectDetails = text {
+                  width: 100%,
+                  fill: rgb(40%, 40%, 40%),
+                  subrange: [
+                    {
+                      range: [174, 184],
+                      font-size: 14,
+                      font-family: "DIN Next LT Pro",
+                      font-style: "Bold"
+                    },
+                    {
+                      range: [184, 372],
+                      font-size: 14,
+                      font-family: "DIN Next LT Pro",
+                      font-style: "Regular"
+                    }
+                  ],
+                  contents: "1. Insert your ATM card and enter the PIN\n2. Select “Other Transaction” on the main menu\n3. Select “Transfer”\n4. Select to “BCA Virtual Account”\n5. Enter BCA Virtual Account 1234567890, then press “Correct”\n6. Enter the Total Amount to Pay, then press “Correct”\n7. Check the transaction details. Select “Yes” to finish the payment or “No” if there is any incorrect details",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Regular",
+                  line-height: 1.429
+                }
+              }
+            }
+
+            line23 = asset {
+              width: 356px,
+              height: 0px,
+              fill: rgb(91.76%, 92.549%, 94.1176%),
+              contents: iconLine23
+            }
+
+            cardHowToPayMobileIndo2 = frame {
+              width: 358px,
+              layout: {
+                direction: .column,
+                justify-content: .center,
+                item-gap: 16px
+              },
+              fill: colorTokens.colors.neutral-00,
+              overflow: .visible,
+              padding: [10px, 16px],
+              children: [container, bcaMobile],
+
+              container = frame {
+                width: 100%,
+                layout: {direction: .column},
+                overflow: .visible,
+                children: [trigger, content],
+
+                trigger = frame {
+                  width: 100%,
+                  layout: {align-items: .center, item-gap: 8px},
+                  overflow: .visible,
+                  children: [header, iconFontAwesomeFreeSolidCChevronDown],
+
+                  header = frame {
+                    width: 302px,
+                    layout: {align-items: .center, item-gap: 8px},
+                    overflow: .visible,
+                    children: [
+                      biInfoCircle,
+                      mBcaBcaMobile,
+                      biInfoCircle2,
+                      badge
+                    ],
+
+                    biInfoCircle = asset {
+                      width: 16px,
+                      height: 16px,
+                      display: .none,
+                      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                      contents: iconBiInfoCircle
+                    }
+
+                    mBcaBcaMobile = text {
+                      fill: rgb(20%, 20%, 20%),
+                      contents: "m-BCA (BCA Mobile)",
+                      font-size: 16,
+                      font-family: "DIN Next LT Pro",
+                      font-style: "Regular",
+                      line-height: 1.5
+                    }
+
+                    biInfoCircle2 = asset {
+                      width: 16px,
+                      height: 16px,
+                      display: .none,
+                      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                      contents: iconBiInfoCircle
+                    }
+
+                    badge = frame {
+                      display: .none,
+                      layout: {
+                        justify-content: .center,
+                        align-items: .center,
+                        item-gap: 4px
+                      },
+                      fill: colorTokens.colors.green-10,
+                      corner-radius: 8px,
+                      padding: 8px,
+                      children: [badge, biInfoCircleFill],
+
+                      badge = text {
+                        fill: colorTokens.colors.green-50,
+                        contents: "Badge",
+                        font-size: 12,
+                        font-family: "DIN Next LT Pro",
+                        font-style: "Medium",
+                        line-height: 1,
+                        letter-spacing: 0.5%,
+                        align: .center
+                      }
+
+                      biInfoCircleFill = asset {
+                        width: 12px,
+                        height: 12px,
+                        display: .none,
+                        fill: rgb(0%, 50.98%, 49.0196%),
+                        contents: iconBiInfoCircleFill2
+                      }
+                    }
+                  }
+
+                  iconFontAwesomeFreeSolidCChevronDown = asset {
+                    width: 16px,
+                    height: 16px,
+                    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                    contents: iconIconFontAwesomeFreeSolidCChevronDown
+                  }
+                }
+
+                content = frame {
+                  width: 100%,
+                  height: 8.1px,
+                  display: .none,
+                  layout: {direction: .column, item-gap: 10px},
+                  overflow: .visible,
+                  padding: [8px, 0px],
+                  children: slotComponentLayout,
+
+                  slotComponentLayout = frame {
+                    display: .none,
+                    layout: {item-gap: 16px},
+                    overflow: .visible,
+                    children: slotComponentDefault,
+
+                    slotComponentDefault = frame {
+                      width: 225px,
+                      height: 100%,
+                      layout: {align-items: .center, item-gap: 8px},
+                      padding: [4px, 16px]
+                    }
+                  }
+                }
+              }
+
+              bcaMobile = frame {
+                width: 100%,
+                display: .none,
+                layout: {direction: .column, item-gap: 12px},
+                fill: colorTokens.colors.neutral-05,
+                corner-radius: 4px,
+                overflow: .visible,
+                padding: 16px,
+                children: [
+                  howToPay,
+                  openBcaMobileAppSelectMBcaThenSelectMTransferSelectBcaVirtualAccountThenEnterBcaVirtualAccount1234567890ClickTheSendButtonThenClickOkEnterYourPinToFinishThePayment
+                ],
+
+                howToPay = text {
+                  width: 100%,
+                  fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                  contents: "How to Pay",
+                  font-size: 16,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Bold",
+                  line-height: 1.5
+                }
+
+                openBcaMobileAppSelectMBcaThenSelectMTransferSelectBcaVirtualAccountThenEnterBcaVirtualAccount1234567890ClickTheSendButtonThenClickOkEnterYourPinToFinishThePayment = text {
+                  width: 100%,
+                  fill: rgb(40%, 40%, 40%),
+                  subrange: [
+                    {
+                      range: [131, 145],
+                      font-size: 14,
+                      font-family: "DIN Next LT Pro",
+                      font-style: "Bold"
+                    },
+                    {
+                      range: [145, 225],
+                      font-size: 14,
+                      font-family: "DIN Next LT Pro",
+                      font-style: "Regular"
+                    }
+                  ],
+                  contents: "1. Open BCA Mobile App\n2. Select “m-BCA”, then select “m-Transfer”\n3. Select “BCA Virtual Account”, then enter BCA Virtual Account 1234567890\n4. Click the “Send” button, then click “OK”\n5. Enter your PIN to finish the payment",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Regular",
+                  line-height: 1.429
+                }
+              }
+            }
+
+            line24 = asset {
+              width: 356px,
+              height: 0px,
+              fill: rgb(91.76%, 92.549%, 94.1176%),
+              contents: iconLine23
+            }
+
+            cardHowToPayMobileIndo3 = frame {
+              width: 358px,
+              layout: {
+                direction: .column,
+                justify-content: .center,
+                item-gap: 16px
+              },
+              fill: colorTokens.colors.neutral-00,
+              corner-radius: [0px, 0px, 8px, 8px],
+              overflow: .visible,
+              padding: [10px, 16px],
+              children: [container, klikBCAInternetBanking],
+
+              container = frame {
+                width: 100%,
+                layout: {direction: .column},
+                overflow: .visible,
+                children: [trigger, content],
+
+                trigger = frame {
+                  width: 100%,
+                  layout: {align-items: .center, item-gap: 8px},
+                  overflow: .visible,
+                  children: [header, iconFontAwesomeFreeSolidCChevronDown],
+
+                  header = frame {
+                    width: 302px,
+                    layout: {align-items: .center, item-gap: 8px},
+                    overflow: .visible,
+                    children: [
+                      biInfoCircle,
+                      bcaInternetBanking,
+                      biInfoCircle2,
+                      badge
+                    ],
+
+                    biInfoCircle = asset {
+                      width: 16px,
+                      height: 16px,
+                      display: .none,
+                      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                      contents: iconBiInfoCircle
+                    }
+
+                    bcaInternetBanking = text {
+                      fill: rgb(20%, 20%, 20%),
+                      contents: "BCA Internet Banking",
+                      font-size: 16,
+                      font-family: "DIN Next LT Pro",
+                      font-style: "Regular",
+                      line-height: 1.5
+                    }
+
+                    biInfoCircle2 = asset {
+                      width: 16px,
+                      height: 16px,
+                      display: .none,
+                      fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                      contents: iconBiInfoCircle
+                    }
+
+                    badge = frame {
+                      display: .none,
+                      layout: {
+                        justify-content: .center,
+                        align-items: .center,
+                        item-gap: 4px
+                      },
+                      fill: colorTokens.colors.green-10,
+                      corner-radius: 8px,
+                      padding: 8px,
+                      children: [badge, biInfoCircleFill],
+
+                      badge = text {
+                        fill: colorTokens.colors.green-50,
+                        contents: "Badge",
+                        font-size: 12,
+                        font-family: "DIN Next LT Pro",
+                        font-style: "Medium",
+                        line-height: 1,
+                        letter-spacing: 0.5%,
+                        align: .center
+                      }
+
+                      biInfoCircleFill = asset {
+                        width: 12px,
+                        height: 12px,
+                        display: .none,
+                        fill: rgb(0%, 50.98%, 49.0196%),
+                        contents: iconBiInfoCircleFill2
+                      }
+                    }
+                  }
+
+                  iconFontAwesomeFreeSolidCChevronDown = asset {
+                    width: 16px,
+                    height: 16px,
+                    fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                    contents: iconIconFontAwesomeFreeSolidCChevronDown
+                  }
+                }
+
+                content = frame {
+                  width: 100%,
+                  height: 8.1px,
+                  display: .none,
+                  layout: {direction: .column, item-gap: 10px},
+                  overflow: .visible,
+                  padding: [8px, 0px],
+                  children: slotComponentLayout,
+
+                  slotComponentLayout = frame {
+                    display: .none,
+                    layout: {item-gap: 16px},
+                    overflow: .visible,
+                    children: slotComponentDefault,
+
+                    slotComponentDefault = frame {
+                      width: 225px,
+                      height: 100%,
+                      layout: {align-items: .center, item-gap: 8px},
+                      padding: [4px, 16px]
+                    }
+                  }
+                }
+              }
+
+              klikBCAInternetBanking = frame {
+                width: 100%,
+                display: .none,
+                layout: {direction: .column, item-gap: 12px},
+                fill: colorTokens.colors.neutral-05,
+                corner-radius: 4px,
+                overflow: .visible,
+                padding: 16px,
+                children: [
+                  howToPay,
+                  loginToKlikBCASelectTransferThenSelectTransferToBcaVirtualAccountEnterBcaVirtualAccount1234567890CheckTheDetailsThenClickSendToFinishThePayment
+                ],
+
+                howToPay = text {
+                  width: 100%,
+                  fill: rgb(30.1961%, 30.1961%, 30.1961%),
+                  contents: "How to Pay",
+                  font-size: 16,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Bold",
+                  line-height: 1.5
+                }
+
+                loginToKlikBCASelectTransferThenSelectTransferToBcaVirtualAccountEnterBcaVirtualAccount1234567890CheckTheDetailsThenClickSendToFinishThePayment = text {
+                  width: 100%,
+                  fill: rgb(40%, 40%, 40%),
+                  subrange: [
+                    {range: [12, 23], underline: .single},
+                    {
+                      range: [117, 131],
+                      font-family: "DIN Next LT Pro",
+                      font-style: "Bold"
+                    },
+                    {
+                      range: [131, 189],
+                      font-size: 14,
+                      font-family: "DIN Next LT Pro",
+                      font-style: "Regular"
+                    }
+                  ],
+                  contents: "1. Login to KlikBCA\n2. Select “Transfer”, then select “Transfer to BCA Virtual Account”\n3. Enter BCA Virtual Account 1234567890\n4. Check the details, then click “Send” to finish the payment",
+                  font-size: 14,
+                  font-family: "DIN Next LT Pro",
+                  font-style: "Regular",
+                  line-height: 1.429
+                }
+              }
+            }
+          }
+        }
+      }
+
+      input = frame {
+        width: 358px,
+        layout: {direction: .column, item-gap: 4px},
+        overflow: .visible,
+        children: [label, inputButton, inputHelperText],
+
+        label = frame {
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [label, badge],
+
+          label = text {
+            fill: rgb(30.1961%, 30.1961%, 30.1961%),
+            contents: "Send instruction to your email?",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Medium",
+            line-height: 1.429
+          }
+
+          badge = frame {
+            display: .none,
+            layout: {
+              justify-content: .center,
+              align-items: .center,
+              item-gap: 4px
+            },
+            fill: colorTokens.colors.green-10,
+            corner-radius: 8px,
+            padding: [4px, 8px],
+            children: [badge, biInfoCircleFill],
+
+            badge = text {
+              opacity: 0.8,
+              fill: colorTokens.colors.green-50,
+              contents: "Badge",
+              font-size: 12,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1,
+              align: .center
+            }
+
+            biInfoCircleFill = asset {
+              width: 12px,
+              height: 12px,
+              display: .none,
+              fill: rgb(0%, 50.98%, 49.0196%),
+              contents: iconBiInfoCircleFill2
+            }
+          }
+        }
+
+        inputButton = frame {
+          width: 100%,
+          height: 40px,
+          overflow: .visible,
+          children: [inputPlaceholder, button],
+
+          inputPlaceholder = frame {
+            left: 0px,
+            top: 0px,
+            width: 296px,
+            layout: {align-items: .center, item-gap: 10px},
+            fill: colorTokens.colors.neutral-00,
+            border: rgb(80%, 80%, 80%),
+            corner-radius: [4px, 0px, 0px, 4px],
+            overflow: .visible,
+            padding: [10px, 16px],
+            children: [
+              iconFontAwesomeFreeSolidIInfoCircle,
+              value,
+              iconFontAwesomeFreeSolidIInfoCircle2
+            ],
+
+            iconFontAwesomeFreeSolidIInfoCircle = asset {
+              width: 20px,
+              height: 20px,
+              display: .none,
+              fill: rgb(40%, 40%, 40%),
+              contents: iconIconFontAwesomeFreeSolidIInfoCircle2
+            }
+
+            value = text {
+              width: 264px,
+              fill: rgb(30.1961%, 30.1961%, 30.1961%),
+              contents: "luthfan@gmail.com",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Regular",
+              line-height: 1.429
+            }
+
+            iconFontAwesomeFreeSolidIInfoCircle2 = asset {
+              width: 20px,
+              height: 20px,
+              display: .none,
+              fill: rgb(40%, 40%, 40%),
+              contents: iconIconFontAwesomeFreeSolidIInfoCircle2
+            }
+          }
+
+          button = frame {
+            left: 295px,
+            top: 0px,
+            layout: {
+              justify-content: .center,
+              align-items: .center,
+              item-gap: 4px
+            },
+            fill: colorTokens.colors.red-50,
+            border: colorTokens.colors.red-50,
+            corner-radius: [0px, 4px, 4px, 0px],
+            overflow: .visible,
+            padding: [10px, 16px],
+            children: myButton,
+
+            myButton = text {
+              fill: colorTokens.colors.neutral-00,
+              contents: "Send",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Medium",
+              line-height: 1.429,
+              align: .center
+            }
+          }
+        }
+
+        inputHelperText = text {
+          width: 100%,
+          display: .none,
+          fill: rgb(40%, 40%, 40%),
+          contents: "Input helper text",
+          font-size: 12,
+          font-family: "DIN Next LT Pro",
+          font-style: "Regular",
+          line-height: 1.33
+        }
+      }
+    }
+  }
+
+  footerMobileIndo = frame {
+    left: 0px,
+    top: 890px,
+    width: 390px,
+    layout: {
+      direction: .column,
+      justify-content: .center,
+      align-items: .center,
+      item-gap: 10px
+    },
+    fill: colorTokens.colors.neutral-00,
+    border: {color: colorTokens.colors.neutral-20, sides: .top},
+    overflow: .visible,
+    padding: [12px, 669px],
+    children: footer,
+
+    footer = frame {
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [securePaymentBy, emoneyDoku],
+
+      securePaymentBy = text {
+        fill: rgb(30.1961%, 30.1961%, 30.1961%),
+        contents: "Secure Payment by",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.429
+      }
+
+      emoneyDoku = asset {
+        width: 24px,
+        height: 24px,
+        fill: colorTokens.colors.red-50,
+        contents: iconEmoneyDoku7
+      }
+    }
+  }
+
+  frame11270 = frame {
+    left: 0px,
+    top: 0px,
+    layout: {direction: .column},
+    overflow: .visible,
+    children: [countdownMobileIndo, topbarMobileIndo],
+
+    countdownMobileIndo = frame {
+      width: 390px,
+      layout: {
+        direction: .column,
+        justify-content: .center,
+        align-items: .center,
+        item-gap: 4px
+      },
+      fill: colorTokens.colors.blue-100,
+      overflow: .visible,
+      padding: [10px, 16px],
+      children: [lengkapiPembayaranDalam, frame54],
+
+      lengkapiPembayaranDalam = text {
+        fill: colorTokens.colors.neutral-00,
+        contents: "Lengkapi pembayaran dalam",
+        font-size: 14,
+        font-family: "DIN Next LT Pro",
+        font-style: "Regular",
+        line-height: 1.429
+      }
+
+      frame54 = frame {
+        layout: {item-gap: 8px},
+        overflow: .visible,
+        children: [frame50, frame51, frame52, frame53],
+
+        frame50 = frame {
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [frame35, hari],
+
+          frame35 = frame {
+            width: 28px,
+            height: 28px,
+            layout: {
+              direction: .column,
+              justify-content: .center,
+              align-items: .center,
+              item-gap: 10px
+            },
+            fill: colorTokens.colors.red-60,
+            corner-radius: 4px,
+            overflow: .visible,
+            padding: 6px,
+            children: label01,
+
+            label01 = text {
+              fill: colorTokens.colors.neutral-00,
+              contents: "01",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Medium"
+            }
+          }
+
+          hari = text {
+            fill: colorTokens.colors.neutral-00,
+            contents: "Hari",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+        }
+
+        frame51 = frame {
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [frame35, jam],
+
+          frame35 = frame {
+            width: 28px,
+            height: 28px,
+            layout: {
+              direction: .column,
+              justify-content: .center,
+              align-items: .center,
+              item-gap: 10px
+            },
+            fill: colorTokens.colors.red-60,
+            corner-radius: 4px,
+            overflow: .visible,
+            padding: 6px,
+            children: label11,
+
+            label11 = text {
+              fill: colorTokens.colors.neutral-00,
+              contents: "11",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Medium"
+            }
+          }
+
+          jam = text {
+            fill: colorTokens.colors.neutral-00,
+            contents: "Jam",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+        }
+
+        frame52 = frame {
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [frame35, menit],
+
+          frame35 = frame {
+            width: 28px,
+            height: 28px,
+            layout: {
+              direction: .column,
+              justify-content: .center,
+              align-items: .center,
+              item-gap: 10px
+            },
+            fill: colorTokens.colors.red-60,
+            corner-radius: 4px,
+            overflow: .visible,
+            padding: 6px,
+            children: label02,
+
+            label02 = text {
+              fill: colorTokens.colors.neutral-00,
+              contents: "02",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Medium"
+            }
+          }
+
+          menit = text {
+            fill: colorTokens.colors.neutral-00,
+            contents: "Menit",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+        }
+
+        frame53 = frame {
+          layout: {align-items: .center, item-gap: 4px},
+          overflow: .visible,
+          children: [frame35, detik],
+
+          frame35 = frame {
+            width: 28px,
+            height: 28px,
+            layout: {
+              direction: .column,
+              justify-content: .center,
+              align-items: .center,
+              item-gap: 10px
+            },
+            fill: colorTokens.colors.red-60,
+            corner-radius: 4px,
+            overflow: .visible,
+            padding: 6px,
+            children: label33,
+
+            label33 = text {
+              fill: colorTokens.colors.neutral-00,
+              contents: "33",
+              font-size: 14,
+              font-family: "DIN Next LT Pro",
+              font-style: "Medium"
+            }
+          }
+
+          detik = text {
+            fill: colorTokens.colors.neutral-00,
+            contents: "Detik",
+            font-size: 14,
+            font-family: "DIN Next LT Pro",
+            font-style: "Regular",
+            line-height: 1.429
+          }
+        }
+      }
+    }
+
+    topbarMobileIndo = frame {
+      width: 390px,
+      layout: {
+        justify-content: .space-between,
+        align-items: .center,
+        item-gap: 189px
+      },
+      fill: colorTokens.colors.neutral-00,
+      border: {color: colorTokens.colors.neutral-20, sides: .bottom},
+      overflow: .visible,
+      padding: [12px, 16px],
+      children: [kembaliKeMerchant, languageSwitcher],
+
+      kembaliKeMerchant = text {
+        fill: colorTokens.colors.red-60,
+        subrange: {
+          range: [0, 2],
+          font-size: 14,
+          font-family: "Inter",
+          font-style: "Medium"
+        },
+        contents: "<- Kembali ke Merchant",
+        font-size: 16,
+        font-family: "Inter",
+        font-style: "Regular"
+      }
+
+      languageSwitcher = frame {
+        layout: {align-items: .center, item-gap: 2px},
+        fill: colorTokens.colors.neutral-00,
+        border: colorTokens.colors.neutral-20,
+        corner-radius: 90px,
+        overflow: .visible,
+        padding: [6px, 16px],
+        children: [english, select],
+
+        english = text {
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: "Indonesia",
+          font-size: 14,
+          font-family: "DIN Next LT Pro",
+          font-style: "Medium",
+          line-height: 1.429
+        }
+
+        select = asset {
+          width: 16px,
+          height: 16px,
+          fill: rgb(30.1961%, 30.1961%, 30.1961%),
+          contents: iconSelect2
+        }
+      }
+    }
+  }
+}

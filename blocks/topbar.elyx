@@ -1,0 +1,154 @@
+import "tokens/colors.elyx" as colorTokens
+import "resources/assets/icons/arrow-back-round.svg" as iconArrowBackRound
+import "resources/assets/icons/more-icon.svg" as iconMoreIcon
+import "resources/assets/icons/emoney-doku.svg" as iconEmoneyDoku
+import "resources/assets/icons/notifications-filled.svg" as iconNotificationsFilled
+import "resources/assets/icons/highlight-off-round.svg" as iconHighlightOffRound
+import "resources/assets/icons/line-5.svg" as iconLine5
+
+export topbarDefault = frame {
+  title: "Topbar / variant=default",
+  left: 0px,
+  top: 0px,
+  width: 312px,
+  height: 55px,
+  layout: {align-items: .center, item-gap: 10px},
+  fill: colorTokens.colors.neutral-00,
+  padding: [6px, 16px],
+  children: [row, moreIcon],
+
+  row = frame {
+    width: 194px,
+    layout: {align-items: .center, item-gap: 10px},
+    overflow: .visible,
+    children: [arrowBack, header],
+
+    arrowBack = asset {
+      width: 20px,
+      height: 20px,
+      fill: colorTokens.colors.neutral-80,
+      contents: iconArrowBackRound
+    }
+
+    header = text {
+      fill: colorTokens.colors.red-50,
+      contents: "Header",
+      font-size: 16,
+      font-family: "DIN Next LT Pro",
+      font-style: "Medium",
+      line-height: 1.5
+    }
+  }
+
+  moreIcon = asset {
+    width: 76px,
+    height: 20px,
+    fill: colorTokens.colors.neutral-80,
+    contents: iconMoreIcon
+  }
+}
+
+export topbarHome = frame {
+  title: "Topbar / variant=home",
+  left: 0px,
+  top: 103px,
+  width: 312px,
+  height: 55px,
+  layout: {
+    justify-content: .space-between,
+    align-items: .center,
+    item-gap: 10px
+  },
+  fill: colorTokens.colors.neutral-00,
+  padding: [6px, 16px],
+  children: [emoneyDoku, header, notifications],
+
+  emoneyDoku = asset {
+    width: 26px,
+    height: 26px,
+    fill: colorTokens.colors.red-50,
+    contents: iconEmoneyDoku
+  }
+
+  header = text {
+    fill: colorTokens.colors.neutral-80,
+    contents: "Header",
+    font-size: 16,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1.5
+  }
+
+  notifications = asset {
+    width: 24px,
+    height: 24px,
+    fill: colorTokens.colors.neutral-30,
+    contents: iconNotificationsFilled
+  }
+}
+
+export topbarSearch = frame {
+  title: "Topbar / variant=search",
+  left: 0px,
+  top: 206px,
+  width: 312px,
+  height: 55px,
+  layout: {align-items: .center, item-gap: 10px},
+  fill: colorTokens.colors.neutral-00,
+  padding: [6px, 16px],
+  children: [arrowBack, row, selesai],
+
+  arrowBack = asset {
+    width: 20px,
+    height: 20px,
+    fill: colorTokens.colors.neutral-80,
+    contents: iconArrowBackRound
+  }
+
+  row = frame {
+    width: 191px,
+    layout: {direction: .column, justify-content: .center, item-gap: 2px},
+    overflow: .visible,
+    children: [frame1, line],
+
+    frame1 = frame {
+      width: 100%,
+      layout: {align-items: .center, item-gap: 4px},
+      overflow: .visible,
+      children: [masukanEmailDoku, highlightOff],
+
+      masukanEmailDoku = text {
+        width: 172.26px,
+        fill: colorTokens.colors.neutral-20,
+        contents: "Cari layanan di sini",
+        font-size: 16,
+        font-family: "DIN Next LT Pro",
+        font-style: "Medium"
+      }
+
+      highlightOff = asset {
+        width: 18px,
+        height: 18px,
+        fill: colorTokens.colors.neutral-50,
+        contents: iconHighlightOffRound
+      }
+    }
+
+    line = asset {
+      width: 191px,
+      height: 2px,
+      fill: colorTokens.colors.neutral-10,
+      contents: iconLine5
+    }
+  }
+
+  selesai = text {
+    fill: colorTokens.colors.red-50,
+    contents: "SELESAI",
+    font-size: 12,
+    font-family: "DIN Next LT Pro",
+    font-style: "Medium",
+    line-height: 1,
+    align: .center
+  }
+}
