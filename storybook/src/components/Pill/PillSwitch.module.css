@@ -1,0 +1,35 @@
+/* Values from controls/pill.elyx, set `switch`. Colors are token variables only. */
+
+.switch {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.segment {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 40px;
+  background: transparent;
+  color: var(--elyx-colors-neutral-50);
+  font-family: var(--doku-font-brand);
+  font-size: var(--elyx-font-sizes-sm);
+  font-weight: 500;
+  line-height: 14px;
+  white-space: pre;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* The selected segment has a 10 dp icon gap in the design (4 dp when unselected). */
+.segment[data-selected] { gap: 10px; background: var(--elyx-colors-neutral-20); color: var(--elyx-colors-red-50); }
+.segment:focus-visible { outline: 2px solid var(--elyx-colors-blue-50); outline-offset: 2px; }
+
+.label { white-space: pre; }

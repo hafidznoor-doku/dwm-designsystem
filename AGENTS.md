@@ -24,6 +24,15 @@ Where to start:
   (`button / Size=default, variant=primary, :state=default`).
 - `screens/` — screen templates from the Figma Status Payment, Confirmation
   Page, and General Error pages.
+- `storybook/` — live components and developer specs for the Android/iOS
+  teams (`cd storybook && npm run storybook`). Controls are hand-coded React
+  components in `storybook/src/components/`; blocks and screens render live
+  from `elyx tree` + `elyx css`. Each story shows a spec (tokens with Android/iOS
+  names, spacing, typography, Compose/SwiftUI skeletons). After changing a
+  design run `npm run sync` (or `sync:all` for tokens/shared components), and
+  `npm run check:visual` to diff live stories against Elyx renders. Keep each
+  component's `title:` in the Figma `<set> / Prop=value, …` form; a coded
+  control's `<Name>.elyx.tsx` maps those variant props. See `storybook/README.md`.
 
 Conventions:
 

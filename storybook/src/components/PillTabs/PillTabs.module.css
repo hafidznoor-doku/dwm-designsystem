@@ -1,0 +1,8 @@
+/* Values from controls/pill-tabs.elyx. */
+
+.tabs {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--elyx-spacing-md);
+}

@@ -1,0 +1,41 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Introduction" />
+
+# DOKU e-Wallet design system
+
+Live components and implementation specs for the DOKU e-Wallet mobile app (Android and iOS),
+generated from the Elyx design project in this repository. The `.elyx` files are the source of
+truth. Everything here is rebuilt from them.
+
+## What's here
+
+- **Foundations**: color, typography, spacing and radius tokens with their Android resource and iOS constant names, the icon set, and ready-to-use `colors.xml`, `dimens.xml` and `DokuTokens.swift`.
+- **Controls**: hand-coded, interactive components (Button, Toggle, Input, PIN, Keyboard…). Use the **Controls** panel to switch size, variant and state.
+- **Blocks** and **Screens**: built live from the Elyx layers. Wherever a design uses a control instance, the coded control is rendered in its place.
+
+## Reading the spec
+
+Every story has a **Spec** under the live component. Hide it with the ruler (**Spec**) button in the toolbar. It follows the variant you pick in Controls:
+
+| Section | What it gives you |
+| --- | --- |
+| Anatomy | Numbered layers with size and position. Hover a row to outline the layer and its padding. |
+| Layout & spacing | Stack direction, padding, gap, radius and alignment, with the spacing/radius token when one matches. |
+| Colors | Every fill, text color, icon tint and border with its token, hex, Android name and iOS name. Values with no token are marked *off-palette*. |
+| Typography | Font, weight, size (sp/pt) and absolute line height for each text style. |
+| Platform skeletons | Jetpack Compose and SwiftUI outlines with the values filled in. Use them as a guide to structure, not as drop-in code. |
+| Design reference | The Elyx render next to the live component, with the pixel diff from the last visual check. |
+
+**Units:** 1 Elyx px = 1 dp on Android = 1 pt on iOS. Font sizes are sp/pt. Screens are designed at 360–390 dp wide.
+
+**Borders:** Elyx strokes are drawn inside the layer unless the spec says *outside*, so they never add to the layer's size.
+
+## Keeping it in sync
+
+```sh
+cd storybook
+npm run storybook     # export tokens + scenes + renders, then start Storybook
+npm run sync:all      # rebuild everything after changing tokens or a shared component
+npm run check:visual  # pixel-diff every live story against its Elyx render (server must be running)
+```

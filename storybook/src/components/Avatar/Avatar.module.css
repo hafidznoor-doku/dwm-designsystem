@@ -1,0 +1,24 @@
+/* Values from controls/avatar.elyx. Colors are token variables only. */
+
+.avatar {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: var(--elyx-radius-md);
+  background: var(--elyx-colors-neutral-00);
+  vertical-align: middle;
+}
+
+.avatar img {
+  position: absolute;
+  display: block;
+  user-select: none;
+}
+
+.photo { inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* The male placeholder bitmap is 41 dp in a 38 dp frame, offset by -1 dp. */
+.bitmap { left: calc(-1 / 38 * 100%); top: calc(-1 / 38 * 100%); width: calc(41 / 38 * 100%); height: calc(41 / 38 * 100%); }
+
+.illustration { inset: 0; width: 100%; height: 100%; }

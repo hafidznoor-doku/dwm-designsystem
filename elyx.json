@@ -4,7 +4,9 @@
   },
   "files": {
     "exclude": [
-      ".pnpm-store"
+      ".pnpm-store",
+      "storybook",
+      "tools/figma-import/node_modules"
     ]
   },
   "assets": {

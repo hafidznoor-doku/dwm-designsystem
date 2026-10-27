@@ -1,0 +1,16 @@
+/* Values from controls/filter.elyx. */
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--elyx-spacing-md);
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 var(--elyx-spacing-md);
+  /* The row is screen-wide; pills past the edge scroll horizontally. */
+  overflow-x: auto;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+.filter::-webkit-scrollbar { display: none; }

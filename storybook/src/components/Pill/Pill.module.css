@@ -1,0 +1,55 @@
+/* Values from controls/pill.elyx (sets _pill and _filter-pill). Colors are
+   token variables only, except where noted as off-palette in the design. */
+
+.chip {
+  --bg: transparent;
+  --ring: transparent;
+  --fg: var(--elyx-colors-neutral-50);
+
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 16px;
+  background: var(--bg);
+  /* Elyx strokes sit inside the pill, so they don't add to its size. */
+  box-shadow: inset 0 0 0 1px var(--ring);
+  color: var(--fg);
+  font-family: var(--doku-font-brand);
+  font-size: var(--elyx-font-sizes-sm);
+  font-weight: 500;
+  line-height: 14px;
+  white-space: pre;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.label { white-space: pre; }
+
+/* ---- _pill: tabs. Large 32, Medium 28. ---- */
+.pill.large { height: 32px; }
+.pill.medium { height: 28px; }
+.pill { --ring: var(--elyx-colors-neutral-10); }
+.pill[data-selected] { --bg: var(--elyx-colors-red-50); --ring: transparent; --fg: var(--elyx-colors-neutral-00); }
+.pill:disabled { --bg: transparent; --ring: transparent; --fg: var(--elyx-colors-neutral-30); }
+
+/* ---- _filter-pill: Large 40 (radius 32), Medium 32 (radius 16). ---- */
+.filter.large { height: 40px; border-radius: 32px; }
+.filter.medium { height: 32px; }
+.filter {
+  --bg: var(--elyx-colors-neutral-00);
+  --ring: var(--elyx-colors-neutral-20);
+  /* Off-palette in the design: rgb(204 204 204), between neutral-20 and neutral-30. */
+  --fg: rgb(204 204 204);
+}
+.filter[data-selected] { --bg: var(--elyx-colors-neutral-20); --ring: transparent; --fg: var(--elyx-colors-red-60); }
+.filter:disabled { --fg: var(--elyx-colors-neutral-30); }
+
+.chip:disabled { cursor: not-allowed; }
+.chip:focus-visible { outline: 2px solid var(--elyx-colors-blue-50); outline-offset: 2px; }

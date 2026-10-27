@@ -1,0 +1,69 @@
+/* Values from controls/button.elyx. Colors are token variables only. */
+
+.button {
+  --bg: transparent;
+  --border: transparent;
+  --fg: var(--elyx-colors-red-50);
+
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  /* Elyx borders sit inside the box (outside for neutral), so they don't add to the height. */
+  box-shadow: var(--ring, inset 0 0 0 1px var(--border));
+  border-radius: var(--elyx-radius-sm);
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--doku-font-brand);
+  font-size: var(--elyx-font-sizes-md);
+  font-weight: 500;
+  line-height: 1.14;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.label {
+  white-space: pre;
+}
+
+.default { padding: 12px var(--elyx-spacing-xl); }
+.small { padding: 8px var(--elyx-spacing-xl); }
+/* The small label box is 14 high in the design, shorter than its line height. */
+.small .label { display: flex; align-items: center; height: 14px; }
+
+/* Neutral and text variants have a fixed height in the design (42 / 32);
+   primary and secondary hug their content (40 / 30). */
+.neutral.default, .textPrimary.default, .textNeutral.default { height: 42px; }
+.neutral.small, .textPrimary.small { height: 32px; }
+.textNeutral.small { height: 30px; font-size: var(--elyx-font-sizes-sm); line-height: 1.167; }
+
+.fullWidth { display: flex; width: 100%; }
+
+/* ---- variants: default / pressed / disabled ---- */
+
+.primary { --bg: var(--elyx-colors-red-50); --border: var(--elyx-colors-red-50); --fg: var(--elyx-colors-neutral-00); }
+.primary:active, .primary[data-state="pressed"] { --bg: var(--elyx-colors-red-60); --border: var(--elyx-colors-red-60); }
+.primary:disabled { --bg: var(--elyx-colors-neutral-20); --border: var(--elyx-colors-neutral-20); --fg: var(--elyx-colors-neutral-40); }
+
+.secondary { --bg: var(--elyx-colors-neutral-00); --border: var(--elyx-colors-red-50); --fg: var(--elyx-colors-red-50); }
+.secondary:active, .secondary[data-state="pressed"] { --border: var(--elyx-colors-red-60); --fg: var(--elyx-colors-red-60); }
+.secondary:disabled { --border: var(--elyx-colors-neutral-30); --fg: var(--elyx-colors-neutral-30); }
+
+.textPrimary { --fg: var(--elyx-colors-red-50); }
+.textPrimary:active, .textPrimary[data-state="pressed"] { --fg: var(--elyx-colors-red-60); }
+.textPrimary:disabled { --fg: var(--elyx-colors-neutral-30); }
+
+.neutral { --ring: 0 0 0 1px var(--border); --bg: var(--elyx-colors-neutral-00); --border: var(--elyx-colors-neutral-30); --fg: var(--elyx-colors-neutral-80); }
+.neutral:active, .neutral[data-state="pressed"] { --bg: var(--elyx-colors-neutral-05); }
+.neutral:disabled { --fg: var(--elyx-colors-neutral-30); }
+
+.textNeutral { --fg: var(--elyx-colors-neutral-80); }
+.textNeutral:active, .textNeutral[data-state="pressed"] { --fg: var(--elyx-colors-neutral-90); }
+.textNeutral:disabled { --fg: var(--elyx-colors-neutral-30); }
+
+.button:disabled { cursor: not-allowed; }
+.button:focus-visible { outline: 2px solid var(--elyx-colors-blue-50); outline-offset: 2px; }

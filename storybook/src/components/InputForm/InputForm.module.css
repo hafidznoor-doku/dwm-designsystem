@@ -1,0 +1,283 @@
+/* Values from controls/input-form.elyx (and the shared field anatomy of
+   controls/select-form.elyx). Colors are token variables, except the `search`
+   variant, which the Figma source draws in off-palette greys (noted below). */
+
+/* ---- underline fields: TextField, TextArea, DateField, SelectForm ---- */
+
+.field {
+  --label: var(--elyx-colors-neutral-80);
+  --value: var(--elyx-colors-neutral-80);
+  --placeholder: var(--elyx-colors-neutral-30);
+  --prefix: var(--elyx-colors-neutral-80);
+  --info: var(--elyx-colors-neutral-80);
+  --icon: var(--elyx-colors-neutral-60);
+  --clear: var(--elyx-colors-neutral-30);
+  --line: var(--elyx-colors-neutral-20);
+  --helper: var(--elyx-colors-neutral-60);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: var(--doku-font-brand);
+  font-size: var(--elyx-font-sizes-md);
+}
+.field *, .search * { box-sizing: border-box; }
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.labelRow { display: flex; align-items: center; gap: 4px; }
+.label {
+  margin: 0;
+  color: var(--label);
+  font-size: var(--elyx-font-sizes-md);
+  font-weight: 500;
+  line-height: 1.14;
+  white-space: pre;
+}
+
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.iconButton:disabled { cursor: default; }
+.iconButton:focus-visible { outline: 2px solid var(--elyx-colors-blue-50); outline-offset: 1px; border-radius: 2px; }
+
+/* label + 24dp input row */
+.row {
+  width: 100%;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+.inputRow {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--value);
+  font: inherit;
+  font-size: var(--elyx-font-sizes-md);
+  font-weight: 400;
+  line-height: 1.14;
+  text-overflow: ellipsis;
+}
+.input::placeholder { color: var(--placeholder); opacity: 1; }
+.input:disabled { -webkit-text-fill-color: var(--value); opacity: 1; }
+.input:disabled::placeholder { -webkit-text-fill-color: var(--placeholder); }
+
+/* "+62 -" phone prefix, or flag + "+62 ▾" country picker */
+.prefix { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+.prefixCode { color: var(--prefix); line-height: 1.14; white-space: pre; }
+.prefixDash { color: var(--elyx-colors-neutral-30); line-height: 1.429; white-space: pre; }
+.prefixPicker { display: flex; align-items: center; gap: 4px; font: inherit; }
+.prefixPicker .prefixCode { color: var(--elyx-colors-neutral-80); }
+.prefixCodeGroup { display: flex; align-items: center; }
+
+.trailing { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+/* The design ships clear + contacts as one 40×16 asset (right-icons.svg); each
+   half is masked out of it so both can be real buttons. */
+.splitIcon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  mask-size: 40px 16px;
+  -webkit-mask-size: 40px 16px;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+.clearIcon { background: var(--clear); mask-position: 0 0; -webkit-mask-position: 0 0; }
+.contactIcon { background: var(--icon); mask-position: -24px 0; -webkit-mask-position: -24px 0; }
+
+/* The Elyx line is a 0-height stroke; draw it centred on that edge so it
+   doesn't take layout space. */
+.line { position: relative; width: 100%; height: 0; flex-shrink: 0; }
+.line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -0.5px;
+  height: 1px;
+  background: var(--line);
+}
+
+.counter {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  color: var(--elyx-colors-neutral-30);
+  font-size: var(--elyx-font-sizes-xs);
+  line-height: 1.2;
+  white-space: pre;
+}
+
+.helper {
+  margin: 0;
+  color: var(--helper);
+  font-size: var(--elyx-font-sizes-sm);
+  line-height: 1.167;
+}
+
+/* ---- states ---- */
+
+.field:focus-within, .field[data-state="pressed"] { --line: var(--elyx-colors-red-20); }
+.field[data-invalid] { --helper: var(--elyx-colors-red-70); }
+.field[data-disabled] {
+  --label: var(--elyx-colors-neutral-30);
+  --info: var(--elyx-colors-neutral-30);
+  --value: var(--elyx-colors-neutral-30);
+  --prefix: var(--elyx-colors-neutral-30);
+  --icon: var(--elyx-colors-neutral-30);
+  --clear: var(--elyx-colors-neutral-30);
+  --helper: var(--elyx-colors-neutral-30);
+}
+/* Input Area and Input Date dim the label to neutral-40, not neutral-30. */
+.area[data-disabled], .date[data-disabled] { --label: var(--elyx-colors-neutral-40); }
+
+/* ---- Input Area ---- */
+.areaBox { width: 100%; height: 62px; padding: 8px 0; }
+.textarea {
+  display: block;
+  width: 100%;
+  height: 46px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  resize: none;
+  background: transparent;
+  color: var(--value);
+  font: inherit;
+  font-size: var(--elyx-font-sizes-md);
+  line-height: 1.14;
+  scrollbar-width: none;
+}
+.textarea::placeholder { color: var(--placeholder); opacity: 1; }
+.textarea:disabled { -webkit-text-fill-color: var(--value); opacity: 1; }
+
+/* ---- Input Date ---- */
+.date .input { cursor: pointer; caret-color: transparent; }
+.date[data-disabled] .input { cursor: default; }
+.nativeDate {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+  border: 0;
+  padding: 0;
+}
+
+/* ---- search variant ---- */
+/* Off-palette greys from the Figma source: #4D4D4D label/value, #666 helper and
+   icon, #CCC border/placeholder, #B3B3B3 disabled, #EAECF0 disabled fill. */
+.search {
+  --label: #4d4d4d;
+  --value: #4d4d4d;
+  --placeholder: #cccccc;
+  --border: #cccccc;
+  --bg: var(--elyx-colors-neutral-00);
+  --icon: #666666;
+  --helper: #666666;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: var(--doku-font-brand);
+  font-size: var(--elyx-font-sizes-md);
+}
+.search .label { line-height: 1.429; }
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: var(--elyx-radius-md);
+  background: var(--elyx-colors-green-10);
+}
+.badgeText { color: var(--elyx-colors-green-50); opacity: 0.8; font-size: var(--elyx-font-sizes-sm); line-height: 1; }
+.box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: var(--elyx-radius-sm);
+  background: var(--bg);
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+.search .input { height: 20px; line-height: 1.429; appearance: none; }
+.search .input::-webkit-search-cancel-button, .search .input::-webkit-search-decoration { appearance: none; -webkit-appearance: none; }
+.searchHelper {
+  width: 100%;
+  margin: 0;
+  color: var(--helper);
+  font-size: var(--elyx-font-sizes-sm);
+  line-height: 1.33;
+}
+.search:focus-within, .search[data-state="pressed"] { --border: var(--elyx-colors-red-20); }
+.search[data-invalid] {
+  --bg: var(--elyx-colors-red-05);
+  --border: var(--elyx-colors-red-70);
+  --icon: var(--elyx-colors-red-60);
+  --helper: var(--elyx-colors-red-70);
+}
+.search[data-disabled] {
+  --bg: #eaecf0;
+  --border: #cccccc;
+  --value: #b3b3b3;
+  --placeholder: #b3b3b3;
+  --icon: #b3b3b3;
+  --helper: #b3b3b3;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

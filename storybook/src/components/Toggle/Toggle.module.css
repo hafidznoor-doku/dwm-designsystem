@@ -1,0 +1,88 @@
+/* Values from controls/toggle.elyx. Colors are token variables only, except
+   where noted as off-palette in the design. */
+
+.toggle {
+  --track: var(--elyx-colors-neutral-20);
+  --thumb: var(--elyx-colors-neutral-00);
+  /* Thumb shadow is a raw design value (black 15%), not a color token. */
+  --thumb-shadow: 3px 3px 3px -3px rgb(0 0 0 / 0.149);
+
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  width: 37.78px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+/* The native checkbox covers the switch: it takes the click, focus and keyboard. */
+.input {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.input:disabled { cursor: not-allowed; }
+
+.track {
+  position: absolute;
+  inset: 0;
+  border-radius: 42px;
+  background: var(--track);
+  transition: background-color 0.15s ease;
+}
+
+.thumb {
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--thumb);
+  box-shadow: var(--thumb-shadow);
+  transition: transform 0.15s ease;
+}
+
+.input:checked ~ .thumb { transform: translateX(16px); }
+
+.toggle:has(.input:checked) {
+  --track: var(--elyx-colors-red-60);
+  --thumb-shadow: -4px 3px 3px -3px rgb(0 0 0 / 0.149);
+}
+.toggle:has(.input:disabled) { --track: var(--elyx-colors-neutral-30); --thumb: var(--elyx-colors-neutral-20); --thumb-shadow: none; }
+.toggle:has(.input:disabled:checked) { --track: var(--elyx-colors-red-20); --thumb: var(--elyx-colors-neutral-10); }
+
+.toggle:has(.input:focus-visible) { outline: 2px solid var(--elyx-colors-blue-50); outline-offset: 2px; border-radius: 42px; }
+
+/* ---- _toggle-list row ---- */
+
+.listItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  /* Off-palette in the design: rgb(77 77 77) for the icon and label. */
+  color: rgb(77 77 77);
+  cursor: pointer;
+}
+
+.listLead {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  min-width: 0;
+}
+
+.listLabel {
+  font-family: var(--doku-font-brand);
+  font-size: var(--elyx-font-sizes-md);
+  font-weight: 500;
+  line-height: 15.96px;
+}

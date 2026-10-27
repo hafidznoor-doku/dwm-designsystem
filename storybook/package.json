@@ -1,0 +1,30 @@
+{
+  "name": "dwm-designsystem-storybook",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/export-tokens.mjs && node scripts/export-scenes.mjs && node scripts/build-catalog.mjs",
+    "sync:all": "node scripts/export-tokens.mjs && node scripts/export-scenes.mjs --force && node scripts/build-catalog.mjs --force",
+    "storybook": "npm run sync && storybook dev -p 6006",
+    "build-storybook": "npm run sync && storybook build",
+    "typecheck": "tsc --noEmit",
+    "check:visual": "node scripts/check-visual.mjs"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-docs": "10.6.4",
+    "@storybook/react-vite": "10.6.4",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "pixelmatch": "8.0.0",
+    "pngjs": "7.0.0",
+    "puppeteer-core": "25.16.0",
+    "storybook": "10.6.4",
+    "typescript": "7.0.2",
+    "vite": "8.3.5"
+  }
+}

@@ -1,0 +1,54 @@
+/* Values from controls/verification-code.elyx. Colors are token variables only. */
+
+.verification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--elyx-spacing-xl);
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 var(--elyx-spacing-md);
+  font-family: var(--doku-font-brand);
+}
+.verification p, .verification h2 { margin: 0; }
+
+.header { display: flex; flex-direction: column; align-items: center; gap: var(--elyx-spacing-xs); align-self: stretch; }
+.title { color: var(--elyx-colors-neutral-80); font-size: var(--elyx-font-sizes-xl); font-weight: 500; line-height: 30px; text-align: center; }
+/* The subtitle box is 341 wide in a 328 column, centred (it overhangs by 6.5 each side). */
+.subtitle { margin: 0 -6.5px !important; align-self: stretch; color: var(--elyx-colors-neutral-40); font-size: var(--elyx-font-sizes-lg); font-weight: 400; line-height: 24px; text-align: center; }
+.destination { display: block; }
+
+.code { display: flex; flex-direction: column; align-items: center; gap: var(--elyx-spacing-md); align-self: stretch; }
+.message { color: var(--elyx-colors-red-70); font-size: var(--elyx-font-sizes-md); font-weight: 400; line-height: 15.96px; text-align: center; }
+
+.footer { display: flex; flex-direction: column; gap: var(--elyx-spacing-xs); align-self: stretch; }
+
+.chance {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 32px;
+  color: var(--elyx-colors-neutral-80);
+  font-family: var(--doku-font-brand);
+  font-size: var(--elyx-font-sizes-md);
+  font-weight: 400;
+  line-height: 15.96px;
+  text-align: center;
+}
+.verification > .chance { width: auto; align-self: stretch; }
+
+/* Text actions. The design draws "Kirim Ulang" in the body colour, so it looks like plain text. */
+.inlineAction, .switch, .support {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.inlineAction { color: inherit; }
+.inlineAction:disabled { cursor: not-allowed; color: var(--elyx-colors-neutral-40); }
+.switch { align-self: stretch; color: var(--elyx-colors-green-50); font-size: var(--elyx-font-sizes-md); line-height: 15.96px; text-align: center; }
+.support { color: var(--elyx-colors-red-60); font-size: var(--elyx-font-sizes-md); font-weight: 500; line-height: 21px; }
+.switch:active, .support:active, .inlineAction:active { opacity: 0.7; }
+.inlineAction:focus-visible, .switch:focus-visible, .support:focus-visible { outline: 2px solid var(--elyx-colors-blue-50); outline-offset: 2px; border-radius: 2px; }

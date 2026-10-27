@@ -1,0 +1,35 @@
+@import "../generated/tokens.css";
+
+/* DIN Next LT Pro is installed locally on design machines (resources/fonts is
+   empty). Elsewhere text falls back to Inter, the newer guideline font. */
+/* Pin each weight to its installed face. Matching by family name alone makes
+   Chrome pick DINNextLTPro-Italic for weight 400. */
+@font-face { font-family: "DIN Next LT Pro"; font-weight: 200; font-style: normal; src: local("DINNextLTPro-UltraLight"); }
+@font-face { font-family: "DIN Next LT Pro"; font-weight: 300; font-style: normal; src: local("DINNextLTPro-Light"); }
+@font-face { font-family: "DIN Next LT Pro"; font-weight: 400; font-style: normal; src: local("DINNextLTPro-Regular"); }
+@font-face { font-family: "DIN Next LT Pro"; font-weight: 500; font-style: normal; src: local("DINNextLTPro-Medium"); }
+@font-face { font-family: "DIN Next LT Pro"; font-weight: 600 700; font-style: normal; src: local("DINNextLTPro-Bold"); }
+@font-face { font-family: "DIN Next LT Pro"; font-weight: 800; font-style: normal; src: local("DINNextLTPro-Heavy"); }
+@font-face { font-family: "DIN Next LT Pro"; font-weight: 900; font-style: normal; src: local("DINNextLTPro-Black"); }
+@font-face { font-family: "DIN Next LT Pro"; font-weight: 400; font-style: italic; src: local("DINNextLTPro-Italic"); }
+
+/* Inter 4 installs as optical sizes ("Inter 18pt", …), so plain "Inter" doesn't
+   resolve. Map it to the 18pt text faces, falling back to a classic install. */
+@font-face { font-family: "Inter"; font-weight: 300; src: local("Inter18pt-Light"), local("Inter-Light"); }
+@font-face { font-family: "Inter"; font-weight: 400; src: local("Inter18pt-Regular"), local("Inter-Regular"); }
+@font-face { font-family: "Inter"; font-weight: 500; src: local("Inter18pt-Medium"), local("Inter-Medium"); }
+@font-face { font-family: "Inter"; font-weight: 600; src: local("Inter18pt-SemiBold"), local("Inter-SemiBold"); }
+@font-face { font-family: "Inter"; font-weight: 700; src: local("Inter18pt-Bold"), local("Inter-Bold"); }
+@font-face { font-family: "Inter"; font-weight: 800; src: local("Inter18pt-ExtraBold"), local("Inter-ExtraBold"); }
+
+:root {
+  --doku-font-brand: var(--elyx-font-families-brand), var(--elyx-font-families-ui), system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f6f6f6;
+  font-family: var(--doku-font-brand);
+  color: var(--elyx-semantic-fg-default);
+  -webkit-font-smoothing: antialiased;
+}

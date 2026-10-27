@@ -1,0 +1,59 @@
+/* Values from controls/badge.elyx. Colors are token variables only, except
+   where noted as off-palette in the design. */
+
+/* Inter Semi Bold under a private name: Inter 4 static installs register as
+   "Inter 18pt" etc., so plain "Inter" doesn't resolve in Chrome. */
+@font-face {
+  font-family: "DOKU Badge Inter";
+  font-weight: 600;
+  font-style: normal;
+  src: local("Inter SemiBold"), local("Inter-SemiBold"), local("Inter18pt-SemiBold"), local("Inter 18pt SemiBold");
+}
+
+.badge {
+  --bg: var(--elyx-colors-green-50);
+  --fg: var(--elyx-colors-neutral-00);
+  --icon-end: currentColor;
+
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-sizing: border-box;
+  height: 24px;
+  margin: 0;
+  padding: 4px 12px;
+  border: 0;
+  border-radius: 42px;
+  background: var(--bg);
+  color: var(--fg);
+  /* Shadow colors are raw design values (near-black at 8% and 12%). The 1px
+     border in the design matches the fill, so it isn't drawn. */
+  box-shadow: 0 1px 8px 0 rgb(20 20 20 / 0.0784), 0 0 1px 0 rgb(20 20 20 / 0.1216);
+  /* The badge is set in Inter Semi Bold, unlike the DIN components around it. */
+  font-family: "DOKU Badge Inter", var(--elyx-font-families-ui), var(--doku-font-brand), sans-serif;
+  font-size: var(--elyx-font-sizes-sm);
+  font-weight: 600;
+  line-height: 15.96px;
+  white-space: pre;
+  flex-shrink: 0;
+}
+
+.label { white-space: pre; }
+
+.unverified {
+  --bg: var(--elyx-colors-neutral-40);
+  /* Off-palette in the design: rgb(252 252 253), a near-white. */
+  --icon-end: rgb(252 252 253);
+}
+.pending {
+  --bg: var(--elyx-colors-yellow-60);
+  --fg: var(--elyx-colors-red-05);
+  --icon-end: var(--elyx-colors-neutral-background);
+}
+.verified { --bg: var(--elyx-colors-green-50); }
+
+.interactive { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.interactive:active { filter: brightness(0.95); }
+.interactive:focus-visible { outline: 2px solid var(--elyx-colors-blue-50); outline-offset: 2px; }

@@ -1,0 +1,36 @@
+/* Values from controls/verification-code.elyx, `_template-verif-code`. */
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  height: 800px;
+  overflow: hidden;
+  background: var(--elyx-colors-neutral-00);
+  font-family: var(--doku-font-brand);
+}
+.statusBar { display: block; width: 100%; height: 44px; flex: none; }
+
+.appBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  height: 55px;
+  flex: none;
+  padding: 6px var(--elyx-spacing-md);
+  background: var(--elyx-colors-neutral-00);
+}
+.back { display: flex; margin: 0; border: 0; padding: 0; background: none; cursor: pointer; }
+.back:focus-visible { outline: 2px solid var(--elyx-colors-blue-50); border-radius: 2px; }
+.appTitle { margin: 0; color: var(--elyx-colors-red-50); font-size: var(--elyx-font-sizes-lg); font-weight: 500; line-height: 24px; }
+
+.body {
+  box-sizing: border-box;
+  height: 447px;
+  flex: none;
+  padding: 56px 0 var(--elyx-spacing-md);
+  background: var(--elyx-colors-neutral-00);
+}
+
+.keyboard { width: 100%; flex: none; }

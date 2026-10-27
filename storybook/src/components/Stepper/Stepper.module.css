@@ -1,0 +1,52 @@
+/* Values from controls/stepper.elyx. Colors are token variables unless noted. */
+
+.stepper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--elyx-spacing-xs);
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 var(--elyx-spacing-md);
+  font-family: var(--doku-font-brand);
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.count {
+  color: var(--elyx-colors-red-60);
+  font-size: var(--elyx-font-sizes-lg);
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.subtitle {
+  align-self: stretch;
+  /* Off-palette in the design: #4D4D4D. */
+  color: #4d4d4d;
+  font-size: var(--elyx-font-sizes-md);
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.track {
+  display: flex;
+  flex-direction: row;
+  gap: var(--elyx-spacing-xxs);
+  padding: var(--elyx-spacing-xxs) 0;
+}
+
+.segment {
+  flex: 1 1 0;
+  height: 8px;
+  border-radius: 18px;
+  /* Off-palette in the design: #EAECF0 (between neutral-10 and neutral-20). */
+  background: #eaecf0;
+}
+
+.segment[data-done] {
+  background: var(--elyx-colors-red-60);
+}

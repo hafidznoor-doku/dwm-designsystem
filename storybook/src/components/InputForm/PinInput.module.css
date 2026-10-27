@@ -1,0 +1,88 @@
+/* Values from controls/input-form.elyx: `PIN input`, `Password input` and the
+   private `_master_pin-password-input` cell. */
+
+.group {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  box-sizing: border-box;
+  font-family: var(--doku-font-brand);
+}
+
+/* One transparent native input over the whole row takes the typing, paste and
+   SMS one-time-code autofill; the cells only display it. */
+.native {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+  font-size: 16px; /* keeps iOS from zooming on focus */
+  color: transparent;
+  caret-color: transparent;
+  background: transparent;
+  cursor: pointer;
+}
+.native:disabled { cursor: default; }
+
+/* ---- cell (_master_pin-password-input) ---- */
+.cell {
+  --bg: var(--elyx-colors-neutral-10);
+  --border: var(--elyx-colors-neutral-20);
+  --fg: var(--elyx-colors-neutral-80);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  padding: 10px;
+  border-radius: var(--elyx-radius-sm);
+  background: var(--bg);
+  box-shadow: inset 0 0 0 1.25px var(--border);
+  color: var(--fg);
+  font-size: var(--elyx-font-sizes-xl);
+  font-weight: 500;
+  line-height: 19px;
+  text-align: center;
+}
+/* The design's digit box is 19dp tall with the glyph set low in it (auto line
+   height); a taller line box reproduces that position. */
+.digit { display: block; height: 19px; line-height: 24px; }
+/* Empty cells fill the row height: 20dp alone, 28dp next to a filled cell. */
+.cell[data-empty] { height: auto; min-height: 20px; align-self: stretch; }
+.cell[data-tone="error"] { --bg: var(--elyx-colors-red-05); --border: var(--elyx-colors-red-60); --fg: var(--elyx-colors-red-60); }
+/* Not in the design: marks where the next digit goes while the input has focus. */
+.group:focus-within .cell[data-active] { --border: var(--elyx-colors-red-20); }
+
+/* ---- password dots ---- */
+.password {
+  justify-content: space-between;
+  width: 248px;
+  padding: 0 6px;
+  align-items: center;
+}
+.dot {
+  --bg: var(--elyx-colors-neutral-20);
+  --border: var(--elyx-colors-neutral-20);
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 22px;
+  background: var(--bg);
+  box-shadow: inset 0 0 0 1.25px var(--border);
+}
+/* Filled dots are not specified in the design; they use the default foreground. */
+.dot[data-filled] { --bg: var(--elyx-colors-neutral-80); --border: var(--elyx-colors-neutral-80); }
+.password[data-tone="error"] .dot[data-filled] { --bg: var(--elyx-colors-red-60); --border: var(--elyx-colors-red-60); }
+.group:focus-within .dot[data-active] { --border: var(--elyx-colors-red-20); }
+
+.group:has(.native:focus-visible) { outline: 2px solid var(--elyx-colors-blue-50); outline-offset: 4px; border-radius: 4px; }

@@ -1,0 +1,73 @@
+/* Values from controls/checkbox.elyx. Colors are token variables only. */
+
+.checkbox {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: var(--doku-font-brand);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.checkbox[data-disabled] { cursor: not-allowed; }
+
+.boxWrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+/* The native checkbox sits on top of the box: it takes clicks, focus and keyboard. */
+.input {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+.box {
+  --bg: var(--elyx-colors-neutral-00);
+  --ring: var(--elyx-colors-neutral-30);
+  --mark: transparent;
+
+  position: absolute;
+  inset: 0;
+  border-radius: var(--elyx-radius-sm);
+  background: var(--bg);
+  /* Elyx strokes sit inside the box. */
+  box-shadow: inset 0 0 0 1px var(--ring);
+  color: var(--mark);
+}
+.check { display: block; }
+
+/* Checked: the Elyx export lost the check mark when the two-tone Figma icon was
+   tinted with one color, so this follows the intended design: brand red box,
+   white check (the tint color in the export). */
+.input:checked + .box { --bg: var(--elyx-colors-red-50); --ring: transparent; --mark: var(--elyx-colors-neutral-00); }
+.input:disabled + .box { --bg: var(--elyx-colors-neutral-20); --ring: transparent; }
+.input:disabled:checked + .box { --bg: var(--elyx-colors-neutral-40); --mark: var(--elyx-colors-neutral-00); }
+.input:focus-visible + .box { outline: 2px solid var(--elyx-colors-blue-50); outline-offset: 2px; }
+
+.text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.title,
+.subtitle {
+  font-size: var(--elyx-font-sizes-md);
+  font-weight: 400;
+  line-height: 15.96px;
+}
+.title { color: var(--elyx-colors-neutral-80); }
+.subtitle { color: var(--elyx-colors-neutral-40); }
+.checkbox[data-disabled] .title,
+.checkbox[data-disabled] .subtitle { color: var(--elyx-colors-neutral-30); }

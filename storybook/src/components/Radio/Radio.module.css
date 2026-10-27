@@ -1,0 +1,90 @@
+/* Values from controls/radio.elyx. Colors are token variables only. */
+
+/* ---- indicator (_master_checkbox) ---- */
+
+.indicator {
+  --bg: var(--elyx-colors-neutral-00);
+  --ring: var(--elyx-colors-neutral-30);
+  --dot: transparent;
+
+  position: relative;
+  display: block;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: var(--bg);
+  /* Elyx strokes sit inside the circle. */
+  box-shadow: inset 0 0 0 var(--ring-w) var(--ring);
+}
+.indicator::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: var(--dot-size);
+  height: var(--dot-size);
+  border-radius: 50%;
+  background: var(--dot);
+  transform: translate(-50%, -50%);
+}
+
+/* Radio Button large uses its own 25 dp circle; _master_checkbox large is 24 dp. */
+.indicator.large { --size: 25px; --ring-w: 4px; --dot-size: 9px; }
+.indicator.medium { --size: 24px; --ring-w: 4px; --dot-size: 8.64px; }
+.indicator.small { --size: 16px; --ring-w: 2.56px; --dot-size: 6px; }
+
+.indicator.checked,
+.input:checked + .indicator { --ring: var(--elyx-colors-red-50); --dot: var(--elyx-colors-red-50); }
+.indicator.disabled,
+.input:disabled + .indicator { --bg: var(--elyx-colors-neutral-20); --ring: transparent; --dot: transparent; }
+.indicator.disabled.checked,
+.input:disabled:checked + .indicator { --bg: var(--elyx-colors-neutral-10); --ring: var(--elyx-colors-neutral-20); --dot: var(--elyx-colors-neutral-30); }
+.input:focus-visible + .indicator { outline: 2px solid var(--elyx-colors-blue-50); outline-offset: 2px; }
+
+/* ---- Radio Button ---- */
+
+.radio {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+  font-family: var(--doku-font-brand);
+  color: var(--elyx-colors-neutral-80);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.radio[data-disabled] { cursor: not-allowed; }
+.radio.large { gap: 12px; }
+.radio.small { gap: 8px; }
+
+.control {
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* The native radio sits on top of the circle: it takes clicks, focus and arrow keys. */
+.input {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+.radio.large .text { padding: 4px 0; }
+
+.label,
+.subtitle {
+  font-size: var(--elyx-font-sizes-md);
+  font-weight: 400;
+  line-height: 15.96px;
+  white-space: pre;
+}

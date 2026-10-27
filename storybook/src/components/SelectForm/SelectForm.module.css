@@ -1,0 +1,131 @@
+/* Values from controls/select-form.elyx. The field anatomy (label, underline,
+   helper) comes from ../InputForm/InputForm.module.css. */
+
+/* ---- Select Form ---- */
+.select { --chevron: var(--elyx-colors-neutral-60); }
+.select[data-disabled] { --chevron: var(--elyx-colors-neutral-30); }
+/* Select Form errors use red-80 for the helper (Input Form uses red-70). */
+.select[data-invalid] { --helper: var(--elyx-colors-red-80); }
+.select[data-open] { --line: var(--elyx-colors-red-20); }
+.select .helperFill { width: 100%; }
+
+.trigger {
+  width: 100%;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.trigger:disabled { cursor: default; }
+.trigger:focus-visible { outline: 2px solid var(--elyx-colors-blue-50); outline-offset: 2px; border-radius: 2px; }
+
+.valueText {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--value);
+  font-size: var(--elyx-font-sizes-md);
+  line-height: 1.14;
+}
+.valueText[data-placeholder] { color: var(--placeholder); }
+
+/* right-icons-3.svg: a 16×24 box with the chevron centred. */
+.chevron {
+  display: block;
+  flex-shrink: 0;
+  width: 16px;
+  height: 24px;
+  background: var(--chevron);
+  /* mask-image is set inline (asset URLs are served by Storybook, not bundled) */
+  mask-position: center;
+  mask-size: 16px 24px;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 16px 24px;
+  -webkit-mask-repeat: no-repeat;
+}
+
+/* The open list sits 52dp below the top (over the helper), full field width. */
+.popup {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  --list-border: var(--elyx-colors-neutral-20);
+}
+
+/* ---- Dropdown List ---- */
+.list {
+  --list-border: #eaecf0; /* off-palette in the Figma source (≈ neutral-20) */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  border-radius: var(--elyx-radius-sm);
+  background: var(--elyx-colors-neutral-00);
+  /* 1dp border centred on the edge, then the design's two drop shadows (off-palette rgb(16 24 40)). */
+  box-shadow:
+    inset 0 0 0 0.5px var(--list-border),
+    0 0 0 0.5px var(--list-border),
+    0 8px 8px -4px rgb(16 24 40 / 0.031),
+    0 20px 24px -4px rgb(16 24 40 / 0.078);
+  overflow-y: auto;
+  scrollbar-width: none;
+  font-family: var(--doku-font-brand);
+}
+.popup .list { --list-border: var(--elyx-colors-neutral-20); }
+
+/* ---- List option (_list-option) ---- */
+/* Off-palette greys from the Figma source: #4D4D4D text, #B3B3B3 disabled, #FAFAFA selected fill. */
+.option {
+  --fg: #4d4d4d;
+  --bg: transparent;
+  --ring: transparent;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  min-height: 28px;
+  padding: 4px 16px;
+  border-radius: 0;
+  background: var(--bg);
+  box-shadow: inset 0 0 0 1px var(--ring);
+  color: var(--fg);
+  font-family: var(--doku-font-brand);
+  font-size: var(--elyx-font-sizes-md);
+  font-weight: 400;
+  line-height: 1.429;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.option[data-hug] { display: inline-flex; }
+.optionLabel { white-space: pre; }
+.option[aria-selected="true"] { --bg: #fafafa; font-weight: 500; }
+.option[data-active] { --bg: var(--elyx-colors-neutral-05); }
+.option:active:not([aria-disabled="true"]), .option[data-state="pressed"] {
+  --bg: var(--elyx-colors-red-10);
+  --ring: var(--elyx-colors-red-60);
+  border-radius: var(--elyx-radius-sm);
+}
+.option[aria-disabled="true"] { --fg: #b3b3b3; cursor: default; }
+
+.addOption { display: flex; flex-direction: column; }
+.divider { height: 0; position: relative; }
+.divider::after { content: ""; position: absolute; left: 0; right: 0; top: -0.5px; height: 1px; background: #eaecf0; }

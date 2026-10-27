@@ -1,0 +1,154 @@
+/* Values from controls/keyboard.elyx. Colors are token variables unless noted. */
+
+.keyboard {
+  box-sizing: border-box;
+  font-family: var(--doku-font-brand);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+:where(.keyboard) button {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.keyboard button:disabled { cursor: not-allowed; opacity: 0.5; }
+.keyboard button:focus-visible { outline: 2px solid var(--elyx-colors-blue-50); outline-offset: -2px; }
+
+/* ---- _keyboard-item ---- */
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 52px;
+  height: 52px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  border-radius: var(--elyx-radius-md);
+  background: transparent;
+  color: var(--elyx-colors-neutral-80);
+  font-family: var(--doku-font-brand);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.item:focus-visible { outline: 2px solid var(--elyx-colors-blue-50); outline-offset: 2px; }
+.number { align-items: flex-start; padding-top: 20px; }
+/* The label box is 12 high in the design, shorter than its 28 px line. */
+.itemLabel { display: block; height: 12px; font-size: 20px; font-weight: 500; line-height: 28px; }
+.large .itemLabel { font-size: 22px; line-height: 26px; }
+.number:active, .number[data-pressed] { background: var(--elyx-colors-neutral-20); }
+.operator { background: var(--elyx-colors-neutral-20); }
+.operator:active, .operator[data-pressed] { background: var(--elyx-colors-neutral-30); }
+
+/* ---- _keyboard-icon-operation ---- */
+
+.opIcon { position: relative; display: inline-block; width: 28px; height: 28px; flex: none; }
+.opPart { position: absolute; mask-size: 100% 100%; -webkit-mask-size: 100% 100%; mask-repeat: no-repeat; -webkit-mask-repeat: no-repeat; }
+
+/* ---- Keyboard Number / input PIN ---- */
+
+.pin {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 86.75px;
+  width: 343px;
+  max-width: 100%;
+}
+.light { --key-bg: var(--elyx-colors-neutral-00); --key-pressed: var(--elyx-colors-neutral-10); --key-fg: #333; /* #333333 is off-palette in the design. */ }
+.brand { --key-bg: var(--elyx-colors-red-50); --key-pressed: var(--elyx-colors-red-60); --key-fg: var(--elyx-colors-neutral-00); }
+
+.pinKey, .pinBlank {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--key-bg);
+  color: var(--key-fg);
+}
+.pinKey { padding-top: 34px; }
+.pinLabel { font-size: 22px; font-weight: 500; line-height: 26px; }
+.pinIcon { padding-top: 27.75px; }
+.pinIcon { color: var(--elyx-colors-neutral-00); }
+.light .pinIcon { color: var(--key-fg); }
+.pinBackspace { background-size: 100% 100%; background-repeat: no-repeat; }
+/* Pressed keys aren't drawn in the design; a one-step darker background stands in. */
+.pinKey:active { background-color: var(--key-pressed); }
+.pinBackspace:active { box-shadow: inset 0 0 0 100px rgb(0 0 0 / 0.08); }
+
+/* ---- Keyboard Number / android (native mock-up) ---- */
+
+/* 360 wide by default; it stretches to the width you give it (keys share the row). */
+.android { width: 360px; display: flex; flex-direction: column; }
+.androidKeys {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(4, 44px);
+  column-gap: 5px;
+  row-gap: 5px;
+  height: 206px;
+  box-sizing: border-box;
+  padding: 7px 4px;
+  /* Off-palette native keyboard background #E9EAEE. */
+  background: rgb(233 234 238);
+}
+.androidKey {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 6px;
+  background: var(--elyx-colors-neutral-00);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #000;
+  font-family: Roboto, var(--elyx-font-families-ui), system-ui, sans-serif;
+}
+.androidKey:active { box-shadow: inset 0 0 0 100px rgb(0 0 0 / 0.08); }
+.androidLabel { padding-top: 3px; font-size: 30px; line-height: 35px; }
+.androidPunct .androidLabel { font-size: 32px; line-height: 38px; }
+.androidArt { background-color: transparent; }
+/* The function column sits 6 dp from the digits instead of 5. */
+.androidArt { margin-left: 1px; margin-right: -1px; }
+.androidNav { display: block; width: 100%; height: 48px; background-size: 100% 100%; }
+
+/* ---- Keyboard Number / ios (native mock-up) ---- */
+
+.ios {
+  position: relative;
+  width: 390px;
+  height: 291px;
+  /* Off-palette native keyboard background rgb(206 210 217 / 70%). */
+  background: rgb(206 210 217 / 0.698);
+  font-family: "SF Pro Text", -apple-system, system-ui, sans-serif;
+}
+.iosKeys {
+  display: grid;
+  grid-template-columns: repeat(3, 122px);
+  grid-template-rows: 46px 47px 47px 46px;
+  column-gap: 6px;
+  row-gap: 7px;
+  padding: 6px;
+}
+.iosKeys > :nth-child(n + 4):nth-child(-n + 9) { padding-top: 1px; }
+.iosKey {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--elyx-colors-neutral-00);
+  box-shadow: 0 1px 0 rgb(0 0 0 / 0.3);
+  color: #000;
+}
+.iosKey:active { background: rgb(171 177 186); }
+.iosNumber { height: 30px; font-size: 25px; line-height: 30px; letter-spacing: -0.02em; }
+.iosLetters { margin-top: -1px; height: 12px; font-size: 10px; font-weight: 700; line-height: 12px; letter-spacing: 0.17em; text-indent: 0.17em; }
+.iosZero { padding-top: 7px; box-shadow: 0 1px 0 rgb(0 0 0 / 0.35); }
+.iosDelete { display: flex; align-items: flex-start; justify-content: flex-start; padding: 6px 0 0 47px; background: transparent; color: #000; border-radius: 5px; }
+.iosDelete:active { background: var(--elyx-colors-neutral-00); }
+.iosHome { position: absolute; left: 127px; top: 278px; width: 135px; height: 5px; border-radius: 5px; background: #000; }
