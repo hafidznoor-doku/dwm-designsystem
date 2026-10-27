@@ -1,0 +1,15 @@
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{t}from"./jsx-runtime-MKhVqBIO.js";import{Jn as n,Qn as r,Xn as i,Yn as a,Zn as o,qn as s}from"./iframe-MwzDaa_q.js";import{n as c,r as l,t as u}from"./controlStories-IBTfhR0X.js";var d,f,p,m,h,g,_,v;function y(){return(y=e((()=>{c(),r(),i(),d=t(),f={title:`Controls/Badge`,component:o,args:{status:`verified`},argTypes:{status:{control:`inline-radio`,options:[`unverified`,`pending`,`verified`]},label:{control:`text`},iconStart:{control:`select`,options:[void 0,null,`verified-round`,`hourglass-bottom-outlined`,`account-circle-round`]},iconEnd:{control:`select`,options:[void 0,null,`add-round`,`chevron-right`,`mode-edit-round`]}},parameters:{docs:{description:{component:"Account level (KYC) badge next to the user's name: `unverified` (Basic, with a plus to upgrade), `pending` (Verifikasi Diproses, with a chevron), and `verified` (Premium). `status` sets color, label and icons; override `label` / `iconStart` / `iconEnd` as needed (`null` hides a default icon). Pass `onClick` to render it as a button.\n\n**Design notes:**\n- The badge is set in **Inter Semi Bold 12**, while the rest of the library uses DIN Next.\n- *Pending* uses `red-05` (a pale pink) for the text and hourglass on `yellow-60`, and `neutral-background` for the chevron, instead of white.\n- The *Basic* plus icon is an off-palette near-white, rgb(252 252 253).\n- *belum-verifikasi* is built as an instance of *sudah-verifikasi* with overrides, not as its own layer tree.\n- Each badge has a 1 px border in the same color as its fill, so it is invisible and not drawn here."}},elyxSpec:e=>({file:n.file,scene:s(e),live:(0,d.jsx)(o,{...e})})}},p={},m={render:()=>(0,d.jsxs)(`div`,{style:{display:`flex`,gap:12},children:[(0,d.jsx)(o,{status:`unverified`}),(0,d.jsx)(o,{status:`pending`}),(0,d.jsx)(o,{status:`verified`})]})},h={args:{status:`unverified`,onClick:()=>{}}},g=l(n,a),_=u(n,a),v=[`Playground`,`Statuses`,`Clickable`,`AllVariants`,`ElyxVariant`],p.parameters={...p.parameters,docs:{...p.parameters?.docs,source:{originalSource:`{}`,...p.parameters?.docs?.source}}},m.parameters={...m.parameters,docs:{...m.parameters?.docs,source:{originalSource:`{
+  render: () => <div style={{
+    display: "flex",
+    gap: 12
+  }}>
+      <Badge status="unverified" />
+      <Badge status="pending" />
+      <Badge status="verified" />
+    </div>
+}`,...m.parameters?.docs?.source}}},h.parameters={...h.parameters,docs:{...h.parameters?.docs,source:{originalSource:`{
+  args: {
+    status: "unverified",
+    onClick: () => {}
+  }
+}`,...h.parameters?.docs?.source}}},g.parameters={...g.parameters,docs:{...g.parameters?.docs,source:{originalSource:`matrixStory(badgeScene, fromElyx) as Story`,...g.parameters?.docs?.source}}},_.parameters={..._.parameters,docs:{..._.parameters?.docs,source:{originalSource:`elyxVariantStory(badgeScene, fromElyx) as Story`,..._.parameters?.docs?.source}}}})))()}y();export{g as AllVariants,h as Clickable,_ as ElyxVariant,p as Playground,m as Statuses,v as __namedExportsOrder,f as default};

@@ -1,0 +1,14 @@
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{t}from"./jsx-runtime-MKhVqBIO.js";import{Bn as n,Hn as r,Un as i,Vn as a,Wn as o,zn as s}from"./iframe-MwzDaa_q.js";import{n as c,r as l,t as u}from"./controlStories-IBTfhR0X.js";var d,f,p,m,h,g,_,v;function y(){return(y=e((()=>{c(),o(),r(),d=t(),f={title:`Controls/Button`,component:i,args:{label:`Bayar`,size:`default`,variant:`primary`,state:`default`,disabled:!1,fullWidth:!1},argTypes:{size:{control:`inline-radio`,options:[`default`,`small`]},variant:{control:`select`,options:[`primary`,`secondary`,`textPrimary`,`neutral`,`textNeutral`]},state:{control:`inline-radio`,options:[`default`,`pressed`,`disabled`]},iconStart:{control:`select`,options:[void 0,`icon-add`,`arrow-back`,`arrow-forward-ios-outlined`]},iconEnd:{control:`select`,options:[void 0,`ads-click-outlined`,`arrow-forward-ios-outlined`]}},parameters:{docs:{description:{component:"Primary actions use `primary`; one per screen. `secondary` and `neutral` for alternatives, text variants for low-emphasis actions. Pressed state comes from touch-down (`:active` here); `state` only forces it for documentation.\n\n**Design note:** primary and secondary hug to 40 / 30 dp, while neutral and text variants are fixed at 42 / 32 dp in the Figma source. Confirm with design before normalizing."}},elyxSpec:e=>({file:n.file,scene:s(e),live:(0,d.jsx)(i,{...e})})}},p={},m={args:{iconStart:`icon-add`,iconEnd:`arrow-forward-ios-outlined`}},h={args:{label:`Lanjutkan`,fullWidth:!0},decorators:[e=>(0,d.jsx)(`div`,{style:{width:328},children:(0,d.jsx)(e,{})})]},g=l(n,a),_=u(n,a),v=[`Playground`,`WithIcons`,`FullWidth`,`AllVariants`,`ElyxVariant`],p.parameters={...p.parameters,docs:{...p.parameters?.docs,source:{originalSource:`{}`,...p.parameters?.docs?.source}}},m.parameters={...m.parameters,docs:{...m.parameters?.docs,source:{originalSource:`{
+  args: {
+    iconStart: "icon-add",
+    iconEnd: "arrow-forward-ios-outlined"
+  }
+}`,...m.parameters?.docs?.source}}},h.parameters={...h.parameters,docs:{...h.parameters?.docs,source:{originalSource:`{
+  args: {
+    label: "Lanjutkan",
+    fullWidth: true
+  },
+  decorators: [S => <div style={{
+    width: 328
+  }}><S /></div>]
+}`,...h.parameters?.docs?.source}}},g.parameters={...g.parameters,docs:{...g.parameters?.docs,source:{originalSource:`matrixStory(buttonScene, fromElyx) as Story`,...g.parameters?.docs?.source}}},_.parameters={..._.parameters,docs:{..._.parameters?.docs,source:{originalSource:`elyxVariantStory(buttonScene, fromElyx) as Story`,..._.parameters?.docs?.source}}}})))()}y();export{g as AllVariants,_ as ElyxVariant,h as FullWidth,p as Playground,m as WithIcons,v as __namedExportsOrder,f as default};

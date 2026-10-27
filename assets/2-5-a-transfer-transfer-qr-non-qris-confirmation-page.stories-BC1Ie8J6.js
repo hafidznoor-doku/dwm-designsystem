@@ -1,0 +1,6 @@
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{n as t,r as n,t as r}from"./SceneStory-DPvbpTt_.js";import{n as i,t as a}from"./2-5-a-transfer-transfer-qr-non-qris-confirmation-page-BxfVdQt5.js";var o,s,c;function l(){return(l=e((()=>{i(),t(),o={title:`Screens/Confirmation/2 5 A Transfer Transfer Qr Non Qris Confirmation Page`,component:r,args:{scene:a,exportRef:``,codedControls:!0},argTypes:{scene:{table:{disable:!0}},exportRef:{table:{disable:!0}}},parameters:{elyxSpec:n}},s={name:`2.5.A Transfer   Transfer QR   Non QRIS   Confirmation Page`,args:{exportRef:`screen25ATransferTransferQrNonQrisConfirmationPage`}},c=[`Screen25ATransferTransferQrNonQrisConfirmationPage`],s.parameters={...s.parameters,docs:{...s.parameters?.docs,source:{originalSource:`{
+  name: "2.5.A Transfer   Transfer QR   Non QRIS   Confirmation Page",
+  args: {
+    exportRef: "screen25ATransferTransferQrNonQrisConfirmationPage"
+  }
+}`,...s.parameters?.docs?.source}}}})))()}l();export{s as Screen25ATransferTransferQrNonQrisConfirmationPage,c as __namedExportsOrder,o as default};
