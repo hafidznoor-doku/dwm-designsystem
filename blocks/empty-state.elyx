@@ -13,7 +13,7 @@ export emptyStateNoCards = frame {
   children: [rp10430233, cards],
 
   rp10430233 = text {
-    left: -7px,
+    left: 3px,
     top: 60px,
     fill: colorTokens.colors.neutral-30,
     contents: "Belum ada kartu tersedia",

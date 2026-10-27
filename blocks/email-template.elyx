@@ -413,6 +413,7 @@ export emailTemplate = frame {
             }
 
             label3 = text {
+              left: 113px,
               display: .none,
               fill: rgb(46.27%, 46.27%, 46.27%),
               contents: "3",
@@ -473,6 +474,7 @@ export emailTemplate = frame {
             }
 
             label3 = text {
+              left: 113px,
               display: .none,
               fill: rgb(46.27%, 46.27%, 46.27%),
               contents: "3",
@@ -533,6 +535,7 @@ export emailTemplate = frame {
             }
 
             label3 = text {
+              left: 113px,
               display: .none,
               fill: rgb(46.27%, 46.27%, 46.27%),
               contents: "3",
@@ -719,6 +722,7 @@ export emailTemplate = frame {
             }
 
             label3 = text {
+              left: 113px,
               display: .none,
               fill: rgb(46.27%, 46.27%, 46.27%),
               contents: "3",
@@ -779,6 +783,7 @@ export emailTemplate = frame {
             }
 
             label3 = text {
+              left: 113px,
               display: .none,
               fill: rgb(46.27%, 46.27%, 46.27%),
               contents: "3",
@@ -839,6 +844,7 @@ export emailTemplate = frame {
             }
 
             label3 = text {
+              left: 113px,
               display: .none,
               fill: rgb(46.27%, 46.27%, 46.27%),
               contents: "3",
@@ -939,6 +945,7 @@ export emailTemplate = frame {
               }
 
               label3 = text {
+                left: 113px,
                 display: .none,
                 fill: rgb(46.27%, 46.27%, 46.27%),
                 contents: "3",
@@ -999,6 +1006,7 @@ export emailTemplate = frame {
               }
 
               label3 = text {
+                left: 113px,
                 display: .none,
                 fill: rgb(46.27%, 46.27%, 46.27%),
                 contents: "3",
@@ -1040,7 +1048,7 @@ export emailTemplate = frame {
             children: signIn,
 
             signIn = text {
-              left: 79px,
+              left: 80px,
               top: 8px,
               fill: colorTokens.colors.neutral-00,
               contents: "Sign in",

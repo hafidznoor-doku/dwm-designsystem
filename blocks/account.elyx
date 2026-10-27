@@ -1021,7 +1021,7 @@ export accountComponentBelumKyc = frame {
               children: akun,
 
               akun = text {
-                left: -2px,
+                left: -0.5px,
                 top: 0px,
                 fill: colorTokens.colors.red-60,
                 contents: "Akun",
@@ -1081,7 +1081,7 @@ export accountComponentBelumKyc = frame {
                   children: wallet,
 
                   wallet = text {
-                    left: -2px,
+                    left: -1px,
                     top: 0px,
                     fill: rgb(91.76%, 92.549%, 94.1176%),
                     contents: "Wallet",
@@ -1157,7 +1157,7 @@ export accountComponentBelumKyc = frame {
                 children: beranda,
 
                 beranda = text {
-                  left: -4px,
+                  left: -2px,
                   top: 0px,
                   fill: rgb(91.76%, 92.549%, 94.1176%),
                   contents: "Beranda",
@@ -1196,7 +1196,7 @@ export accountComponentBelumKyc = frame {
             children: [promo, promo2, groupLayer],
 
             promo = text {
-              left: 0px,
+              left: 1px,
               top: 27.55px,
               fill: rgb(91.76%, 92.549%, 94.1176%),
               contents: "Promo",
@@ -1208,7 +1208,7 @@ export accountComponentBelumKyc = frame {
             }
 
             promo2 = text {
-              left: 72px,
+              left: 73px,
               top: 27.55px,
               fill: rgb(91.76%, 92.549%, 94.1176%),
               contents: "Bayar",
@@ -2265,7 +2265,7 @@ export accountComponentKyc = frame {
               children: akun,
 
               akun = text {
-                left: -2px,
+                left: -0.5px,
                 top: 0px,
                 fill: colorTokens.colors.red-60,
                 contents: "Akun",
@@ -2325,7 +2325,7 @@ export accountComponentKyc = frame {
                   children: wallet,
 
                   wallet = text {
-                    left: -2px,
+                    left: -1px,
                     top: 0px,
                     fill: rgb(91.76%, 92.549%, 94.1176%),
                     contents: "Wallet",
@@ -2401,7 +2401,7 @@ export accountComponentKyc = frame {
                 children: beranda,
 
                 beranda = text {
-                  left: -4px,
+                  left: -2px,
                   top: 0px,
                   fill: rgb(91.76%, 92.549%, 94.1176%),
                   contents: "Beranda",
@@ -2440,7 +2440,7 @@ export accountComponentKyc = frame {
             children: [promo, promo2, groupLayer],
 
             promo = text {
-              left: 0px,
+              left: 1px,
               top: 27.55px,
               fill: rgb(91.76%, 92.549%, 94.1176%),
               contents: "Promo",
@@ -2452,7 +2452,7 @@ export accountComponentKyc = frame {
             }
 
             promo2 = text {
-              left: 72px,
+              left: 73px,
               top: 27.55px,
               fill: rgb(91.76%, 92.549%, 94.1176%),
               contents: "Bayar",
@@ -3509,7 +3509,7 @@ export accountComponentOnProcessKyc = frame {
               children: akun,
 
               akun = text {
-                left: -2px,
+                left: -0.5px,
                 top: 0px,
                 fill: colorTokens.colors.red-60,
                 contents: "Akun",
@@ -3569,7 +3569,7 @@ export accountComponentOnProcessKyc = frame {
                   children: wallet,
 
                   wallet = text {
-                    left: -2px,
+                    left: -1px,
                     top: 0px,
                     fill: rgb(91.76%, 92.549%, 94.1176%),
                     contents: "Wallet",
@@ -3645,7 +3645,7 @@ export accountComponentOnProcessKyc = frame {
                 children: beranda,
 
                 beranda = text {
-                  left: -4px,
+                  left: -2px,
                   top: 0px,
                   fill: rgb(91.76%, 92.549%, 94.1176%),
                   contents: "Beranda",
@@ -3684,7 +3684,7 @@ export accountComponentOnProcessKyc = frame {
             children: [promo, promo2, groupLayer],
 
             promo = text {
-              left: 0px,
+              left: 1px,
               top: 27.55px,
               fill: rgb(91.76%, 92.549%, 94.1176%),
               contents: "Promo",
@@ -3696,7 +3696,7 @@ export accountComponentOnProcessKyc = frame {
             }
 
             promo2 = text {
-              left: 72px,
+              left: 73px,
               top: 27.55px,
               fill: rgb(91.76%, 92.549%, 94.1176%),
               contents: "Bayar",
